@@ -1,4 +1,4 @@
-import MovingCircle from '@/components/TestProject/MovingCircle'
+import MovingCircle from '@/components/PracticalQuestion/MovingCircle'
 import React from 'react'
 
 const MovingCirclePage = () => {

@@ -1,4 +1,4 @@
-import TimeOne from '@/components/TestProject/TimeOne'
+import TimeOne from '@/components/PracticalQuestion/TimeOne'
 import React from 'react'
 
 const TimeOnePage = () => {

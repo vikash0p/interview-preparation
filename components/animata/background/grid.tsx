@@ -1,5 +1,5 @@
 'use client'
-import Placeholder from "@/components/TestProject/Placeholder";
+import Placeholder from "@/components/PracticalQuestion/Placeholder";
 
 export interface GridProps {
   color?: string;

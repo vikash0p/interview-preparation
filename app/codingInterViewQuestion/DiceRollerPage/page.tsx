@@ -1,4 +1,4 @@
-import DiceRoller from '@/components/TestProject/DiceRoller'
+import DiceRoller from '@/components/PracticalQuestion/DiceRoller'
 import React from 'react'
 
 const DiceRollerPage = () => {

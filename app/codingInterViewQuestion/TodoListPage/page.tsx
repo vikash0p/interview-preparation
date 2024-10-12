@@ -1,4 +1,4 @@
-import TodoList from '@/components/TestProject/TodoList'
+import TodoList from '@/components/PracticalQuestion/TodoList'
 import React from 'react'
 
 const TodoListPage = () => {

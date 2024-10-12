@@ -1,4 +1,4 @@
-import BackgroundColor from '@/components/TestProject/BackgroundColor'
+import BackgroundColor from '@/components/PracticalQuestion/BackgroundColor'
 import React from 'react'
 
 const BackGroundColorPage = () => {

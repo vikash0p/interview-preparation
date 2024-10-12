@@ -1,4 +1,4 @@
-import ModelOne from '@/components/TestProject/ModelOne'
+import ModelOne from '@/components/PracticalQuestion/ModelOne'
 import React from 'react'
 
 const ModelPage = () => {

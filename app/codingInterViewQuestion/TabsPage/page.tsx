@@ -1,4 +1,4 @@
-import Tabs from "@/components/TestProject/Tabs";
+import Tabs from "@/components/PracticalQuestion/Tabs";
 import React from "react";
 
 const TabsPage = () => {

@@ -1,4 +1,4 @@
-import LikeButton from '@/components/TestProject/LikeButton'
+import LikeButton from '@/components/PracticalQuestion/LikeButton'
 import React from 'react'
 
 const LikeButtonPage = () => {

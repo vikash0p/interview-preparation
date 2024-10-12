@@ -1,4 +1,4 @@
-import SetTimeInterval from '@/components/TestProject/SetTimeInterval'
+import SetTimeInterval from '@/components/PracticalQuestion/SetTimeInterval'
 import React from 'react'
 
 const SetTimeIntervalPage = () => {

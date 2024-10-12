@@ -1,4 +1,4 @@
-import CheckBor from '@/components/TestProject/CheckBor'
+import CheckBor from '@/components/PracticalQuestion/CheckBor'
 import React from 'react'
 
 const CheckBoxPage = () => {

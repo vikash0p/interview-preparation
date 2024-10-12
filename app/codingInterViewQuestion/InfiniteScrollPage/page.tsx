@@ -1,4 +1,4 @@
-import InfiniteScroll from '@/components/TestProject/InfiniteScroll'
+import InfiniteScroll from '@/components/PracticalQuestion/InfiniteScroll'
 import React from 'react'
 
 const InfiniteScrolling = () => {

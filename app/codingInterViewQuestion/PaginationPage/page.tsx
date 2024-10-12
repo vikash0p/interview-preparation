@@ -1,4 +1,4 @@
-import Pagination from '@/components/TestProject/Pagination'
+import Pagination from '@/components/PracticalQuestion/Pagination'
 import React from 'react'
 
 const PaginationPage = () => {

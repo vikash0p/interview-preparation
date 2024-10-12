@@ -1,4 +1,4 @@
-import MovingCircleThree from '@/components/TestProject/MovingCircleThree'
+import MovingCircleThree from '@/components/PracticalQuestion/MovingCircleThree'
 import React from 'react'
 
 const MovingCircleSecondPage = () => {

@@ -1,4 +1,4 @@
-import StarRating from "@/components/TestProject/StarRating";
+import StarRating from "@/components/PracticalQuestion/StarRating";
 import React from "react";
 
 const StarRatingPage = () => {

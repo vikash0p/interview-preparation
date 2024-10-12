@@ -1,5 +1,5 @@
-import DebounceExample from '@/components/TestProject/DebounceExample'
-import { ScrollToTop, Throttling } from '@/components/TestProject/Throttling'
+import DebounceExample from '@/components/PracticalQuestion/DebounceExample'
+import { ScrollToTop, Throttling } from '@/components/PracticalQuestion/Throttling'
 import React from 'react'
 
 const DeBouncePage = () => {
