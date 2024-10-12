@@ -1,10 +1,11 @@
+import Grid from '@/components/animata/background/grid';
 import { LinkData } from '@/data/LinkData';
 import Link from 'next/link';
 import React from 'react'
 
 const codingInterViewQuestion = () => {
   return (
-    <div>
+    <Grid>
       <div className="container m-auto  py-20  flex gap-10 flex-wrap ">
         {LinkData.map((value) => {
           return (
@@ -18,7 +19,7 @@ const codingInterViewQuestion = () => {
           );
         })}
       </div>{" "}
-    </div>
+    </Grid>
   );
 }
 

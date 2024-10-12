@@ -1,5 +1,7 @@
 'use client'
-import Placeholder from "@/components/PracticalQuestion/Placeholder";
+
+
+
 
 export interface GridProps {
   color?: string;
@@ -12,6 +14,8 @@ export interface GridProps {
 
 
 export default function Grid({color = "#cacaca",size = 20,children,className,style = { backgroundColor: "white",},}: GridProps) {
+  const widthSpread = 100;
+  const heightSpread = 20;
   return (
     <div
       style={{
@@ -19,8 +23,17 @@ export default function Grid({color = "#cacaca",size = 20,children,className,sty
         backgroundImage: `linear-gradient(${color} 1px, transparent 1px), linear-gradient(to right, ${color} 1px, transparent 1px)`,
         backgroundSize: `${size}px ${size}px`,
       }}
-      className={className} >
-      {children ?? <Placeholder size={size} />}
+      className={className}
+    >
+      <div
+        style={{
+          width: `${widthSpread * size + 1}px`,
+          height: `${heightSpread * size + 1}px`,
+        }}
+        className=" min-h-screen max-w-full    "
+      >
+      {children}
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ export interface Link {
     name: string;
     url: string;
 }
-// TestProject
+// PracticalQuestion
 export const LinkData: Link[] = [
   {
     id: 1,

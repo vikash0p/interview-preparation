@@ -1,3 +1,4 @@
+
 import BackgroundColor from '@/components/PracticalQuestion/BackgroundColor'
 import React from 'react'
 
