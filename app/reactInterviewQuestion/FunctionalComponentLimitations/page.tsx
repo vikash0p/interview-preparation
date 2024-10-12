@@ -53,20 +53,20 @@ const limitations = [
 
 const FunctionalComponentLimitations = () => {
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-4 text-center text-gray-800">
+    <div className="p-6  min-h-screen">
+      <h1 className="text-2xl font-bold mb-4 text-center ">
         Limitations of Functional Components
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {limitations.map((limitation) => (
           <div
             key={limitation.id}
-            className="p-6 bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+            className="p-6  rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl font-semibold  mb-2">
               {limitation.title}
             </h2>
-            <p className="text-gray-600">{limitation.description}</p>
+            <p className="">{limitation.description}</p>
           </div>
         ))}
       </div>

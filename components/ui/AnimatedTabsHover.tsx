@@ -14,12 +14,12 @@ export function AnimatedTabsHover() {
     },
     {
       id: "2",
-      name: "Practical Coding Interview",
+      name: " Coding Interview",
       link: "/codingInterViewQuestion",
     },
     {
       id: "2",
-      name: "React Interview Question",
+      name: "React Interview ",
       link: "/reactInterviewQuestion",
     },
     {
