@@ -1,25 +1,22 @@
-import React from 'react'
-import { ReactInterViewQuestionLink } from "@/components/ReactInterview/ReactInterViewQuestionLink";
-import Link from "next/link";
-const ReactInterviewQuestionLayout = ({children}:{children:React.ReactNode}) => {
+import LinkContainer from "@/components/ReactInterview/LinkContainer";
+import React from "react";
+
+const ReactInterviewQuestionLayout = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   return (
-    <div className='w-full min-h-screen lg:flex '>
-      <div className="lg:w-1/4 h-screen overflow-y-scroll sticky top-0  bg-zinc-900 py-5">
-        {ReactInterViewQuestionLink.map((value) => {
-          return (
-            <Link
-              className="ps-4 hover:underline "
-              href={value.link}
-              key={value.id}
-            >
-              {value.title}
-            </Link>
-          );
-        })}
+    <div className="w-full min-h-screen lg:flex lg:pl-1/4">
+      {/* Sidebar */}
+      <div className="lg:w-1/4 h-screen fixed top-20 left-0 bg-zinc-900 py-5  overflow-y-scroll">
+        <LinkContainer />
       </div>
-      <div className="lg:w-3/4 p-5"> {children}</div>
+
+      {/* Main Content */}
+      <div className="lg:w-3/4 ml-auto p-5 lg:pl-8">{children}</div>
     </div>
   );
-}
+};
 
-export default ReactInterviewQuestionLayout
+export default ReactInterviewQuestionLayout;
