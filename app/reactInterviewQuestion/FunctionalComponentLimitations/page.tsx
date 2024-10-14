@@ -57,11 +57,11 @@ const FunctionalComponentLimitations = () => {
       <h1 className="text-2xl font-bold mb-4  ">
         Limitations of Functional Components
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="">
         {limitations.map((limitation) => (
           <div
             key={limitation.id}
-            className="p-6  rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+            className="p-6  "
           >
             <h2 className="text-xl font-semibold  mb-2">
               {limitation.title}

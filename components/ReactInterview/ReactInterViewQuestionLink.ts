@@ -7,6 +7,11 @@ export const ReactInterViewQuestionLink = [
   },
   {
     id: "2",
+    title: "Advantages of React",
+    link: "/reactInterviewQuestion/advantages-of-react",
+  },
+  {
+    id: "3",
     title: "Limitation for functional component",
     link: "/reactInterviewQuestion/FunctionalComponentLimitations",
   },
