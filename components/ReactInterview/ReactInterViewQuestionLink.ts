@@ -20,4 +20,9 @@ export const ReactInterViewQuestionLink = [
     title: "state in react",
     link: "/reactInterviewQuestion/state-in-react",
   },
+  {
+    id: "5",
+    title:'stateful component in react',
+    link: "/reactInterviewQuestion/stateful-component-in-react",
+  }
 ];
