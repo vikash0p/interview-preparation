@@ -15,4 +15,9 @@ export const ReactInterViewQuestionLink = [
     title: "Limitation for functional component",
     link: "/reactInterviewQuestion/FunctionalComponentLimitations",
   },
+  {
+    id: "4",
+    title: "state in react",
+    link: "/reactInterviewQuestion/state-in-react",
+  },
 ];
