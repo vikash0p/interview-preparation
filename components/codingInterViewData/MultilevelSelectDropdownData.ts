@@ -1,7 +1,8 @@
+export const MultilevelSelectDropdownData = `
 "use client";
 import React, { useState } from "react";
 
-const InputAddDataAndSearchDataComponent = () => {
+const MultilevelSelectDropdownComponent = () => {
   const initialCountries = [
     "India",
     "Pakistan",
@@ -25,9 +26,8 @@ const InputAddDataAndSearchDataComponent = () => {
   };
 
   const handleCountrySelect = (country: string) => {
-    if(!selectedCountry.includes(country)){
-    setSelectedCountry((prev) => [...prev, country]);
-
+    if (!selectedCountry.includes(country)) {
+      setSelectedCountry((prev) => [...prev, country]);
     }
     setShowDropdown(false); // Close dropdown after selecting
     setSearchTerm(""); // Clear search term after selecting
@@ -103,4 +103,7 @@ const InputAddDataAndSearchDataComponent = () => {
   );
 };
 
-export default InputAddDataAndSearchDataComponent;
+export default MultilevelSelectDropdownComponent;
+
+
+`;

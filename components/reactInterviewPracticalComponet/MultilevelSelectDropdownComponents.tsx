@@ -1,7 +1,8 @@
 "use client";
+import { X } from "lucide-react";
 import React, { useState } from "react";
 
-const InputAddDataAndSearchDataComponent = () => {
+const MultilevelSelectDropdownComponent = () => {
   const initialCountries = [
     "India",
     "Pakistan",
@@ -25,43 +26,74 @@ const InputAddDataAndSearchDataComponent = () => {
   };
 
   const handleCountrySelect = (country: string) => {
-    if(!selectedCountry.includes(country)){
-    setSelectedCountry((prev) => [...prev, country]);
-
+    if (!selectedCountry.includes(country)) {
+      setSelectedCountry((prev) => [...prev, country]);
     }
     setShowDropdown(false); // Close dropdown after selecting
     setSearchTerm(""); // Clear search term after selecting
   };
 
+  // Remove a country from the selected countries list
+  const handleCountryDelete = (country: string) => {
+    setSelectedCountry((prev) => prev.filter((item) => item !== country));
+  };
+
   const SubmitHandlerFunction = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const myData = updatedCountries.find((value) => value === searchTerm);
-    console.log("🚀 ~ file: page.tsx:37 ~ myData:", typeof myData);
     if (!myData) {
       return setUpdatedCountries((prev) => [...prev, searchTerm]);
     } else {
-      console.log("🚀 ~ The country already exists in the list.");
       alert("The country already exists in the list.");
     }
-    // if(searchCountries && !updatedCountries.includes(searchTerm)){
-    //   setUpdatedCountries((prev)=>[...prev,searchTerm])
-    // }
   };
 
   return (
-    <div className="w-full  flex flex-col gap-5 mt-20 items-center">
+    <div className="w-full flex flex-col gap-5 mt-20 items-center">
       <div className="relative w-96">
         {/* Input field to display selected country */}
-        <input
-          type="text"
-          value={selectedCountry}
-          readOnly
-          onClick={() => setShowDropdown(!showDropdown)} // Toggle dropdown visibility
-          placeholder="Select a country"
-          className="w-full h-12 px-4 border border-gray-300 rounded cursor-pointer"
-        />
+        {/* <div>
+          <input
+            type="text"
+            value={selectedCountry.join(", ")} // Show selected countries
+            readOnly
+            onClick={() => setShowDropdown(!showDropdown)}
+            placeholder="Select a country"
+            className="w-full h-12 px-4 border border-gray-300 rounded cursor-pointer"
+          />
+        </div> */}
 
-        {/* Search bar */}
+        <div>
+          <div
+            className="w-96 min-h-12 border border-black bg-white text-black rounded-sm cursor-pointer "
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            {selectedCountry.length > 0 ? (
+              <div className="w-full flex flex-wrap gap-2 p-2">
+                {selectedCountry.map((count) => {
+                  return (
+                    <div className="" key={count}>
+                      <div className="flex flex-row items-center gap-2 px-2  py-1 rounded-md bg-gray-400">
+                        <span>{count} </span>
+                        <button
+                          onClick={() => handleCountryDelete(count)}
+                          className="text-red-600"
+                        >
+                          <X />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="w-full ps-3 pt-3 flex flex-col justify-center  text-gray-500">
+                <span>Search a product</span>
+              </div>
+            )}
+          </div>
+        </div>
+        {/* Search bar and dropdown */}
         {showDropdown && (
           <div className="absolute top-full left-0 w-full bg-white border border-gray-300 z-10">
             <form action="" onSubmit={SubmitHandlerFunction}>
@@ -99,8 +131,26 @@ const InputAddDataAndSearchDataComponent = () => {
           </div>
         )}
       </div>
+
+      {/* Display selected countries with a delete button
+      <div className="w-96 mt-4">
+        {selectedCountry.map((country) => (
+          <div
+            key={country}
+            className="flex justify-between items-center bg-gray-100 px-4 py-2 my-2 rounded-md shadow"
+          >
+            <span>{country}</span>
+            <button
+              onClick={() => handleCountryDelete(country)}
+              className="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600"
+            >
+              Delete
+            </button>
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };
 
-export default InputAddDataAndSearchDataComponent;
+export default MultilevelSelectDropdownComponent;

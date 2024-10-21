@@ -135,4 +135,9 @@ export const LinkData: Link[] = [
     name: "serchDataAndInputDatawithLocalstorage ",
     url: "/codingInterViewQuestion/serchDataAndInputDatawithLocalstorage",
   },
+  {
+    id: 26,
+    name: "multilevelSelectDropdown ",
+    url: "/codingInterViewQuestion/multilevelSelectDropdown",
+  },
 ];
