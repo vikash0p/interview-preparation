@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const Home = () => {
   return (
-    <div className="">
-      {/* <AnimatedTabsHover /> */}
+    <div>
+      
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

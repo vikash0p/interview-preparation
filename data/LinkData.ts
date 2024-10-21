@@ -120,4 +120,19 @@ export const LinkData: Link[] = [
     name: "Accordion With Motion ",
     url: "/codingInterViewQuestion/AccoridonWithMotion",
   },
+  {
+    id: 23,
+    name: "MultilevelDropDown ",
+    url: "/codingInterViewQuestion/MultilevelDropDown",
+  },
+  {
+    id: 24,
+    name: "InputAddDataAndSearchData ",
+    url: "/codingInterViewQuestion/InputAddDataAndSearchData",
+  },
+  {
+    id: 25,
+    name: "serchDataAndInputDatawithLocalstorage ",
+    url: "/codingInterViewQuestion/serchDataAndInputDatawithLocalstorage",
+  },
 ];

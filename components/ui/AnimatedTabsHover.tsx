@@ -31,7 +31,7 @@ export function AnimatedTabsHover() {
   ];
 
   return (
-    <div className="flex flex-row gap-6 border-b border-b-white bg-black justify-center items-center py-4 sticky top-0 left-0 right-0 ">
+    <div className=" z-50 flex flex-row gap-6 border-b border-b-white bg-black justify-center items-center py-4 sticky top-0 left-0 right-0 ">
       <AnimatedBackground
         className="rounded-lg bg-white transition-all"
         transition={{
