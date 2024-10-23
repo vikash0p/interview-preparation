@@ -145,4 +145,19 @@ export const LinkData: Link[] = [
     name: "MultilevelFormComponent ",
     url: "/codingInterViewQuestion/MultilevelForm",
   },
+  {
+    id: 28,
+    name: "TicketOneComponent ",
+    url: "/codingInterViewQuestion/ticketOne",
+  },
+  {
+    id: 29,
+    name: "TicketTwoComponent ",
+    url: "/codingInterViewQuestion/tickettwo",
+  },
+  {
+    id: 30,
+    name: "MessageWithLike ",
+    url: "/codingInterViewQuestion/messagewithlike",
+  }
 ];
