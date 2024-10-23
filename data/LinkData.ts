@@ -140,4 +140,9 @@ export const LinkData: Link[] = [
     name: "multilevelSelectDropdown ",
     url: "/codingInterViewQuestion/multilevelSelectDropdown",
   },
+  {
+    id: 27,
+    name: "MultilevelFormComponent ",
+    url: "/codingInterViewQuestion/MultilevelForm",
+  },
 ];
