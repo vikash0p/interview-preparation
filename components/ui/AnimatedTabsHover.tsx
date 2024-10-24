@@ -28,6 +28,11 @@ export function AnimatedTabsHover() {
       name: "Contact",
       link: "/contact",
     },
+    {
+      id:"5",
+      name:"JavascriptKnow",
+      link:"/javascriptKnow"
+    }
   ];
 
   return (
