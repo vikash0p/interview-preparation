@@ -164,5 +164,10 @@ export const LinkData: Link[] = [
     id: 31,
     name: "ExcelSheet ",
     url: "/codingInterViewQuestion/execlSheet",
+  },
+  {
+    id: 32,
+    name: "Pagination tow ",
+    url: "/codingInterViewQuestion/paginationtwo",
   }
 ];
