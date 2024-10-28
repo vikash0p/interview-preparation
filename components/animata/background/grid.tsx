@@ -30,7 +30,7 @@ export default function Grid({color = "#cacaca",size = 20,children,className,sty
           width: `${widthSpread * size + 1}px`,
           height: `${heightSpread * size + 1}px`,
         }}
-        className=" min-h-screen max-w-full bg-black/50   "
+        className=" min-h-screen overflow-y-scroll max-w-full bg-black/50   "
       >
       {children}
       </div>

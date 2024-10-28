@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
-const HOme = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Home = () => {
+  const name='vikash';
+  console.log(name.split("").reverse().join(''))
 
-export default HOme
+  return <div></div>;
+};
+
+export default Home;

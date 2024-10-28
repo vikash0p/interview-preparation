@@ -6,7 +6,7 @@ import React from 'react'
 const codingInterViewQuestion = () => {
   return (
     <Grid>
-      <div className="container m-auto  py-20  flex gap-10 flex-wrap ">
+      <div className="container m-auto min-h-screen  py-20  flex gap-10 flex-wrap ">
         {LinkData.map((value) => {
           return (
             <Link

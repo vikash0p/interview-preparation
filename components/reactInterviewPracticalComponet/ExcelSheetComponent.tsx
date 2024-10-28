@@ -3,8 +3,15 @@ import React, { useState } from "react";
 
 const ExcelSheetComponent = () => {
   const [bgColor, setBgColor] = useState("bg-white");
+  console.log("🚀 ~ file: ExcelSheetComponent.tsx:6 ~ setBgColor:", setBgColor);
   const [isBold, setIsBold] = useState(false);
+  console.log("🚀 ~ file: ExcelSheetComponent.tsx:7 ~ setIsBold:", setIsBold);
+
   const [isItalic, setIsItalic] = useState(false);
+  console.log(
+    "🚀 ~ file: ExcelSheetComponent.tsx:11 ~ setIsItalic:",
+    setIsItalic
+  );
   // Initialize excel state with an empty 2D array of strings
   const [excel, setExcel] = useState<string[][]>(
     Array.from({ length: 3 }, () => Array(3).fill(""))

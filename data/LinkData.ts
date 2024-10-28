@@ -169,5 +169,15 @@ export const LinkData: Link[] = [
     id: 32,
     name: "Pagination tow ",
     url: "/codingInterViewQuestion/paginationtwo",
-  }
+  },
+  {
+    id: 33,
+    name: "CarouselTow ",
+    url: "/codingInterViewQuestion/carouselTowPage",
+  },
+  {
+    id: 34,
+    name: "shaffledArray ",
+    url: "/codingInterViewQuestion/shaffleFrom",
+  },
 ];
