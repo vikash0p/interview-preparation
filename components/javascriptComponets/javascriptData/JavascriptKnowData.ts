@@ -115,7 +115,82 @@ console.log(!!"")
 console.log(1==="")
 1===""; // false
 
+console.log("A" - 1); // NaN
+"A" - 1; // NaN
 
+
+console.log("A" + "b");
+"A" + "b"; // "Ab"
+
+
+console.log("A" + 1);
+"A" + 1; // "A1"
+
+
+
+const a = {};
+  const b = {
+    name: "viaksh",
+  };
+
+  a[b] = {
+    name: "varun",
+  };
+  console.log(a[b]); // { name: 'varun' }
+
+
+  const a = {};
+  const b = {
+    name: "viaksh",
+  };
+  const c = {
+    name: "ankit",
+  };
+
+  a[b] = {
+    name: "varun",
+  };
+  a[c] = {
+    name: "akash",
+  };
+  console.log(a[b]); //  {name: 'akash'} because [] using the dynamic value
+
+
+
+console.log("true" - false); //NaN
+console.log("true" - true);//NaN
+console.log(0 / 0); //NaN
+console.log(NaN + 5); //NaN
+console.log(NaN === NaN);//false
+console.log(NaN == NaN);//
+
+
+console.log("abc" + false);//"abcfalse"
+console.log(false + "abc");//"falseabc"
+console.log(false + "false");//"falsefalse"
+console.log(false + "true");//"falsetrue"
+console.log(true + "true");//truetrue
+console.log(false + false);//0
+console.log(false + true);//1
+
+
+const x = (4, 5, 6);
+console.log("x=", x); // x=6
+
+
+
+function abc() {} // The function is defined first.
+var abc;          // This line has no effect because abc is already defined;
+console.log(abc); //[Function: abc]
+
+var abc;
+function abc() {}
+console.log(abc); //[Function: abc]
+
+
+function abc() {}
+var abc = 10;  // Reassigns abc to 10, overriding the function.
+console.log(abc); // 10
 
 
 

@@ -180,4 +180,9 @@ export const LinkData: Link[] = [
     name: "shaffledArray ",
     url: "/codingInterViewQuestion/shaffleFrom",
   },
+  {
+    id: 35,
+    name: "CountDownOne ",
+    url: "/codingInterViewQuestion/CountDownOne",
+  },
 ];

@@ -1,3 +1,4 @@
+export const CountDownOneData = `
 "use client";
 import React, { useEffect, useState } from "react";
 
@@ -7,7 +8,7 @@ interface TimesInterface {
   seconds: number;
 }
 
-const Contact = () => {
+const CountDownComponent = () => {
   const [times, setTimes] = useState<TimesInterface>({
     hours: 0,
     minutes: 0,
@@ -18,11 +19,25 @@ const Contact = () => {
 
   const timeHandlerFunction = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
+    const numValue = Math.max(0, Number(value));
 
-    setTimes((prev) => ({
-      ...prev,
-      [name]: Math.max(0, Number(value)),
-    }));
+    setTimes((prev) => {
+      if (name === "seconds" && numValue >= 60) {
+        return {
+          ...prev,
+          minutes: prev.minutes + Math.floor(numValue / 60),
+          seconds: numValue % 60,
+        };
+      } else if (name === "minutes" && numValue >= 60) {
+        return {
+          ...prev,
+          hours: prev.hours + Math.floor(numValue / 60),
+          minutes: numValue % 60,
+        };
+      } else {
+        return { ...prev, [name]: numValue };
+      }
+    });
   };
 
   useEffect(() => {
@@ -57,14 +72,15 @@ const Contact = () => {
     setIsTimes(true);
   };
 
-  const ResetHandlerFunction=()=>{
+  const resetHandlerFunction = () => {
     setTimes({
       hours: 0,
       minutes: 0,
       seconds: 0,
     });
-    setIsTimes(false)
-  }
+    setIsTimes(false);
+  };
+
   return (
     <div className="flex flex-col w-full min-h-screen justify-center items-center">
       <div className="w-96 space-y-6">
@@ -116,9 +132,8 @@ const Contact = () => {
           </button>
           <button
             type="button"
-            className="text-white text-xl px-6 py-2 rounded-md bg-red-700 disabled:bg-gray-700 disabled:cursor-not-allowed"
-            onClick={ResetHandlerFunction}
-
+            className="text-white text-xl px-6 py-2 rounded-md bg-red-700"
+            onClick={resetHandlerFunction}
           >
             Reset
           </button>
@@ -128,4 +143,7 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default CountDownComponent;
+
+
+`;
