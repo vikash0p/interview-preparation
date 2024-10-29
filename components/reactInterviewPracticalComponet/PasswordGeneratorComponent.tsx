@@ -1,29 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-const checkData = [
-  {
-    id: "1",
-    label: "Include Uppercase Letter",
-    name: "uppercase",
-  },
-  {
-    id: "2",
-    label: "Include Lowercase Letter",
-    name: "lowercase",
-  },
-  {
-    id: "3",
-    label: "Include Number",
-    name: "number",
-  },
-  {
-    id: "4",
-    label: "Include Symbol",
-    name: "symbol",
-  },
-];
-
 interface PasswordOptions {
   range: number;
   uppercase: boolean;
@@ -32,54 +9,54 @@ interface PasswordOptions {
   symbol: boolean;
 }
 
-const Contact: React.FC = () => {
+const checkData = [
+  { id: "1", label: "Include Uppercase Letter", name: "uppercase" },
+  { id: "2", label: "Include Lowercase Letter", name: "lowercase" },
+  { id: "3", label: "Include Number", name: "number" },
+  { id: "4", label: "Include Symbol", name: "symbol" },
+];
+
+const PasswordGeneratorComponent: React.FC = () => {
   const [password, setPassword] = useState<PasswordOptions>({
     range: 10,
     uppercase: false,
     lowercase: false,
     number: false,
-    symbol: true,
+    symbol: false,
   });
-
-  const [generatePassword, setGeneratePassword] = useState<string>("");
+  const [generatedPassword, setGeneratedPassword] = useState<string>("");
+  const [copyData, setCopyData] = useState<boolean>(false);
 
   const PasswordChangeHandlerFunction = (
     event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const { name, value, type, checked } = event.target;
+  ): void => {
+    const { name, type, checked, value } = event.target;
+
     setPassword((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : Math.max(0, Number(value)),
     }));
   };
-const generateHadlerFunction = () => {
-  const { range, uppercase, lowercase, number, symbol } = password;
 
-  const characterSets: { [key: string]: string } = {
-    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    lowercase: "abcdefghijklmnopqrstuvwxyz",
-    number: "0123456789",
-    symbol: "!@#$%^&*()`~",
+  const generateHadlerFunction = (): void => {
+    const { range, uppercase, lowercase, number, symbol } = password;
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lower = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*()";
+    let charPool = "";
+
+    if (uppercase) charPool += upper;
+    if (lowercase) charPool += lower;
+    if (number) charPool += numbers;
+    if (symbol) charPool += symbols;
+
+    let generated = "";
+    for (let i = 0; i < range; i++) {
+      generated += charPool.charAt(Math.floor(Math.random() * charPool.length));
+    }
+    setGeneratedPassword(generated);
   };
-
-  // Build the pool of characters based on the selected options
-  const stringdata = [
-    uppercase && characterSets.uppercase,
-    lowercase && characterSets.lowercase,
-    number && characterSets.number,
-    symbol && characterSets.symbol,
-  ]
-    .filter(Boolean)
-    .join("");
-
-  // Generate the password
-  const passwordGenerated = Array.from({ length: range }, () =>
-    stringdata.charAt(Math.floor(Math.random() * stringdata.length))
-  ).join("");
-
-  setGeneratePassword(passwordGenerated);
-};
-
 
   return (
     <div className="w-full min-h-screen flex flex-col gap-5 justify-center items-center text-white">
@@ -88,18 +65,21 @@ const generateHadlerFunction = () => {
           Password Generator with React
         </h1>
         <div className="w-full flex flex-row justify-between items-center px-10">
-          <p className="text-xl ">
-            {generatePassword || "Generated password will appear here"}
+          <p className="text-xl">
+            {generatedPassword || "Your generated password"}
           </p>
           <button
             type="button"
             className="px-5 py-2 rounded-md bg-blue-500"
-            onClick={() => navigator.clipboard.writeText(generatePassword)}
+            onClick={() => {
+              navigator.clipboard.writeText(generatedPassword);
+              setCopyData(true);
+            }}
           >
-            Copy
+            {copyData ? <div>Copied</div> : <div>Copy</div>}
           </button>
         </div>
-        {/* Range Slider */}
+
         <div>
           <label htmlFor="range" className="text-xl px-10 space-y-3">
             Character Length: {password.range}
@@ -115,7 +95,7 @@ const generateHadlerFunction = () => {
             />
           </label>
         </div>
-        {/* Checkboxes */}
+
         <div className="grid grid-cols-2 gap-5 w-full place-items-center">
           {checkData.map((value) => (
             <label key={value.id} className="flex gap-5 items-center">
@@ -125,16 +105,14 @@ const generateHadlerFunction = () => {
                 name={value.name}
                 id={value.id}
                 checked={
-                  password[
-                    value.name as keyof Omit<PasswordOptions, "range">
-                  ] as boolean
+                  password[value.name as keyof Omit<PasswordOptions, "range">]
                 }
                 onChange={PasswordChangeHandlerFunction}
               />
             </label>
           ))}
         </div>
-        {/* Generate Button */}
+
         <div className="mt-6">
           <button
             type="button"
@@ -149,4 +127,4 @@ const generateHadlerFunction = () => {
   );
 };
 
-export default Contact;
+export default PasswordGeneratorComponent;

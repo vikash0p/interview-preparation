@@ -185,4 +185,9 @@ export const LinkData: Link[] = [
     name: "CountDownOne ",
     url: "/codingInterViewQuestion/CountDownOne",
   },
+  {
+    id: 36,
+    name: "PasswrodGenerater ",
+    url: "/codingInterViewQuestion/PasswrodGenerater",
+  }
 ];

@@ -1,3 +1,4 @@
+export const PasswordGeneratorData = `
 "use client";
 import React, { useState } from "react";
 
@@ -127,3 +128,54 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+// second method.
+
+// const generateHadlerFunction = () => {
+//   const { range, uppercase, lowercase, number, symbol } = password;
+
+//   const characterSets: { [key: string]: string } = {
+//     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+//     lowercase: "abcdefghijklmnopqrstuvwxyz",
+//     number: "0123456789",
+//     symbol: "!@#$%^&*();
+//   };
+
+//   // Build the pool of characters based on the selected options
+//   const stringdata = [
+//     uppercase && characterSets.uppercase,
+//     lowercase && characterSets.lowercase,
+//     number && characterSets.number,
+//     symbol && characterSets.symbol,
+//   ]
+//     .filter(Boolean)
+//     .join("");
+
+//   // Generate the password
+//   const passwordGenerated = Array.from({ length: range }, () =>
+//     stringdata.charAt(Math.floor(Math.random() * stringdata.length))
+//   ).join("");
+
+//   setGeneratePassword(passwordGenerated);
+// };
+
+// third method.
+// const generateHadlerFunction = () => {
+//   const { range, uppercase, lowercase, number, symbol } = password;
+
+//   // Set up character pool based on selected options
+//   const stringdata =
+//     (uppercase ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : "") +
+//     (lowercase ? "abcdefghijklmnopqrstuvwxyz" : "") +
+//     (number ? "0123456789" : "") +
+//     (symbol ? "!@#$%^&*()" : "");
+
+//   // Generate the password using random characters from the pool
+//   let passwordGenerated = Array.from({ length: range }, () =>
+//     stringdata.charAt(Math.floor(Math.random() * stringdata.length))
+//   ).join("");
+
+//   setGeneratePassword(passwordGenerated);
+// };
+`
