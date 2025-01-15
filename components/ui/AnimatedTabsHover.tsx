@@ -4,8 +4,8 @@ import { usePathname, useSelectedLayoutSegment } from "next/navigation"; // Impo
 import AnimatedBackground from "../core/AnimatedBackground";
 
 export function AnimatedTabsHover() {
-  const pathname = usePathname(); // Get the current route
-  const selectedSegment = useSelectedLayoutSegment(); // Get the current layout segment
+  const pathname = usePathname();
+  const selectedSegment = useSelectedLayoutSegment();
 
   const links = [
     {
@@ -30,42 +30,49 @@ export function AnimatedTabsHover() {
     },
     {
       id:"5",
-      name:"JavascriptKnow",
+      name:"Javascript",
       link:"/javascriptKnow"
     }
   ];
 
   return (
-    <div className=" z-50 flex flex-row gap-6 border-b border-b-white bg-black justify-center items-center py-4 sticky top-0 left-0 right-0 ">
-      <AnimatedBackground
-        className="rounded-lg bg-white transition-all"
-        transition={{
-          type: "spring",
-          bounce: 0.2,
-          duration: 0.3,
-        }}
-        enableHover
-      >
-        {links.map((tab) => {
-          // Check if the selected layout segment matches the link
-          const isActiveSegment = selectedSegment === tab.link.split("/")[1];
+    <div className=" z-50 flex flex-row gap-6 max-w-7xl m-auto bg-black justify-between items-center py-4 sticky top-0 left-0 right-0 ">
+      <div className="flex items-center text-white text-2xl font-bold">
+        <Link href="/" className="no-underline text-white hover:text-gray-300">
+          InterViewPrap
+        </Link>
+      </div>
+      <div className="space-x-4">
+        <AnimatedBackground
+          className="rounded-lg bg-white transition-all"
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.3,
+          }}
+          enableHover
+        >
+          {links.map((tab) => {
+            // Check if the selected layout segment matches the link
+            const isActiveSegment = selectedSegment === tab.link.split("/")[1];
 
-          return (
-            <Link
-              href={tab.link}
-              key={tab.id}
-              data-id={tab.link}
-              className={`px-5 py-2 text-xl transition-colors duration-300 no-underline ${
-                pathname === tab.link || isActiveSegment
-                  ? "bg-white text-black rounded-lg"
-                  : "text-gray-300 hover:text-black"
-              }`}
-            >
-              {tab.name}
-            </Link>
-          );
-        })}
-      </AnimatedBackground>
+            return (
+              <Link
+                href={tab.link}
+                key={tab.id}
+                data-id={tab.link}
+                className={`px-5 py-2 text-md transition-colors duration-300 no-underline ${
+                  pathname === tab.link || isActiveSegment
+                    ? "bg-white text-black rounded-lg"
+                    : "text-gray-300 hover:text-black"
+                }`}
+              >
+                {tab.name}
+              </Link>
+            );
+          })}
+        </AnimatedBackground>
+      </div>
     </div>
   );
 }
