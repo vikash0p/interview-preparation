@@ -1,3 +1,4 @@
+import Footer from "@/components/GlobalComponents/Footer";
 import AskQuestion from "@/components/HomeComponents/AskQuestion";
 import Domains from "@/components/HomeComponents/Domains";
 import Features from "@/components/HomeComponents/Features";
@@ -23,6 +24,7 @@ const page = () => {
       <SuccessStory />
       <JoinCommunity />
       <AskQuestion />
+      <Footer />
     </div>
   );
 };
