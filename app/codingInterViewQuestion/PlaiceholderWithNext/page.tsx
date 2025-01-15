@@ -1,12 +1,7 @@
-import HomeImageCard from '@/components/HomeImageCard'
-import React from 'react'
+import React from "react";
 
-const PlaceholderWithNextPage = () => {
-  return (
-    <div>
-    <HomeImageCard />
-    </div>
-  )
-}
+const page = () => {
+  return <div>page</div>;
+};
 
-export default PlaceholderWithNextPage
+export default page;

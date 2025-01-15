@@ -1,5 +1,5 @@
 "use client";
-import { myImage } from "@/components/ImageData"; // Assuming this contains an array of image objects
+import { myImage } from "@/data/ImageData"; // Assuming this contains an array of image objects
 import Image from "next/image";
 import React, { useState } from "react";
 

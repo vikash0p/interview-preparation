@@ -1,12 +1,9 @@
-import { AccordionBasic } from '@/components/AccordionBasic'
 import React from 'react'
 
-const AccordionWithMotion = () => {
+const page = () => {
   return (
-    <div className='max-w-2xl m-auto mt-40'>
-        <AccordionBasic />
-    </div>
+    <div>page</div>
   )
 }
 
-export default AccordionWithMotion
+export default page

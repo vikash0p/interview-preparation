@@ -1,7 +1,7 @@
-import { dropDownMenuData } from "@/components/codingInterViewData/dropDownMenuData";
+import { dropDownMenuData } from "@/data/codingInterViewData/dropDownMenuData";
 import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
 import MultilevelDropDownComp from "@/components/reactInterviewPracticalComponet/MultilevelDropDownComp";
-import React from 'react'
+import React from "react";
 
 const MultilevelDropDown = () => {
   return (
@@ -12,6 +12,6 @@ const MultilevelDropDown = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MultilevelDropDown;

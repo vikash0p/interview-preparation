@@ -1,8 +1,7 @@
-import { MessageWithLikeData } from "@/components/codingInterViewData/MessageWithLikeData"
-import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter"
-import MessageWithLikeComponent from "@/components/reactInterviewPracticalComponet/MessageWithLikeComponent"
-import React from 'react'
-
+import { MessageWithLikeData } from "@/data/codingInterViewData/MessageWithLikeData";
+import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
+import MessageWithLikeComponent from "@/components/reactInterviewPracticalComponet/MessageWithLikeComponent";
+import React from "react";
 
 const MessageWithLike = () => {
   return (
@@ -13,6 +12,6 @@ const MessageWithLike = () => {
       </div>
     </div>
   );
-}
+};
 
-export default MessageWithLike
+export default MessageWithLike;

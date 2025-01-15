@@ -1,4 +1,4 @@
-import { SerchDataAndInputDatawithLocalstorageData } from "@/components/codingInterViewData/SerchDataAndInputDatawithLocalstorageData";
+import { SerchDataAndInputDatawithLocalstorageData } from "@/data/codingInterViewData/SerchDataAndInputDatawithLocalstorageData";
 import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
 import SearchDataAndInputDatawithLocalstorageComponents from "@/components/reactInterviewPracticalComponet/SerchDataAndInputDatawithLocalstorageComponents";
 

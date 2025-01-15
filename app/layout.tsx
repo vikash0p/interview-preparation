@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { AnimatedTabsHover } from "@/components/ui/AnimatedTabsHover";
 import Footer from "@/components/GlobalComponents/Footer";
+import Navbar from "@/components/GlobalComponents/Navbar";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -62,7 +63,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-400 bg-black`}
       >
-        <AnimatedTabsHover />
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
