@@ -1,4 +1,3 @@
-// AdvantagesOfReact.tsx
 import React from "react";
 
 const AdvantagesOfReact = () => {
