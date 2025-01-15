@@ -15,23 +15,23 @@ import AnimatedBackground from "../core/AnimatedBackground";
     },
     {
       id: "2",
-      name: "Coding Interview",
-      link: "/codingInterViewQuestion",
+      name: "Coding Round",
+      link: "/codingRound",
     },
     {
       id: "3",
-      name: "React Interview",
-      link: "/reactInterviewQuestion",
+      name: "JavaScript",
+      link: "/Javascript",
     },
     {
       id: "4",
-      name: "Contact",
-      link: "/contact",
+      name: "ReactJS",
+      link: "/React",
     },
     {
       id: "5",
-      name: "Javascript",
-      link: "/javascriptKnow",
+      name: "NextJS",
+      link: "/Next",
     },
   ];
 
