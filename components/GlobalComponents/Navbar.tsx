@@ -34,6 +34,11 @@ import Image from "next/image";
       name: "NextJS",
       link: "/Next",
     },
+    {
+      id: "6",
+      name: "Practical",
+      link: "/coding",
+    },
   ];
 
   return (
