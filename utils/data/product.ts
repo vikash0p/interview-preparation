@@ -1,11 +1,11 @@
 export interface ProductProps {
-  id: number; // Unique identifier for the product
-  name: string; // Name of the product
-  price: number; // Price of the product
-  description: string; // Description of the product
-  imageUrl: string; // URL of the product image
-  category: string; // Category of the product (e.g., Earrings, Bracelets)
-  inStock: boolean; // Availability of the product in stock
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  imageUrl: string;
+  category: string;
+  inStock: boolean;
 }
 
 export const products: ProductProps[] = [

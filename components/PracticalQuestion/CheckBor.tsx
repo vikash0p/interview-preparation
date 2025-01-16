@@ -1,15 +1,16 @@
 "use client";
-import { products } from "@/data/product";
+import { products } from "@/utils/data/product";
 import React, { useState } from "react";
 
 const CheckBor = () => {
-
-  const arr=[1,2,3,4,5,];
-  arr.length=0;
+  const arr = [1, 2, 3, 4, 5];
+  arr.length = 0;
   // console.log("🚀 ~ file: CheckBor.tsx:7 ~ arr:", arr);
 
   // Get unique categories from the product list
-  const categories = Array.from( new Set(products.map((value) => value.category)));
+  const categories = Array.from(
+    new Set(products.map((value) => value.category))
+  );
 
   // State to hold selected categories
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -17,12 +18,21 @@ const CheckBor = () => {
   // Handle checkbox toggle
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = event.target;
-// Update the selected categories based on the checkbox state
-    setSelectedCategories((prevSelected) =>  checked ? [...prevSelected, value]: prevSelected.filter((category) => category !== value));
+    // Update the selected categories based on the checkbox state
+    setSelectedCategories((prevSelected) =>
+      checked
+        ? [...prevSelected, value]
+        : prevSelected.filter((category) => category !== value)
+    );
   };
 
   // Filter products based on selected categories
-  const filteredProducts = selectedCategories.length > 0   ? products.filter((product) => selectedCategories.includes(product.category)): products;
+  const filteredProducts =
+    selectedCategories.length > 0
+      ? products.filter((product) =>
+          selectedCategories.includes(product.category)
+        )
+      : products;
   // Show all products if no categories are selected
 
   return (

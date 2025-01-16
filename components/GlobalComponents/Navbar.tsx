@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation"; // Import both hooks
 import AnimatedBackground from "../core/AnimatedBackground";
+import Image from "next/image";
 
  function Navbar() {
   const pathname = usePathname();
@@ -41,9 +42,10 @@ import AnimatedBackground from "../core/AnimatedBackground";
         <div className="flex items-center text-white text-2xl font-bold">
           <Link
             href="/"
-            className="no-underline text-white hover:text-gray-300"
+            className="no-underline text-white hover:text-gray-300 flex items-center gap-2"
           >
-            InterViewPrap
+            <Image src={'/favicon/interViewPraplogo.png'} alt="logo" className="w-14 h-14  object-contain"  width={300} height={500} />
+            <p className="text-3xl font-semibold text-gray-200 ">InterViewPrap</p>
           </Link>
         </div>
         <div className="space-x-4">

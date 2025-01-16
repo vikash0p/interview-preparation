@@ -1,4 +1,4 @@
-import { dropDownMenuData } from "@/data/codingInterViewData/dropDownMenuData";
+import { dropDownMenuData } from "@/utils/data/codingInterViewData/dropDownMenuData";
 import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
 import MultilevelDropDownComp from "@/components/reactInterviewPracticalComponet/MultilevelDropDownComp";
 import React from "react";

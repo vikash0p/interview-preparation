@@ -1,7 +1,7 @@
 "use client";
-import { products } from "@/data/product";
+import { products } from "@/utils/data/product";
 import React, { useEffect, useState } from "react";
-import { ProductProps } from "@/data/product";
+import { ProductProps } from "@/utils/data/product";
 
 const InputSelect = () => {
   const [selectCategoryValue, setSelectCategoryValue] = useState("");

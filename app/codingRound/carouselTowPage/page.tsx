@@ -1,5 +1,5 @@
 "use client";
-import { products } from "@/data/product";
+import { products } from "@/utils/data/product";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -27,7 +27,9 @@ const CarouselTowPage = () => {
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(index - Math.floor(itemsInView / 2)) * itemWidth}px)`,
+            transform: `translateX(-${
+              (index - Math.floor(itemsInView / 2)) * itemWidth
+            }px)`,
           }}
         >
           {products.map((pro, indx) => {
