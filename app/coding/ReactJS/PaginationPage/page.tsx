@@ -1,12 +1,12 @@
-import Pagination from '@/components/PracticalQuestion/Pagination'
-import React from 'react'
+import Pagination from "@/components/PracticalReactComponents/Pagination";
+import React from "react";
 
 const PaginationPage = () => {
   return (
     <div>
       <Pagination />
     </div>
-  )
-}
+  );
+};
 
-export default PaginationPage
+export default PaginationPage;

@@ -1,12 +1,12 @@
-import SetTimeInterval from '@/components/PracticalQuestion/SetTimeInterval'
-import React from 'react'
+import SetTimeInterval from "@/components/PracticalReactComponents/SetTimeInterval";
+import React from "react";
 
 const SetTimeIntervalPage = () => {
   return (
     <div>
       <SetTimeInterval />
     </div>
-  )
-}
+  );
+};
 
-export default SetTimeIntervalPage
+export default SetTimeIntervalPage;

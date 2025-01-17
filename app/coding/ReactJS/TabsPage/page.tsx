@@ -1,4 +1,4 @@
-import Tabs from "@/components/PracticalQuestion/Tabs";
+import Tabs from "@/components/PracticalReactComponents/Tabs";
 import React from "react";
 
 const TabsPage = () => {

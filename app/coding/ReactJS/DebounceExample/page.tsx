@@ -1,7 +1,9 @@
-import DebounceExample from '@/components/PracticalQuestion/DebounceExample'
-import { ScrollToTop, Throttling } from '@/components/PracticalQuestion/Throttling'
-import React from 'react'
-
+import DebounceExample from "@/components/PracticalReactComponents/DebounceExample";
+import {
+  ScrollToTop,
+  Throttling,
+} from "@/components/PracticalReactComponents/Throttling";
+import React from "react";
 
 const DeBouncePage = () => {
   return (
@@ -9,9 +11,8 @@ const DeBouncePage = () => {
       <DebounceExample />
       <Throttling />
       <ScrollToTop />
-
     </div>
-  )
-}
+  );
+};
 
-export default DeBouncePage
+export default DeBouncePage;
