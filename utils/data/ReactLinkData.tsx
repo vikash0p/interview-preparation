@@ -4,8 +4,7 @@ import { ReactInterViewQuestionLink } from "@/components/ReactInterview/ReactInt
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const LinkContainer = () => {
-  // Get the current active layout segment (active URL segment)
+const ReactLinkData = () => {
   const pathname = usePathname();
 
   return (
@@ -29,4 +28,4 @@ const LinkContainer = () => {
   );
 };
 
-export default LinkContainer;
+export default ReactLinkData;

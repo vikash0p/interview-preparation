@@ -1,4 +1,4 @@
-import LinkContainer from "@/components/ReactInterview/LinkContainer";
+import ReactLinkData from "@/utils/data/ReactLinkData";
 import React from "react";
 
 const ReactInterviewQuestionLayout = ({
@@ -10,7 +10,7 @@ const ReactInterviewQuestionLayout = ({
     <div className="w-full min-h-screen lg:flex lg:pl-1/4">
       {/* Sidebar */}
       <div className="lg:w-1/4 h-screen fixed top-20 left-0 bg-zinc-900 py-5  overflow-y-scroll">
-        <LinkContainer />
+        <ReactLinkData />
       </div>
 
       {/* Main Content */}
