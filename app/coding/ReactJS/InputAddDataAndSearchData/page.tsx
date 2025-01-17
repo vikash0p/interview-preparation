@@ -1,5 +1,5 @@
 import { InputAddDataAndSearchHighlighterData } from "@/utils/data/codingInterViewData/InputAddDataAndSearchHighlighterData";
-import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
+import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import InputAddDataAndSearchDataComponent from "@/components/reactInterviewPracticalComponet/InputAddDataAndSearchDataComponent";
 
 import React from "react";

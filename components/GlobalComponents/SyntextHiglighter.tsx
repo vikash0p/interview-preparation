@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-// Dynamically import the SyntaxHighlighter to prevent SSR issues
 const SyntaxHighlighter = dynamic(() =>
   import("react-syntax-highlighter").then((mod) => mod.Prism)
 );

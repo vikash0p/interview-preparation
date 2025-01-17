@@ -1,5 +1,5 @@
 import React from "react";
-import ReactSynHighlighter from "@/components/ReactInterview/ReactSyntextHiglighter";
+import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import MultiLevelFormComponent from "@/components/reactInterviewPracticalComponet/MultilevelFormComponent";
 import { MultiLevelFromData } from "@/utils/data/codingInterViewData/MultilevelFormData";
 
