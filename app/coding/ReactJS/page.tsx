@@ -1,11 +1,11 @@
-import { LinkData } from "@/utils/data/LinkData";
+import { CodingLinkData } from "@/utils/data/CodingLinkData";
 import Link from "next/link";
 import React from "react";
 
 const CodingInterviewQuestion = () => {
   return (
     <div className="max-w-7xl mx-auto min-h-screen py-20 px-5 flex flex-wrap gap-6 justify-center">
-      {LinkData.map((value) => (
+      {CodingLinkData.map((value) => (
         <Link
           className="flex flex-col items-center justify-center border border-gray-800 shadow-md rounded-lg p-6 w-64 text-center transition-transform transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-300"
           href={value.url}

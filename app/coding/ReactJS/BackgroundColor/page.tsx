@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-// Define the type for a color object
 interface Color {
   id: string;
   text: string;
@@ -29,7 +28,6 @@ const colors: Color[] = [
 const BackgroundColorTwo: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
 
-  // Handle color change on radio selection
   const ColorChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIndex(Number(event.target.value));
   };
@@ -61,7 +59,7 @@ const BackgroundColorTwo: React.FC = () => {
               type="checkbox"
               id={`color-${color.id}`}
               name="color"
-              value={idx} // Assign index as value
+              value={idx}
               checked={index === idx}
               onChange={ColorChangeHandler}
               className="form-radio h-5 w-5"

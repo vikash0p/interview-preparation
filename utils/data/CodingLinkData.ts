@@ -1,23 +1,22 @@
 export interface Link {
-    id: number;
-    name: string;
-    url: string;
+  id: number;
+  name: string;
+  url: string;
 }
-export const LinkData: Link[] = [
-  {
-    id: 1,
-    name: "Background Color Picker",
-    url: "/coding/ReactJS/backgroundcolorpage",
-  },
+export const CodingLinkData: Link[] = [
   {
     id: 2,
     name: "Dynamic Background Colors",
-    url: "/coding/ReactJS/BackgroundColorPageOne",
+    url: "/coding/ReactJS/BackgroundColor",
   },
   { id: 3, name: "Image Carousel", url: "/coding/ReactJS/carouselPage" },
   { id: 4, name: "Custom Checkbox", url: "/coding/ReactJS/checkboxpage" },
   { id: 5, name: "Dice Roller Game", url: "/coding/ReactJS/DiceRollerPage" },
-  { id: 6, name: "Infinite Scrolling", url: "/coding/ReactJS/InfiniteScrollPage" },
+  {
+    id: 6,
+    name: "Infinite Scrolling",
+    url: "/coding/ReactJS/InfiniteScrollPage",
+  },
   {
     id: 7,
     name: "Like Button Interaction",
@@ -39,7 +38,11 @@ export const LinkData: Link[] = [
     name: "Moving Circle Animation 2",
     url: "/coding/ReactJS/MovingCircleSecondPage",
   },
-  { id: 12, name: "Pagination Component", url: "/coding/ReactJS/PaginationPage" },
+  {
+    id: 12,
+    name: "Pagination Component",
+    url: "/coding/ReactJS/PaginationPage",
+  },
   {
     id: 13,
     name: "Set Interval Example",
@@ -47,8 +50,16 @@ export const LinkData: Link[] = [
   },
   { id: 14, name: "Star Rating System", url: "/coding/ReactJS/StarRatingPage" },
   { id: 15, name: "Tabs Navigation", url: "/coding/ReactJS/TabsPage" },
-  { id: 16, name: "Time Display Example 1", url: "/coding/ReactJS/TimeOnePage" },
-  { id: 17, name: "Todo List Application", url: "/coding/ReactJS/TodoListPage" },
+  {
+    id: 16,
+    name: "Time Display Example 1",
+    url: "/coding/ReactJS/TimeOnePage",
+  },
+  {
+    id: 17,
+    name: "Todo List Application",
+    url: "/coding/ReactJS/TodoListPage",
+  },
   {
     id: 18,
     name: "Debouncing and Throttling",
@@ -62,11 +73,7 @@ export const LinkData: Link[] = [
     name: "Image Placeholders with Next.js",
     url: "/coding/ReactJS/PlaiceholderWithNext",
   },
-  {
-    id: 23,
-    name: "Accordion with Motion Effects",
-    url: "/coding/ReactJS/AccoridonWithMotion",
-  },
+
   {
     id: 24,
     name: "Multi-Level Dropdown",
@@ -88,15 +95,27 @@ export const LinkData: Link[] = [
     url: "/coding/ReactJS/multilevelSelectDropdown",
   },
   { id: 28, name: "Multi-Level Form", url: "/coding/ReactJS/MultilevelForm" },
-  { id: 29, name: "Ticket Booking Example 1", url: "/coding/ReactJS/ticketOne" },
-  { id: 30, name: "Ticket Booking Example 2", url: "/coding/ReactJS/tickettwo" },
+  {
+    id: 29,
+    name: "Ticket Booking Example 1",
+    url: "/coding/ReactJS/ticketOne",
+  },
+  {
+    id: 30,
+    name: "Ticket Booking Example 2",
+    url: "/coding/ReactJS/tickettwo",
+  },
   {
     id: 31,
     name: "Message with Like Button",
     url: "/coding/ReactJS/messagewithlike",
   },
   { id: 32, name: "Excel Sheet Viewer", url: "/coding/ReactJS/execlSheet" },
-  { id: 33, name: "Pagination Example 2", url: "/coding/ReactJS/paginationtwo" },
+  {
+    id: 33,
+    name: "Pagination Example 2",
+    url: "/coding/ReactJS/paginationtwo",
+  },
   {
     id: 34,
     name: "Image Carousel Example 2",
@@ -108,5 +127,9 @@ export const LinkData: Link[] = [
     name: "Countdown Timer Example 2",
     url: "/coding/ReactJS/CountDownOne",
   },
-  { id: 37, name: "Password Generator", url: "/coding/ReactJS/PasswrodGenerater" },
+  {
+    id: 37,
+    name: "Password Generator",
+    url: "/coding/ReactJS/PasswrodGenerater",
+  },
 ];
