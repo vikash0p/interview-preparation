@@ -4,7 +4,7 @@ import { usePathname, useSelectedLayoutSegment } from "next/navigation"; // Impo
 import AnimatedBackground from "../core/AnimatedBackground";
 import Image from "next/image";
 
- function Navbar() {
+function Navbar() {
   const pathname = usePathname();
   const selectedSegment = useSelectedLayoutSegment();
 
@@ -13,11 +13,6 @@ import Image from "next/image";
       id: "1",
       name: "Home",
       link: "/",
-    },
-    {
-      id: "2",
-      name: "Coding Round",
-      link: "/codingRound",
     },
     {
       id: "3",
@@ -36,7 +31,7 @@ import Image from "next/image";
     },
     {
       id: "6",
-      name: "Practical",
+      name: "Coding Round",
       link: "/coding",
     },
   ];
@@ -49,8 +44,16 @@ import Image from "next/image";
             href="/"
             className="no-underline text-white hover:text-gray-300 flex items-center gap-2"
           >
-            <Image src={'/favicon/interViewPraplogo.png'} alt="logo" className="w-14 h-14  object-contain"  width={300} height={500} />
-            <p className="text-3xl font-semibold text-gray-200 ">InterViewPrap</p>
+            <Image
+              src={"/favicon/interViewPraplogo.png"}
+              alt="logo"
+              className="w-14 h-14  object-contain"
+              width={300}
+              height={500}
+            />
+            <p className="text-3xl font-semibold text-gray-200 ">
+              InterViewPrap
+            </p>
           </Link>
         </div>
         <div className="space-x-4">
@@ -90,4 +93,4 @@ import Image from "next/image";
   );
 }
 
-export default Navbar
+export default Navbar;
