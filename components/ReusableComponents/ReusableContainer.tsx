@@ -3,7 +3,7 @@ import React from "react";
 import Code from "./Code";
 
 
-const ReusableContainer = ({ data, component,}: {data: string;component: React.ReactNode}) => {
+const ReusableContainer = ({ data,component}: {data: string;component: React.ReactNode}) => {
   return (
     <div className="w-full flex flex-row gap-2 px-2">
       <div className="border border-gray-700 w-[60%] h-screen rounded-sm flex flex-col items-center pt-20">
