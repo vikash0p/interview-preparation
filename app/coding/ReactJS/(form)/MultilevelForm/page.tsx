@@ -1,7 +1,7 @@
 import React from "react";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import MultiLevelFormComponent from "@/components/reactInterviewPracticalComponet/MultilevelFormComponent";
-import { MultiLevelFromData } from "@/utils/data/codingInterViewData/MultilevelFormData";
+import { MultiLevelFromData } from "@/utils/data/codingReactData/MultilevelFormData";
 
 const MultiLevelForm = () => {
   return (

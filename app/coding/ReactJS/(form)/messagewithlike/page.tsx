@@ -1,4 +1,4 @@
-import { MessageWithLikeData } from "@/utils/data/codingInterViewData/MessageWithLikeData";
+import { MessageWithLikeData } from "@/utils/data/codingReactData/MessageWithLikeData";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import MessageWithLikeComponent from "@/components/reactInterviewPracticalComponet/MessageWithLikeComponent";
 import React from "react";

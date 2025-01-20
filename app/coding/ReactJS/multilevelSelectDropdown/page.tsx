@@ -1,4 +1,4 @@
-import { MultilevelSelectDropdownData } from "@/utils/data/codingInterViewData/MultilevelSelectDropdownData";
+import { MultilevelSelectDropdownData } from "@/utils/data/codingReactData/MultilevelSelectDropdownData";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import MultilevelSelectDropdownComponent from "@/components/reactInterviewPracticalComponet/MultilevelSelectDropdownComponents";
 import React from "react";

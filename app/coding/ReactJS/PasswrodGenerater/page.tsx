@@ -1,4 +1,4 @@
-import { PasswordGeneratorData } from "@/utils/data/codingInterViewData/PasswrodGeneratorData";
+import { PasswordGeneratorData } from "@/utils/data/codingReactData/PasswrodGeneratorData";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import PasswordGeneratorComponent from "@/components/reactInterviewPracticalComponet/PasswordGeneratorComponent";
 import React from "react";

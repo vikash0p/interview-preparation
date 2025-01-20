@@ -1,4 +1,4 @@
-import { InputAddDataAndSearchHighlighterData } from "@/utils/data/codingInterViewData/InputAddDataAndSearchHighlighterData";
+import { InputAddDataAndSearchHighlighterData } from "@/utils/data/codingReactData/InputAddDataAndSearchHighlighterData";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import InputAddDataAndSearchDataComponent from "@/components/reactInterviewPracticalComponet/InputAddDataAndSearchDataComponent";
 

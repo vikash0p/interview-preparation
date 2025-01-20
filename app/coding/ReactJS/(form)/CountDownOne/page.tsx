@@ -1,4 +1,4 @@
-import { CountDownOneData } from "@/utils/data/codingInterViewData/CountDownOneData";
+import { CountDownOneData } from "@/utils/data/codingReactData/CountDownOneData";
 import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import CountDownComponent from "@/components/reactInterviewPracticalComponet/CountDownComponent";
 import React from "react";

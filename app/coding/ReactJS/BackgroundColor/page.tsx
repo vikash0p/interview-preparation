@@ -1,7 +1,7 @@
-import BackgroundOneComponent from "@/components/PracticalReactComponents/BackgroundOneComponent"
-import Code from "@/components/ReusableComponents/Code"
-import { CountDownOneData } from "@/utils/data/codingInterViewData/CountDownOneData"
-import React from 'react'
+import BackgroundOneComponent from "@/components/PracticalReactComponents/BackgroundOneComponent";
+import Code from "@/components/ReusableComponents/Code";
+import { CountDownOneData } from "@/utils/data/codingReactData/CountDownOneData";
+import React from "react";
 const BackgroundColor = () => {
   return (
     <div className="w-full flex flex-row gap-2 px-2 ">
@@ -12,7 +12,7 @@ const BackgroundColor = () => {
         <Code data={CountDownOneData} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BackgroundColor
+export default BackgroundColor;
