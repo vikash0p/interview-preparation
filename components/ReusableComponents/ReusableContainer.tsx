@@ -1,7 +1,5 @@
-// ReusableContainer Component
 import React from "react";
 import Code from "./Code";
-
 
 const ReusableContainer = ({ data,component}: {data: string;component: React.ReactNode}) => {
   return (
