@@ -35,6 +35,11 @@ export const ReactInterViewQuestionLink = [
     title: "props in react",
     link: "/React/props-in-react",
   },
+  {
+    id: "8",
+    title: "Pass data child to parent",
+    link: "/React/pass-data-child-to-parent",
+  },
 ];
 const ReactLinkData = () => {
   const pathname = usePathname();
