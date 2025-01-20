@@ -1,6 +1,7 @@
 import BackgroundOneComponent from "@/components/PracticalReactComponents/BackgroundOneComponent";
 import Code from "@/components/ReusableComponents/Code";
-import { CountDownOneData } from "@/utils/data/codingReactData/CountDownOneData";
+import { backgroundColorData } from "@/utils/data/codingReactData/BackgroundOneData";
+
 import React from "react";
 const BackgroundColor = () => {
   return (
@@ -9,7 +10,7 @@ const BackgroundColor = () => {
         <BackgroundOneComponent />
       </div>
       <div className="w-[40%]  ">
-        <Code data={CountDownOneData} />
+        <Code data={backgroundColorData} />
       </div>
     </div>
   );
