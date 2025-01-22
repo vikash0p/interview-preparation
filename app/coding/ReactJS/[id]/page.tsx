@@ -10,12 +10,14 @@ const ReactById = ({params}:{params:{id:string}}) => {
   console.log("🚀 ~ file: page.tsx:11 ~ singleData:", singleData?.data);
 
   return (
-
-    <ReusableContainer
-    data={singleData?.data || ""}
-    component={singleData?.component}
-     />
-  )
+    <section className=" h-screen ">
+      <ReusableContainer
+        data={singleData?.data || ""}
+        component={singleData?.component}
+        heading={singleData?.name || ''}
+      />
+    </section>
+  );
 }
 
 export default ReactById

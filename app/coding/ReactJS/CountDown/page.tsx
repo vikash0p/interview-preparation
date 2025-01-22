@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useState } from "react";
 
@@ -8,12 +7,10 @@ const CountDown: React.FC = () => {
   useEffect(() => {
     if (count === 50) return;
 
-    // Start the countdown without using sessionStorage
     const timer = setTimeout(() => {
       setCount((prevCount) => prevCount + 1);
     }, 100);
 
-    // Cleanup the timeout on component unmount or when the count changes
     return () => clearTimeout(timer);
   }, [count]);
 

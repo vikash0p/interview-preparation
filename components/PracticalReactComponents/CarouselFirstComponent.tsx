@@ -33,7 +33,7 @@ const CarouselFirstComponent = () => {
           className={`px-5 py-2 rounded-md font-medium transition-all duration-200 text-white ${
             index === 0
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-green-600 hover:bg-green-700"
+              : "bg-indigo-600 hover:bg-indigo-700"
           }`}
           onClick={handlePrev}
           disabled={index === 0}
@@ -45,7 +45,7 @@ const CarouselFirstComponent = () => {
           className={`px-5 py-2 rounded-md font-medium transition-all duration-200 text-white ${
             index === totalImages - 1
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-green-600 hover:bg-green-700"
+              : "bg-indigo-600 hover:bg-indigo-700"
           }`}
           onClick={handleNext}
           disabled={index === totalImages - 1}

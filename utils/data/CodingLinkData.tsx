@@ -1,6 +1,10 @@
 import React from "react";
 import BackgroundOneComponent, { backgroundOneData } from "@/components/PracticalReactComponents/BackgroundOneComponent";
 import CarouselFirstComponent, { carouselFirstData } from "@/components/PracticalReactComponents/CarouselFirstComponent";
+import ImageSliderComponent, { imageSliderDataSource } from "@/components/PracticalReactComponents/ImageSlider";
+import FilterWithCheckBox, { filterWithCheckDataSource } from "@/components/PracticalReactComponents/FilterWithCheckBox";
+
+
 
 export interface Link {
   id: string;
@@ -33,7 +37,14 @@ export const CodingLinkData: Link[] = [
     id: "3",
     name: "Image slider",
     url: "image-Slider",
-    component: React.createElement(CarouselFirstComponent),
-    data: carouselFirstData,
+    component: React.createElement(ImageSliderComponent),
+    data: imageSliderDataSource,
+  },
+  {
+    id: "4",
+    name: "Filter With checkbox",
+    url: "filter-with-checkbox",
+    component: React.createElement(FilterWithCheckBox),
+    data: filterWithCheckDataSource,
   },
 ];
