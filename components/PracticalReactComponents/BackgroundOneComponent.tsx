@@ -126,7 +126,7 @@ const BackgroundOneComponent: React.FC = () => {
         {colors.map((color, idx) => (
           <label
             key={color.id}
-            htmlFor={'backgroundColor'} 
+            htmlFor={'backgroundColor'}
             className="flex items-center space-x-2"
           >
             <input
