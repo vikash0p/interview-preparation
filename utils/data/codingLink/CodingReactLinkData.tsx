@@ -1,5 +1,3 @@
-import BackgroundOneComponent from "@/components/PracticalReactComponents/BackgroundOneComponent";
-import { backgroundColorData } from "../codingReactData/BackgroundOneData";
 
 export interface Link {
   id: number;
@@ -10,13 +8,13 @@ export interface Link {
 }
 
 export const CodingReactLinkData: Link[] = [
-  {
-    id: 2,
-    name: "Dynamic Background Colors",
-    url: "/coding/ReactJS/BackgroundColor",
-    component: BackgroundOneComponent,
-    data: backgroundColorData,
-  },
+  // {
+  //   id: 2,
+  //   name: "Dynamic Background Colors",
+  //   url: "/coding/ReactJS/BackgroundColor",
+  //   component: BackgroundOneComponent,
+  //   data: backgroundColorData,
+  // },
 //   { id: 3, name: "Image Carousel", url: "/coding/ReactJS/carouselPage" },
 
 

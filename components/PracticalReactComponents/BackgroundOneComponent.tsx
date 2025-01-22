@@ -72,7 +72,7 @@ const BackgroundOneComponent: React.FC = () => {
 
 export default BackgroundOneComponent
 
-
+// ! background one data source
 export const backgroundOneData=`
 "use client";
 import React, { useState } from "react";

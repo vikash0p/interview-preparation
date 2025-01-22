@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Code = ({ data }: { data: string }) => {
   const [copied, setCopied] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleCopy = () => {
     navigator.clipboard

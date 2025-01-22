@@ -1,9 +1,9 @@
 import React from "react";
 import BackgroundOneComponent, { backgroundOneData } from "@/components/PracticalReactComponents/BackgroundOneComponent";
-
+import CarouselFirstComponent, { carouselFirstData } from "@/components/PracticalReactComponents/CarouselFirstComponent";
 
 export interface Link {
-  id: number;
+  id: string;
   name: string;
   url: string;
   component: React.ReactNode;
@@ -12,13 +12,28 @@ export interface Link {
 
 
 
-// Prepare the CodingLinkData array
+//! Prepare the CodingLinkData array
+
 export const CodingLinkData: Link[] = [
   {
-    id: 2,
+    id: "1",
     name: "Dynamic Background Colors",
-    url: "/coding/ReactJS/BackgroundColor",
+    url: "theme-switcher",
     component: <BackgroundOneComponent />,
     data: backgroundOneData,
+  },
+  {
+    id: "2",
+    name: "Image Carousel",
+    url: "image-carousel",
+    component: React.createElement(CarouselFirstComponent),
+    data: carouselFirstData,
+  },
+  {
+    id: "3",
+    name: "Image slider",
+    url: "image-Slider",
+    component: React.createElement(CarouselFirstComponent),
+    data: carouselFirstData,
   },
 ];
