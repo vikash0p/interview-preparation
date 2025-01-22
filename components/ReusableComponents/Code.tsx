@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 
 const Code = ({ data }: { data: string }) => {
@@ -23,7 +23,7 @@ const Code = ({ data }: { data: string }) => {
     <div className="w-full mx-auto h-screen overflow-scroll">
       <div className="relative">
         <div className="relative bg-neutral-800 p-2 rounded-sm border border-neutral-700 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4 sticky top-0 py-3 bg-neutral-800">
             {/* Traffic lights */}
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -49,11 +49,13 @@ const Code = ({ data }: { data: string }) => {
           </div>
 
           {/* Code snippet */}
-          {isVisible && (
-            <pre className="bg-neutral-900 text-neutral-400 p-4 rounded-lg overflow-auto text-sm">
-              <code>{data}</code>
-            </pre>
-          )}
+          <pre
+            className={`bg-neutral-900 text-neutral-400 p-4 rounded-lg overflow-auto text-sm transition-opacity duration-300 ${
+              isVisible ? " text-opacity-100" : "text-opacity-10"
+            }`}
+          >
+            <code>{data}</code>
+          </pre>
         </div>
       </div>
     </div>

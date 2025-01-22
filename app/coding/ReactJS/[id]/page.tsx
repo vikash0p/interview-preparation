@@ -7,6 +7,7 @@ const ReactById = ({params}:{params:{id:string}}) => {
 
 
   const singleData=CodingLinkData.find((value)=> String(value.id) === params.id)
+  console.log("🚀 ~ file: page.tsx:11 ~ singleData:", singleData?.data);
 
   return (
 
