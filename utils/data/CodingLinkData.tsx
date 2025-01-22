@@ -3,6 +3,7 @@ import BackgroundOneComponent, { backgroundOneData } from "@/components/Practica
 import CarouselFirstComponent, { carouselFirstData } from "@/components/PracticalReactComponents/CarouselFirstComponent";
 import ImageSliderComponent, { imageSliderDataSource } from "@/components/PracticalReactComponents/ImageSlider";
 import FilterWithCheckBox, { filterWithCheckDataSource } from "@/components/PracticalReactComponents/FilterWithCheckBox";
+import CountDownTimers, { countDownTimersDataSource } from "@/components/PracticalReactComponents/CountDownTimer";
 
 
 
@@ -46,5 +47,12 @@ export const CodingLinkData: Link[] = [
     url: "filter-with-checkbox",
     component: React.createElement(FilterWithCheckBox),
     data: filterWithCheckDataSource,
+  },
+  {
+    id: "5 ",
+    name: "CountDown Timer",
+    url: "countdown-timer",
+    component: React.createElement(CountDownTimers),
+    data: countDownTimersDataSource,
   },
 ];
