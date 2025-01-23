@@ -1,77 +1,77 @@
 import React from "react";
 import BackgroundOneComponent, {
   backgroundOneData,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/BackgroundOneComponent";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/BackgroundOneComponent";
 import CarouselFirstComponent, {
   carouselFirstData,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/CarouselFirstComponent";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/CarouselFirstComponent";
 import ImageSliderComponent, {
   imageSliderDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ImageSlider";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/ImageSlider";
 import FilterWithCheckBox, {
   filterWithCheckDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/FilterWithCheckBox";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/FilterWithCheckBox";
 import CountDownTimers, {
   countDownTimersDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/CountDownTimer";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/CountDownTimer";
 import DiceRoller, {
   diceRollerDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/DiceRoller";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/DiceRoller";
 import LikeButton, {
   likeButtonDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/LikeButton";
-import InputAndSearch from "@/components/React/ReactPracticalComponents/AdvancedComponents/InputAndSearch";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/LikeButton";
+import InputAndSearch from "@/components/ReactComponents/ReactPracticalComponents/AdvancedComponents/InputAndSearch";
 import InfiniteScroll, {
   infiniteScrollDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/InfiniteScroll";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/InfiniteScroll";
 import MovingCircleFirst, {
   moveCircleFirstDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/MovingCircleFirst";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/MovingCircleFirst";
 import PasswordGenerator, {
   generatePasswordDataSource,
-} from "@/components/React/ReactPracticalComponents/AdvancedComponents/PasswordGenerator";
+} from "@/components/ReactComponents/ReactPracticalComponents/AdvancedComponents/PasswordGenerator";
 import MultilevelDropDown, {
   dropDownMenuDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultilevelDropdown";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MultilevelDropdown";
 import StarRating, {
   starRatingDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/StarRating";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/StarRating";
 import TodoList, {
   todoListDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/TodoList";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/TodoList";
 import Tabs, {
   tabsDataSource,
-} from "@/components/React/ReactPracticalComponents/BeginnerComponents/Tabs";
+} from "@/components/ReactComponents/ReactPracticalComponents/BeginnerComponents/Tabs";
 import Timer, {
   timerDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/Timer";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/Timer";
 import SearchAndInputWithLocalStorage, {
   searchAndInputWithLocalStorageDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
 import Pagination, {
   paginationDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/Pagination";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/Pagination";
 import CountDownComponent, {
   countDownInterMediateDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/CountDownComponent";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/CountDownComponent";
 import ExcelSheet, {
   excelSheetDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ExcelSheetFirst";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/ExcelSheetFirst";
 import MessageWithLikeButton, {
   messageWithLikeDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MessageWithLikeButton";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MessageWithLikeButton";
 import MultiLevel, {
   multiLevelDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultilevelForm";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MultilevelForm";
 import ShuffleGifts, {
   shuffleGiftsDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ShuffleGifts";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/ShuffleGifts";
 import TicketBooking, {
   ticketBookingDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/TicketBooking";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/TicketBooking";
 import MultipleInputAndDropDown, {
   multipleInputDataSource,
-} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultipleInputAndDropDown";
+} from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MultipleInputAndDropDown";
 
 export interface Link {
   id: string;

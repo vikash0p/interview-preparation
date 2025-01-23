@@ -1,5 +1,5 @@
 "use client";
-import { Child } from "@/components/React/ReactMockComponents/ReactChildToParent";
+import { Child } from "@/components/ReactComponents/ReactMockComponents/ReactChildToParent";
 import React, { useState } from "react";
 
 const Parent = () => {
