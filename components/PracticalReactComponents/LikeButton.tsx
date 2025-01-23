@@ -1,14 +1,45 @@
-"use client";
+'use client'
 import React, { useState } from "react";
 
 const LikeButton = () => {
-  const [like, setLike] = useState(false); // Track whether liked or not
-  const [count, setCount] = useState(0); // Track the count of likes
+  const [like, setLike] = useState(false);
+  const [count, setCount] = useState(0);
 
-  // Handler for like button
+  const likeHandler = () => {
+    setLike(!like);
+    setCount((prevCount) => prevCount + (like ? -1 : 1));
+  };
+
+  // Store JSX in a variable
+  const buttonJSX = (
+    <button
+      type="button"
+      className={`text-2xl p-2 ${like ? "text-green-500" : "text-red-500"}`}
+      onClick={likeHandler}
+    >
+      {like ? <span>👍 Like: {count}</span> : <span>👎 Unlike {count}</span>}
+    </button>
+  );
+
+  return (
+    <div className="flex flex-col items-center gap-4">
+      {buttonJSX} {/* Render the JSX variable here */}
+    </div>
+  );
+};
+
+export default LikeButton;
+
+// !Like Button with data source
+
+export const likeButtonDataSource = `
+"use client";
+import React, { useState } from "react";
+const LikeButton = () => {
+  const [like, setLike] = useState(false);
+  const [count, setCount] = useState(0);
   const likeHandler = () => {
     if (!like) {
-      // Only increase count if not already liked
       setLike(true);
       setCount((prevCount) => prevCount + 1);
     }else{
@@ -17,20 +48,18 @@ const LikeButton = () => {
 
     }
   };
-
-
-
   return (
     <div className="flex flex-col items-center gap-4">
       <button
         type="button"
-        className={`text-2xl p-2 ${like ? "text-green-500" : "text-red-500"}`}
+        // using the string literal
+        className={"text-2xl p-2 " + (like ? "text-green-500" : "text-red-500")}
         onClick={likeHandler}
       >
-        {like ? ` 👍 Like: ${count}` : `👎 Dislike: ${count}`}
+        {like ?  <span>👍 Like: {count}</span> : <span>👎Unlike {count} </span> }
       </button>
     </div>
   );
 };
 
-export default LikeButton;
+export default LikeButton;`;

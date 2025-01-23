@@ -5,6 +5,7 @@ import ImageSliderComponent, { imageSliderDataSource } from "@/components/Practi
 import FilterWithCheckBox, { filterWithCheckDataSource } from "@/components/PracticalReactComponents/FilterWithCheckBox";
 import CountDownTimers, { countDownTimersDataSource } from "@/components/PracticalReactComponents/CountDownTimer";
 import DiceRoller, { diceRollerDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/DiceRoller";
+import LikeButton, { likeButtonDataSource } from "@/components/PracticalReactComponents/LikeButton";
 
 
 export interface Link {
@@ -38,7 +39,7 @@ export const CodingLinkData: Link[] = [
     description:
       "Learn how to create a dynamic background color switcher using React state management techniques.",
     tags: ["React", "UI", "State Management"],
-    estimatedTime: 30 ,
+    estimatedTime: 30,
     prerequisites: ["Basics of React", "Understanding State"],
     objectives: [
       "Learn to manage state dynamically",
@@ -143,80 +144,28 @@ export const CodingLinkData: Link[] = [
   },
   {
     id: "7",
-    name: "Todo List App",
-    url: "todo-list",
-    component: React.createElement(() => (
-      <div>Todo List Component Placeholder</div>
-    )),
-    data: "{ tasks: [] }",
+    name: "Like Button",
+    url: "like-button",
+    component: React.createElement(LikeButton),
+    data: likeButtonDataSource,
     level: "Beginner",
     description:
-      "Develop a basic todo list application to add, edit, and delete tasks dynamically.",
-    tags: ["React", "CRUD", "Beginner"],
-    estimatedTime: 35,
-    prerequisites: ["React Basics", "State Management"],
-    objectives: ["Implement CRUD operations", "Handle user input dynamically"],
-    tips: "Use React hooks like useState to manage task state effectively.",
-    challenges: "Add a feature to mark tasks as completed.",
-  },
-  {
-    id: "8",
-    name: "Weather App",
-    url: "weather-app",
-    component: React.createElement(() => (
-      <div>Weather App Component Placeholder</div>
-    )),
-    data: "{ location: null, weather: null }",
-    level: "Intermediate",
-    description:
-      "Build a weather app that fetches real-time data from an external API and displays it based on user input.",
-    tags: ["React", "API", "Weather"],
-    estimatedTime: 1.5,
-    prerequisites: ["React Basics", "API Fetching"],
-    objectives: [
-      "Fetch and display external data",
-      "Handle asynchronous operations in React",
+      "A simple interactive Like button that toggles between 'Like' and 'Unlike' states. It includes a counter to track the number of likes.",
+    tags: ["React", "useState", "Interactive UI", "Beginner"],
+    estimatedTime: 15,
+    prerequisites: [
+      "Basic understanding of React and functional components",
+      "Knowledge of React's useState hook",
+      "Familiarity with basic Tailwind CSS",
     ],
-    tips: "Test the app with different APIs to learn handling various data structures.",
-    challenges: "Add a feature to show weather forecasts for multiple days.",
-  },
-  {
-    id: "9",
-    name: "Calculator",
-    url: "calculator",
-    component: React.createElement(() => (
-      <div>Calculator Component Placeholder</div>
-    )),
-    data: "{}",
-    level: "Beginner",
-    description:
-      "Implement a simple calculator with basic arithmetic operations and a user-friendly interface.",
-    tags: ["React", "Math", "Beginner"],
-    estimatedTime: 30,
-    prerequisites: ["React Basics"],
     objectives: [
-      "Implement basic arithmetic operations",
-      "Create a clean and intuitive UI",
+      "Learn how to toggle state in React components",
+      "Understand how to update and display a counter using state",
+      "Practice conditional rendering in JSX",
+      "Style components using Tailwind CSS",
     ],
-    tips: "Use CSS to style the buttons and layout for a better user experience.",
-    challenges: "Extend the calculator to handle scientific operations.",
-  },
-  {
-    id: "10",
-    name: "Expense Tracker",
-    url: "expense-tracker",
-    component: React.createElement(() => (
-      <div>Expense Tracker Component Placeholder</div>
-    )),
-    data: "{ transactions: [] }",
-    level: "Intermediate",
-    description:
-      "Create an expense tracker app to manage and visualize your income and expenses dynamically.",
-    tags: ["React", "Finance", "CRUD"],
-    estimatedTime: 1,
-    prerequisites: ["React Basics", "State Management"],
-    objectives: ["Manage financial data", "Visualize income and expenses"],
-    tips: "Integrate a chart library to visualize expenses more effectively.",
-    challenges: "Add a feature to categorize expenses.",
+    tips: "Ensure the button's state updates correctly by testing the toggle functionality. Use Tailwind CSS classes to visually differentiate the like and unlike states.",
+    challenges:
+      "Handling the state toggle correctly and ensuring the counter reflects the accurate number of likes.",
   },
 ];
