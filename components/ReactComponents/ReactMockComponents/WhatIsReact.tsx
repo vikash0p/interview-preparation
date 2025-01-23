@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WhatIsReact = () => {
+export const WhatIsReact = () => {
   return (
     <div>
       <h1 className='text-2xl font-bold '>What is React?</h1>
@@ -9,4 +9,3 @@ const WhatIsReact = () => {
   );
 }
 
-export default WhatIsReact

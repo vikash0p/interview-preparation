@@ -1,6 +1,7 @@
+
 import React from "react";
 
-const AdvantagesOfReact = () => {
+export const AdvantagesOfReact = () => {
   const advantages = [
     "Reusable Components: Reduce code duplication and improve maintainability.",
     "Virtual DOM: Faster UI updates by minimizing actual DOM manipulations.",
@@ -30,5 +31,3 @@ const AdvantagesOfReact = () => {
     </div>
   );
 };
-
-export default AdvantagesOfReact;

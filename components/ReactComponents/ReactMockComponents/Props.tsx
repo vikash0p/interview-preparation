@@ -1,7 +1,6 @@
-import ReactSynHighlighter from "@/components/GlobalComponents/SyntextHiglighter";
 import React from "react";
 
-const exampleCode = `
+export const exampleCode = `
 import React from 'react';
 
 const Greeting = ({ name, age }) => {
@@ -15,7 +14,7 @@ const Greeting = ({ name, age }) => {
 
 export default Greeting;
 `;
-const PropsInReact = () => {
+const Props = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold">Props in React</h1>
@@ -41,9 +40,8 @@ const PropsInReact = () => {
           <li>Props help in making components dynamic and reusable.</li>
         </ul>
       </div>
-      <ReactSynHighlighter exampleCode={exampleCode} />
     </div>
   );
 };
 
-export default PropsInReact;
+export default Props;
