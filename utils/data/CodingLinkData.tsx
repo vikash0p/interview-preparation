@@ -8,6 +8,8 @@ import DiceRoller, { diceRollerDataSource } from "@/components/PracticalReactCom
 import LikeButton, { likeButtonDataSource } from "@/components/PracticalReactComponents/LikeButton";
 import InputAndSearch from "@/components/PracticalReactComponents/AdvancedComponents/InputAndSearch";
 import InfiniteScroll, { infiniteScrollDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/InfiniteScroll";
+import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/PracticalReactComponents/BeginnerComponents/MovingCircleFirst";
+
 
 export interface Link {
   id: string;
@@ -226,5 +228,31 @@ export const CodingLinkData: Link[] = [
     tips: "Optimize the data loading logic to minimize unnecessary renders. Use a loading spinner or placeholder for a better user experience.",
     challenges:
       "Efficiently managing performance while handling large datasets and ensuring the observer triggers correctly.",
+  },
+  {
+    id: "10",
+    name: "Moving Circle Component",
+    url: "moving-circle",
+    component: React.createElement(MovingCircleFirst),
+    data: moveCircleFirstDataSource,
+    level: "Intermediate",
+    description:
+      "A visually engaging component where a circle dynamically moves based on the user's mouse position.",
+    tags: ["React", "TypeScript", "Mouse Events", "Dynamic UI"],
+    estimatedTime: 30,
+    prerequisites: [
+      "Basic understanding of React and functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with event listeners in JavaScript",
+    ],
+    objectives: [
+      "Learn how to handle mouse events in React",
+      "Understand how to update state dynamically based on user interactions",
+      "Create smooth animations with Tailwind CSS",
+      "Enhance user engagement through interactive UI components",
+    ],
+    tips: "Ensure smooth transitions and consider optimizing performance for continuous mouse events. Add a hover effect for extra interactivity.",
+    challenges:
+      "Accurately capturing and updating mouse position while maintaining smooth transitions.",
   },
 ];
