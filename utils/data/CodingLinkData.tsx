@@ -9,6 +9,8 @@ import LikeButton, { likeButtonDataSource } from "@/components/PracticalReactCom
 import InputAndSearch from "@/components/PracticalReactComponents/AdvancedComponents/InputAndSearch";
 import InfiniteScroll, { infiniteScrollDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/InfiniteScroll";
 import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/PracticalReactComponents/BeginnerComponents/MovingCircleFirst";
+import PasswordGenerator, { generatePasswordDataSource } from "@/components/PracticalReactComponents/AdvancedComponents/PasswordGenerator";
+
 
 
 export interface Link {
@@ -254,5 +256,32 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure smooth transitions and consider optimizing performance for continuous mouse events. Add a hover effect for extra interactivity.",
     challenges:
       "Accurately capturing and updating mouse position while maintaining smooth transitions.",
+  },
+  {
+    id: "11",
+    name: "Password Generator ",
+    url: "password-generator",
+    component: React.createElement(PasswordGenerator),
+    data: generatePasswordDataSource,
+    level: "Advanced",
+    description:
+      "A feature-rich password generator that allows users to customize the length and type of characters (uppercase, lowercase, numbers, symbols) included in the password. Users can also copy the generated password with a single click.",
+    tags: ["React", "TypeScript", "Password Generator", "State Management"],
+    estimatedTime: 45,
+    prerequisites: [
+      "Basic understanding of React and TypeScript",
+      "Knowledge of React hooks (useState)",
+      "Familiarity with handling forms and events in React",
+      "Basic CSS or Tailwind CSS for styling",
+    ],
+    objectives: [
+      "Learn how to create a dynamic password generator",
+      "Understand how to manage and update state based on user interactions",
+      "Implement clipboard functionality for user convenience",
+      "Enhance UI/UX with real-time updates and feedback",
+    ],
+    tips: "Ensure the generated passwords are truly random by using a strong randomization method. Validate input ranges to prevent unexpected results.",
+    challenges:
+      "Combining multiple customization options while ensuring the output remains valid and secure.",
   },
 ];
