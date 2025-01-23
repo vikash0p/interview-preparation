@@ -1,4 +1,4 @@
-import { CodingLinkData } from "@/utils/data/CodingLinkData";
+import { CodingLinkData } from "@/utils/data/ReactData/ReactPracticalData";
 import Link from "next/link";
 import React from "react";
 

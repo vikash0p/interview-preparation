@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Code from "./Code";
-import ModelOne from "../PracticalReactComponents/ModelOne";
+import ModelOne from "../React/ReactPracticalComponents/ModelOne";
 const ReusableContainer = ({
   data,
   component,
@@ -11,8 +11,7 @@ const ReusableContainer = ({
   component: React.ReactNode;
   heading: string;
 }) => {
-
-      const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
     setOpen(!open);
@@ -32,7 +31,12 @@ const ReusableContainer = ({
       <div className="w-[40%] h-full ">
         <Code data={data} toggleOpen={toggleOpen} open={open} />
       </div>
-      <ModelOne open={open} toggleOpen={toggleOpen} data={data} heading={heading} />
+      <ModelOne
+        open={open}
+        toggleOpen={toggleOpen}
+        data={data}
+        heading={heading}
+      />
     </div>
   );
 };

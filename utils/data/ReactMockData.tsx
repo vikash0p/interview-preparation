@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
-export const ReactInterViewQuestionLink = [
+export const ReactMockData = [
   {
     id: "1",
     title: "What is React",
@@ -46,13 +46,12 @@ const ReactLinkData = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      {ReactInterViewQuestionLink.map((value) => {
-
-
+      {ReactMockData.map((value) => {
         return (
           <Link
             className={`ps-4 hover:underline ${
-              pathname === value.link ? "font-bold text-white underline" : ""}`}
+              pathname === value.link ? "font-bold text-white underline" : ""
+            }`}
             href={value.link}
             key={value.id}
           >

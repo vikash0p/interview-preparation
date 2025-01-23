@@ -1,34 +1,77 @@
 import React from "react";
-import BackgroundOneComponent, { backgroundOneData } from "@/components/PracticalReactComponents/BackgroundOneComponent";
-import CarouselFirstComponent, { carouselFirstData } from "@/components/PracticalReactComponents/CarouselFirstComponent";
-import ImageSliderComponent, { imageSliderDataSource } from "@/components/PracticalReactComponents/ImageSlider";
-import FilterWithCheckBox, { filterWithCheckDataSource } from "@/components/PracticalReactComponents/FilterWithCheckBox";
-import CountDownTimers, { countDownTimersDataSource } from "@/components/PracticalReactComponents/CountDownTimer";
-import DiceRoller, { diceRollerDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/DiceRoller";
-import LikeButton, { likeButtonDataSource } from "@/components/PracticalReactComponents/LikeButton";
-import InputAndSearch from "@/components/PracticalReactComponents/AdvancedComponents/InputAndSearch";
-import InfiniteScroll, { infiniteScrollDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/InfiniteScroll";
-import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/PracticalReactComponents/BeginnerComponents/MovingCircleFirst";
-import PasswordGenerator, { generatePasswordDataSource } from "@/components/PracticalReactComponents/AdvancedComponents/PasswordGenerator";
-import MultilevelDropDown, { dropDownMenuDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelDropdown";
-import StarRating, { starRatingDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/StarRating";
-import TodoList, { todoListDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TodoList";
-import Tabs, { tabsDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/Tabs";
-import Timer, { timerDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Timer";
-import SearchAndInputWithLocalStorage, { searchAndInputWithLocalStorageDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
-import Pagination, { paginationDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Pagination";
-import CountDownComponent, { countDownInterMediateDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/CountDownComponent";
-import ExcelSheet, { excelSheetDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/ExcelSheetFirst";
-import MessageWithLikeButton, { messageWithLikeDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MessageWithLikeButton";
-import MultiLevel, { multiLevelDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelForm";
-import ShuffleGifts, { shuffleGiftsDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/ShuffleGifts";
-import TicketBooking, { ticketBookingDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TicketBooking";
-import MultipleInputAndDropDown, { multipleInputDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultipleInputAndDropDown";
-
-
-
-
-
+import BackgroundOneComponent, {
+  backgroundOneData,
+} from "@/components/React/ReactPracticalComponents/BackgroundOneComponent";
+import CarouselFirstComponent, {
+  carouselFirstData,
+} from "@/components/React/ReactPracticalComponents/CarouselFirstComponent";
+import ImageSliderComponent, {
+  imageSliderDataSource,
+} from "@/components/React/ReactPracticalComponents/ImageSlider";
+import FilterWithCheckBox, {
+  filterWithCheckDataSource,
+} from "@/components/React/ReactPracticalComponents/FilterWithCheckBox";
+import CountDownTimers, {
+  countDownTimersDataSource,
+} from "@/components/React/ReactPracticalComponents/CountDownTimer";
+import DiceRoller, {
+  diceRollerDataSource,
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/DiceRoller";
+import LikeButton, {
+  likeButtonDataSource,
+} from "@/components/React/ReactPracticalComponents/LikeButton";
+import InputAndSearch from "@/components/React/ReactPracticalComponents/AdvancedComponents/InputAndSearch";
+import InfiniteScroll, {
+  infiniteScrollDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/InfiniteScroll";
+import MovingCircleFirst, {
+  moveCircleFirstDataSource,
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/MovingCircleFirst";
+import PasswordGenerator, {
+  generatePasswordDataSource,
+} from "@/components/React/ReactPracticalComponents/AdvancedComponents/PasswordGenerator";
+import MultilevelDropDown, {
+  dropDownMenuDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultilevelDropdown";
+import StarRating, {
+  starRatingDataSource,
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/StarRating";
+import TodoList, {
+  todoListDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/TodoList";
+import Tabs, {
+  tabsDataSource,
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/Tabs";
+import Timer, {
+  timerDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/Timer";
+import SearchAndInputWithLocalStorage, {
+  searchAndInputWithLocalStorageDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
+import Pagination, {
+  paginationDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/Pagination";
+import CountDownComponent, {
+  countDownInterMediateDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/CountDownComponent";
+import ExcelSheet, {
+  excelSheetDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ExcelSheetFirst";
+import MessageWithLikeButton, {
+  messageWithLikeDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MessageWithLikeButton";
+import MultiLevel, {
+  multiLevelDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultilevelForm";
+import ShuffleGifts, {
+  shuffleGiftsDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ShuffleGifts";
+import TicketBooking, {
+  ticketBookingDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/TicketBooking";
+import MultipleInputAndDropDown, {
+  multipleInputDataSource,
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/MultipleInputAndDropDown";
 
 export interface Link {
   id: string;
@@ -45,8 +88,6 @@ export interface Link {
   tips: string;
   challenges: string | string[];
 }
-
-
 
 //! Prepare the CodingLinkData array
 
