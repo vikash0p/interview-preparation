@@ -1,8 +1,4 @@
 "use client";
-import React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 
 export const ReactMockData = [
   {
@@ -41,27 +37,3 @@ export const ReactMockData = [
     link: "/React/pass-data-child-to-parent",
   },
 ];
-const ReactLinkData = () => {
-  const pathname = usePathname();
-
-  return (
-    <div className="flex flex-col gap-2">
-      {ReactMockData.map((value) => {
-        return (
-          <Link
-            className={`ps-4 hover:underline ${
-              pathname === value.link ? "font-bold text-white underline" : ""
-            }`}
-            href={value.link}
-            key={value.id}
-          >
-            <span> {value.id}.</span>
-            <span> {value.title}</span>
-          </Link>
-        );
-      })}
-    </div>
-  );
-};
-
-export default ReactLinkData;
