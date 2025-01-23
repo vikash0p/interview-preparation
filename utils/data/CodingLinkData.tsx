@@ -13,6 +13,8 @@ import PasswordGenerator, { generatePasswordDataSource } from "@/components/Prac
 import MultilevelDropDown, { dropDownMenuDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelDropdown";
 import StarRating, { starRatingDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/StarRating";
 import TodoList, { todoListDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TodoList";
+import Tabs, { tabsDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/Tabs";
+import Timer, { timerDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Timer";
 
 
 
@@ -369,5 +371,54 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure that the todo list is accessible and responsive. Validate user input to avoid adding empty tasks.",
     challenges:
       "Handle potential errors when parsing data from local storage. Add features like task editing or marking tasks as completed.",
+  },
+  {
+    id: "15",
+    name: "Tabs ",
+    url: "tabs",
+    component: React.createElement(Tabs),
+    data: tabsDataSource,
+    level: "Beginner",
+    description:
+      "This component provides a tabbed interface, allowing users to switch between different content sections dynamically.",
+    tags: ["React", "UI Component", "Tabs", "State Management"],
+    estimatedTime: 20,
+    prerequisites: [
+      "Basic understanding of React functional components",
+      "Familiarity with React's useState hook",
+    ],
+    objectives: [
+      "Learn to implement a tab-based navigation interface",
+      "Understand how to dynamically render content based on state",
+      "Practice creating reusable components in React",
+    ],
+    tips: "Use meaningful labels for the tabs and ensure the design is accessible and responsive.",
+    challenges:
+      "Add keyboard navigation support for the tabs. Implement additional features such as animations or lazy loading for tab content.",
+  },
+  {
+    id: "16",
+    name: "Timer Component",
+    url: "timer-component",
+    component: React.createElement(Timer),
+    data: timerDataSource,
+    level: "Intermediate",
+    description:
+      "This component provides a countdown timer starting from 60 seconds, allowing users to pause, resume, and stop the timer with an intuitive interface.",
+    tags: ["React", "Timer", "Interactive Component", "State Management"],
+    estimatedTime: 25,
+    prerequisites: [
+      "Basic understanding of React functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with handling timers using JavaScript",
+    ],
+    objectives: [
+      "Learn how to create a countdown timer in React",
+      "Practice managing state and side effects effectively",
+      "Enhance the UI using Tailwind CSS for responsiveness",
+    ],
+    tips: "Ensure the timer is responsive and accessible. Add visual feedback to indicate when the timer is paused or running.",
+    challenges:
+      "Implement a reset button to restart the timer. Allow users to set a custom starting time and handle edge cases like negative values.",
   },
 ];
