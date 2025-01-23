@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Code from "./Code";
-import ModelOne from "../React/ReactPracticalComponents/ModelOne";
+import ModelOne from "../GlobalComponents/GlobalModel";
 const ReusableContainer = ({
   data,
   component,

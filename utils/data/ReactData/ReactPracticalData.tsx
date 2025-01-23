@@ -1,25 +1,25 @@
 import React from "react";
 import BackgroundOneComponent, {
   backgroundOneData,
-} from "@/components/React/ReactPracticalComponents/BackgroundOneComponent";
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/BackgroundOneComponent";
 import CarouselFirstComponent, {
   carouselFirstData,
-} from "@/components/React/ReactPracticalComponents/CarouselFirstComponent";
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/CarouselFirstComponent";
 import ImageSliderComponent, {
   imageSliderDataSource,
-} from "@/components/React/ReactPracticalComponents/ImageSlider";
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/ImageSlider";
 import FilterWithCheckBox, {
   filterWithCheckDataSource,
-} from "@/components/React/ReactPracticalComponents/FilterWithCheckBox";
+} from "@/components/React/ReactPracticalComponents/IntermediateComponents/FilterWithCheckBox";
 import CountDownTimers, {
   countDownTimersDataSource,
-} from "@/components/React/ReactPracticalComponents/CountDownTimer";
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/CountDownTimer";
 import DiceRoller, {
   diceRollerDataSource,
 } from "@/components/React/ReactPracticalComponents/BeginnerComponents/DiceRoller";
 import LikeButton, {
   likeButtonDataSource,
-} from "@/components/React/ReactPracticalComponents/LikeButton";
+} from "@/components/React/ReactPracticalComponents/BeginnerComponents/LikeButton";
 import InputAndSearch from "@/components/React/ReactPracticalComponents/AdvancedComponents/InputAndSearch";
 import InfiniteScroll, {
   infiniteScrollDataSource,
@@ -98,7 +98,7 @@ export const CodingLinkData: Link[] = [
     url: "theme-switcher",
     component: <BackgroundOneComponent />,
     data: backgroundOneData,
-    level: "Intermediate",
+    level: "Beginner",
     description:
       "Learn how to create a dynamic background color switcher using React state management techniques.",
     tags: ["React", "UI", "State Management"],
