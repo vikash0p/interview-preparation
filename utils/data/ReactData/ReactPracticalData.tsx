@@ -73,25 +73,13 @@ import MultipleInputAndDropDown, {
   multipleInputDataSource,
 } from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MultipleInputAndDropDown";
 
-export interface Link {
-  id: string;
-  name: string;
-  url: string;
-  component: React.ReactNode;
-  data: string;
-  level: string;
-  description: string;
-  tags: string[];
-  estimatedTime: number;
-  prerequisites: string[];
-  objectives: string[];
-  tips: string;
-  challenges: string | string[];
-}
+import { LinkInterface} from '../../types/types'
+
+
 
 //! Prepare the CodingLinkData array
 
-export const CodingLinkData: Link[] = [
+export const CodingLinkData: LinkInterface[] = [
   {
     id: "1",
     name: "Dynamic Background Colors",
