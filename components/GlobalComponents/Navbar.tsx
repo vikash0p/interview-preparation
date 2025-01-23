@@ -1,7 +1,7 @@
 "use client"; // Ensure client-side rendering
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation"; // Import both hooks
-import AnimatedBackground from "../core/AnimatedBackground";
+import AnimatedBackground from "./AnimatedBackground";
 import Image from "next/image";
 
 function Navbar() {
