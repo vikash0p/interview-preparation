@@ -21,9 +21,6 @@ const Code = ({ data ,toggleOpen,open}: { data: string,open: boolean ,toggleOpen
   };
 
 
-
-
-
   return (
     <div className="w-full mx-auto max-w-4xl h-full">
       <div className="relative h-full">

@@ -17,6 +17,12 @@ import Tabs, { tabsDataSource } from "@/components/PracticalReactComponents/Begi
 import Timer, { timerDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Timer";
 import SearchAndInputWithLocalStorage, { searchAndInputWithLocalStorageDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
 import Pagination, { paginationDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Pagination";
+import CountDownComponent, { countDownInterMediateDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/CountDownComponent";
+import ExcelSheet, { excelSheetDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/ExcelSheetFirst";
+import MessageWithLikeButton, { messageWithLikeDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MessageWithLikeButton";
+import MultiLevel, { multiLevelDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelForm";
+
+
 
 
 
@@ -35,7 +41,7 @@ export interface Link {
   prerequisites: string[];
   objectives: string[];
   tips: string;
-  challenges: string;
+  challenges: string | string[];
 }
 
 
@@ -489,5 +495,154 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure that edge cases like navigating to the first or last page are handled gracefully. Provide visual feedback for active pages.",
     challenges:
       "Add functionality for jumping to a specific page. Implement accessibility features like keyboard navigation.",
+  },
+  {
+    id: "19",
+    name: "CountDown Timer ",
+    url: "countdown-timer-hours-minutes-seconds",
+    component: React.createElement(CountDownComponent),
+    description:
+      "A React-based countdown timer that allows users to input hours, minutes, and seconds. The timer dynamically counts down and provides options to start and reset.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "Timer",
+      "State Management",
+      "useState",
+      "useEffect",
+      "Tailwind CSS",
+    ],
+    data: countDownInterMediateDataSource,
+    estimatedTime: 20,
+    prerequisites: [
+      "Understanding of React functional components",
+      "Knowledge of useState and useEffect hooks",
+      "Familiarity with JavaScript timer functions like setInterval and clearInterval",
+      "Basic knowledge of Tailwind CSS for styling",
+    ],
+    objectives: [
+      "Learn how to build a dynamic countdown timer in React",
+      "Practice handling user input and managing component state",
+      "Implement interval-based updates using setInterval and clearInterval",
+      "Improve styling and layout using Tailwind CSS",
+    ],
+    tips: "Ensure edge cases like input validation and countdown end behavior are handled correctly. Avoid negative values for hours, minutes, and seconds.",
+    challenges: [
+      "Add a pause button to pause the countdown and resume it later.",
+      "Display an alert or perform an action when the countdown reaches zero.",
+      "Make the input fields more user-friendly, such as by restricting input to numeric values.",
+    ],
+  },
+  {
+    id: "20",
+    name: "Excel Sheet Component",
+    url: "excel-sheet-component",
+    component: React.createElement(ExcelSheet),
+    description:
+      "A simple React-based Excel-like grid component that allows users to input and edit text in a grid format. Users can toggle cell styles, including background color, bold text, and italic text.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "useState",
+      "CSS",
+      "Excel Grid",
+      "Tailwind CSS",
+      "Dynamic Styling",
+    ],
+    data: excelSheetDataSource,
+    estimatedTime: 30,
+    prerequisites: [
+      "Basic understanding of React functional components",
+      "Familiarity with useState for state management",
+      "Knowledge of dynamic class manipulation in Tailwind CSS",
+    ],
+    objectives: [
+      "Learn how to build an editable Excel-like grid in React",
+      "Practice working with two-dimensional arrays for dynamic data manipulation",
+      "Implement dynamic styling using Tailwind CSS based on state changes",
+    ],
+    tips: "Keep the grid size adjustable and ensure that input text does not overflow the cells. Add visual feedback for toggled styles.",
+    challenges: [
+      "Add a feature to increase or decrease the grid size dynamically.",
+      "Allow users to apply styles to specific cells instead of all cells.",
+      "Enable exporting the grid content to a CSV or JSON file.",
+      "Implement undo/redo functionality for cell edits.",
+    ],
+  },
+  {
+    id: "21",
+    name: "Message with Like Button",
+    url: "message-with-like-button",
+    component: React.createElement(MessageWithLikeButton),
+    description:
+      "A simple React component that allows users to type and submit messages, display them in a list, and toggle a 'Like' or 'Unlike' state for each message.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "useState",
+      "Message App",
+      "Like Button",
+      "Dynamic List",
+      "Tailwind CSS",
+    ],
+    data: messageWithLikeDataSource,
+    estimatedTime: 20,
+    prerequisites: [
+      "Understanding of React functional components",
+      "Familiarity with useState for state management",
+      "Basic styling knowledge with Tailwind CSS",
+    ],
+    objectives: [
+      "Learn to manage a dynamic list of items in React",
+      "Implement conditional rendering based on state",
+      "Practice working with user input and event handlers",
+      "Build a toggleable 'Like' button with dynamic styling",
+    ],
+    tips: "Add placeholder text for empty inputs and make the component accessible using ARIA roles where needed.",
+    challenges: [
+      "Allow users to edit existing messages.",
+      "Enable sorting of messages (e.g., by 'Liked' status or alphabetical order).",
+      "Add a feature to delete messages from the list.",
+      "Persist message data in localStorage or a database for a more permanent solution.",
+    ],
+  },
+  {
+    id: "22",
+    name: "Multi-Level Form",
+    url: "multi-level-form",
+    component: React.createElement(MultiLevel),
+    description:
+      "A multi-step form component in React that collects user details one field at a time, allowing navigation between steps, and displays submitted data upon completion.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "useState",
+      "Form Handling",
+      "Multi-Step Form",
+      "Input Validation",
+      "User Interface",
+      "Tailwind CSS",
+    ],
+    data: multiLevelDataSource,
+    estimatedTime: 30,
+    prerequisites: [
+      "Understanding of React functional components and useState",
+      "Familiarity with event handling in forms",
+      "Basic knowledge of conditional rendering",
+      "Experience with Tailwind CSS for styling",
+    ],
+    objectives: [
+      "Create a dynamic multi-step form with React",
+      "Implement navigation between steps with validation",
+      "Display submitted data dynamically upon form submission",
+      "Learn how to reset form and state after submission",
+    ],
+    tips: "Add form validation for each step to ensure proper data entry, and consider improving accessibility by using appropriate ARIA roles and attributes.",
+    challenges: [
+      "Add client-side validation for email and password fields.",
+      "Persist form data across page reloads using localStorage or sessionStorage.",
+      "Make the form responsive to accommodate different screen sizes.",
+      "Add an optional progress bar to indicate completion percentage.",
+    ],
   },
 ];
