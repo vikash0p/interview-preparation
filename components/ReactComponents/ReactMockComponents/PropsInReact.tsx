@@ -14,7 +14,7 @@ const Greeting = ({ name, age }) => {
 
 export default Greeting;
 `;
-const Props = () => {
+export const PropsInReact = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold">Props in React</h1>
@@ -44,4 +44,4 @@ const Props = () => {
   );
 };
 
-export default Props;
+export default PropsInReact;

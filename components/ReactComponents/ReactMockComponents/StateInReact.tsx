@@ -1,8 +1,7 @@
 'use client'
 import React, { useState } from "react";
 
-const StateInReact = () => {
-  // Declare a state variable 'count' and set its initial value to 0
+export const StateInReact = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -45,5 +44,3 @@ const StateInReact = () => {
     </div>
   );
 };
-
-export default StateInReact;

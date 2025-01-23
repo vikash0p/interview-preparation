@@ -51,7 +51,7 @@ const limitations = [
   },
 ];
 
-const FunctionalComponentLimitations = () => {
+export const FunctionalComponentLimitations = () => {
   return (
     <div className="p-6  min-h-screen">
       <h1 className="text-2xl font-bold mb-4  ">
@@ -73,5 +73,3 @@ const FunctionalComponentLimitations = () => {
     </div>
   );
 };
-
-export default FunctionalComponentLimitations;

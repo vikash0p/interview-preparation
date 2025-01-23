@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StatefulComponentInReact = () => {
+export const StatefulComponentInReact = () => {
   return (
     <div>
       <h1 className='text-2xl font-bold' >Stateful Component in React</h1>
@@ -8,5 +8,3 @@ const StatefulComponentInReact = () => {
     </div>
   )
 }
-
-export default StatefulComponentInReact
