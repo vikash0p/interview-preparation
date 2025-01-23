@@ -6,14 +6,15 @@ import FilterWithCheckBox, { filterWithCheckDataSource } from "@/components/Prac
 import CountDownTimers, { countDownTimersDataSource } from "@/components/PracticalReactComponents/CountDownTimer";
 import DiceRoller, { diceRollerDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/DiceRoller";
 import LikeButton, { likeButtonDataSource } from "@/components/PracticalReactComponents/LikeButton";
-
+import InputAndSearch from "@/components/PracticalReactComponents/AdvancedComponents/InputAndSearch";
+import InfiniteScroll, { infiniteScrollDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/InfiniteScroll";
 
 export interface Link {
   id: string;
   name: string;
   url: string;
   component: React.ReactNode;
-  data: any;
+  data: string;
   level: string;
   description: string;
   tags: string[];
@@ -167,5 +168,63 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure the button's state updates correctly by testing the toggle functionality. Use Tailwind CSS classes to visually differentiate the like and unlike states.",
     challenges:
       "Handling the state toggle correctly and ensuring the counter reflects the accurate number of likes.",
+  },
+  {
+    id: "8",
+    name: "Input and Search Component",
+    url: "input-search",
+    component: React.createElement(InputAndSearch),
+    data: likeButtonDataSource,
+    level: "Advanced",
+    description:
+      "A component to search, select, and dynamically add items to a list.",
+    tags: ["React", "TypeScript", "Component", "Search", "Dropdown"],
+    estimatedTime: 30,
+    prerequisites: [
+      "Basic understanding of React and functional components",
+      "Knowledge of React's useState hook",
+      "Familiarity with basic Tailwind CSS",
+    ],
+    objectives: [
+      "Learn how to filter and dynamically update lists",
+      "Implement dropdown and selection functionality",
+      "Practice managing component state effectively",
+      "Style components using Tailwind CSS",
+    ],
+    tips: "Ensure the search functionality is efficient and responsive. Handle edge cases for user input.",
+    challenges:
+      "Managing the dynamic addition of items and ensuring the UI updates correctly.",
+  },
+  {
+    id: "9",
+    name: "Infinite Scroll Component",
+    url: "infinite-scroll",
+    component: React.createElement(InfiniteScroll),
+    data: infiniteScrollDataSource,
+    level: "Intermediate",
+    description:
+      "An Infinite Scroll component that dynamically loads more data as the user scrolls down.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Infinite Scroll",
+      "Component",
+      "Intersection Observer",
+    ],
+    estimatedTime: 45,
+    prerequisites: [
+      "Basic understanding of React and functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with the Intersection Observer API",
+    ],
+    objectives: [
+      "Learn how to implement infinite scrolling in a React component",
+      "Understand the use of Intersection Observer API for triggering data loads",
+      "Practice managing state and rendering dynamic content efficiently",
+      "Style components to display data effectively using Tailwind CSS",
+    ],
+    tips: "Optimize the data loading logic to minimize unnecessary renders. Use a loading spinner or placeholder for a better user experience.",
+    challenges:
+      "Efficiently managing performance while handling large datasets and ensuring the observer triggers correctly.",
   },
 ];

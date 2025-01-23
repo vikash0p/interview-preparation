@@ -26,7 +26,7 @@ const ReusableContainer = ({
           <div>{component}</div>
         </div>
         <p className="text-red-500 text-center absolute bottom-10">
-          Notes: customize the css to fit your needs
+          Notes: customize the css to fit your project.
         </p>
       </div>
       <div className="w-[40%] h-full ">

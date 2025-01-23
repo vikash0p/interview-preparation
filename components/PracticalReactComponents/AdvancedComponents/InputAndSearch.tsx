@@ -1,7 +1,8 @@
+// InputAndSearch component with background black and text white
 "use client";
 import React, { useState } from "react";
 
-const InputAddDataAndSearchDataComponent = () => {
+const InputAndSearch = () => {
   const initialCountries = [
     "India",
     "Pakistan",
@@ -17,7 +18,7 @@ const InputAddDataAndSearchDataComponent = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value); // Update search term without changing selected country
+    setSearchTerm(e.target.value);
     const filteredCountries = updatedCountries.filter((country) =>
       country.toLowerCase().includes(e.target.value.toLowerCase())
     );
@@ -26,48 +27,42 @@ const InputAddDataAndSearchDataComponent = () => {
 
   const handleCountrySelect = (country: string) => {
     setSelectedCountry(country);
-    setShowDropdown(false); // Close dropdown after selecting
-    setSearchTerm(""); // Clear search term after selecting
+    setShowDropdown(false);
+    setSearchTerm("");
   };
 
   const SubmitHandlerFunction = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const myData = updatedCountries.find((value) => value === searchTerm);
-    console.log("🚀 ~ file: page.tsx:37 ~ myData:", typeof myData);
     if (!myData) {
       return setUpdatedCountries((prev) => [...prev, searchTerm]);
     } else {
-      console.log("🚀 ~ The country already exists in the list.");
       alert("The country already exists in the list.");
     }
-    // if(searchCountries && !updatedCountries.includes(searchTerm)){
-    //   setUpdatedCountries((prev)=>[...prev,searchTerm])
-    // }
   };
 
   return (
-    <div className="w-full  flex flex-col gap-5 mt-20 items-center">
+    <div className="w-full flex flex-col gap-5 mt-20 items-center bg-black text-white">
       <div className="relative w-96">
-        {/* Input field to display selected country */}
         <input
           type="text"
           value={selectedCountry}
           readOnly
-          onClick={() => setShowDropdown(!showDropdown)} // Toggle dropdown visibility
+          onClick={() => setShowDropdown(!showDropdown)}
           placeholder="Select a country"
-          className="w-full h-12 px-4 border border-gray-300 rounded cursor-pointer"
+          className="w-full h-12 px-4 border border-gray-300 rounded cursor-pointer bg-gray-800 text-white"
         />
 
         {/* Search bar */}
         {showDropdown && (
-          <div className="absolute top-full left-0 w-full bg-white border border-gray-300 z-10">
+          <div className="absolute top-full left-0 w-full bg-gray-800 border border-gray-300 z-10">
             <form action="" onSubmit={SubmitHandlerFunction}>
               <input
                 type="text"
                 value={searchTerm}
                 onChange={handleSearchChange}
                 placeholder="Search and Add data"
-                className="w-full h-10 px-4 border-b border-gray-300"
+                className="w-full h-10 px-4 border-b border-gray-600 bg-gray-700 text-white"
               />
               <ul className="max-h-60 overflow-y-auto">
                 {updatedCountries.length > 0 ? (
@@ -78,7 +73,7 @@ const InputAddDataAndSearchDataComponent = () => {
                     <li
                       key={country}
                       onClick={() => handleCountrySelect(country)}
-                      className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                      className="px-4 py-2 hover:bg-gray-600 cursor-pointer"
                     >
                       {country}
                     </li>
@@ -86,7 +81,7 @@ const InputAddDataAndSearchDataComponent = () => {
                 ) : (
                   <li
                     onClick={() => handleCountrySelect("No results found")}
-                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                    className="px-4 py-2 hover:bg-gray-600 cursor-pointer"
                   >
                     No Result found? Add this Data
                   </li>
@@ -100,4 +95,4 @@ const InputAddDataAndSearchDataComponent = () => {
   );
 };
 
-export default InputAddDataAndSearchDataComponent;
+export default InputAndSearch;
