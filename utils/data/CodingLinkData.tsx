@@ -11,6 +11,7 @@ import InfiniteScroll, { infiniteScrollDataSource } from "@/components/Practical
 import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/PracticalReactComponents/BeginnerComponents/MovingCircleFirst";
 import PasswordGenerator, { generatePasswordDataSource } from "@/components/PracticalReactComponents/AdvancedComponents/PasswordGenerator";
 import MultilevelDropDown, { dropDownMenuDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelDropdown";
+import StarRating, { starRatingDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/StarRating";
 
 
 export interface Link {
@@ -310,5 +311,30 @@ export const CodingLinkData: Link[] = [
     tips: "Handle edge cases, such as when no cities are available for a selected person. Use meaningful placeholder text for dropdowns.",
     challenges:
       "Ensure proper synchronization between the two dropdowns and handle cases where the user changes their selection.",
+  },
+  {
+    id: "13",
+    name: "Star Rating ",
+    url: "star-rating",
+    component: React.createElement(StarRating),
+    data: starRatingDataSource,
+    level: "Beginner",
+    description:
+      "This component allows users to provide a rating out of 5 stars, dynamically updating the UI based on their selection.",
+    tags: ["React", "Star Rating", "Interactive Component", "State Management"],
+    estimatedTime: 20,
+    prerequisites: [
+      "Basic understanding of React functional components",
+      "Knowledge of React's useState hook",
+      "Familiarity with handling events in React",
+    ],
+    objectives: [
+      "Learn how to implement an interactive star rating feature",
+      "Practice using state to update the UI dynamically",
+      "Enhance user interface design using icons from lucide-react",
+    ],
+    tips: "Ensure the component is accessible for keyboard and screen reader users. Consider implementing hover effects to enhance user feedback.",
+    challenges:
+      "Handle cases where users want to reset their rating. Ensure the component is visually consistent across different devices and screen sizes.",
   },
 ];
