@@ -21,7 +21,9 @@ import CountDownComponent, { countDownInterMediateDataSource } from "@/component
 import ExcelSheet, { excelSheetDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/ExcelSheetFirst";
 import MessageWithLikeButton, { messageWithLikeDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MessageWithLikeButton";
 import MultiLevel, { multiLevelDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelForm";
-
+import ShuffleGifts, { shuffleGiftsDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/ShuffleGifts";
+import TicketBooking, { ticketBookingDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TicketBooking";
+import MultipleInputAndDropDown, { multipleInputDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultipleInputAndDropDown";
 
 
 
@@ -643,6 +645,127 @@ export const CodingLinkData: Link[] = [
       "Persist form data across page reloads using localStorage or sessionStorage.",
       "Make the form responsive to accommodate different screen sizes.",
       "Add an optional progress bar to indicate completion percentage.",
+    ],
+  },
+  {
+    id: "23",
+    name: "Shuffle Gifts",
+    url: "shuffle-gifts",
+    component: React.createElement(ShuffleGifts),
+    description:
+      "A fun and interactive gift assignment application where names are entered, and gifts are shuffled and assigned randomly. Users can reset the data and start over.",
+    level: "Beginner",
+    tags: [
+      "React",
+      "useState",
+      "Array Manipulation",
+      "Randomization",
+      "Form Handling",
+      "Interactive Application",
+      "Tailwind CSS",
+    ],
+    data: shuffleGiftsDataSource,
+    estimatedTime: 20,
+    prerequisites: [
+      "Understanding of React functional components and useState",
+      "Basic knowledge of array manipulation in JavaScript",
+      "Familiarity with conditional rendering and event handling in React",
+      "Experience with Tailwind CSS for styling",
+    ],
+    objectives: [
+      "Create an interactive app for adding names and assigning gifts",
+      "Implement a shuffle algorithm for random gift assignment",
+      "Enable users to reset data and start over",
+      "Learn how to manage dynamic lists with React state",
+    ],
+    tips: "You can add more gift options or use an API to fetch gift ideas dynamically. Improve accessibility by adding labels and proper ARIA attributes to form elements.",
+    challenges: [
+      "Add input validation to ensure unique names are entered.",
+      "Display a warning message if the number of names exceeds the number of gifts.",
+      "Allow users to remove individual names from the list.",
+      "Make the app responsive and enhance styling with animations using Tailwind CSS.",
+    ],
+  },
+  {
+    id: "24",
+    name: "Ticket Booking",
+    url: "ticket-booking",
+    component: React.createElement(TicketBooking),
+    description:
+      "A dynamic ticket booking system where users can select tickets for VIP, Economy, or General sections, with a maximum limit of 5 selections. The selected tickets are highlighted, and unavailable tickets are disabled when the limit is reached.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "useState",
+      "Event Handling",
+      "Conditional Rendering",
+      "Interactive UI",
+      "Ticket Booking System",
+      "Tailwind CSS",
+    ],
+    data: ticketBookingDataSource,
+    estimatedTime: 30,
+    prerequisites: [
+      "Knowledge of React functional components and state management using useState",
+      "Familiarity with array manipulation in JavaScript",
+      "Basic understanding of conditional rendering and event handling in React",
+      "Experience using Tailwind CSS for styling",
+    ],
+    objectives: [
+      "Develop a functional ticket booking system with a maximum selection limit",
+      "Allow users to select and deselect tickets dynamically",
+      "Handle state changes and conditional rendering efficiently",
+      "Ensure the UI is user-friendly and visually appealing using Tailwind CSS",
+    ],
+    tips: "Enhance the design by adding hover effects, tooltips, or animations for better interactivity. You can also add an option to reset all selections.",
+    challenges: [
+      "Add functionality to reset all selected tickets.",
+      "Display a summary of selected tickets (e.g., section and seat numbers).",
+      "Make the grid responsive for smaller devices.",
+      "Implement an option to confirm the ticket booking and show a success message.",
+      "Add error handling for cases where users try to select more than the allowed limit.",
+    ],
+  },
+  {
+    id: "25",
+    name: "Multiple Input and Dropdown",
+    url: "multiple-input-and-dropdown",
+    component: React.createElement(MultipleInputAndDropDown),
+    description:
+      "A versatile multiple input and dropdown component where users can search, select, and manage a list of countries. Users can also add new entries to the list dynamically.",
+    level: "Intermediate",
+    tags: [
+      "React",
+      "Dropdown",
+      "Search",
+      "Dynamic Input",
+      "Interactive UI",
+      "Form Handling",
+      "State Management",
+      "Lucide Icons",
+      "Tailwind CSS",
+    ],
+    data: multipleInputDataSource,
+    estimatedTime: 40,
+    prerequisites: [
+      "Knowledge of React functional components and state management using useState",
+      "Experience handling forms and input events in React",
+      "Understanding of array manipulation and filtering in JavaScript",
+      "Familiarity with styling using Tailwind CSS",
+    ],
+    objectives: [
+      "Implement a dropdown that allows multiple selections with clear functionality",
+      "Enable users to search and filter existing countries dynamically",
+      "Allow adding new countries if they are not already in the list",
+      "Provide a user-friendly and visually appealing UI",
+    ],
+    tips: "Use debounce techniques to optimize the search functionality for better performance in larger datasets. Consider enhancing accessibility by adding ARIA roles and labels.",
+    challenges: [
+      "Add a feature to sort the selected countries alphabetically.",
+      "Highlight newly added countries with a different color for a few seconds.",
+      "Limit the number of selectable countries and show a warning if the limit is exceeded.",
+      "Make the dropdown responsive for mobile and smaller screens.",
+      "Persist the selected countries and updated list in localStorage.",
     ],
   },
 ];
