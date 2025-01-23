@@ -10,7 +10,7 @@ import InputAndSearch from "@/components/PracticalReactComponents/AdvancedCompon
 import InfiniteScroll, { infiniteScrollDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/InfiniteScroll";
 import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/PracticalReactComponents/BeginnerComponents/MovingCircleFirst";
 import PasswordGenerator, { generatePasswordDataSource } from "@/components/PracticalReactComponents/AdvancedComponents/PasswordGenerator";
-
+import MultilevelDropDown, { dropDownMenuDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelDropdown";
 
 
 export interface Link {
@@ -283,5 +283,32 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure the generated passwords are truly random by using a strong randomization method. Validate input ranges to prevent unexpected results.",
     challenges:
       "Combining multiple customization options while ensuring the output remains valid and secure.",
+  },
+  {
+    id: "12",
+    name: "Multilevel Dropdown ",
+    url: "multilevel-dropdown",
+    component: React.createElement(MultilevelDropDown),
+    data: dropDownMenuDataSource,
+    level: "Intermediate",
+    description:
+      "This component provides a multilevel dropdown feature where users can first select a person and then choose a city associated with the selected person.",
+    tags: ["React", "Dropdown", "Multilevel Dropdown", "State Management"],
+    estimatedTime: 30,
+    prerequisites: [
+      "Basic understanding of React functional components",
+      "Familiarity with React's useState hook",
+      "Understanding of managing dependent dropdowns",
+      "Basic knowledge of styling with Tailwind CSS or CSS",
+    ],
+    objectives: [
+      "Learn how to implement dependent dropdowns",
+      "Understand how to manage and update state based on user interactions",
+      "Enhance user experience by dynamically rendering options",
+      "Practice working with arrays and conditional rendering in React",
+    ],
+    tips: "Handle edge cases, such as when no cities are available for a selected person. Use meaningful placeholder text for dropdowns.",
+    challenges:
+      "Ensure proper synchronization between the two dropdowns and handle cases where the user changes their selection.",
   },
 ];
