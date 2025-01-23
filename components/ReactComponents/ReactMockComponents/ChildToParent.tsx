@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export const Parent = () => {
+export const ChildToParent = () => {
   const [childCount, setChildCount] = useState(0);
 
   const handleChildData = (count: number) => {
