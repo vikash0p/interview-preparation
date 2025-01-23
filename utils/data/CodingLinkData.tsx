@@ -15,6 +15,8 @@ import StarRating, { starRatingDataSource } from "@/components/PracticalReactCom
 import TodoList, { todoListDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TodoList";
 import Tabs, { tabsDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/Tabs";
 import Timer, { timerDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Timer";
+import SearchAndInputWithLocalStorage, { searchAndInputWithLocalStorageDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
+
 
 
 
@@ -420,5 +422,38 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure the timer is responsive and accessible. Add visual feedback to indicate when the timer is paused or running.",
     challenges:
       "Implement a reset button to restart the timer. Allow users to set a custom starting time and handle edge cases like negative values.",
+  },
+  {
+    id: "17",
+    name: "Search Input with Local Storage",
+    url: "search-input-local-storage",
+    component: React.createElement(SearchAndInputWithLocalStorage),
+    data: searchAndInputWithLocalStorageDataSource,
+    level: "Intermediate",
+    description:
+      "This component allows users to input, search, and store unique data in local storage. It dynamically updates the list based on user input and provides delete functionality for managing the stored data.",
+    tags: [
+      "React",
+      "Local Storage",
+      "Search Functionality",
+      "State Management",
+      "Dynamic UI",
+    ],
+    estimatedTime: 40,
+    prerequisites: [
+      "Understanding of React functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with local storage for data persistence",
+      "Basic understanding of event handling in React",
+    ],
+    objectives: [
+      "Learn how to implement dynamic search functionality",
+      "Practice using local storage for persisting data",
+      "Enhance user interface design using Tailwind CSS",
+      "Manage state effectively for dynamic components",
+    ],
+    tips: "Ensure the input data is validated before adding to the list. Provide visual feedback for actions like adding, searching, and deleting items.",
+    challenges:
+      "Handle edge cases such as duplicate entries and case-insensitive searches. Implement additional features like editing items or clearing all stored data.",
   },
 ];
