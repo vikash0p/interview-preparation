@@ -16,6 +16,8 @@ import TodoList, { todoListDataSource } from "@/components/PracticalReactCompone
 import Tabs, { tabsDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/Tabs";
 import Timer, { timerDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Timer";
 import SearchAndInputWithLocalStorage, { searchAndInputWithLocalStorageDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/SearchAndInputWithLocalStorage";
+import Pagination, { paginationDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/Pagination";
+
 
 
 
@@ -455,5 +457,37 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure the input data is validated before adding to the list. Provide visual feedback for actions like adding, searching, and deleting items.",
     challenges:
       "Handle edge cases such as duplicate entries and case-insensitive searches. Implement additional features like editing items or clearing all stored data.",
+  },
+  {
+    id: "18",
+    name: "Pagination Component",
+    url: "pagination-component",
+    component: React.createElement(Pagination),
+    data: paginationDataSource,
+    level: "Intermediate",
+    description:
+      "This component displays a list of students with pagination functionality. It dynamically fetches and displays a subset of students based on the current page and allows navigation between pages.",
+    tags: [
+      "React",
+      "Pagination",
+      "State Management",
+      "Dynamic UI",
+      "Tailwind CSS",
+    ],
+    estimatedTime: 30,
+    prerequisites: [
+      "Understanding of React functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with array methods like slice for pagination",
+      "Basic understanding of component-based design",
+    ],
+    objectives: [
+      "Learn how to implement pagination in a React component",
+      "Practice managing state and rendering dynamic data",
+      "Enhance styling and layout using Tailwind CSS",
+    ],
+    tips: "Ensure that edge cases like navigating to the first or last page are handled gracefully. Provide visual feedback for active pages.",
+    challenges:
+      "Add functionality for jumping to a specific page. Implement accessibility features like keyboard navigation.",
   },
 ];
