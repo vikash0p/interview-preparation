@@ -12,6 +12,8 @@ import MovingCircleFirst, { moveCircleFirstDataSource,} from "@/components/Pract
 import PasswordGenerator, { generatePasswordDataSource } from "@/components/PracticalReactComponents/AdvancedComponents/PasswordGenerator";
 import MultilevelDropDown, { dropDownMenuDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/MultilevelDropdown";
 import StarRating, { starRatingDataSource } from "@/components/PracticalReactComponents/BeginnerComponents/StarRating";
+import TodoList, { todoListDataSource } from "@/components/PracticalReactComponents/IntermediateComponents/TodoList";
+
 
 
 export interface Link {
@@ -336,5 +338,36 @@ export const CodingLinkData: Link[] = [
     tips: "Ensure the component is accessible for keyboard and screen reader users. Consider implementing hover effects to enhance user feedback.",
     challenges:
       "Handle cases where users want to reset their rating. Ensure the component is visually consistent across different devices and screen sizes.",
+  },
+  {
+    id: "14",
+    name: "Todo List ",
+    url: "todo-list",
+    component: React.createElement(TodoList),
+    data: todoListDataSource,
+    level: "Intermediate",
+    description:
+      "This component allows users to manage a todo list, persist tasks in local storage, and dynamically update the UI when tasks are added or removed.",
+    tags: [
+      "React",
+      "Todo List",
+      "State Management",
+      "Local Storage",
+      "Interactive Component",
+    ],
+    estimatedTime: 40,
+    prerequisites: [
+      "Understanding of React functional components",
+      "Knowledge of React's useState and useEffect hooks",
+      "Familiarity with local storage for data persistence",
+    ],
+    objectives: [
+      "Learn how to implement a basic todo list application",
+      "Practice using React state and effect hooks effectively",
+      "Understand how to store and retrieve data from local storage",
+    ],
+    tips: "Ensure that the todo list is accessible and responsive. Validate user input to avoid adding empty tasks.",
+    challenges:
+      "Handle potential errors when parsing data from local storage. Add features like task editing or marking tasks as completed.",
   },
 ];
