@@ -13,3 +13,10 @@ export interface LinkInterface {
   tips: string;
   challenges: string | string[];
 }
+
+export interface JavaScriptLogicalInterface {
+  id: string;
+  title: string;
+  content: string;
+  link: string;
+}

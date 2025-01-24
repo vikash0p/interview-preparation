@@ -1,0 +1,1 @@
+export const JavaScriptLogicalSecond="hello second"
