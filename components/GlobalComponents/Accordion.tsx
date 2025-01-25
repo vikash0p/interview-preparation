@@ -31,7 +31,7 @@ const Accordion: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen sticky top-0  text-white flex  justify-center">
+    <div className="min-h-screen sticky top-0  text-gray-300 flex  justify-center">
       <div className="w-full max-w-3xl mx-auto ">
         {accordionData.map((item, index) => (
           <div key={index} className="border-b border-b-gray-200">
@@ -39,18 +39,18 @@ const Accordion: React.FC = () => {
               className="flex justify-between items-center bg-gray-800 py-4 px-2 cursor-pointer hover:bg-gray-700 transition-transform duration-300"
               onClick={() => toggleAccordion(index)}
             >
-              <h2 className="text-lg font-semibold">{item.title}</h2>
+              <h2 className="text-lg ">{item.title}</h2>
               <motion.div
                 animate={{
-                  rotate: open === index ? 180 : 0,
-                  scale: open === index ? 1.2 : 1,
+                  rotate: open === index ? 360 : 0, // Determines icon rotation
+                  scale: open === index ? 1.2 : 1, // Slightly enlarges the active icon
                 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
               >
                 {open === index ? (
-                  <FaChevronUp className="text-xl" />
+                  <FaChevronUp className="text-xl" /> // Displays up arrow
                 ) : (
-                  <FaChevronDown className="text-xl" />
+                  <FaChevronDown className="text-xl" /> // Displays down arrow
                 )}
               </motion.div>
             </div>

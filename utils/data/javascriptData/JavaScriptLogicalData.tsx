@@ -19,8 +19,8 @@ export const JavaScriptLogicalData : JavaScriptLogicalInterface[] =[
     },
     {
         id: "3",
-        title: "Logical Operators third",
+        title: "Logical function Operators ",
         content: JavaScriptLogicalThird,
-        link: "logical-operators-third"
+        link: "logical-function-Operators"
     }
 ]

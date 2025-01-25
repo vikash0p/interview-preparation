@@ -17,6 +17,12 @@ export interface LinkInterface {
 export interface JavaScriptLogicalInterface {
   id: string;
   title: string;
-  content: string;
+  content: string | ProductProps[]
   link: string;
 }
+
+export interface ProductProps  {
+    question: string;
+    code: string;
+    answer: string;
+  };

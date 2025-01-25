@@ -30,6 +30,10 @@ console.log([]=={}); //empty array is coerced  equal to 0
 console.log({}==[]); //empty array is coerced  equal to 0
 {} == []; // error - syntax error
 
+console.log(true) //true is coerced to true
+
+console.log(false) //false is coerced to false
+
 
 console.log({}=={}); //empty array is coerced  equal to 0
 {} == {}; // true
@@ -194,4 +198,67 @@ console.log(abc); // 10
 
 
 
+console.log(false == ![]);
+// The key concept here is that [] (an empty array) is truthy when used in a Boolean context.
+// Applying ! to it converts the truthy value to false.
+// The == operator then checks if false == false, which is true.
+
+
+
+console.log(false == []);
+// false is coerced to 0.
+// [] is coerced to an empty string (""), which is further coerced to 0.
+// 0 == 0 is true.
+
+
+console.log(false == {});
+// false == "[object Object]"
+// 0 == NaN
+//false
+
+
+
+// console.log(false == !{});
+// false== false  //because {} (an empty object) is considered truthy in JavaScript because all objects are truthy.
+// true
+
+
+console.log(false ==!{a: 1});
+// {a:1} is an object, and all objects are truthy in JavaScript
+// !{a:1} is false
+// false==false
+
+
+const arr=[1,2,3,4];
+const str='1,2,3,4';
+console.log(arr===str) //false because arr is an array and str is a string
+
+
+const arr=[1,2,3,4];
+const str='1,2,3,4';
+console.log(arr==str) //true
+//compare the value not the data types
+
+
+const str1='vikash';
+str1[2]='p';
+console.log(str1) //vikash because string is immutable and primitive  is not immutable
+
+
+
+const arr=[1,2,3,4];
+const[y]=arr;
+console.log(y)
+//[y]=[1,2,3,4]
+// [y,z]=[1,2,3,4]
+//y=1
+//z=2
+//1
+
+
+console.log(null == undefined)//true
+console.log(null === undefined)//false
+
 `;
+
+

@@ -7,3 +7,4 @@ const JavaScriptIds = ({params}:{params:{id:string}}) => {
 }
 
 export default JavaScriptIds
+
