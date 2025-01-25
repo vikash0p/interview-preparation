@@ -1,9 +1,9 @@
 import React from 'react'
 
-const NextJS = () => {
+const page = () => {
   return (
-    <div>NextJS</div>
+    <div>page</div>
   )
 }
 
-export default NextJS
+export default page
