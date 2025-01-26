@@ -1,4 +1,3 @@
-import { rejects } from "assert";
 
 export const JavaScriptLogicalFirst = `
 console.log([]==0); //empty array is coerced  equal to 0
@@ -265,4 +264,3 @@ console.log(typeof function name(){}) //function
 console.log(typeof class myClass{}) //function
 
 `;
-
