@@ -77,7 +77,7 @@ const Accordion: React.FC = () => {
                   ease: "easeInOut",
                   delay: open === index ? 0.2 : 0,
                 }}
-                className="px-2 py-4 bg-gray-900 rounded-b-lg"
+                className="px-2 py-4 pb-20 border bg-gray-900 rounded-b-lg"
               >
                 <div>
                   {item.component && React.createElement(item.component)}
