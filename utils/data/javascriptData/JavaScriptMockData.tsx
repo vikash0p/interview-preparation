@@ -139,7 +139,7 @@ boundGreet("Hey"); // Hey, Alice!`,
     code: `console.log(typeof null); // object
 console.log(typeof undefined); // undefined`,
     answer:
-"null represents an intentional absence of value, undefined means a variable has been declared but not initialized.",
+      "null represents an intentional absence of value, undefined means a variable has been declared but not initialized.",
     link: "null-vs-undefined",
   },
   {
@@ -940,35 +940,59 @@ console.log(proxy.b); // Not Found`,
   },
   {
     id: "83",
-    question: "What are the differences between `let` and `const`?",
-    code: `let a = 10;
-a = 20; // Reassignable
-const b = 30;
-// b = 40; // Error: Assignment to constant variable`,
+    question: "What are call, apply, and bind methods in JavaScript?",
+    code: `const person = {
+  name: 'John',
+  age: 30,
+  city: 'New York',
+  country: 'USA',
+  job: 'Developer',
+};
+
+// Function definition
+function greet(param1, param2, param3) {
+  console.log(\`Hello, \${this.name}. \${param1}, \${param2}, \${param3}\`);
+}
+
+// Using call
+// 'call' invokes the function with a specified 'this' value and arguments passed individually
+greet.call(person, 'arg1', 'arg2', 'arg3');
+
+// Using apply
+// 'apply' invokes the function with a specified 'this' value and arguments passed as an array
+greet.apply(person, ['arg1', 'arg2', 'arg3']);
+
+// Using bind
+// 'bind' creates a new function with 'this' bound to the specified object
+const greetBound = greet.bind(person);
+greetBound('arg1', 'arg2', 'arg3');
+`,
     answer:
-      "`let` allows reassignment, while `const` ensures the variable cannot be reassigned.",
-    link: "difference-between-let-and-const-in-javascript",
+      "The `call`, `apply`, and `bind` methods are used to set the `this` context explicitly when calling or binding a function:\n\n- `call`: Invokes the function immediately with arguments passed individually.\n- `apply`: Invokes the function immediately with arguments passed as an array.\n- `bind`: Creates a new function with the `this` value set, which can be invoked later.",
+    link: "what-is-the-call-apply-and-bind-method",
   },
   {
     id: "84",
-    question: "What are JavaScript decorators?",
-    code: `function log(target, key, descriptor) {
-   const original = descriptor.value;
-   descriptor.value = function (...args) {
-     console.log(\`Calling \${key}\`);
-     return original.apply(this, args);
-   };
- }
- class Example {
-   @log
-   greet() {
-     console.log("Hello");
-   }
- }
- const obj = new Example();
- obj.greet();`,
-    answer:
-      "Decorators are special functions that modify the behavior of classes or methods.",
-    link: "what-are-javascript-decorators",
+    question: "What is event delegation in JavaScript?",
+    code: `// Event delegation example
+document.getElementById('parent').addEventListener('click', function (event) {
+  // Check if the clicked element is a child with the target class
+  if (event.target && event.target.classList.contains('child')) {
+    console.log('Child element clicked:', event.target.textContent);
+  }
+});
+
+// HTML structure
+/*
+<div id="parent">
+  <button class="child">Button 1</button>
+  <button class="child">Button 2</button>
+  <button class="child">Button 3</button>
+</div>
+*/
+`,
+    answer:"Event delegation in JavaScript is a technique where you attach a single event handler to a parent element and handle events on its child elements.",
+
+    link: "event_delegation",
   },
 ];
