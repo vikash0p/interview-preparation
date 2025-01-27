@@ -26,3 +26,12 @@ export interface ProductProps  {
     code: string;
     answer: string;
   };
+
+
+export  interface JavaScriptMockInterface {
+    id: string;
+    question: string;
+    code?: string;
+    answer: string;
+    link: string;
+  }

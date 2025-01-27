@@ -1,28 +1,27 @@
 "use client";
 
-import { JavaScriptLogicalData } from "@/utils/data/JavaScriptData/JavaScriptLogicalData";
 import React from "react";
-import { JavaScriptLogicalInterface } from "../../../utils/types/types";
 import Link from "next/link";
-import { usePathname,  } from "next/navigation";
-
-const JavaScriptLogicalNavigation = () => {
+import { usePathname } from "next/navigation";
+import { JavaScriptMockData } from "@/utils/data/JavaScriptData/JavaScriptMockData";
+import { JavaScriptMockInterface } from "@/utils/types/types";
+const JavaScriptMockNavigation = () => {
   const pathname = usePathname();
 
   return (
     <div className="flex flex-col gap-3">
-      {JavaScriptLogicalData.map((question: JavaScriptLogicalInterface) => {
+      {JavaScriptMockData.map((question: JavaScriptMockInterface, index) => {
         const isActive = pathname.includes(question.link);
 
         return (
           <Link
-            href={`/JavaScript/logical/${question.link}`}
+            href={`/JavaScript/${question.link}`}
             key={question.id}
             className={`${
               isActive ? "text-indigo-600 font-semibold" : "text-gray-300"
             } hover:text-indigo-500 transition-colors`}
           >
-           {question.id}.  {question.title}
+           {index+1}.  {question.question}
           </Link>
         );
       })}
@@ -30,4 +29,4 @@ const JavaScriptLogicalNavigation = () => {
   );
 };
 
-export default JavaScriptLogicalNavigation;
+export default JavaScriptMockNavigation;
