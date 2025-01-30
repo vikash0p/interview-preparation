@@ -86,7 +86,7 @@ const Hero = () => {
             id="el-1x952eof"
           ></div>
           <div
-            className="relative bg-neutral-800 p-8 rounded-2xl border border-neutral-700"
+            className="relative bg-[#181d28] p-8 rounded-2xl border border-neutral-700"
             id="el-fmthelka"
           >
             <div
@@ -119,7 +119,7 @@ const Hero = () => {
               </p>
             </div>
             {/* JavaScript Code Snippet */}
-            <pre className="bg-neutral-900 text-neutral-100 p-4 rounded-lg overflow-x-auto text-sm">
+            <pre className="bg-gray-900 text-neutral-100 p-4 rounded-lg overflow-x-auto text-sm">
               <code>
                 {`// Example of var, let, and const in JavaScript
 
@@ -142,11 +142,6 @@ console.log(z); // Output: 30`}
           </div>
         </div>
       </div>
-
-
-
-
-      
     </div>
   );
 };

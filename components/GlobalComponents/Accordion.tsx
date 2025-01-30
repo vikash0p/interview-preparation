@@ -35,7 +35,7 @@ const Accordion: React.FC = () => {
           <div key={index} className="border-b border-b-gray-200">
             {/* Sticky Title */}
             <div
-              className="flex justify-between items-center bg-gray-800 py-4 px-2 cursor-pointer hover:bg-gray-700 transition-transform duration-300 sticky top-0 z-10"
+              className="flex justify-between items-center bg-[#181d28] py-4 px-2 cursor-pointer hover:bg-gray-700 transition-transform duration-300 sticky top-0 z-10"
               onClick={() => toggleAccordion(index)}
             >
               <h2 className="text-lg">{item.title}</h2>
@@ -77,7 +77,7 @@ const Accordion: React.FC = () => {
                   ease: "easeInOut",
                   delay: open === index ? 0.2 : 0,
                 }}
-                className="px-2 py-4 pb-20 border bg-gray-900 rounded-b-lg"
+                className="px-2 py-4 pb-20  bg-gray-900 rounded-b-lg"
               >
                 <div>
                   {item.component && React.createElement(item.component)}

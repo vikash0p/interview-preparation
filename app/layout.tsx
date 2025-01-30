@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased text-gray-400 bg-black`}>
+      <body
+        className={` antialiased text-gray-300 bg-gradient-to-b from-gray-900 to-gray-900`}
+      >
         <Navbar />
         <main>{children}</main>
         <ScrollToTop />

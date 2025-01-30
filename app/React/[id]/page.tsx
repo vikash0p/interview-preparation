@@ -11,7 +11,7 @@ const ReactId = ({ params }: { params: { id: string } }) => {
   return (
     <div className=" min-h-screen flex  justify-center text-white  ">
       {ReactSingleData ? (
-        <div className="w-full  p-4  rounded-lg shadow-lg">
+        <div className="w-full  p-4  rounded-lg shadow-lg text-gray-300">
           {ReactSingleData.component}
         </div>
       ) : (
