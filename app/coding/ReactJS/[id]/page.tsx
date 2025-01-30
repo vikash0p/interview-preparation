@@ -1,21 +1,18 @@
 import ReusableContainer from "@/components/ReusableComponents/ReusableContainer";
-import { CodingLinkData } from "@/utils/data/ReactData/ReactPracticalData";
+import { CodingLinkData } from "@/utils/data/ReactData/ReactPractical/ReactPracticalData";
+
+import { LinkInterface } from "../../../../utils/types/types";
 
 import React from "react";
 const ReactById = ({ params }: { params: { id: string } }) => {
-  console.log("🚀 ~ file: page.tsx:4 ~ params:", params.id);
 
-  const singleData = CodingLinkData.find(
-    (value) => String(value.url) === params.id
-  );
-  console.log("🚀 ~ file: page.tsx:11 ~ singleData:", singleData?.data);
+  const singleData = CodingLinkData.find((value) => String(value.url) === params.id) || {} as LinkInterface;
 
   return (
     <section className=" h-screen ">
       <ReusableContainer
-        data={singleData?.data || ""}
-        component={singleData?.component}
-        heading={singleData?.name || ""}
+        data={singleData}
+
       />
     </section>
   );

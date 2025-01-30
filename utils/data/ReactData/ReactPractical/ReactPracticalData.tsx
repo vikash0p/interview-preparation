@@ -73,9 +73,7 @@ import MultipleInputAndDropDown, {
   multipleInputDataSource,
 } from "@/components/ReactComponents/ReactPracticalComponents/IntermediateComponents/MultipleInputAndDropDown";
 
-import { LinkInterface} from '../../types/types'
-
-
+import { LinkInterface } from "../../../types/types";
 
 //! Prepare the CodingLinkData array
 

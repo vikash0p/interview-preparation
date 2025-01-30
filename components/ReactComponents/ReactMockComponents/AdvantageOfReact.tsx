@@ -7,7 +7,6 @@ export const AdvantagesOfReact = () => {
     "Virtual DOM: Faster UI updates by minimizing actual DOM manipulations.",
     "Fast Rendering: Efficient diffing algorithm for quicker UI rendering.",
     "Unidirectional Data Flow: Predictable data flow that's easier to debug.",
-    "Rich Ecosystem: Wide array of libraries, tools, and third-party integrations.",
     "JSX Syntax: HTML-like syntax for more intuitive component structure.",
     "React Hooks: Simplified state and lifecycle management with hooks.",
     "Cross-Platform Development: Build mobile apps with React Native.",

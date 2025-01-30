@@ -1,53 +1,113 @@
 "use client";
-import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import React, { useState, useEffect } from "react";
+import { AiOutlineClose, AiOutlineCopy } from "react-icons/ai";
+import { FiCheckCircle } from "react-icons/fi";
 
-const ModelOne = ({
-  open,
-  toggleOpen,
-  data,
-  heading,
-}: {
+interface ModelOneProps {
   open: boolean;
   toggleOpen: () => void;
   data: string;
   heading: string;
+}
+
+const ModelOne: React.FC<ModelOneProps> = ({
+  open,
+  toggleOpen,
+  data,
+  heading,
 }) => {
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const copyToClipboard = async (): Promise<void> => {
+    try {
+      await navigator.clipboard.writeText(data);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        toggleOpen();
+      }
+    };
+
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "unset";
+      document.removeEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open, toggleOpen]);
+
   return (
-    <div>
-      {/* Modal Overlay */}
+    <div
+      className={`fixed inset-0 flex items-center justify-center z-50 transition-all duration-300 ${
+        open
+          ? "bg-black/80 backdrop-blur-sm"
+          : "bg-transparent pointer-events-none"
+      }`}
+    >
+      {/* Modal Container */}
       <div
-        className={`fixed inset-0 flex items-center justify-center bg-black/70 z-40 transition-opacity duration-500 ease-out ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 max-w-6xl w-full mx-4 rounded-xl shadow-2xl transform transition-all duration-300 ${
+          open ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
-        onClick={toggleOpen}
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Content */}
-        <div
-          className={`bg-black text-gray-200 max-w-7xl w-full h-[700px] rounded-lg shadow-2xl transition-transform duration-500 ease-out transform border-2 border-indigo-600 ${
-            open ? "scale-100" : "scale-75"
-          } ${!open ? "opacity-0" : "opacity-100"}`}
-        >
-          {/* Modal Header */}
-          <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700 bg-neutral-900 rounded-t-lg">
-            <h2 className="text-lg font-semibold">{heading} </h2>
+        {/* Modal Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700 bg-gray-900/50 rounded-t-xl">
+          <div>
+            <h2 className="text-xl font-bold text-white">{heading}</h2>
+            <p className="text-sm text-gray-400 mt-1">Code Snippet</p>
+          </div>
+          <div className="flex items-center gap-4">
             <button
-              type="button"
-              className="text-gray-400 hover:text-gray-200 transition-colors"
-              onClick={toggleOpen}
+              onClick={copyToClipboard}
+              className="p-2 hover:bg-gray-700/30 rounded-lg group relative"
+              aria-label="Copy code"
             >
-              <AiOutlineClose size={24} />
+              <AiOutlineCopy className="text-xl text-gray-300 hover:text-white transition-colors" />
+              {copied && (
+                <span className="absolute -top-8 right-0 bg-gray-700 px-2 py-1 rounded-md text-sm flex items-center gap-1">
+                  <FiCheckCircle className="text-emerald-400" />
+                  Copied!
+                </span>
+              )}
+            </button>
+            <button
+              onClick={toggleOpen}
+              className="p-2 hover:bg-gray-700/30 rounded-lg"
+              aria-label="Close modal"
+            >
+              <AiOutlineClose className="text-xl text-gray-300 hover:text-white transition-colors" />
             </button>
           </div>
+        </div>
 
-          {/* Modal Body */}
-          <div
-            className="overflow-auto px-6 py-2 h-[92%] rounded-b-lg  scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-700 custom-scrollbar"
-            style={{ overflowY: "scroll" }}
-          >
-            <pre className="text-sm whitespace-pre-wrap">
-              <code className="text-gray-300">{data}</code>
-            </pre>
+        {/* Modal Body */}
+        <div className="overflow-auto h-[80vh] bg-gray-950/30 custom-scrollbar">
+          <pre className="text-sm  ps-6">
+            <code className="text-emerald-400">{data}</code>
+          </pre>
+        </div>
+
+        {/* Modal Footer */}
+        <div className="px-6 py-4 border-t border-gray-700 bg-gray-900/50 rounded-b-xl">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-gray-400">Press ESC to close</span>
+            <div className="flex items-center gap-4 text-gray-400">
+              <span>{data.split("\n").length} lines</span>
+              <span>{data.length} characters</span>
+            </div>
           </div>
         </div>
       </div>

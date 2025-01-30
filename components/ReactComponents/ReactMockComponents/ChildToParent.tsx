@@ -1,55 +1,43 @@
-"use client"; // Enables client-side rendering in Next.js
+"use client";
 import React, { useState } from "react";
 
-// Parent Component: ChildToParent
 export const ChildToParent = () => {
-  // State to hold the count received from the child
   const [childCount, setChildCount] = useState(0);
-
-  // Handler function to update `childCount` when data is received from the child
   const handleChildData = (count: number) => {
     setChildCount(count);
   };
 
   return (
     <div>
-      {/* Definition of the parent component */}
       <h5>
         This is the parent component. It receives the count from the child
         component and displays it here.
       </h5>
 
-      {/* Display the count received from the child */}
       <h1>Child Count in Parent: {childCount}</h1>
 
-      {/* Render the Child component and pass the handler function as a prop */}
       <Child onCountChange={handleChildData} />
     </div>
   );
 };
 
-// Interface defining the props for the Child component
 interface ChildProps {
-  onCountChange: (count: number) => void; // Callback function to send the count to the parent
+  onCountChange: (count: number) => void;
 }
 
-// Child Component: Child
 const Child = ({ onCountChange }: ChildProps) => {
-  // Local state to track the count within the child
   const [count, setCount] = useState(0);
 
-  // Function to increment the count
   const handleIncrease = () => {
-    const newCount = count + 1; // Increment the count
-    setCount(newCount); // Update local state
-    onCountChange(newCount); // Notify parent of updated count
+    const newCount = count + 1;
+    setCount(newCount);
+    onCountChange(newCount);
   };
 
-  // Function to decrement the count
   const handleDecrease = () => {
-    const newCount = count - 1; // Decrement the count
-    setCount(newCount); // Update local state
-    onCountChange(newCount); // Notify parent of updated count
+    const newCount = count - 1;
+    setCount(newCount);
+    onCountChange(newCount);
   };
 
   return (
