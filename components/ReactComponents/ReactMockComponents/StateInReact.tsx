@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
 
-export const StateInReact = () => {
+ const StateInReact = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -44,3 +44,49 @@ export const StateInReact = () => {
     </div>
   );
 };
+
+export default StateInReact;
+
+export  const StateInReactData = `
+'use client'
+import React, { useState } from "react";
+
+export const StateInReact = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="">
+      <h1 className="text-2xl font-bold">State in React</h1>
+      <h5 className="text-4xl font-bold text-blue-600 mb-5">
+        Counter: {count}
+      </h5>
+      <div className="space-x-4">
+        {/* Decrease button */}
+        <button
+          className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition"
+          onClick={() => setCount(count - 1)}
+        >
+          Decrease
+        </button>
+
+        {/* Increase button */}
+        <button
+          className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition"
+          onClick={() => setCount(count + 1)}
+        >
+          Increase
+        </button>
+
+        {/* Reset button */}
+        <button
+          className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition"
+          onClick={() => setCount(0)}
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+};
+
+`;

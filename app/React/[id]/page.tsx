@@ -1,9 +1,15 @@
+'use client'
+import Code from "@/components/ReusableComponents/Code";
 import { ReactMockData } from "@/utils/data/ReactData/ReactMockData";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 const ReactId = ({ params }: { params: { id: string } }) => {
   console.log("🚀 ~ file: page.tsx:4 ~ params:", params);
 
+  const[open,setOpen]=useState(false);
+  const toggleOpen=()=>{
+    setOpen(!open);
+  }
   const ReactSingleData = useMemo(() => {
     return ReactMockData.find((value) => String(value.link) === params.id);
   }, [params.id]);
@@ -11,8 +17,11 @@ const ReactId = ({ params }: { params: { id: string } }) => {
   return (
     <div className=" min-h-screen flex  justify-center text-white  ">
       {ReactSingleData ? (
-        <div className="w-full  p-4  rounded-lg shadow-lg text-gray-300">
-          {ReactSingleData.component}
+        <div className="flex flex-col gap-10">
+          <div className="w-full  p-4  rounded-lg shadow-lg text-gray-300">
+            {ReactSingleData.component}
+          </div>
+          {ReactSingleData.data && <Code data={ReactSingleData.data} open={open} toggleOpen={toggleOpen} />}
         </div>
       ) : (
         <div className="text-center">
