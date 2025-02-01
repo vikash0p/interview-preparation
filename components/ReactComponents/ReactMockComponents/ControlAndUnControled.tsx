@@ -7,19 +7,22 @@ const ControlAndUnControled = () => {
   return (
     <div className="min-h-screen bg-gray-300 p-8">
       <p className="text-black">
-        {" "}
         <span className="text-xl font-semibold">Controlled Component :- </span>A
-        controlled component is one where React manages the component's state.
-        The component's value is controlled by React through state, and changes
-        are handled via event callbacks (e.g., onChange). The component
-        re-renders whenever the state changes.
+        controlled component is one where React manages the component&apos;s
+        state. The component&apos;s value is controlled by React through state,
+        and changes are handled via event callbacks (e.g., onChange). The
+        component re-renders whenever the state changes.
       </p>
+
       <p className="text-black">
-        <span className="text-xl font-semibold">Uncontrolled Component :- </span>
+        <span className="text-xl font-semibold">
+          Uncontrolled Component :-{" "}
+        </span>
         An uncontrolled component lets the DOM manage the form data directly.
         Instead of React state, you use a ref (e.g., useRef) to access the DOM
-        element's value when needed (e.g., on form submission).
+        element&apos;s value when needed (e.g., on form submission).
       </p>
+
       {/* Header */}
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-2">

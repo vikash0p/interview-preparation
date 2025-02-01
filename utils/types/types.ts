@@ -29,7 +29,6 @@ export interface ProductProps  {
 
 
 export  interface JavaScriptMockInterface {
-    id: string;
     question: string;
     code?: string;
     answer: string;

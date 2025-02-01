@@ -16,7 +16,7 @@ const JavaScriptMockNavigation = () => {
         return (
           <Link
             href={`/JavaScript/${question.link}`}
-            key={question.id}
+            key={index}
             className={`${
               isActive ? "text-indigo-600 font-semibold" : "text-gray-300"
             } hover:text-indigo-500 transition-colors`}

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaCode, FaDatabase, FaMobileAlt, FaPaintBrush } from "react-icons/fa";
-import { SiNextdotjs, SiNodedotjs, SiTypescript } from "react-icons/si";
+import {  SiNodedotjs, SiTypescript } from "react-icons/si";
 
 const domains = [
   {
