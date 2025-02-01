@@ -20,24 +20,28 @@ const Page = () => {
     {
       title: "Next.js",
       description: "The React framework for production.",
-      icon: <SiNextdotjs className="text-white text-6xl" />,
+      icon: <SiNextdotjs className="text-gray-300 text-6xl" />,
       link: "/coding/NextJS",
     },
   ];
 
   return (
-    <div className="bg-black min-h-screen flex items-center justify-center max-w-7xl m-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+    <div className="min-h-screen flex items-center justify-center  px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
         {cards.map((card, index) => (
           <Link
             key={index}
             href={card.link}
             rel="noopener noreferrer"
-            className="border border-gray-800 text-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform duration-300 flex flex-col items-center p-6"
+            className="group bg-gray-800 border border-gray-700 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-gray-500 flex flex-col items-center p-6"
           >
-            <div className="mb-4">{card.icon}</div>
-            <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
-            <p className="text-sm text-gray-400 text-center">
+            <div className="mb-4 transition-transform duration-300 group-hover:rotate-6">
+              {card.icon}
+            </div>
+            <h2 className="text-xl font-semibold mb-2 text-white">
+              {card.title}
+            </h2>
+            <p className="text-sm text-gray-400 text-center leading-relaxed">
               {card.description}
             </p>
           </Link>

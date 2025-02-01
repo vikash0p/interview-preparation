@@ -72,7 +72,7 @@ const Code = ({
           style={{ willChange: "transform, opacity, max-height" }}
         >
           <pre className="p-4 text-sm text-neutral-200 font-mono leading-relaxed">
-            <code className="text-wrap text-teal-400">{data}</code>
+            <code className="text-wrap text-teal-500">{data}</code>
           </pre>
         </div>
       </div>

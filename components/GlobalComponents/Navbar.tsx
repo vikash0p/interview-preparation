@@ -34,10 +34,15 @@ function Navbar() {
       name: "Coding Round",
       link: "/coding",
     },
+    {
+      id: "6",
+      name: "Contact",
+      link: "/contact",
+    },
   ];
 
   return (
-    <div className=" z-20  bg-gradient-to-b from-gray-900 to-gray-900  py-4 sticky top-0 left-0 right-0  border-b border-gray-300 ">
+    <div className=" z-20  bg-gradient-to-b from-gray-900 to-gray-900  py-4 sticky top-0 left-0 right-0  border-b-2 border-gray-800 ">
       <div className=" max-w-7xl m-auto flex flex-row gap-6 justify-between items-center ">
         <div className="flex items-center text-white text-2xl font-bold">
           <Link

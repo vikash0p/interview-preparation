@@ -21,7 +21,7 @@ const ReactInterviewQuestionLayout = ({
           <h2 className="text-xl font-bold text-white mb-4 px-4">
             React Interview Questions
           </h2>
-          {ReactMockData.map((value) => {
+          {ReactMockData.map((value,index) => {
             const isActive =
               pathname === `/React/${value.link}` ||
               selectedSegment === value.link.split("/")[1];
@@ -34,7 +34,7 @@ const ReactInterviewQuestionLayout = ({
                     : "hover:bg-zinc-800 text-zinc-300"
                 }`}
                 href={`/React/${value.link}`}
-                key={value.id}
+                key={value.title}
                 aria-current={isActive ? "page" : undefined}
               >
                 <div className="flex items-center gap-2">
@@ -43,7 +43,7 @@ const ReactInterviewQuestionLayout = ({
                       isActive ? "text-white" : "text-zinc-400"
                     }`}
                   >
-                    {value.id}.
+                    {index +1}.
                   </span>
                   <span className="text-sm">{value.title}</span>
                   {isActive && (
