@@ -3,8 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { JavaScriptMockData } from "@/utils/data/JavaScriptData/JavaScriptMockData";
 import { JavaScriptMockInterface } from "@/utils/types/types";
+import { JavaScriptMockData } from "@/utils/data/javascriptData/JavaScriptMockData";
+
 const JavaScriptMockNavigation = () => {
   const pathname = usePathname();
 

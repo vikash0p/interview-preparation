@@ -1,4 +1,4 @@
-import { JavaScriptLogicalData } from "@/utils/data/JavaScriptData/JavaScriptLogicalData";
+import { JavaScriptLogicalData } from "@/utils/data/javascriptData/JavaScriptLogicalData";
 import React from "react";
 
 const LogicalSingle = ({ params }: { params: { logical: string } }) => {
