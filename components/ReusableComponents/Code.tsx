@@ -64,7 +64,7 @@ const Code = ({
 
         {/* Code area */}
         <div
-          className={`transition-[max-height,opacity,transform] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${
+          className={`transition-[max-height,opacity,transform] duration-300 ease-&lsqb;cubic-bezier(0.4,0,0.2,1)&rsqb; overflow-hidden ${
             open
               ? "max-h-[2000px] opacity-100 translate-y-0"
               : "max-h-64 opacity-95 translate-y-1"

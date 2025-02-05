@@ -1,5 +1,5 @@
 'use client'
-import { JavaScriptMockData } from "@/utils/data/JavaScriptData/JavaScriptMockData";
+import { JavaScriptMockData } from "@/utils/data/javascriptData/JavaScriptMockData";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { FaCheck, FaCopy, FaHome, FaSadTear } from "react-icons/fa";
