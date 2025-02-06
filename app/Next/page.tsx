@@ -204,7 +204,7 @@ const RenderingStrategies: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="table-auto w-full border-collapse border border-gray-200">
             <thead>
-              <tr className="bg-gray-200">
+              <tr className="bg-gray-800">
                 <th className="border border-gray-200 p-2">Feature</th>
                 <th className="border border-gray-200 p-2">CSR</th>
                 <th className="border border-gray-200 p-2">SSR</th>

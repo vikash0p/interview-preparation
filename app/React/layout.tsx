@@ -30,8 +30,8 @@ const ReactInterviewQuestionLayout = ({
               <Link
                 className={`group px-2 py-2 rounded-lg transition-all duration-200 ${
                   isActive
-                    ? "bg--600 text-white shadow-lg"
-                    : "hover:bg-zinc-800 text-zinc-300"
+                    ? "bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 shadow-lg"
+                    : "hover:bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300"
                 }`}
                 href={`/React/${value.link}`}
                 key={value.title}
@@ -43,7 +43,7 @@ const ReactInterviewQuestionLayout = ({
                       isActive ? "text-white" : "text-zinc-400"
                     }`}
                   >
-                    {index +1}.
+                    {index + 1}.
                   </span>
                   <span className="text-sm">{value.title}</span>
                   {isActive && (
