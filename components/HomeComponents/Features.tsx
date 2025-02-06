@@ -145,7 +145,7 @@ const Features = () => {
                 {feature.description}
               </p>
 
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-b-xl" />
+              {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-b-xl" /> */}
             </motion.div>
           ))}
         </motion.div>

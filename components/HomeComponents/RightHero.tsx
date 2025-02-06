@@ -196,7 +196,7 @@ const RightHero = () => {
         }}
       />
       <motion.div
-        className="relative bg-[#181d28] p-8 rounded-2xl border border-neutral-700 shadow-lg hover:shadow-xl transition-shadow"
+        className="relative bg-gradient-to-r  from-gray-900 to-gray-800 p-8 rounded-2xl border border-neutral-700 shadow-lg hover:shadow-xl transition-shadow"
         whileHover={{ scale: 1.01 }}
       >
         <div className="flex items-center justify-between mb-6">
@@ -252,7 +252,7 @@ const RightHero = () => {
               </p>
 
               <div className="relative ">
-                <pre className="bg-gray-900 min-h-60 text-neutral-100 p-4 rounded-lg text-sm text-wrap ">
+                <pre className="bg-gray-950 min-h-60 text-neutral-100 p-4 rounded-lg text-sm text-wrap ">
                   <code>{questions[currentQuestion].code}</code>
                 </pre>
                 <button
