@@ -93,7 +93,7 @@ const FeatureCard: React.FC<Feature> = ({
   color,
 }) => (
   <motion.div
-    className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300"
+    className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-opacity duration-300"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
@@ -146,12 +146,22 @@ const ChatBubble: React.FC<{ message: Message }> = ({ message }) => (
 
 const MockInterview: React.FC = () => {
   return (
-    <section
-      id="mockInterviews"
-      className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white"
-    >
+    <section id="mockInterviews" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ... keep existing header animation */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-4">
+            Mock Interviews
+          </h2>
+          <p className="text-lg text-gray-300">
+            Enhance your interview skills with our AI-powered mock interviews.
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Enhanced Interview Demo */}

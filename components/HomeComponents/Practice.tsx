@@ -61,7 +61,7 @@ const Practice = () => {
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-4">
             Practice Area
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-300">
             Interactive coding environment and problem-solving platform
           </p>
         </motion.div>

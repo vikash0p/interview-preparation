@@ -6,7 +6,7 @@ import Hero from "@/components/HomeComponents/Hero";
 import JoinCommunity from "@/components/HomeComponents/JoinCommunity";
 import MokeInterView from "@/components/HomeComponents/MokeInterView";
 import Practice from "@/components/HomeComponents/Practice";
-import Pricing from "@/components/HomeComponents/Pricing";
+// import Pricing from "@/components/HomeComponents/Pricing";
 import Resources from "@/components/HomeComponents/Resources";
 import SuccessStory from "@/components/HomeComponents/SuccessStory";
 import React from "react";
@@ -20,7 +20,7 @@ const page = () => {
       <Practice />
       <MokeInterView />
       <Resources />
-      <Pricing />
+      {/* <Pricing /> */}
       <SuccessStory />
       <JoinCommunity />
       <AskQuestion />

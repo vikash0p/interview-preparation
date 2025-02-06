@@ -84,7 +84,7 @@ const Domains = () => {
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
             Domains I Work In
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-300">
             Explore my technical expertise across different domains
           </p>
         </motion.div>

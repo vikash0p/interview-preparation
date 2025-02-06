@@ -101,10 +101,10 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-300 mb-4">
+          <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
             Comprehensive Interview Preparation
           </h2>
-          <p className="text-lg text-neutral-400">
+          <p className="text-lg text-gray-300">
             Everything you need to succeed in your next interview
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ const Features = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {featuresData.map((feature,) => (
+          {featuresData.map((feature) => (
             <motion.div
               key={feature.id}
               variants={itemVariants}

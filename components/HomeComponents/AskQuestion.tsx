@@ -1,95 +1,93 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+
+const faqData = [
+  {
+    question: "How should I prepare for technical interviews?",
+    answer:
+      "Practice coding problems regularly, review fundamental concepts, study data structures and algorithms, and participate in mock interviews.",
+  },
+  {
+    question: "What should I wear to an interview?",
+    answer:
+      "Dress professionally in business attire. When in doubt, it's better to be slightly overdressed than underdressed.",
+  },
+  {
+    question: "How early should I arrive for an interview?",
+    answer:
+      "Aim to arrive 10-15 minutes early. This shows punctuality and gives you time to compose yourself.",
+  },
+  {
+    question: "How should I handle difficult interview questions?",
+    answer:
+      "Stay calm, take a moment to think, and it's okay to ask for clarification. Structure your answers using the STAR method when applicable.",
+  },
+  {
+    question: "What questions should I ask the interviewer?",
+    answer:
+      "Ask about company culture, team dynamics, growth opportunities, and specific projects you might work on.",
+  },
+];
 
 const AskQuestion = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-   <section id="faq" className="bg-neutral-900 py-16 px-4 sm:px-6 lg:px-8">
-  <div className="max-w-7xl mx-auto" id="el-94y4glzn">
-    <div className="text-center mb-12" id="el-ukqs2civ">
-      <h2 className="text-4xl font-bold text-white mb-4" id="el-6kxdv78p">
-        Frequently Asked Questions
-      </h2>
-      <p className="text-neutral-400" id="el-teo4inyh">
-        Find answers to common questions about interview preparation
-      </p>
-    </div>
-    <div className="grid gap-6 max-w-3xl mx-auto" id="el-ek1pxn5k">
-      <div className="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition duration-300" id="el-zz3ijdl9">
-        <button className="flex justify-between items-center w-full text-left" id="el-pqhfaz9n">
-          <h3 className="text-xl font-semibold text-white" id="el-8lrrw6iu">
-            How should I prepare for technical interviews?
-          </h3>
-          <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-2mrz99zi">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" id="el-wzag1see" />
-          </svg>
-        </button>
-        <div className="mt-4 text-neutral-400" id="el-q8xuhxcg">
-          Practice coding problems regularly, review fundamental concepts,
-          study data structures and algorithms, and participate in mock
-          interviews.
+    <section id="faq" className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-300">
+            Find answers to common questions about interview preparation
+          </p>
+        </div>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqData.map((item, index) => (
+            <motion.div
+              key={index}
+              className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <button
+                onClick={() => toggleAccordion(index)}
+                className="flex justify-between items-center w-full text-left"
+              >
+                <h3 className="text-xl font-semibold text-white">
+                  {item.question}
+                </h3>
+                {activeIndex === index ? (
+                  <FiChevronUp className="w-6 h-6 text-neutral-400 transition-transform duration-300 transform rotate-180" />
+                ) : (
+                  <FiChevronDown className="w-6 h-6 text-neutral-400 transition-transform duration-300 transform rotate-0" />
+                )}
+              </button>
+              {activeIndex === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mt-4 text-neutral-400">{item.answer}</div>
+                </motion.div>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
-      <div className="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition duration-300" id="el-dp6fbxne">
-        <button className="flex justify-between items-center w-full text-left" id="el-rumzlwo0">
-          <h3 className="text-xl font-semibold text-white" id="el-9fun5cfp">
-            What should I wear to an interview?
-          </h3>
-          <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-x1o4nu68">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" id="el-rmuch4fp" />
-          </svg>
-        </button>
-        <div className="mt-4 text-neutral-400" id="el-cs4io3uz">
-          Dress professionally in business attire. When in doubt, its
-          better to be slightly overdressed than underdressed.
-        </div>
-      </div>
-      <div className="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition duration-300" id="el-jph3o9n6">
-        <button className="flex justify-between items-center w-full text-left" id="el-h58ed44t">
-          <h3 className="text-xl font-semibold text-white" id="el-snaj49fz">
-            How early should I arrive for an interview?
-          </h3>
-          <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-gtmgn2le">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" id="el-fw2dk65i" />
-          </svg>
-        </button>
-        <div className="mt-4 text-neutral-400" id="el-ys0coqp8">
-          Aim to arrive 10-15 minutes early. This shows punctuality and
-          gives you time to compose yourself.
-        </div>
-      </div>
-      <div className="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition duration-300" id="el-k3t60qv7">
-        <button className="flex justify-between items-center w-full text-left" id="el-grk9uue4">
-          <h3 className="text-xl font-semibold text-white" id="el-d91etzl5">
-            How should I handle difficult interview questions?
-          </h3>
-          <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-wbds3y5e">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" id="el-fq3g1kwy" />
-          </svg>
-        </button>
-        <div className="mt-4 text-neutral-400" id="el-jofkjcik">
-          Stay calm, take a moment to think, and its okay to ask for
-          clarification. Structure your answers using the STAR method when
-          applicable.
-        </div>
-      </div>
-      <div className="bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition duration-300" id="el-7fjs8xf1">
-        <button className="flex justify-between items-center w-full text-left" id="el-3h47tgb7">
-          <h3 className="text-xl font-semibold text-white" id="el-kuuuaj3d">
-            What questions should I ask the interviewer?
-          </h3>
-          <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-2e8y719p">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" id="el-e5935y26" />
-          </svg>
-        </button>
-        <div className="mt-4 text-neutral-400" id="el-myi4w3w9">
-          Ask about company culture, team dynamics, growth opportunities,
-          and specific projects you might work on.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
   );
-}
+};
 
-export default AskQuestion
+export default AskQuestion;
