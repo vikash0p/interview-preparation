@@ -31,20 +31,20 @@ const Page = () => {
     <div className=" mt-20 flex  justify-center  px-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
         {cards.map((card, index) => (
-          <motion.div
-            className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300 cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
-            }}
-            transition={{ delay: index * 0.2 }}
-            key={index}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
-            <Link key={index} href={card.link} rel="noopener noreferrer">
+          <Link href={card.link} key={index} passHref>
+            <motion.div
+              className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300 cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
+              }}
+              transition={{ delay: index * 0.2 }}
+              key={index}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
               <div className="mb-4 transition-transform duration-300 group-hover:rotate-6">
                 {card.icon}
               </div>
@@ -54,8 +54,9 @@ const Page = () => {
               <p className="text-sm text-gray-400  leading-relaxed">
                 {card.description}
               </p>
-            </Link>
-          </motion.div>
+
+            </motion.div>
+          </Link>
         ))}
       </div>
     </div>

@@ -175,13 +175,14 @@ const SuccessStoryCard = ({
     <motion.div
       key={index}
       className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-opacity duration-300"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.2 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       whileHover={{
-        scale: 1.02,
-        boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+        y: -5,
+        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
       }}
+      transition={{ delay: index * 0.2 }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
 
