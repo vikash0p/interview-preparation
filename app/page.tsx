@@ -1,17 +1,18 @@
-import Footer from "@/components/GlobalComponents/Footer";
-import AskQuestion from "@/components/HomeComponents/AskQuestion";
-import Domains from "@/components/HomeComponents/Domains";
-import Features from "@/components/HomeComponents/Features";
-import Hero from "@/components/HomeComponents/Hero";
-import JoinCommunity from "@/components/HomeComponents/JoinCommunity";
-import MokeInterView from "@/components/HomeComponents/MokeInterView";
-import Practice from "@/components/HomeComponents/Practice";
-// import Pricing from "@/components/HomeComponents/Pricing";
-import Resources from "@/components/HomeComponents/Resources";
-import SuccessStory from "@/components/HomeComponents/SuccessStory";
 import React from "react";
+import dynamic from "next/dynamic";
 
-const page = () => {
+const Hero = dynamic(() => import("@/components/HomeComponents/Hero"), {ssr: false,});
+const Features = dynamic(() => import("@/components/HomeComponents/Features"),{ ssr:false});
+const Domains = dynamic(() => import("@/components/HomeComponents/Domains"),{ ssr:false});
+const Practice = dynamic(() => import("@/components/HomeComponents/Practice"),{ ssr:false});
+const MokeInterView = dynamic(() => import("@/components/HomeComponents/MokeInterView"),{ ssr:false});
+const Resources = dynamic(() => import("@/components/HomeComponents/Resources"),{ ssr:false});
+const SuccessStory = dynamic(() => import("@/components/HomeComponents/SuccessStory"),{ ssr:false});
+const JoinCommunity = dynamic(() => import("@/components/HomeComponents/JoinCommunity"),{ ssr:false});
+const AskQuestion = dynamic(() => import("@/components/HomeComponents/AskQuestion"),{ ssr:false});
+const Footer = dynamic(() => import("@/components/GlobalComponents/Footer"),{ ssr:false});
+
+const Page = () => {
   return (
     <div className="max-w-7xl m-auto">
       <Hero />
@@ -20,7 +21,6 @@ const page = () => {
       <Practice />
       <MokeInterView />
       <Resources />
-      {/* <Pricing /> */}
       <SuccessStory />
       <JoinCommunity />
       <AskQuestion />
@@ -29,4 +29,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -24,11 +24,11 @@ const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
 
 const LeftHero = () => {
   return (
-    <motion.div
+    <div
       className="lg:w-1/2 space-y-8"
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
+      // initial={{ opacity: 0, x: -50 }}
+      // animate={{ opacity: 1, x: 0 }}
+      // transition={{ duration: 0.6 }}
     >
       <motion.h1
         className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white"
@@ -109,7 +109,7 @@ const LeftHero = () => {
           <span>4.9/5 Rating</span>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

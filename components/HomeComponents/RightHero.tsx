@@ -177,11 +177,11 @@ const RightHero = () => {
   };
 
   return (
-    <motion.div
+    <div
       className="lg:w-1/2 mt-12 lg:mt-0 relative"
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
+      // initial={{ opacity: 0, x: 50 }}
+      // animate={{ opacity: 1, x: 0 }}
+      // transition={{ duration: 0.6 }}
     >
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl transform rotate-6 blur-xl opacity-30"
@@ -305,7 +305,7 @@ const RightHero = () => {
           })()}
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
