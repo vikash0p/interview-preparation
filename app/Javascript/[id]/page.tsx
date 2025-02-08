@@ -1,6 +1,6 @@
 'use client'
 import { JavaScriptMockData } from "@/utils/data/javascriptData/JavaScriptMockData";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { useCallback, useState } from "react";
 import { FaCheck, FaCopy, FaHome, FaSadTear } from "react-icons/fa";
 

@@ -3,7 +3,7 @@
 
 import React from "react";
 import { JavaScriptLogicalInterface } from "../../../utils/types/types";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 import { usePathname,  } from "next/navigation";
 import { JavaScriptLogicalData } from "@/utils/data/javascriptData/JavaScriptLogicalData";
 const JavaScriptLogicalNavigation = () => {

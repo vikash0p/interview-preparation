@@ -1,6 +1,6 @@
 "use client";
 import { CodingLinkData } from "@/utils/data/ReactData/ReactPractical/ReactPracticalData";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 import React, { useState } from "react";
 import { FiChevronRight, FiCode, FiStar } from "react-icons/fi";
 

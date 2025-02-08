@@ -1,8 +1,9 @@
-"use client"; // Ensure client-side rendering
-import Link from "next/link";
+"use client";
+import { Link } from 'next-view-transitions'
 import { usePathname, useSelectedLayoutSegment } from "next/navigation"; // Import both hooks
 import AnimatedBackground from "./AnimatedBackground";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const pathname = usePathname();
@@ -42,9 +43,19 @@ function Navbar() {
   ];
 
   return (
-    <div className=" z-20  bg-gradient-to-b from-gray-900 to-gray-900  py-4 sticky top-0 left-0 right-0  border-b-2 border-gray-800 ">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className=" z-20  bg-gradient-to-b from-gray-900 to-gray-900  py-4 sticky top-0 left-0 right-0  border-b-2 border-gray-800 "
+    >
       <div className=" max-w-7xl m-auto flex flex-row gap-6 justify-between items-center ">
-        <div className="flex items-center text-white text-2xl font-bold">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center text-white text-2xl font-bold"
+        >
           <Link
             href="/"
             className="no-underline text-white hover:text-gray-300 flex items-center gap-2"
@@ -60,7 +71,7 @@ function Navbar() {
               InterViewPrap
             </p>
           </Link>
-        </div>
+        </motion.div>
         <div className="space-x-4">
           <AnimatedBackground
             className="rounded-lg bg-white transition-all"
@@ -94,7 +105,7 @@ function Navbar() {
           </AnimatedBackground>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

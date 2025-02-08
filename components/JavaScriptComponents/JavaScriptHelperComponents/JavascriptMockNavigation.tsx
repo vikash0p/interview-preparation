@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 import { usePathname } from "next/navigation";
 import { JavaScriptMockInterface } from "@/utils/types/types";
 import { JavaScriptMockData } from "@/utils/data/javascriptData/JavaScriptMockData";
