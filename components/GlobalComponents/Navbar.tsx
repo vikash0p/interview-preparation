@@ -18,7 +18,7 @@ function Navbar() {
     {
       id: "3",
       name: "JavaScript",
-      link: "/JavaScript",
+      link: "/Javascript",
     },
     {
       id: "4",
