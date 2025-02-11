@@ -33,7 +33,7 @@ const Page = () => {
         {cards.map((card, index) => (
           <Link href={card.link} key={index} passHref>
             <motion.div
-              className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300 cursor-pointer"
+              className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300 cursor-pointer min-h-52"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
