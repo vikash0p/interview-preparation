@@ -100,3 +100,30 @@ body {
   background-color: #2d2d2d; /* Dark gray track */
   border-radius: 10px;
 }
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-size: 40px;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #fff;
+  background:
+    radial-gradient(0.71em at 50% 1em,#fff 99%,#fff 101%) calc(50% - 1em) 1em/2em 200% repeat-x text,
+    radial-gradient(0.71em at 50% -0.5em,#fff 99%,#fff 101%) 50% 1.5em/2em 200% repeat-x text;
+  animation:
+    l10-0 .8s linear infinite alternate,
+    l10-1  4s linear infinite;
+}
+.loader:before {
+  content: "Loading";
+}
+@keyframes l10-0 {
+  to {background-position-x: 50%,calc(50% + 1em)}
+}
+@keyframes l10-1 {
+  to {background-position-y: -.5em,0}
+}

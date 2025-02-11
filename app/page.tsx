@@ -1,7 +1,7 @@
 import HomeContainer from "@/components/HomeComponents/HomeContainer";
 import React from "react";
 
-const page = () => {
+const page =  () => {
   return <HomeContainer />;
 };
 
