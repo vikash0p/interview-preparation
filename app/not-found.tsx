@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaExclamationTriangle, FaHome, FaSearch } from "react-icons/fa";
@@ -53,7 +53,7 @@ export default function NotFound() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition gap-2"
+              className="flex items-center justify-center px-6 py-3 bg-indigo-600 font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition gap-2"
             >
               <FaHome className="text-lg" />
               Return Home
@@ -80,7 +80,7 @@ export default function NotFound() {
         >
           <p className="text-sm">
             Need more help?{" "}
-            <a href="/contact" className="text-yellow-500 hover:underline">
+            <a href="/contact" className="text-indigo-500 hover:underline">
               Contact Support
             </a>
           </p>

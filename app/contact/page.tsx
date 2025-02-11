@@ -97,7 +97,7 @@ const Contact = () => {
           <motion.h1
             initial={{ y: -50 }}
             animate={{ y: 0 }}
-            className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600"
+            className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-600"
           >
             Let&apos;s Transform Your Career
           </motion.h1>
@@ -127,21 +127,21 @@ const Contact = () => {
                   transition={{ delay: index * 0.2 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-2xl border border-gray-700"
                 >
-                  <h2 className="text-2xl font-bold mb-6 text-yellow-400 flex items-center gap-2">
-                    <div className="h-1 w-8 bg-yellow-500 rounded-full" />
+                  <h2 className="text-2xl font-bold mb-6 text-indigo-400 flex items-center gap-2">
+                    <div className="h-1 w-8 bg-indigo-500 rounded-full" />
                     {section.title}
                   </h2>
                   <div className="space-y-6">
                     {section.items.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-4 group">
-                        <div className="p-3 bg-gray-700 rounded-lg group-hover:bg-yellow-500 transition-colors">
+                        <div className="p-3 bg-gray-700 rounded-lg group-hover:bg-indigo-500 transition-colors">
                           {item.icon}
                         </div>
                         <div className="flex-1">
                           {item.link ? (
                             <Link
                               href={item.link}
-                              className="text-lg hover:text-yellow-400 transition-colors"
+                              className="text-lg hover:text-indigo-400 transition-colors"
                             >
                               {item.text.split("\n").map((line, i) => (
                                 <p key={i}>{line}</p>
@@ -169,7 +169,7 @@ const Contact = () => {
               transition={{ delay: 0.6 }}
               className="bg-gray-800/50 p-8 rounded-xl border border-gray-700"
             >
-              <h3 className="text-2xl font-bold mb-6 text-yellow-400">
+              <h3 className="text-2xl font-bold mb-6 text-indigo-400">
                 Stay Connected
               </h3>
               <div className="grid grid-cols-2 gap-4">
@@ -177,7 +177,7 @@ const Contact = () => {
                   <Link
                     key={index}
                     href={link.url}
-                    className="flex items-center gap-3 p-4 bg-gray-700 rounded-lg hover:bg-yellow-500 transition-colors"
+                    className="flex items-center gap-3 p-4 bg-gray-700 rounded-lg hover:bg-indigo-500 transition-colors"
                   >
                     <span className="text-2xl">{link.icon}</span>
                     <span className="font-medium">{link.name}</span>
@@ -196,7 +196,7 @@ const Contact = () => {
               transition={{ delay: 0.4 }}
               className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-2xl border border-gray-700"
             >
-              <h2 className="text-2xl font-bold mb-8 text-yellow-400">
+              <h2 className="text-2xl font-bold mb-8 text-indigo-400">
                 Send Your Inquiry
               </h2>
               {submitted ? (
@@ -221,7 +221,7 @@ const Contact = () => {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -237,7 +237,7 @@ const Contact = () => {
                       <input
                         type="email"
                         required
-                        className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                        className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -250,7 +250,7 @@ const Contact = () => {
                       </label>
                       <input
                         type="tel"
-                        className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                        className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500"
                         value={formData.phone}
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
@@ -266,7 +266,7 @@ const Contact = () => {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500"
                       value={formData.subject}
                       onChange={(e) =>
                         setFormData({ ...formData, subject: e.target.value })
@@ -281,7 +281,7 @@ const Contact = () => {
                     <textarea
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                      className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500"
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
@@ -292,7 +292,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-4 bg-yellow-500 text-gray-900 font-bold rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-indigo-500 text-gray-900 font-bold rounded-lg hover:bg-indigo-600 transition-colors flex items-center justify-center gap-2"
                   >
                     {isLoading ? (
                       <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900" />
@@ -336,11 +336,11 @@ const Contact = () => {
         >
           <p className="text-sm">
             © 2024 InterviewPrep. All rights reserved.
-            <Link href="#" className="hover:text-yellow-400 ml-2">
+            <Link href="#" className="hover:text-indigo-400 ml-2">
               Privacy Policy
             </Link>{" "}
             |
-            <Link href="#" className="hover:text-yellow-400 ml-2">
+            <Link href="#" className="hover:text-indigo-400 ml-2">
               Terms of Service
             </Link>
           </p>
