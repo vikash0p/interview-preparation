@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from 'next-view-transitions';
 import React from "react";
-import { SiJavascript, SiReact, SiNextdotjs } from "react-icons/si";
+import { SiJavascript, SiReact,  } from "react-icons/si";
 
 const Page = () => {
   const cards = [
@@ -19,12 +19,7 @@ const Page = () => {
       icon: <SiReact className="text-blue-500 text-6xl" />,
       link: "/coding/ReactJS",
     },
-    {
-      title: "Next.js",
-      description: "The React framework for production.",
-      icon: <SiNextdotjs className="text-gray-300 text-6xl" />,
-      link: "/coding/NextJS",
-    },
+
   ];
 
   return (

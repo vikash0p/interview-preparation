@@ -1,19 +1,33 @@
 import ReusableContainer from "@/components/ReusableComponents/ReusableContainer";
 import { CodingLinkData } from "@/utils/data/ReactData/ReactPractical/ReactPracticalData";
-
-import { LinkInterface } from "../../../../utils/types/types";
-
 import React from "react";
-const ReactById = ({ params }: { params: { id: string } }) => {
 
-  const singleData = CodingLinkData.find((value) => String(value.url) === params.id) || {} as LinkInterface;
+export function generateStaticParams() {
+  return CodingLinkData.map((post) => ({
+    id: post.url.toString(),
+  }));
+}
+
+interface ReactByIdProps {
+  params: { id: string };
+}
+
+const ReactById: React.FC<ReactByIdProps> = ({ params }) => {
+  const singleData = CodingLinkData.find(
+    (value) => value.url.toString() === params.id
+  );
+
+  if (!singleData) {
+    return (
+      <section className="h-screen flex items-center justify-center">
+        <p className="text-red-500 text-lg">Data not found!</p>
+      </section>
+    );
+  }
 
   return (
-    <section className=" h-screen ">
-      <ReusableContainer
-        data={singleData}
-
-      />
+    <section className="h-screen">
+      <ReusableContainer data={singleData} />
     </section>
   );
 };
