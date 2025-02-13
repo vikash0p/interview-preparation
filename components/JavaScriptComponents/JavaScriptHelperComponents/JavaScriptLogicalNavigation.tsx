@@ -16,7 +16,7 @@ const JavaScriptLogicalNavigation = () => {
 
         return (
           <Link
-            href={`/JavaScript/logical/${question.link}`}
+            href={`/Javascript/logical/${question.link}`}
             key={question.id}
             className={`${
               isActive ? "text-indigo-600 font-semibold" : "text-gray-300"

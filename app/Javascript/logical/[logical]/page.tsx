@@ -1,6 +1,14 @@
 import { JavaScriptLogicalData } from "@/utils/data/javascriptData/JavaScriptLogicalData";
 import React from "react";
 
+
+
+export function generateStaticParams() {
+  return JavaScriptLogicalData.map((post) => ({
+    logical: post.link,
+  }));
+}
+
 const LogicalSingle = ({ params }: { params: { logical: string } }) => {
   const singleData = JavaScriptLogicalData.find(
     (value) => String(value.link) === params.logical

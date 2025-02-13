@@ -1,4 +1,3 @@
-"use client";
 
 import Accordion from "@/components/GlobalComponents/Accordion";
 import React from "react";

@@ -1,4 +1,4 @@
-export const JavaScriptMockData = [
+ const JavaScriptMockData = [
   {
     question: "What is JavaScript?",
     answer:
@@ -941,3 +941,5 @@ document.getElementById('parent').addEventListener('click', function (event) {
     link: "event_delegation",
   },
 ];
+
+export default JavaScriptMockData;
