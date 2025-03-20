@@ -22,11 +22,16 @@ const CodingCard = () => {
       {JavascriptCodingData.map(({ id, question, code }) => (
         <motion.div
           key={id}
-          className="relative bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 flex flex-col"
+          className="relative group  p-8 bg-gray-800 rounded-2xl border-2 border-gray-700 hover:border-indigo-500 transition-all shadow-xl hover:shadow-2xl"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          style={{
+            background:
+              "linear-gradient(45deg, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%)",
+          }}
         >
           {/* Copy Code Button */}
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 opacity-0 group-hover:opacity-100 rounded-2xl" />
 
           {/* Question */}
           <div className="flex items-center justify-between mb-4">
