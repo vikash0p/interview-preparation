@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactMockData } from "@/utils/data/ReactData/ReactMockData";
+import { ReactMockData } from "@/main/data/ReactData/ReactMockData";
 import { Link } from 'next-view-transitions'
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import React from "react";

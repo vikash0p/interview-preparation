@@ -1,6 +1,6 @@
 'use client'
 import Code from "@/components/ReusableComponents/Code";
-import { ReactMockData } from "@/utils/data/ReactData/ReactMockData";
+import { ReactMockData } from "@/main/data/ReactData/ReactMockData";
 import React, { useMemo, useState } from "react";
 
 const ReactId = ({ params }: { params: { id: string } }) => {

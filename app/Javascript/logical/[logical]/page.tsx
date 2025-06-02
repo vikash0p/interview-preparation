@@ -1,4 +1,4 @@
-import { JavaScriptLogicalData } from "@/utils/data/javascriptData/JavaScriptLogicalData";
+import { JavaScriptLogicalData } from "@/main/data/javascriptData/JavaScriptLogicalData";
 import React from "react";
 
 

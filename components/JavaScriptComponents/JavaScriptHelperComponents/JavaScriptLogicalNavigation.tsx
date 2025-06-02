@@ -2,10 +2,11 @@
 
 
 import React from "react";
-import { JavaScriptLogicalInterface } from "../../../utils/types/types";
+import { JavaScriptLogicalInterface } from "../../../main/types/types";
+
 import { Link } from 'next-view-transitions';
 import { usePathname,  } from "next/navigation";
-import { JavaScriptLogicalData } from "@/utils/data/javascriptData/JavaScriptLogicalData";
+import { JavaScriptLogicalData } from "@/main/data/javascriptData/JavaScriptLogicalData";
 const JavaScriptLogicalNavigation = () => {
   const pathname = usePathname();
 

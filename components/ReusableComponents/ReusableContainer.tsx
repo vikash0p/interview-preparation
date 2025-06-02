@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ModelOne from "../GlobalComponents/GlobalModel";
-import { LinkInterface } from "../../utils/types/types";
+import { LinkInterface } from "../../main/types/types";
 import { FiBook, FiTarget, FiInfo, FiCode } from "react-icons/fi";
 
 const ReusableContainer = ({ data }: { data: LinkInterface }) => {

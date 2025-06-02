@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { JavascriptCodingData } from "@/utils/data/javascriptData/JavaScriptCodingData";
+import { JavascriptCodingData } from "@/main/data/javascriptData/JavaScriptCodingData";
+
 
 const CodingCard = () => {
   const [copiedId, setCopiedId] = useState<string | null>(null);

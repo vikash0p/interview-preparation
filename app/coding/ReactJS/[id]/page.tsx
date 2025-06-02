@@ -1,6 +1,7 @@
 import ReusableContainer from "@/components/ReusableComponents/ReusableContainer";
-import { CodingLinkData } from "@/utils/data/ReactData/ReactPractical/ReactPracticalData";
+import { CodingLinkData } from "@/main/data/ReactData/ReactPractical/ReactPracticalData";
 import React from "react";
+
 
 export function generateStaticParams() {
   return CodingLinkData.map((post) => ({

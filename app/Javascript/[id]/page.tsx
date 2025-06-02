@@ -1,5 +1,6 @@
 import JavaScriptMockSingleClient from "@/components/JavaScriptComponents/JavaScriptHelperComponents/JavaScriptMockSingleClient";
-import JavaScriptMockData from "@/utils/data/javascriptData/JavaScriptMockData";
+import JavaScriptMockData from "@/main/data/javascriptData/JavaScriptMockData";
+
 
 export function generateStaticParams() {
   return JavaScriptMockData.map((post) => ({

@@ -1,5 +1,6 @@
 "use client";
-import { NextMockData } from "@/utils/data/nextData/NextMockData";
+
+import { NextMockData } from "@/main/data/nextData/NextMockData";
 import React, { useMemo,  } from "react";
 const ReactId = ({ params }: { params: { id: string } }) => {
   console.log("🚀 ~ file: page.tsx:4 ~ params:", params);
