@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/GlobalComponents/Navbar";
-import { LayoutMetadata } from "@/utils/seo/meta/LayoutMetadata";
 import ScrollToTop from "@/components/GlobalComponents/ScrollToTop";
 import { ViewTransitions } from "next-view-transitions";
 import { Nunito } from "next/font/google";
+import { LayoutMetadata } from "@/main/meta/LayoutMetadata";
 
 
 const nunito = Nunito({
