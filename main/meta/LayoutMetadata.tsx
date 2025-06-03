@@ -65,14 +65,6 @@ export const LayoutMeta: Metadata = {
 		],
 		locale: 'en_US',
 		type: 'website',
-		videos: [
-			{
-				url: '/assets/demo-video.mp4',
-				width: 1280,
-				height: 720,
-				type: 'video/mp4',
-			},
-		],
 	},
 	// twitter metadata
 	twitter: {
