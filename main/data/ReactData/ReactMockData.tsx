@@ -1,21 +1,21 @@
-import AdvantagesOfReact from '@/components/react-components/ReactMockComponents/AdvantageOfReact';
+import AdvantagesOfReact from '@/components/react-components/react-mock-components/AdvantageOfReact';
 import ChildToParent, {
 	ChildToParentData,
-} from '@/components/react-components/ReactMockComponents/ChildToParent';
-import ControlAndUnControled from '@/components/react-components/ReactMockComponents/ControlAndUnControled';
-import ElementAndComponent from '@/components/react-components/ReactMockComponents/ElementAndComponent';
+} from '@/components/react-components/react-mock-components/ChildToParent';
+import ControlAndUnControled from '@/components/react-components/react-mock-components/ControlAndUnControled';
+import ElementAndComponent from '@/components/react-components/react-mock-components/ElementAndComponent';
 import HighOrderComponent, {
 	HighOrderComponentData,
-} from '@/components/react-components/ReactMockComponents/HighOrderComponent';
-import { LimitationOfFunctionComponent } from '@/components/react-components/ReactMockComponents/LimitationOfReact';
+} from '@/components/react-components/react-mock-components/HighOrderComponent';
+import { LimitationOfFunctionComponent } from '@/components/react-components/react-mock-components/LimitationOfReact';
 import PropsInReact, {
 	PropsInReactData,
-} from '@/components/react-components/ReactMockComponents/PropsInReact';
-import { StatefulComponentInReact } from '@/components/react-components/ReactMockComponents/StatefulComponent';
+} from '@/components/react-components/react-mock-components/PropsInReact';
+import { StatefulComponentInReact } from '@/components/react-components/react-mock-components/StatefulComponent';
 import StateInReact, {
 	StateInReactData,
-} from '@/components/react-components/ReactMockComponents/StateInReact';
-import { WhatIsReact } from '@/components/react-components/ReactMockComponents/WhatIsReact';
+} from '@/components/react-components/react-mock-components/StateInReact';
+import { WhatIsReact } from '@/components/react-components/react-mock-components/WhatIsReact';
 
 interface ReactMockDataInterface {
 	title: string;
