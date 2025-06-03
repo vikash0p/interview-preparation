@@ -42,7 +42,7 @@ export const LayoutMeta: Metadata = {
 		},
 	},
 	category: 'career development',
-// opengraph metadata
+	// opengraph metadata
 	openGraph: {
 		title: 'InterViewPrep | Your Complete Interview Preparation Platform',
 		description:
@@ -51,13 +51,13 @@ export const LayoutMeta: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/assets/og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'InterViewPrep - Transform Your Interview Performance',
 			},
 			{
-				url: '/assets/og-image-16x9.png',
+				url: '/opengraph-image.png',
 				width: 1600,
 				height: 900,
 				alt: 'InterViewPrep - AI-Powered Interview Coaching',
@@ -83,7 +83,7 @@ export const LayoutMeta: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/assets/twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'InterViewPrep - Your Interview Success Partner',
 			width: 1200,
 			height: 675,
