@@ -44,12 +44,16 @@ const MultilevelDropDown = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center mt-20">
+      <label htmlFor="people" className="sr-only">
+        Select a person
+      </label>
       <select
         name="people"
         id="people"
         className="w-96 h-14 mb-4 bg-zinc-900"
         value={selectedPerson}
         onChange={handlePersonChange}
+        aria-label="Select a person"
       >
         <option value="" disabled>
           Select a person
@@ -61,12 +65,14 @@ const MultilevelDropDown = () => {
         ))}
       </select>
       {cities && cities.length > 0 && (
+
         <select
           name="cities"
           id="cities"
           className="w-96 h-14 bg-zinc-900"
           value={selectedCity}
           onChange={handleCityChange}
+          aria-label="Select a city"
         >
           <option value="" disabled>
             Select a city
