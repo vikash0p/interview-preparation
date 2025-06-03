@@ -1,7 +1,8 @@
 
 import Accordion from "@/components/GlobalComponents/Accordion";
+import { JavaScriptMetaData } from "@/main/meta/JavaScriptMetaData";
 import React from "react";
-
+export const metadata= JavaScriptMetaData;
 const ReactInterviewQuestionLayout = ({
   children,
 }: {
