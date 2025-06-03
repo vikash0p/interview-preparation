@@ -1,4 +1,4 @@
-import HomeContainer from "@/components/HomeComponents/HomeContainer";
+import HomeContainer from "@/components/home-components/HomeContainer";
 import { HomeMetaData } from "@/main/meta/HomeMetaData";
 import React from "react";
 
