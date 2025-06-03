@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic"
 import React from 'react'
-const ContactComponent = dynamic(() => import("@/components/ContactComponents/ContactContainer"))
+const ContactComponent = dynamic(() => import("@/components/contact-components/ContactContainer"))
 const Contact = () => {
   return (
     <div>
