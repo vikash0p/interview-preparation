@@ -18,6 +18,7 @@
         ]
       }
     ],
-    "axe/text-alternatives": "off"
+    "axe/text-alternatives": "off",
+    "axe/name-role-value": "off"
   }
 }
