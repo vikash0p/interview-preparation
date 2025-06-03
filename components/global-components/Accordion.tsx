@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import JavaScriptLogicalNavigation from "../JavaScriptComponents/JavaScriptHelperComponents/JavaScriptLogicalNavigation";
-import JavaScriptMockNavigation from "../JavaScriptComponents/JavaScriptHelperComponents/JavascriptMockNavigation";
+import JavaScriptLogicalNavigation from "../javascript-components/JavaScriptHelperComponents/JavaScriptLogicalNavigation";
+import JavaScriptMockNavigation from "../javascript-components/JavaScriptHelperComponents/JavascriptMockNavigation";
 
 interface AccordionItem {
   title: string;

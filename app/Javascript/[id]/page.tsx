@@ -1,4 +1,4 @@
-import JavaScriptMockSingleClient from "@/components/JavaScriptComponents/JavaScriptHelperComponents/JavaScriptMockSingleClient";
+import JavaScriptMockSingleClient from "@/components/javascript-components/JavaScriptHelperComponents/JavaScriptMockSingleClient";
 import JavaScriptMockData from "@/main/data/javascriptData/JavaScriptMockData";
 
 
