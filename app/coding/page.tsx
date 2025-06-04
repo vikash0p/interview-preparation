@@ -1,14 +1,14 @@
-import React from 'react'
-import CodingContainer from "./_CodingContainer"
-import { CodingMetaData } from "@/main/meta/CodingMetaData";
+import React from 'react';
+import { CodingMetaData } from '@/main/meta/CodingMetaData';
+import CodingPageWrapper from './_CodingPageWrapper';
 
-export const metadata=CodingMetaData
+export const metadata = CodingMetaData;
 const Coding = () => {
-  return (
-    <>
-    <CodingContainer />
-    </>
-  )
-}
+	return (
+		<>
+			<CodingPageWrapper />
+		</>
+	);
+};
 
-export default Coding
+export default Coding;

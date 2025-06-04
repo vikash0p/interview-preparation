@@ -4,7 +4,7 @@ import { Link } from 'next-view-transitions';
 import React from 'react';
 import { SiJavascript, SiReact } from 'react-icons/si';
 
-const CodingContainer = () => {
+const CodingPageWrapper = () => {
 	const cards = [
 		{
 			title: 'JavaScript',
@@ -56,4 +56,4 @@ const CodingContainer = () => {
 	);
 };
 
-export default CodingContainer;
+export default CodingPageWrapper;
