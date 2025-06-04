@@ -1,14 +1,14 @@
-'use client'
+import React from 'react';
+import Contact from './_ContactContainer';
+import { ContactMetaData } from "@/main/meta/ContactMetaData";
 
-import dynamic from "next/dynamic"
-import React from 'react'
-const ContactComponent = dynamic(() => import("@/components/contact-components/ContactContainer"))
-const Contact = () => {
-  return (
-    <div>
-      <ContactComponent />
-    </div>
-  );
-}
+export const metadata=ContactMetaData
+const Page = () => {
+	return (
+		<>
+			<Contact />
+		</>
+	);
+};
 
-export default Contact
+export default Page;
