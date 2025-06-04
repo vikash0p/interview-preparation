@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic"
 import React from 'react'
 const ContactComponent = dynamic(() => import("@/components/contact-components/ContactContainer"))
-const Contact = () => {
+const ContactPageWrapper = () => {
   return (
     <div>
       <ContactComponent />
@@ -11,4 +11,4 @@ const Contact = () => {
   );
 }
 
-export default Contact
+export default ContactPageWrapper

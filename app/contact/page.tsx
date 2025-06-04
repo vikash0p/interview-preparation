@@ -1,12 +1,12 @@
 import React from 'react';
-import Contact from './_ContactContainer';
-import { ContactMetaData } from "@/main/meta/ContactMetaData";
+import { ContactMetaData } from '@/main/meta/ContactMetaData';
+import ContactPageWrapper from './_ContactPageWrapper';
 
-export const metadata=ContactMetaData
+export const metadata = ContactMetaData;
 const Page = () => {
 	return (
 		<>
-			<Contact />
+			<ContactPageWrapper />
 		</>
 	);
 };
