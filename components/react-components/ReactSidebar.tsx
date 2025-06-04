@@ -1,11 +1,11 @@
 'use client';
 
-import { Link } from 'next-view-transitions';
+import { ReactMockData } from '@/main/data/ReactData/ReactMockData';
 import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
+import { Link } from 'next-view-transitions';
 import React from 'react';
-import type { InterviewQuestion } from "@/main/data/nextData/NextMockData";
 
-const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
+const ReactSidebar = () => {
 	const pathname = usePathname();
 	const selectedSegment = useSelectedLayoutSegment();
 
@@ -15,20 +15,20 @@ const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
 				<h2 className='text-xl font-bold text-white mb-4 px-4'>
 					React Interview Questions
 				</h2>
-				{data.map((value, index) => {
+				{ReactMockData.map((value, index) => {
 					const isActive =
-						pathname === `/Next/${value.customLink}` ||
-						selectedSegment === value.customLink.split('/')[1];
+						pathname === `/React/${value.link}` ||
+						selectedSegment === value.link.split('/')[1];
 
 					return (
 						<Link
-							className={`group px-2 py-2 rounded-lg transition-all duration-200  ${
+							className={`group px-2 py-2 rounded-lg transition-all duration-200 ${
 								isActive
 									? 'bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 shadow-lg'
-									: 'hover:bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 '
+									: 'hover:bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300'
 							}`}
-							href={`/Next/${value.customLink}`}
-							key={value.question}
+							href={`/React/${value.link}`}
+							key={value.title}
 							aria-current={isActive ? 'page' : undefined}
 						>
 							<div className='flex items-center gap-2'>
@@ -39,7 +39,7 @@ const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
 								>
 									{index + 1}.
 								</span>
-								<span className='text-sm'>{value.question}</span>
+								<span className='text-sm'>{value.title}</span>
 								{isActive && (
 									<span className='ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-xl' />
 								)}
@@ -52,4 +52,4 @@ const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
 	);
 };
 
-export default NextSidebar;
+export default ReactSidebar;
