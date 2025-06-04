@@ -59,13 +59,13 @@ export const HomeMetaData: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/home-og-image.png', // Consider a homepage-specific image
+				url: '/opengraph-image.png', 
 				width: 1200,
 				height: 630,
 				alt: 'InterViewPrep - Transform Interview Anxiety into Confidence',
 			},
 			{
-				url: '/home-og-image-wide.png',
+				url: '/opengraph-image.png',
 				width: 1600,
 				height: 900,
 				alt: 'InterViewPrep - The Smart Way to Prepare for Interviews',
@@ -73,15 +73,6 @@ export const HomeMetaData: Metadata = {
 		],
 		locale: 'en_US',
 		type: 'website',
-		// Added optional OG parameters
-		videos: [
-			{
-				url: '/homepage-demo.mp4',
-				width: 1280,
-				height: 720,
-				type: 'video/mp4',
-			},
-		],
 	},
 
 	// Enhanced Twitter metadata
@@ -93,12 +84,11 @@ export const HomeMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/home-twitter-card.png', // Homepage-specific Twitter image
+			url: '/twitter-image.png',
 			alt: 'AI Interview Practice Platform with Real-time Feedback',
 			width: 1200,
 			height: 675,
 		},
-
 	},
 
 	robots: {
@@ -128,7 +118,6 @@ export const HomeMetaData: Metadata = {
 		yandex: 'your-yandex-verification-code',
 		me: 'your-me-verification-code',
 	},
-
 
 	other: {
 		'msapplication-TileColor': '#2b5797', // Changed to a more professional blue

@@ -56,7 +56,7 @@ export const ReactMetaData: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/react-og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'React Interview Practice with AI Guidance',
@@ -82,12 +82,11 @@ export const ReactMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/react-twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'AI-Powered React Interview Platform',
 			width: 1200,
 			height: 675,
 		},
-
 	},
 
 	robots: {

@@ -54,7 +54,7 @@ export const ContactMetaData: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/contact-og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'Get in Touch with InterViewPrep',
@@ -72,7 +72,7 @@ export const ContactMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/contact-twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'Contact InterViewPrep - We’re Here to Help',
 			width: 1200,
 			height: 675,

@@ -57,7 +57,7 @@ export const NextJsMetaData: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/Next-og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'Next.js Interview Coaching with AI',
@@ -83,12 +83,11 @@ export const NextJsMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/Next-twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'Next.js Interview Simulator with AI Guidance',
 			width: 1200,
 			height: 675,
 		},
-
 	},
 
 	robots: {

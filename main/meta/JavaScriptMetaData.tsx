@@ -53,11 +53,11 @@ export const JavaScriptMetaData: Metadata = {
 		title: 'JavaScript Interview Prep | AI-Powered Coaching & Feedback',
 		description:
 			'Sharpen your JavaScript skills with our AI-driven platform. Real-world questions, live coding practice, and expert feedback to help you land your next job.',
-		url: `${url}/javascript`,
+		url: `${url}/Javascript`,
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/js-og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'JavaScript Interview Practice with AI Coaching',
@@ -83,12 +83,11 @@ export const JavaScriptMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/js-twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'Practice JavaScript Interviews with Real-Time AI Feedback',
 			width: 1200,
 			height: 675,
 		},
-
 	},
 
 	robots: {
@@ -117,8 +116,6 @@ export const JavaScriptMetaData: Metadata = {
 		yandex: 'your-yandex-verification-code',
 		me: 'your-me-verification-code',
 	},
-
-
 
 	other: {
 		'msapplication-TileColor': '#2b5797',

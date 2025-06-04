@@ -58,7 +58,7 @@ export const CodingMetaData: Metadata = {
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/coding-og-image.png',
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'AI-Powered Coding Interview Practice',
@@ -84,12 +84,11 @@ export const CodingMetaData: Metadata = {
 		site: '@InterViewPrep',
 		creator: '@InterViewPrepTeam',
 		images: {
-			url: '/coding-twitter-card.png',
+			url: '/twitter-image.png',
 			alt: 'DSA & Coding Interview AI Coach',
 			width: 1200,
 			height: 675,
 		},
-		
 	},
 
 	robots: {
