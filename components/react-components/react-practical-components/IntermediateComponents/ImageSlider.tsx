@@ -1,5 +1,5 @@
 'use client';
-import { products } from '@/main/data/product';
+import { products } from '@/main/data/common/product';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
