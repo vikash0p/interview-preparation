@@ -5,15 +5,15 @@ import { JavaScriptLogicalFirst } from "./JavaScriptLogical/JavaScriptLogicalFir
 export const JavaScriptLogicalData : JavaScriptLogicalInterface[] =[
     {
         id: "1",
-        title: "Logical operators  first",
+        title: "Logical operators  Beginner",
         content: JavaScriptLogicalFirst,
-        link: "logical-operators-first"
+        link: "logical-operators-Beginner"
     },
     {
         id: "2",
-        title: "Logical operation second",
+        title: "Logical operation advanced",
         content: JavaScriptLogicalSecond,
-        link: "logical-operators-second"
+        link: "logical-operators-advanced",
     },
     {
         id: "3",

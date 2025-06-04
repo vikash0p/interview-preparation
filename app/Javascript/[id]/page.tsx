@@ -8,10 +8,6 @@ export function generateStaticParams() {
   }));
 }
 
-export default function JavaScriptMockSingle({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function JavaScriptMockSingle({ params,}: { params: { id: string }}) {
   return <JavaScriptMockSingleClient id={params.id} />;
 }
