@@ -20,7 +20,7 @@ export default function RootLayout({
 		<ViewTransitions>
 			<html lang='en'>
 				<body
-					className={`${nunito.className} antialiased text-gray-300 bg-gradient-to-b from-gray-900 to-gray-900`}
+					className={`${nunito.className} antialiased text-gray-300 bg-gradient-to-b  from-gray-900 to-gray-900 overflow-auto`}
 				>
 					<Navbar />
 					<main>{children}</main>
