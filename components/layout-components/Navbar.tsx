@@ -1,9 +1,9 @@
 'use client';
 import { Link } from 'next-view-transitions';
-import AnimatedBackground from './AnimatedBackground';
 import Image from 'next/image';
 import { links } from '@/main/data/common/links';
 import { useActiveLinkHook } from '@/main/hooks/useActiveLinkHook';
+import AnimatedBackground from "../global-components/AnimatedBackground";
 
 function Navbar() {
 	const { getActiveStatus } = useActiveLinkHook();

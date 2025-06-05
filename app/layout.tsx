@@ -1,9 +1,9 @@
 import './globals.css';
-import Navbar from '@/components/global-components/Navbar';
 import ScrollToTop from '@/components/global-components/ScrollToTop';
 import { ViewTransitions } from 'next-view-transitions';
 import { Nunito } from 'next/font/google';
 import { LayoutMeta } from '@/main/meta/LayoutMetadata';
+import Navbar from "@/components/layout-components/Navbar";
 
 const nunito = Nunito({
 	subsets: ['latin'],

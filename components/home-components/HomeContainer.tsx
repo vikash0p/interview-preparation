@@ -11,7 +11,7 @@ const Resources = dynamic(() => import('./Resources'), { ssr: false });
 const SuccessStory = dynamic(() => import('./SuccessStory'), { ssr: false });
 const JoinCommunity = dynamic(() => import('./JoinCommunity'), { ssr: false });
 const AskQuestion = dynamic(() => import('./AskQuestion'), { ssr: false });
-const Footer = dynamic(() => import('@/components/global-components/Footer'), {
+const Footer = dynamic(() => import('@/components/layout-components/Footer'), {
 	ssr: false,
 });
 
