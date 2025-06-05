@@ -26,3 +26,12 @@ export const iconVariants = {
 		transition: { duration: 0.6 },
 	},
 };
+
+
+export const techItemVariants = {
+	hover: {
+		x: 5,
+		scale: 1.05,
+		transition: { type: 'spring', stiffness: 300 },
+	},
+};
