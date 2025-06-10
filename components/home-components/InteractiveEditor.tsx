@@ -1,8 +1,46 @@
 'use client';
 import { motion } from 'framer-motion';
 import { FaChevronRight } from 'react-icons/fa';
+import Editor from '@monaco-editor/react';
+import React, { useState } from 'react';
 
 const InteractiveEditor = () => {
+	const [code, setCode] = useState(`// Example: var, let, const
+var x = 10;
+x = 20;
+console.log("x:", x);
+
+let y = 15;
+y = 25;
+console.log("y:", y);
+
+const z = 30;
+console.log("z:", z);`);
+
+	const [output, setOutput] = useState('');
+
+	const runCode = () => {
+		try {
+			const capturedLogs: string[] = [];
+			const customConsole = {
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				log: (...args: any[]) => capturedLogs.push(args.join(' ')),
+			};
+
+			const runner = new Function('console', code);
+			runner(customConsole);
+			setOutput(capturedLogs.join('\n'));
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		} catch (err: any) {
+			setOutput(err.toString());
+		}
+	};
+
+	const resetCode = () => {
+		setCode('');
+		setOutput('');
+	};
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, x: -50 }}
@@ -20,40 +58,41 @@ const InteractiveEditor = () => {
 				<span className='text-sm text-gray-400'>JavaScript</span>
 			</div>
 
-			<div className='font-mono bg-gray-900 p-4 rounded-lg text-gray-300 text-sm h-96 overflow-y-auto relative'>
-				<div className='absolute left-0 top-0 w-8 h-full text-right pr-2 text-gray-600 text-sm'>
-					{Array.from({ length: 12 }).map((_, i) => (
-						<div key={i} className='h-6'>
-							{i + 1}
-						</div>
-					))}
-				</div>
-				<pre className='pl-10'>
-					<code className='language-javascript'>
-						{`// Example of var, let, and const in JavaScript
-var x = 10;
-x = 20;
-console.log(x); // Output: 20
+			{/* Monaco Editor */}
+			<div className='h-96 border rounded-lg overflow-hidden'>
+				<Editor
+					height='100%'
+					defaultLanguage='javascript'
+					value={code}
+					theme='vs-dark'
+					onChange={(value) => setCode(value || '')}
+          options={{
+            fontSize: 14,
+            minimap: { enabled: false },
+            automaticLayout: true,
+            scrollBeyondLastLine: false,
+            wordWrap: 'on',
+            wrappingIndent: 'indent',
+            lineNumbers: 'on',
 
-let y = 15;
-y = 25;
-console.log(y); // Output: 25
+          }}
+				/>
+			</div>
 
-const z = 30;
-console.log(z); // Output: 30`}
-					</code>
+			{/* Console Output */}
+			<div className='mt-6 p-4 bg-gray-900 rounded-lg'>
+				<div className='text-sm text-gray-400 mb-2'>Console Output:</div>
+				<pre className='text-green-400 font-mono text-sm whitespace-pre-wrap'>
+					{output || '/* Output will appear here */'}
 				</pre>
 			</div>
 
-			<div className='mt-6 p-4 bg-gray-900 rounded-lg'>
-				<div className='text-sm text-gray-400 mb-2'>Console Output:</div>
-				<div className='text-green-400 font-mono text-sm'></div>
-			</div>
-
+			{/* Buttons */}
 			<div className='flex justify-end mt-4 space-x-3'>
 				<motion.button
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
+					onClick={resetCode}
 					className='px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors'
 				>
 					Reset
@@ -61,6 +100,7 @@ console.log(z); // Output: 30`}
 				<motion.button
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
+					onClick={runCode}
 					className='px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-md hover:from-indigo-700 hover:to-purple-700 transition-colors flex items-center'
 				>
 					Run Code
