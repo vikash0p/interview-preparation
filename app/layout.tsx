@@ -3,7 +3,7 @@ import ScrollToTop from '@/components/global-components/ScrollToTop';
 import { ViewTransitions } from 'next-view-transitions';
 import { Nunito } from 'next/font/google';
 import { LayoutMeta } from '@/main/meta/LayoutMetadata';
-import Navbar from "@/components/layout-components/Navbar";
+import Navbar from '@/components/layout-components/Navbar';
 
 const nunito = Nunito({
 	subsets: ['latin'],
@@ -16,6 +16,10 @@ export const metadata = LayoutMeta;
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
+
+
+
+
 	return (
 		<ViewTransitions>
 			<html lang='en'>
