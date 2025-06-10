@@ -4,7 +4,9 @@ import { url } from "./LayoutMetadata";
 
 
 export const HomeMetaData: Metadata = {
-	title: ' Master Your Job Interviews with AI Coaching',
+	title: {
+		absolute: 'InterViewPrep - AI-Powered Interview preparation platform',
+	},
 	description:
 		'Boost your interview success rate with our AI-powered platform. Practice mock interviews, get personalized feedback, and access 10,000+ questions tailored to your industry and experience level.',
 	keywords: homeKeywords,

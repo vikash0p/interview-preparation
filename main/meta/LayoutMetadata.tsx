@@ -1,13 +1,15 @@
 import { Metadata } from 'next';
-import { layoutKeywords } from "./keywords";
-import { appleWebApp } from "./appleWebApp";
+import { layoutKeywords } from './keywords';
+import { appleWebApp } from './appleWebApp';
 
-export const url = Object.freeze(	process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app')
+export const url = Object.freeze(
+	process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app'
+);
 
 export const LayoutMeta: Metadata = {
 	title: {
-		default:	'InterViewPrep  | Ace Your Job Interviews',
-		template: '%s ',
+		default: 'InterViewPrep  ',
+		template: 'InterViewPrep - %s   ',
 	},
 	description:
 		'Comprehensive interview preparation platform with AI-powered mock interviews, personalized feedback, and industry-specific question banks.',
@@ -18,6 +20,7 @@ export const LayoutMeta: Metadata = {
 	referrer: 'origin-when-cross-origin',
 	creator: 'InterViewPrep Team',
 	publisher: 'InterViewPrep Inc.',
+	
 	formatDetection: {
 		email: true,
 		address: false,
@@ -32,6 +35,7 @@ export const LayoutMeta: Metadata = {
 		},
 	},
 	category: 'career development',
+
 	// opengraph metadata
 	openGraph: {
 		title: 'InterViewPrep AI-Powered Interview Coaching',
