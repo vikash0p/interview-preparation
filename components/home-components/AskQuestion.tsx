@@ -3,34 +3,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { faqData } from "@/main/data/common/faqData";
+import ReusableHeading from "../reusable-components/ReusableHeading";
 
-const faqData = [
-  {
-    question: "How should I prepare for technical interviews?",
-    answer:
-      "Practice coding problems regularly, review fundamental concepts, study data structures and algorithms, and participate in mock interviews.",
-  },
-  {
-    question: "What should I wear to an interview?",
-    answer:
-      "Dress professionally in business attire. When in doubt, it's better to be slightly overdressed than underdressed.",
-  },
-  {
-    question: "How early should I arrive for an interview?",
-    answer:
-      "Aim to arrive 10-15 minutes early. This shows punctuality and gives you time to compose yourself.",
-  },
-  {
-    question: "How should I handle difficult interview questions?",
-    answer:
-      "Stay calm, take a moment to think, and it's okay to ask for clarification. Structure your answers using the STAR method when applicable.",
-  },
-  {
-    question: "What questions should I ask the interviewer?",
-    answer:
-      "Ask about company culture, team dynamics, growth opportunities, and specific projects you might work on.",
-  },
-];
+
 
 const AskQuestion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -42,14 +18,8 @@ const AskQuestion = () => {
   return (
     <section id="faq" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-gray-300">
-            Find answers to common questions about interview preparation
-          </p>
-        </div>
+        <ReusableHeading heading="Frequently Asked Questions" description="Find answers to common questions about interview preparation" />
+
         <div className="max-w-3xl mx-auto space-y-4">
           {faqData.map((item, index) => (
             <motion.div
@@ -76,7 +46,7 @@ const AskQuestion = () => {
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
+                  exit={{ opacity: 0, height: 0, transitionEnd: { display: "none" } }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="mt-4 text-neutral-400">{item.answer}</div>
