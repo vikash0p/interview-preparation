@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 import HomeContainer from "@/components/home-components/HomeContainer";
 import { HomeMetaData } from "@/main/meta/HomeMetaData";
 import React from "react";
