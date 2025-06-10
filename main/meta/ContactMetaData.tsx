@@ -1,41 +1,13 @@
 import { Metadata } from 'next';
+import { url } from "./LayoutMetadata";
+import { contactKeywords } from "./keywords";
 
-const url =
-	process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app';
+
 
 export const ContactMetaData: Metadata = {
-	title: 'Contact Us | InterViewPrep - Talk to Our AI Interview Coaching Team',
-	description:
-		'Have questions or feedback? Get in touch with the InterViewPrep team. We’re here to help you master interviews with personalized AI support.',
-
-	applicationName: 'InterViewPrep',
-	authors: [{ name: 'InterViewPrep Team', url }],
-	generator: 'Next.js',
-
-	keywords: [
-		'contact InterViewPrep',
-		'customer support',
-		'AI coaching inquiries',
-		'technical support',
-		'interview preparation help',
-		'platform questions',
-		'contact interview training platform',
-		'feedback',
-		'business inquiries',
-		'support team contact',
-	],
-
-	referrer: 'origin-when-cross-origin',
-	creator: 'InterViewPrep Team',
-	publisher: 'InterViewPrep Inc.',
-
-	formatDetection: {
-		email: true,
-		address: true,
-		telephone: true,
-	},
-
-	metadataBase: new URL(url),
+	title: 'Talk to Our AI Interview Coaching Team',
+	description:'Have questions or feedback? Get in touch with the InterViewPrep team. We’re here to help you master interviews with personalized AI support.',
+	keywords: contactKeywords,
 	alternates: {
 		canonical: '/contact',
 		languages: {
@@ -44,10 +16,8 @@ export const ContactMetaData: Metadata = {
 		},
 	},
 
-	category: 'customer support',
-
 	openGraph: {
-		title: 'Contact InterViewPrep | Reach Our Support & Coaching Team',
+		title: 'Reach Our Support & Coaching Team',
 		description:
 			'We’re here to assist you on your interview prep journey. Reach out for support, partnership, or coaching help.',
 		url: `${url}/contact`,
@@ -66,7 +36,7 @@ export const ContactMetaData: Metadata = {
 
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Contact InterViewPrep | Support, Feedback & Business Inquiries',
+		title: 'Support, Feedback & Business Inquiries',
 		description:
 			'Have a question or want to work with us? Contact the InterViewPrep team — we’re here to help you succeed.',
 		site: '@InterViewPrep',
@@ -77,48 +47,5 @@ export const ContactMetaData: Metadata = {
 			width: 1200,
 			height: 675,
 		},
-	},
-
-	robots: {
-		index: true,
-		follow: true,
-		nocache: false,
-		googleBot: {
-			index: true,
-			follow: true,
-			noimageindex: false,
-			'max-video-preview': 'large',
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-
-	appleWebApp: {
-		title: 'InterViewPrep',
-		statusBarStyle: 'black-translucent',
-		capable: true,
-		startupImage: '/app-splash-screen.png',
-	},
-
-	verification: {
-		google: 'your-google-verification-code',
-		yandex: 'your-yandex-verification-code',
-		me: 'your-me-verification-code',
-	},
-
-	icons: {
-		icon: '/favicon.ico',
-		apple: '/apple-touch-icon.png',
-		other: {
-			rel: 'mask-icon',
-			url: '/safari-pinned-tab.svg',
-			color: '#5bbad5',
-		},
-	},
-
-	other: {
-		'msapplication-TileColor': '#2b5797',
-		'msapplication-config': '/browserconfig.xml',
-		'theme-color': '#ffffff',
 	},
 };

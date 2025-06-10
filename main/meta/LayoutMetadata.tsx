@@ -1,30 +1,20 @@
 import { Metadata } from 'next';
+import { layoutKeywords } from "./keywords";
+import { appleWebApp } from "./appleWebApp";
 
-const url=process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app';
-
+export const url = Object.freeze(	process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app')
 
 export const LayoutMeta: Metadata = {
 	title: {
-		default: 'InterViewPrep | Ace Your Job Interviews',
-		template: '%s | InterViewPrep',
+		default:	'InterViewPrep  | Ace Your Job Interviews',
+		template: '%s ',
 	},
 	description:
 		'Comprehensive interview preparation platform with AI-powered mock interviews, personalized feedback, and industry-specific question banks.',
 	applicationName: 'InterViewPrep',
 	authors: [{ name: 'InterViewPrep Team', url: url }],
 	generator: 'Next.js',
-	keywords: [
-		'job interview preparation',
-		'career coaching',
-		'mock interviews',
-		'behavioral interview questions',
-		'technical interview practice',
-		'interview skills',
-		'career advancement',
-		'AI interview coach',
-		'interview feedback',
-		'salary negotiation tips',
-	],
+	keywords: layoutKeywords,
 	referrer: 'origin-when-cross-origin',
 	creator: 'InterViewPrep Team',
 	publisher: 'InterViewPrep Inc.',
@@ -44,7 +34,7 @@ export const LayoutMeta: Metadata = {
 	category: 'career development',
 	// opengraph metadata
 	openGraph: {
-		title: 'InterViewPrep | Your Complete Interview Preparation Platform',
+		title: 'InterViewPrep AI-Powered Interview Coaching',
 		description:
 			'AI-powered interview coaching with real-time feedback. Practice with 10,000+ questions across 50+ industries and job levels.',
 		url: url,
@@ -69,7 +59,7 @@ export const LayoutMeta: Metadata = {
 	// twitter metadata
 	twitter: {
 		card: 'summary_large_image',
-		title: 'InterViewPrep | AI-Powered Interview Coaching',
+		title: 'InterViewPrep AI-Powered Interview Coaching',
 		description:
 			'Get interview-ready with our smart platform. Practice, get feedback, and gain confidence for your next career move.',
 		site: '@InterViewPrep',
@@ -81,32 +71,12 @@ export const LayoutMeta: Metadata = {
 			height: 675,
 		},
 	},
-	robots: {
-		index: true,
-		follow: true,
-		nocache: false,
-		googleBot: {
-			index: true,
-			follow: true,
-			noimageindex: false,
-			'max-video-preview': 'large',
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
 
-	appleWebApp: {
-		title: 'InterViewPrep',
-		statusBarStyle: 'black-translucent',
-		capable: true,
-	},
+	appleWebApp: appleWebApp,
+
 	verification: {
 		google: 'your-google-verification-code',
 		yandex: 'your-yandex-verification-code',
 		me: 'your-me-verification-code',
-	},
-	other: {
-		'msapplication-TileColor': '#da532c',
-		'msapplication-config': '/browserconfig.xml',
 	},
 };

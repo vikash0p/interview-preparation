@@ -1,45 +1,14 @@
 import { Metadata } from 'next';
+import { homeKeywords } from "./keywords";
+import { url } from "./LayoutMetadata";
 
-const url =
-	process.env.NEXT_PUBLIC_BASE_URL || 'https://interview-prap.vercel.app';
 
 export const HomeMetaData: Metadata = {
-	title: 'InterViewPrep | Master Your Job Interviews with AI Coaching',
+	title: ' Master Your Job Interviews with AI Coaching',
 	description:
 		'Boost your interview success rate with our AI-powered platform. Practice mock interviews, get personalized feedback, and access 10,000+ questions tailored to your industry and experience level.',
+	keywords: homeKeywords,
 
-	// Keep existing application info
-	applicationName: 'InterViewPrep',
-	authors: [{ name: 'InterViewPrep Team', url: url }],
-	generator: 'Next.js',
-
-	// Enhanced keywords
-	keywords: [
-		'AI interview practice',
-		'job interview simulator',
-		'career coaching platform',
-		'behavioral interview preparation',
-		'technical interview questions',
-		'interview skills training',
-		'career growth',
-		'interview feedback analysis',
-		'salary negotiation strategies',
-		'job search assistance',
-		'interview anxiety reduction',
-		'competency-based interview practice',
-	],
-
-	referrer: 'origin-when-cross-origin',
-	creator: 'InterViewPrep Team',
-	publisher: 'InterViewPrep Inc.',
-
-	formatDetection: {
-		email: true,
-		address: false,
-		telephone: true,
-	},
-
-	metadataBase: new URL(url),
 	alternates: {
 		canonical: '/',
 		languages: {
@@ -48,18 +17,16 @@ export const HomeMetaData: Metadata = {
 		},
 	},
 
-	category: 'career development',
-
 	// Enhanced OpenGraph for homepage
 	openGraph: {
-		title: 'InterViewPrep | AI-Powered Interview Success Platform',
+		title: 'InterViewPrep AI-Powered Interview Coaching',
 		description:
 			'Practice with intelligent mock interviews that adapt to your responses. Get real-time feedback on your answers, body language, and communication style.',
 		url: url,
 		siteName: 'InterViewPrep',
 		images: [
 			{
-				url: '/opengraph-image.png', 
+				url: '/opengraph-image.png',
 				width: 1200,
 				height: 630,
 				alt: 'InterViewPrep - Transform Interview Anxiety into Confidence',
@@ -78,7 +45,7 @@ export const HomeMetaData: Metadata = {
 	// Enhanced Twitter metadata
 	twitter: {
 		card: 'summary_large_image',
-		title: 'InterViewPrep - Practice Interviews with AI Feedback',
+		title: 'InterViewPrep AI-Powered Interview Coaching',
 		description:
 			'Our AI analyzes your responses like a hiring manager would. Get detailed reports on how to improve after every practice session.',
 		site: '@InterViewPrep',
@@ -89,39 +56,5 @@ export const HomeMetaData: Metadata = {
 			width: 1200,
 			height: 675,
 		},
-	},
-
-	robots: {
-		index: true,
-		follow: true,
-		nocache: false,
-		googleBot: {
-			index: true,
-			follow: true,
-			noimageindex: false,
-			'max-video-preview': 'large',
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-
-	// App-related metadata
-	appleWebApp: {
-		title: 'InterViewPrep',
-		statusBarStyle: 'black-translucent',
-		capable: true,
-		startupImage: '/app-splash-screen.png', // Added startup image
-	},
-
-	verification: {
-		google: 'your-google-verification-code',
-		yandex: 'your-yandex-verification-code',
-		me: 'your-me-verification-code',
-	},
-
-	other: {
-		'msapplication-TileColor': '#2b5797', // Changed to a more professional blue
-		'msapplication-config': '/browserconfig.xml',
-		'theme-color': '#ffffff',
 	},
 };
