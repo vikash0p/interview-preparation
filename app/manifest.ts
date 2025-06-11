@@ -14,9 +14,9 @@ export default function manifest(): MetadataRoute.Manifest {
 		lang: 'en',
 		icons: [
 			{
-				src: '/favicon.ico',
+				src: '/favicon/interViewPraplogo.png',
 				sizes: 'any',
-				type: 'image/x-icon',
+				type: 'image/png',
 			},
 			{
 				src: '/favicon/interViewPraplogo.png',
