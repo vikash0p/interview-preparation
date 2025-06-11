@@ -4,6 +4,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import { Nunito } from 'next/font/google';
 import { LayoutMeta } from '@/main/meta/LayoutMetadata';
 import Navbar from '@/components/layout-components/Navbar';
+import { LayoutViewport } from "@/main/meta/viewport";
 
 const nunito = Nunito({
 	subsets: ['latin'],
@@ -12,6 +13,7 @@ const nunito = Nunito({
 });
 
 export const metadata = LayoutMeta;
+export const viewport = LayoutViewport;
 
 export default function RootLayout({
 	children,
