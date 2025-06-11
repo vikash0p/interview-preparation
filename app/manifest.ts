@@ -19,7 +19,7 @@ export default function manifest(): MetadataRoute.Manifest {
 				type: 'image/x-icon',
 			},
 			{
-				src: '/icon.png',
+				src: '/favicon/interViewPraplogo.png',
 				sizes: '192x192',
 				type: 'image/png',
 			},

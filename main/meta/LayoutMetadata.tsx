@@ -20,7 +20,7 @@ export const LayoutMeta: Metadata = {
 	referrer: 'origin-when-cross-origin',
 	creator: 'InterViewPrep Team',
 	publisher: 'InterViewPrep Inc.',
-	
+
 	formatDetection: {
 		email: true,
 		address: false,
