@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: 'InterViewPrep',
 		short_name: 'InterViewPrep',
-		description:'Master your job interviews with AI-powered coaching and feedback.',
+		description:
+			'Master your job interviews with AI-powered coaching and feedback.',
 		start_url: '/',
 		display: 'standalone',
 		background_color: '#111827',
@@ -18,7 +19,7 @@ export default function manifest(): MetadataRoute.Manifest {
 				type: 'image/x-icon',
 			},
 			{
-				src: '/icon.png',
+				src: 'favicon/interViewPraplogo.png',
 				sizes: '192x192',
 				type: 'image/png',
 			},
