@@ -7,7 +7,7 @@ import InterviewCard from '@/components/card-components/InterviewCard';
 const Interview = () => {
 	return (
 		<main className='min-h-screen px-4 py-16 text-white'>
-			<section className='max-w-5xl mx-auto'>
+			<section className='max-w-6xl mx-auto'>
 				<ReusableHeading
 					heading='Interview Categories'
 					description='Choose your area to start preparing for real-world interview questions.'
@@ -22,6 +22,7 @@ const Interview = () => {
 							icon={topic.icon}
 							comingSoon={topic.comingSoon}
 							animationDelay={index * 0.1}
+							actionLevel={topic.actionLabel}
 						/>
 					))}
 				</div>

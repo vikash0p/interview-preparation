@@ -12,6 +12,7 @@ interface InterviewCardProps {
 	className?: string;
 	animationDelay?: number;
 	children?: React.ReactNode;
+	actionLevel?: string;
 }
 
 const InterviewCard = ({
@@ -22,6 +23,7 @@ const InterviewCard = ({
 	className = '',
 	animationDelay = 0.2,
 	children,
+	actionLevel
 }: InterviewCardProps) => {
 	return (
 		<motion.div
@@ -50,7 +52,7 @@ const InterviewCard = ({
 							href={href}
 							className='text-sm text-violet-300 flex items-center gap-1 group-hover:text-cyan-400 transition-colors'
 						>
-							Start Mock Interview{' '}
+							{actionLevel }
 							<FaArrowRight className='inline text-xs group-hover:translate-x-1 transition-transform' />
 						</Link>
 					)}
