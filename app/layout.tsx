@@ -7,7 +7,7 @@ import Navbar from '@/components/layout-components/Navbar';
 import { LayoutViewport } from "@/main/meta/viewport";
 
 const nunito = Nunito({
-	subsets: ['latin'],
+	subsets: ['latin',],
 	display: 'swap',
 	weight: ['400', '700'],
 });
