@@ -1,8 +1,7 @@
 import React from 'react';
 import { resourcesData } from '@/main/data/common/ResourceData';
 import ReusableHeading from '../reusable-components/ReusableHeading';
-import ResourceCard from "../card-components/ResourceCard";
-
+import ResourceCard from '../utilsComponent/card-components/ResourceCard';
 
 const Resources: React.FC = () => {
 	return (

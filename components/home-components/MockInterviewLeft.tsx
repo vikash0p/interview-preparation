@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaClock } from 'react-icons/fa';
 import { chatMessages } from '@/main/data/common/mockInterviewData';
-import ChatBubbleCard from '../card-components/ChatBubbleCard';
+import ChatBubbleCard from '../utilsComponent/card-components/ChatBubbleCard';
 const MockInterviewLeft = () => {
-  return (
+	return (
 		<div className='relative'>
 			<div className='relative bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-gray-700 rounded-xl p-6 shadow-2xl'>
 				<div className='absolute inset-0 rounded-xl bg-[radial-gradient(circle_at_center,#4f46e510,transparent)]' />
@@ -49,6 +49,6 @@ const MockInterviewLeft = () => {
 			</div>
 		</div>
 	);
-}
+};
 
-export default MockInterviewLeft
+export default MockInterviewLeft;

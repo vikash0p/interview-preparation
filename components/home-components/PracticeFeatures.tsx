@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { FaChevronRight } from 'react-icons/fa';
 import { practiceData } from '@/main/data/common/practiceData';
-import PracticeCard from '../card-components/PracticeCard';
+import PracticeCard from '../utilsComponent/card-components/PracticeCard';
 import { Link } from 'next-view-transitions';
 
 const PracticeFeatures = () => {

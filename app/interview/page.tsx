@@ -2,7 +2,7 @@
 import React from 'react';
 import { interviewCategories } from '@/main/data/common/interviewData';
 import ReusableHeading from '@/components/reusable-components/ReusableHeading';
-import InterviewCard from '@/components/card-components/InterviewCard';
+import InterviewCard from '@/components/utilsComponent/card-components/InterviewCard';
 
 const Interview = () => {
 	return (

@@ -1,7 +1,7 @@
 'use client';
 import ReusableHeading from '@/components/reusable-components/ReusableHeading';
 import { frontendTopics } from '@/main/data/common/frontendTopicsData';
-import InterviewCard from '@/components/card-components/InterviewCard';
+import InterviewCard from '@/components/utilsComponent/card-components/InterviewCard';
 
 export default function Frontend() {
 	return (

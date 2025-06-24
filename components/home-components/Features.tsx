@@ -4,7 +4,7 @@ import { featuresData } from '@/main/data/common/featuresData';
 import { motion } from 'framer-motion';
 import React from 'react';
 import ReusableHeading from '../reusable-components/ReusableHeading';
-import FeatureCard from '../card-components/FeatureCard';
+import FeatureCard from '../utilsComponent/card-components/FeatureCard';
 
 const Features = () => {
 	return (

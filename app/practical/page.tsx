@@ -1,4 +1,4 @@
-import InterviewCard from '@/components/card-components/InterviewCard';
+import InterviewCard from '@/components/utilsComponent/card-components/InterviewCard';
 import ReusableHeading from '@/components/reusable-components/ReusableHeading';
 import { practicalChallengesData } from '@/main/data/common/practicalChallengesData';
 import React from 'react';
@@ -22,7 +22,6 @@ const Practical = () => {
 							comingSoon={topic.comingSoon}
 							animationDelay={index * 0.1}
 							actionLevel={topic.actionLabel}
-
 						/>
 					))}
 				</div>

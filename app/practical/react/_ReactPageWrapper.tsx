@@ -1,19 +1,24 @@
 'use client';
-import { ChallengeCard } from "@/components/ChallengeCard";
+import { ChallengeCard } from '@/components/utilsComponent/card-components/ChallengeCard';
 import { CodingLinkData } from '@/main/data/ReactData/ReactPractical/ReactPracticalData';
 import React, { useState } from 'react';
-
-
 
 const ReactPageWrapper = () => {
 	const [selectedFilter, setSelectedFilter] = useState('All');
 	const [codingData, setCodingData] = useState(CodingLinkData);
 
-	const levels = ['All',...Array.from(new Set(CodingLinkData.map((v) => v.level))),];
+	const levels = [
+		'All',
+		...Array.from(new Set(CodingLinkData.map((v) => v.level))),
+	];
 
 	const filterCodingLinkData = (level: string) => {
 		setSelectedFilter(level);
-		setCodingData(level === 'All'	? CodingLinkData	: CodingLinkData.filter((v) => v.level === level));
+		setCodingData(
+			level === 'All'
+				? CodingLinkData
+				: CodingLinkData.filter((v) => v.level === level)
+		);
 	};
 
 	return (

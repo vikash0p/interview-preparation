@@ -1,11 +1,11 @@
-import React from 'react'
-import MockInterviewCard from "../card-components/MockInterviewCard";
-import { interviewFeatures } from "@/main/data/common/mockInterviewData";
-import { motion } from "framer-motion";
-import { FaCalendarAlt } from "react-icons/fa";
+import React from 'react';
+import MockInterviewCard from '../utilsComponent/card-components/MockInterviewCard';
+import { interviewFeatures } from '@/main/data/common/mockInterviewData';
+import { motion } from 'framer-motion';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const MockInterviewRight = () => {
-  return (
+	return (
 		<div>
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 				{interviewFeatures.map((feature, index) => (
@@ -23,6 +23,6 @@ const MockInterviewRight = () => {
 			</motion.button>
 		</div>
 	);
-}
+};
 
-export default MockInterviewRight
+export default MockInterviewRight;

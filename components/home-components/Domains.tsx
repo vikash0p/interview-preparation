@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { containerVariants } from '@/main/animation/motionVariants';
 import ReusableHeading from '../reusable-components/ReusableHeading';
 import React from 'react';
-import DomainCard from "../card-components/DomainCard";
+import DomainCard from '../utilsComponent/card-components/DomainCard';
 
 const Domains = () => {
 	return (
