@@ -2,7 +2,7 @@ import { NavLinkInterface } from '@/main/types/navLink.types';
 
 export const navLinks: NavLinkInterface[] = [
 	{ label: 'Home', href: '/' },
-	{ label: 'AI Interviews', href: '/mock' },
+	{ label: 'AI Interviews', href: '/ai-interview' },
 
 	{
 		label: 'Categories',
@@ -130,7 +130,7 @@ export const navLinks: NavLinkInterface[] = [
 	},
 
 	{ label: 'Technical Rounds', href: '/practical' },
-	{ label: 'Tips & Guides', href: '/tips' },
+	{ label: 'Tips & Guides', href: '/tips-&-guides' },
 	{ label: 'Support', href: '/contact' },
 	{ label: 'Sign In', href: '/login' },
 ];
