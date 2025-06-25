@@ -1,4 +1,4 @@
-import NextRendering from '@/components/next-components/NextRendering';
+import NextRendering from '@/components/mockInterviewComponents/nextjs-mock-components/NextRendering';
 import React from 'react';
 
 const Next = () => {

@@ -17,7 +17,7 @@ const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
 				</h2>
 				{data.map((value, index) => {
 					const isActive =
-						pathname === `/interview/frontend/nextjs/${value.customLink}` ||
+						pathname === `/mock-interview/frontend/nextjs/${value.customLink}` ||
 						selectedSegment === value.customLink.split('/')[1];
 
 					return (
@@ -27,7 +27,7 @@ const NextSidebar = ({data}:{data:InterviewQuestion[]}) => {
 									? 'bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 shadow-lg'
 									: 'hover:bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 '
 							}`}
-							href={`/interview/frontend/nextjs/${value.customLink}`}
+							href={`/mock-interview/frontend/nextjs/${value.customLink}`}
 							key={value.question}
 							aria-current={isActive ? 'page' : undefined}
 						>

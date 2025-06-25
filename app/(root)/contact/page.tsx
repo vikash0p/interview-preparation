@@ -1,14 +1,10 @@
-import React from 'react';
-import { ContactMetaData } from '@/main/meta/ContactMetaData';
-import ContactPageWrapper from './_ContactPageWrapper';
+import ContactContainer from "@/components/contact-components/ContactContainer"
+import React from 'react'
 
-export const metadata = ContactMetaData;
-const Page = () => {
+const Contact = () => {
 	return (
-		<>
-			<ContactPageWrapper />
-		</>
-	);
-};
+		<ContactContainer />
+	)
+}
 
-export default Page;
+export default Contact

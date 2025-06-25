@@ -12,7 +12,7 @@ interface LinkInterface {
 	code?: string;
 }
 
-const JavaScriptSingleNavigation = ({ id }: { id: string }) => {
+const JavaScriptMockSingleClient = ({ id }: { id: string }) => {
 	const [copied, setCopied] = useState(false);
 
 	const handleCopy = useCallback(async (code: string) => {
@@ -111,4 +111,4 @@ const JavaScriptSingleNavigation = ({ id }: { id: string }) => {
 	);
 };
 
-export default JavaScriptSingleNavigation;
+export default JavaScriptMockSingleClient;

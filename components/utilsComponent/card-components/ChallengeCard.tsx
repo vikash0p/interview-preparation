@@ -44,7 +44,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({	id,	name,	url,	lev
 
 	return (
 		<Link
-			href={`/practical/react/${url}`}
+			href={`/practical-interview/react/${url}`}
 			key={id}
 			className='group relative border border-gray-800 p-6 rounded-xl bg-gradient-to-l from-gray-800 to-gray-900 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10'
 		>

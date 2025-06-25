@@ -6,122 +6,122 @@ export const navLinks: NavLinkInterface[] = [
 
 	{
 		label: 'Categories',
-		href: '/interview',
+		href: '/mock-interview',
 		dropdown: [
 			{
 				label: 'Frontend',
-				href: '/interview/frontend',
+				href: '/mock-interview/frontend',
 				comingSoon: false,
 				children: [
-					{ label: 'HTML', href: '/interview/frontend/html', comingSoon: true },
-					{ label: 'CSS', href: '/interview/frontend/css', comingSoon: true },
+					{ label: 'HTML', href: '/mock-interview/frontend/html', comingSoon: true },
+					{ label: 'CSS', href: '/mock-interview/frontend/css', comingSoon: true },
 					{
 						label: 'JavaScript',
-						href: '/interview/frontend/javascript',
+						href: '/mock-interview/frontend/javascript',
 						comingSoon: false,
 					},
 					{
 						label: 'React',
-						href: '/interview/frontend/react',
+						href: '/mock-interview/frontend/react',
 						comingSoon: false,
 					},
 					{
 						label: 'Next.js',
-						href: '/interview/frontend/nextjs',
+						href: '/mock-interview/frontend/nextjs',
 						comingSoon: false,
 					},
 				],
 			},
 			{
 				label: 'Backend',
-				href: '/interview/backend',
+				href: '/mock-interview/backend',
 				comingSoon: true,
 				children: [
 					{
 						label: 'Node.js',
-						href: '/interview/backend/nodejs',
+						href: '/mock-interview/backend/nodejs',
 						comingSoon: true,
 					},
 					{
 						label: 'Express.js',
-						href: '/interview/backend/express',
+						href: '/mock-interview/backend/express',
 						comingSoon: true,
 					},
 					{
 						label: 'NestJS',
-						href: '/interview/backend/nestjs',
+						href: '/mock-interview/backend/nestjs',
 						comingSoon: true,
 					},
 					{
 						label: 'REST APIs',
-						href: '/interview/backend/rest-api',
+						href: '/mock-interview/backend/rest-api',
 						comingSoon: true,
 					},
 				],
 			},
 			{
 				label: 'Mobile',
-				href: '/interview/mobile',
+				href: '/mock-interview/mobile',
 				comingSoon: true,
 				children: [
 					{
 						label: 'React Native',
-						href: '/interview/mobile/react-native',
+						href: '/mock-interview/mobile/react-native',
 						comingSoon: true,
 					},
 					{
 						label: 'Flutter',
-						href: '/interview/mobile/flutter',
+						href: '/mock-interview/mobile/flutter',
 						comingSoon: true,
 					},
 					{
 						label: 'Android',
-						href: '/interview/mobile/android',
+						href: '/mock-interview/mobile/android',
 						comingSoon: true,
 					},
 				],
 			},
 			{
 				label: 'Database',
-				href: '/interview/database',
+				href: '/mock-interview/database',
 				comingSoon: true,
 				children: [
 					{
 						label: 'MongoDB',
-						href: '/interview/database/mongodb',
+						href: '/mock-interview/database/mongodb',
 						comingSoon: true,
 					},
 					{
 						label: 'MySQL',
-						href: '/interview/database/mysql',
+						href: '/mock-interview/database/mysql',
 						comingSoon: true,
 					},
 					{
 						label: 'PostgreSQL',
-						href: '/interview/database/postgresql',
+						href: '/mock-interview/database/postgresql',
 						comingSoon: true,
 					},
 					{
 						label: 'Redis',
-						href: '/interview/database/redis',
+						href: '/mock-interview/database/redis',
 						comingSoon: true,
 					},
 				],
 			},
 			{
 				label: 'UI/UX Design',
-				href: '/interview/ui-ux',
+				href: '/mock-interview/ui-ux',
 				comingSoon: true,
 				children: [
 					{
 						label: 'Design Principles',
-						href: '/interview/ui-ux/principles',
+						href: '/mock-interview/ui-ux/principles',
 						comingSoon: true,
 					},
-					{ label: 'Figma', href: '/interview/ui-ux/figma', comingSoon: true },
+					{ label: 'Figma', href: '/mock-interview/ui-ux/figma', comingSoon: true },
 					{
 						label: 'Accessibility',
-						href: '/interview/ui-ux/accessibility',
+						href: '/mock-interview/ui-ux/accessibility',
 						comingSoon: true,
 					},
 				],
@@ -129,7 +129,7 @@ export const navLinks: NavLinkInterface[] = [
 		],
 	},
 
-	{ label: 'Technical Rounds', href: '/practical' },
+	{ label: 'Technical Rounds', href: '/practical-interview' },
 	{ label: 'Tips & Guides', href: '/tips-&-guides' },
 	{ label: 'Support', href: '/contact' },
 	{ label: 'Sign In', href: '/login' },

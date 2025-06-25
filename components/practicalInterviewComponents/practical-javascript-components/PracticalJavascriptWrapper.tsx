@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { JavascriptCodingData } from '@/main/data/javascriptData/JavaScriptCodingData';
 
-const JavascriptPageWrapper = () => {
+const  PracticalJavascriptWrapper = () => {
+
 	const [copiedId, setCopiedId] = useState<string | null>(null);
 
 	const handleCopy = (id: string, code: string) => {
@@ -55,4 +56,4 @@ const JavascriptPageWrapper = () => {
 	);
 };
 
-export default JavascriptPageWrapper;
+export default  PracticalJavascriptWrapper;

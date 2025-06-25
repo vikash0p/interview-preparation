@@ -1,17 +1,16 @@
-import NextSidebar from '@/components/next-components/NextSidebar';
+import NextSidebar from '@/components/mockInterviewComponents/nextjs-mock-components/NextSidebar';
 import { NextMockData } from '@/main/data/nextData/NextMockData';
-import { NextJsMetaData } from "@/main/meta/NextJsMetaData";
+import { NextJsMetaData } from '@/main/meta/NextJsMetaData';
 import React from 'react';
 
 interface NextLayoutProps {
 	children: React.ReactNode;
 }
 
-export const metadata=NextJsMetaData;
+export const metadata = NextJsMetaData;
 const ReactInterviewQuestionLayout = ({ children }: NextLayoutProps) => {
 	return (
 		<div className='w-full min-h-screen lg:flex lg:pl-1/4'>
-
 			<NextSidebar data={NextMockData} />
 
 			{/* Main Content */}

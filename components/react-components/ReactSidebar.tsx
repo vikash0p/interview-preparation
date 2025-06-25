@@ -17,7 +17,7 @@ const ReactSidebar = () => {
 				</h2>
 				{ReactMockData.map((value, index) => {
 					const isActive =
-						pathname === `/interview/frontend/react/${value.link}` ||
+						pathname === `/mock-interview/frontend/react/${value.link}` ||
 						selectedSegment === value.link.split('/')[1];
 
 					return (
@@ -27,7 +27,7 @@ const ReactSidebar = () => {
 									? 'bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300 shadow-lg'
 									: 'hover:bg-gradient-to-r from-gray-950 to-gray-800 text-gray-300'
 							}`}
-							href={`/interview/frontend/react/${value.link}`}
+							href={`/mock-interview/frontend/react/${value.link}`}
 							key={value.title}
 							aria-current={isActive ? 'page' : undefined}
 						>
