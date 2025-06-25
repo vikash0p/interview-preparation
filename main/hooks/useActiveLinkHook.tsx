@@ -1,6 +1,8 @@
 'use client'
 import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
 
+
+
 export const useActiveLinkHook = () => {
 	const pathname = usePathname();
 	const selectedSegment = useSelectedLayoutSegment();

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { FcGoogle } from 'react-icons/fc';
 
 export default function LoginPage() {
 	const router = useRouter();
@@ -17,20 +18,23 @@ export default function LoginPage() {
 			return;
 		}
 
-		// Simulate login logic
 		if (email === 'user@example.com' && password === 'password123') {
 			setError('');
-			router.push('/dashboard'); // redirect on successful login
+			router.push('/dashboard');
 		} else {
 			setError('Invalid credentials');
 		}
 	};
 
+	const handleLogin = () => {
+		window.open('http://localhost:5000/api/auth/google', '_self');
+	};
+
 	return (
 		<main className='flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-black px-4'>
-			<div className='w-full max-w-md bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-8'>
+			<div className='w-full max-w-md bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8'>
 				<h1 className='text-3xl font-bold text-white text-center mb-6'>
-					Sign In
+					Welcome Back
 				</h1>
 
 				<form onSubmit={handleSubmit} className='space-y-5'>
@@ -45,7 +49,6 @@ export default function LoginPage() {
 							onChange={(e) => setEmail(e.target.value)}
 							className='w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500'
 							placeholder='you@example.com'
-							required
 						/>
 					</div>
 
@@ -63,7 +66,6 @@ export default function LoginPage() {
 							onChange={(e) => setPassword(e.target.value)}
 							className='w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500'
 							placeholder='••••••••'
-							required
 						/>
 					</div>
 
@@ -80,6 +82,20 @@ export default function LoginPage() {
 						Login
 					</button>
 				</form>
+
+				<div className='my-6 flex items-center justify-between'>
+					<hr className='flex-grow border-gray-600' />
+					<span className='mx-4 text-gray-400 text-sm'>OR</span>
+					<hr className='flex-grow border-gray-600' />
+				</div>
+
+				<button
+					onClick={handleLogin}
+					className='w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black font-medium py-2 px-4 rounded-md transition-colors'
+				>
+					<FcGoogle className='text-xl' />
+					Sign in with Google
+				</button>
 
 				<p className='text-sm text-gray-400 text-center mt-6'>
 					Don&apos;t have an account?{' '}
