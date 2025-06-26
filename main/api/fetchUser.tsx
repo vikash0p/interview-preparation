@@ -1,5 +1,5 @@
 export const fetchUser = async () => {
-	const res = await fetch('http://localhost:5000/api/auth/user', {
+	const res = await fetch('https://backend-interview-prap-api.vercel.app/api/auth/user', {
 		credentials: 'include', // VERY IMPORTANT for cookies
 	});
 

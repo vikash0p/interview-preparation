@@ -27,7 +27,7 @@ export default function LoginPage() {
 	};
 
 	const handleLogin = () => {
-		window.open('http://localhost:5000/api/auth/google', '_self');
+		window.open('https://backend-interview-prap-api.vercel.app/api/auth/google', '_self');
 	};
 
 	return (

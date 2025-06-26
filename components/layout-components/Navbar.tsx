@@ -69,7 +69,8 @@ function Navbar() {
 						<div key={link.label} className='relative inline-block'>
 							{link.dropdown ? (
 								<div className='inline-block'>
-									<button
+									<Link
+									href={link.href}
 										onClick={() => toggleDropdown(link.label)}
 										className={`xl:px-5 lg:px-3 py-2 text-md transition-colors duration-300 flex items-center gap-1 ${
 											getActiveStatus(link.href) ||
@@ -84,7 +85,7 @@ function Navbar() {
 										) : (
 											<FaChevronDown className='text-xs' />
 										)}
-									</button>
+									</Link>
 
 									{activeDropdown === link.label && (
 										<NavbarDropdown
