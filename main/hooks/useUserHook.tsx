@@ -12,6 +12,7 @@ type User = {
 
 const useUserHook = () => {
 	const [user, setUser] = useState<User | null>(null);
+	console.log("🚀 ~ useUserHook.tsx:15 ~ user:", user);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 	console.log("🚀 ~ useUserHook.tsx:17 ~ error:", error);
