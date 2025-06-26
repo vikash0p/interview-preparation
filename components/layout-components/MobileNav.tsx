@@ -1,6 +1,6 @@
 'use client';
 
-import { mobileLink } from '@/main/data/common/mobilelink';
+import { mobileLink } from "@/main/data/common/mobileLink";
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import React from 'react';
