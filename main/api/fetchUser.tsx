@@ -1,22 +1,25 @@
+import axios from 'axios';
+
 export const fetchUser = async () => {
 	try {
-		const res = await fetch(
+		const response = await axios.get(
 			'https://backend-interview-prap-api.vercel.app/api/auth/user',
 			{
-				credentials: 'include', // VERY IMPORTANT for cookies
+				withCredentials: true, // Needed for cookies/session
 			}
 		);
 
-		if (!res.ok) {
-			const errorText = await res.text(); // to log response body if any
-			throw new Error(
-				`Failed to fetch user: ${res.status} ${res.statusText} - ${errorText}`
-			);
+		return response.data;
+	} catch (error: unknown) {
+		if (axios.isAxiosError(error) && error.response) {
+			console.error('❌ Error fetching user:', error.response.data);
+			throw new Error(error.response.data?.error || 'Failed to fetch user');
+		} else if (error instanceof Error) {
+			console.error('❌ Network or unknown error:', error.message);
+			throw new Error('Network error');
+		} else {
+			console.error('❌ An unexpected error occurred');
+			throw new Error('An unexpected error occurred');
 		}
-
-		return await res.json();
-	} catch (error) {
-		console.error('❌ Error fetching user:', error);
-		throw error; // rethrow so caller can handle it too
 	}
 };
