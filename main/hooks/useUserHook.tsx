@@ -36,7 +36,10 @@ const useUserHook = () => {
 	const logout = () => {
     const confirmed = window.confirm('Are you sure you want to logout?');
 		if (confirmed) {
-			window.open('https://authwithgoogle.vercel.app/auth/logout', '_self');
+			window.open(
+				'https://backend-interview-prap-api.vercel.app/api/auth/logout',
+				'_self'
+			);
 		}
     setUser(null);
 	};

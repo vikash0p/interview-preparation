@@ -3,7 +3,7 @@ import axios from 'axios';
 export const fetchUser = async () => {
 	try {
 		const response = await axios.get(
-			'https://authwithgoogle.vercel.app/auth/user',
+			'https://backend-interview-prap-api.vercel.app/api/auth/user',
 			{
 				withCredentials: true, // Needed for cookies/session
 			}

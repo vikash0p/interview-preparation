@@ -25,8 +25,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   isLoading,
   handleSubmit,
 }) => {
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  const handleChange = ( e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -90,6 +89,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500"
                 value={formData.phone}
                 onChange={handleChange}
+                
               />
             </div>
           </div>
