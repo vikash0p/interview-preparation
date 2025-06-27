@@ -26,12 +26,10 @@ export default function LoginPage() {
 		}
 	};
 
-	const handleLogin = () => {
-		window.open('https://authwithgoogle.vercel.app/auth/google', '_self');
-	};
+
 
 	return (
-		<main className='flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-black px-4'>
+		<main className='flex  justify-center py-8 px-4'>
 			<div className='w-full max-w-md bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8'>
 				<h1 className='text-3xl font-bold text-white text-center mb-6'>
 					Welcome Back
@@ -88,24 +86,23 @@ export default function LoginPage() {
 					<span className='mx-4 text-gray-400 text-sm'>OR</span>
 					<hr className='flex-grow border-gray-600' />
 				</div>
+				<div className='space-y-4'>
+					<button
+						onClick={() => {}}
+						className='w-full flex items-center justify-center gap-3 bg-white border border-gray-200 hover:bg-gray-50 text-gray-800 font-medium py-2.5 px-4 rounded-lg transition-all shadow-sm hover:shadow-md active:scale-[0.98]'
+					>
+						<FcGoogle className='text-2xl' />
+						<span>Continue with Google</span>
+					</button>
 
-				<button
-					onClick={handleLogin}
-					className='w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black font-medium py-2 px-4 rounded-md transition-colors'
-				>
-					<FcGoogle className='text-xl' />
-					Sign in with Google
-				</button>
-
-				{/* github login  */}
-
-				<button
-					onClick={handleLogin}
-					className='w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black font-medium py-2 px-4 rounded-md transition-colors'
-				>
-					<FaGithub className='text-xl' />
-					Sign in with github
-				</button>
+					<button
+						onClick={() => {}}
+						className='w-full flex items-center justify-center gap-3 bg-gray-950 hover:bg-gray-900 text-white font-medium py-2.5 px-4 rounded-lg transition-all shadow-sm hover:shadow-md active:scale-[0.98]'
+					>
+						<FaGithub className='text-2xl' />
+						<span>Continue with GitHub</span>
+					</button>
+				</div>
 
 				<p className='text-sm text-gray-400 text-center mt-6'>
 					Don&apos;t have an account?{' '}

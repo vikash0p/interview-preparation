@@ -6,10 +6,8 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useActiveLinkHook } from '@/main/hooks/useActiveLinkHook';
 import { navLinks } from '@/main/data/common/links';
 import NavbarDropdown from './NavbarDropdown';
-import useUserHook from '@/main/hooks/useUserHook';
 
 function Navbar() {
-	const { user } = useUserHook();
 	const { getActiveStatus } = useActiveLinkHook();
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 	const dropdownRef = useRef<HTMLDivElement>(null);
@@ -93,18 +91,6 @@ function Navbar() {
 											onClose={handleChildClick}
 										/>
 									)}
-								</div>
-							) : link.href === '/login' && user ? (
-								<div className='flex items-center'>
-									<Link href='/profile' className='block'>
-										<Image
-											src={user.avatar}
-											alt='User Avatar'
-											className='w-10 h-10 rounded-full object-cover border border-gray-600'
-											width={40}
-											height={40}
-										/>
-									</Link>
 								</div>
 							) : (
 								<Link
