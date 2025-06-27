@@ -1,8 +1,8 @@
 'use client';
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FcGoogle } from 'react-icons/fc';
+import { FaGithub } from "react-icons/fa";
 
 export default function LoginPage() {
 	const router = useRouter();
@@ -27,10 +27,7 @@ export default function LoginPage() {
 	};
 
 	const handleLogin = () => {
-		window.open(
-			'https://backend-interview-prap-api.vercel.app/api/auth/google',
-			'_self'
-		);
+		window.open('https://authwithgoogle.vercel.app/auth/google', '_self');
 	};
 
 	return (
@@ -98,6 +95,16 @@ export default function LoginPage() {
 				>
 					<FcGoogle className='text-xl' />
 					Sign in with Google
+				</button>
+
+				{/* github login  */}
+
+				<button
+					onClick={handleLogin}
+					className='w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-black font-medium py-2 px-4 rounded-md transition-colors'
+				>
+					<FaGithub className='text-xl' />
+					Sign in with github
 				</button>
 
 				<p className='text-sm text-gray-400 text-center mt-6'>

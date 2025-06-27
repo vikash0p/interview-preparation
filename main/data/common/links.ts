@@ -132,5 +132,5 @@ export const navLinks: NavLinkInterface[] = [
 	{ label: 'Technical Rounds', href: '/practical-interview' },
 	{ label: 'Tips & Guides', href: '/tips-&-guides' },
 	{ label: 'Support', href: '/contact' },
-	{ label: 'Sign In', href: '/login' },
+	{ label: 'Login', href: '/login' },
 ];
