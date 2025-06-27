@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Profile() {
 	const { user, loading, error, logout } = useUserHook();
+	console.log("🚀 ~ page.tsx:8 ~ user:", user);
 
 	if (loading) {
 		return (

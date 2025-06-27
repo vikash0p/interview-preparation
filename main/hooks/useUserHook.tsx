@@ -36,8 +36,7 @@ const useUserHook = () => {
 	const logout = () => {
     const confirmed = window.confirm('Are you sure you want to logout?');
 		if (confirmed) {
-			window.open(
-				'https://backend-interview-prap-api.vercel.app/api/auth/logout',
+			window.open(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/logout`,
 				'_self'
 			);
 		}

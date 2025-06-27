@@ -27,8 +27,7 @@ export default function LoginPage() {
 	};
 
 	const login = () => {
-		window.open(
-			'https://backend-interview-prap-api.vercel.app/api/auth/google',
+		window.open(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/google`,
 			'_self'
 		);
 
