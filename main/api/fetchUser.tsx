@@ -9,6 +9,8 @@ export const fetchUser = async () => {
 			}
 		);
 
+		console.log("🚀 ~ fetchUser.tsx:8 ~ response:", response.data);
+
 		return response.data;
 	} catch (error: unknown) {
 		if (axios.isAxiosError(error) && error.response) {

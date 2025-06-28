@@ -1,24 +1,68 @@
 'use client';
 
-import useUserHook from "@/main/hooks/useUserHook";
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+type User = {
+	name: string;
+	email: string;
+	avatar: string;
+	googleId: string;
+	_id: string;
+};
+
 export default function Profile() {
-	const { user, loading, error, logout } = useUserHook();
-	console.log("🚀 ~ page.tsx:8 ~ user:", user);
+	const [user, setUser] = useState<User | null>(null);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const fetchUser = async () => {
+			try {
+				const res = await fetch(
+					`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/user`,
+					{
+						method: 'GET',
+						credentials: 'include', // include cookies/session
+						headers: {
+							'Content-Type': 'application/json',
+							Accept: 'application/json',
+						},
+					}
+				);
+
+				if (!res.ok) throw new Error('Failed to fetch user');
+				const data = await res.json();
+				setUser(data.user || data); // adapt if your API returns { user: { ... } }
+			} catch (error) {
+				console.error('Error fetching user:', error);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchUser();
+	}, []);
+
+	const logout = async () => {
+		await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/logout`, {
+			method: 'POST',
+			credentials: 'include',
+		});
+		window.location.href = '/login'; // redirect to login
+	};
 
 	if (loading) {
 		return (
-			<div className='min-h-screen flex items-center justify-center bg-gray-900 text-gray-400'>
-				<p>Loading profile...</p>
+			<div className='min-h-screen bg-gray-900 text-white flex justify-center items-center'>
+				Loading...
 			</div>
 		);
 	}
 
-	if (error || !user) {
+	if (!user) {
 		return (
-			<div className='min-h-screen flex items-center justify-center bg-gray-900 text-red-500'>
-				<p>{error || 'User not logged in'}</p>
+			<div className='min-h-screen bg-gray-900 text-white flex justify-center items-center'>
+				User not found
 			</div>
 		);
 	}
