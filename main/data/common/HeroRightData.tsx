@@ -60,7 +60,8 @@ newFunc("World");`,
 		question: 'How does event delegation work in JavaScript?',
 		code: `// Event Delegation Example
 document.getElementById("parent").
-addEventListener("click",function(event) {
+addEventListener("click",
+function(event) {
   if (event.target && event.target.matches("button")) {
     console.log("Button clicked", event.target);
   }
