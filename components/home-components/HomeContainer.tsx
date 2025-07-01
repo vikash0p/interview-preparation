@@ -17,7 +17,7 @@ const Footer = dynamic(() => import('@/components/layout-components/Footer'), {
 
 const HomeContainer = () => {
 	return (
-		<div className='max-w-7xl m-auto overflow-x-hidden'>
+		<div className='max-w-7xl m-auto px-1 md:px-4 lg:px-0'>
 			<Hero />
 			<Features />
 			<Domains />

@@ -22,7 +22,7 @@ const ScrollToTop = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed right-5 bottom-20 lg:bottom-5 z-50"
+          className="fixed right-3 lg:right-5 bottom-20 lg:bottom-5 z-50"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}

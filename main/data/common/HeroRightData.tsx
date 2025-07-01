@@ -8,7 +8,7 @@ export interface HeroRightDataInterface{
 export const HeroRightData : HeroRightDataInterface[] = [
 	{
 		question:
-			'What is the difference between var, let, and const in JavaScript?',
+			'What is the difference between var, let, and const ',
 		code: `// Example of var, let, and const
 var x = 10;
 x = 20;
