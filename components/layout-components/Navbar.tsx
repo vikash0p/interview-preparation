@@ -37,13 +37,13 @@ function Navbar() {
 	};
 
 	return (
-		<nav className='hidden lg:block z-50 bg-gradient-to-b from-gray-900 to-gray-900 lg:px-2 xl:px-0 py-4 sticky top-0 left-0 right-0 border-b-2 border-gray-800'>
+		<nav className='hidden lg:block z-50 bg-inherit  lg:px-2 xl:px-0 py-4 sticky top-0 left-0 right-0 border-b-2 border-gray-800'>
 			<div className='max-w-7xl mx-auto flex justify-between items-center gap-6'>
 				{/* Logo */}
-				<div className='flex items-center text-white text-2xl font-bold'>
+				<div className='flex items-center  text-2xl font-bold'>
 					<Link
 						href='/'
-						className='no-underline text-white hover:text-gray-300 flex items-center gap-2'
+						className='no-underline  hover:text-gray-300 flex items-center gap-2'
 					>
 						<Image
 							src={'/favicon/interViewPraplogo.png'}
@@ -52,9 +52,7 @@ function Navbar() {
 							width={300}
 							height={500}
 						/>
-						<p className='xl:text-3xl font-semibold text-gray-200'>
-							InterViewPrap
-						</p>
+						<p className='xl:text-3xl font-semibold '>InterViewPrap</p>
 					</Link>
 				</div>
 
@@ -68,13 +66,13 @@ function Navbar() {
 							{link.dropdown ? (
 								<div className='inline-block'>
 									<Link
-									href={link.href}
+										href={link.href}
 										onClick={() => toggleDropdown(link.label)}
-										className={`xl:px-5 lg:px-3 py-2 text-md transition-colors duration-300 flex items-center gap-1 ${
+										className={`xl:px-5 lg:px-3 py-2 text-md transition-colors duration-300 flex items-center gap-1 rounded-sm ${
 											getActiveStatus(link.href) ||
 											activeDropdown === link.label
-												? 'bg-gradient-to-r from-gray-950 to-gray-800 text-white rounded-sm'
-												: 'text-gray-300 hover:bg-gradient-to-r from-gray-950 to-gray-800 hover:rounded-sm'
+												? 'bg-main-gradient-r  text-gray-300  '
+												: ' hover:bg-main-gradient-r  transition-colors duration-500 '
 										}`}
 									>
 										{link.label}
@@ -95,10 +93,10 @@ function Navbar() {
 							) : (
 								<Link
 									href={link.href}
-									className={`xl:px-5 lg:px-3 py-2 text-md transition-colors duration-300 no-underline flex items-center ${
+									className={`xl:px-5 lg:px-3 py-2 text-md transition-colors duration-300 no-underline flex items-center  rounded-sm ${
 										getActiveStatus(link.href)
-											? 'bg-gradient-to-r from-gray-950 to-gray-800 text-white rounded-sm'
-											: 'text-gray-300 hover:bg-gradient-to-r from-gray-950 to-gray-800 hover:rounded-sm'
+											? 'bg-main-gradient-r  text-gray-300 '
+											: ' hover:bg-main-gradient-r	transition duration-500 '
 									}`}
 								>
 									{link.label}

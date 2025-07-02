@@ -24,7 +24,7 @@ const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
 const LeftHero = () => {
 	return (
 		<div className='basis-1/2 space-y-4 sm:space-y-6 lg:space-y-8'>
-			<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold leading-loose bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>
+			<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>
 				Crack Your Dream Job Interview Prap with Confidence
 			</h1>
 

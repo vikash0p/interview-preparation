@@ -19,13 +19,10 @@ export const viewport = LayoutViewport;
 
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>) {
-
 	return (
 		<ViewTransitions>
 			<html lang='en'>
-				<body
-					className={`${nunito.className} antialiased text-gray-300 bg-gradient-to-b  from-gray-900 to-gray-900 overflow-auto`}
-				>
+				<body	className={`${nunito.className} antialiased text-gray-400  bg-gray-900 `}	>
 				<MainLayout>{children} </MainLayout>
 				</body>
 			</html>

@@ -24,7 +24,7 @@ const NavbarDropdown = ({ items, onClose }: NavbarDropdownProps) => {
 	};
 
 	return (
-		<div className='absolute left-0 mt-2 w-56 bg-gray-800 rounded-md shadow-lg z-50 border border-gray-700'>
+		<div className='absolute left-0 mt-2 w-56 bg-gray-900 rounded-md shadow-lg z-50 border border-gray-700'>
 			<div className='py-1'>
 				{items.map((item) => (
 					<div key={item.label} className='relative group'>
@@ -51,7 +51,7 @@ const NavbarDropdown = ({ items, onClose }: NavbarDropdownProps) => {
 						</Link>
 
 						{item.children && (
-							<div className='absolute left-full top-0 ml-1 w-56 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-700'>
+							<div className='absolute left-full top-0 ml-1 w-56 bg-gray-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-700'>
 								{item.children.map((child) => (
 									<Link
 										key={child.label}
