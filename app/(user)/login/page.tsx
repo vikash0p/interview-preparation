@@ -1,117 +1,96 @@
 'use client';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { FcGoogle } from 'react-icons/fc';
-import { FaGithub } from "react-icons/fa";
 
-export default function LoginPage() {
-	const router = useRouter();
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [error, setError] = useState('');
+import React, { useState } from 'react';
+import axios from 'axios';
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
+const Login = () => {
+	const [email, setEmail] = useState('test4@gmail.com');
+	const [password, setPassword] = useState('test@1234');
+	interface User {
+	id: string;
+	email: string;
+	name?: string;
+}
 
-		if (!email || !password) {
-			setError('Please fill in all fields');
-			return;
-		}
+const [user, setUser] = useState<User | null>(null);
+	const [error, setError] = useState<string>('');
+	const [loading, setLoading] = useState(false);
 
-		if (email === 'user@example.com' && password === 'password123') {
+	const handleLogin = async () => {
+		try {
+			setLoading(true);
 			setError('');
-			router.push('/dashboard');
-		} else {
-			setError('Invalid credentials');
+			setUser(null);
+
+			// Step 1: POST login
+			await axios.post(
+				'https://backendauthentication.vercel.app/api/auth/login',
+				{ email, password },
+				{ withCredentials: true }
+			);
+
+			// Step 2: GET user
+			const res = await axios.get(
+				'https://backendauthentication.vercel.app/api/auth/user',
+				{ withCredentials: true }
+			);
+
+			setUser(res.data.user);
+		} catch (err: unknown) {
+			if (axios.isAxiosError(err)) {
+				setError(err.response?.data?.message || 'Login failed');
+			} else {
+				setError('An unexpected error occurred');
+			}
+		} finally {
+			setLoading(false);
 		}
 	};
 
-
-
-
 	return (
-		<main className='flex  justify-center py-8 px-4'>
-			<div className='w-full max-w-md bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8'>
-				<h1 className='text-3xl font-bold text-white text-center mb-6'>
-					Welcome Back
-				</h1>
+		<div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4'>
+			<div className='bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-4'>
+				<h1 className='text-2xl font-semibold text-center'>Login</h1>
 
-				<form onSubmit={handleSubmit} className='space-y-5'>
-					<div>
-						<label htmlFor='email' className='block text-sm text-gray-300 mb-1'>
-							Email Address
-						</label>
-						<input
-							type='email'
-							id='email'
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-							className='w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500'
-							placeholder='you@example.com'
-						/>
-					</div>
+				<input
+					type='email'
+					placeholder='Email'
+					className='w-full px-4 py-2 border rounded-md'
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+				/>
 
-					<div>
-						<label
-							htmlFor='password'
-							className='block text-sm text-gray-300 mb-1'
-						>
-							Password
-						</label>
-						<input
-							type='password'
-							id='password'
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
-							className='w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500'
-							placeholder='••••••••'
-						/>
-					</div>
+				<input
+					type='password'
+					placeholder='Password'
+					className='w-full px-4 py-2 border rounded-md'
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+				/>
 
-					{error && (
-						<p className='text-red-400 text-sm font-medium text-center'>
-							{error}
+				<button
+					onClick={handleLogin}
+					disabled={loading}
+					className='w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400'
+				>
+					{loading ? 'Logging in...' : 'Login'}
+				</button>
+
+				{error && <p className='text-red-500 text-center'>{error}</p>}
+
+				{user && (
+					<div className='p-4 mt-4 border rounded-md bg-green-100'>
+						<p>
+							<strong>Name:</strong> {user.name}
 						</p>
-					)}
-
-					<button
-						type='submit'
-						className='w-full bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-semibold py-2 px-4 rounded-md'
-					>
-						Login
-					</button>
-				</form>
-
-				<div className='my-6 flex items-center justify-between'>
-					<hr className='flex-grow border-gray-600' />
-					<span className='mx-4 text-gray-400 text-sm'>OR</span>
-					<hr className='flex-grow border-gray-600' />
-				</div>
-				<div className='space-y-4'>
-					<button
-						onClick={()=>{}}
-						className='w-full flex items-center justify-center gap-3 bg-white border border-gray-200 hover:bg-gray-50 text-gray-800 font-medium py-2.5 px-4 rounded-lg transition-all shadow-sm hover:shadow-md active:scale-[0.98]'
-					>
-						<FcGoogle className='text-2xl' />
-						<span>Continue with Google</span>
-					</button>
-
-					<button
-						onClick={() => {}}
-						className='w-full flex items-center justify-center gap-3 bg-gray-950 hover:bg-gray-900 text-white font-medium py-2.5 px-4 rounded-lg transition-all shadow-sm hover:shadow-md active:scale-[0.98]'
-					>
-						<FaGithub className='text-2xl' />
-						<span>Continue with GitHub</span>
-					</button>
-				</div>
-
-				<p className='text-sm text-gray-400 text-center mt-6'>
-					Don&apos;t have an account?{' '}
-					<a href='/register' className='text-indigo-400 hover:underline'>
-						Register
-					</a>
-				</p>
+						<p>
+							<strong>Email:</strong> {user.email}
+						</p>
+					</div>
+				)}
 			</div>
-		</main>
+		</div>
 	);
-}
+};
+
+export default Login;
