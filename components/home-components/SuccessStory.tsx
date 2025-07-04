@@ -5,24 +5,21 @@ import ReusableHeading from '../reusable-components/ReusableHeading';
 
 const SuccessStory = () => {
 	return (
-		<section id='testimonials' className='py-20'>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				{/* Heading and Description */}
-				<ReusableHeading
-					heading='Success Stories'
-					description='Hear from our successful candidates'
-				/>
+		<section className='mt-10 md:mt-14 lg:mt-20'>
+			<ReusableHeading
+				heading='Inspiring Success Stories from Our Learners'
+				description='Discover how aspiring professionals transformed their careers through dedication and our guided interview prep'
+			/>
 
-				{/* Testimonials Grid */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-					{testimonialsData.map((testimonial, index) => (
-						<TestimonialCard
-							key={index}
-							testimonial={testimonial}
-							index={index}
-						/>
-					))}
-				</div>
+			{/* Testimonials Grid */}
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+				{testimonialsData.map((testimonial, index) => (
+					<TestimonialCard
+						key={index}
+						testimonial={testimonial}
+						index={index}
+					/>
+				))}
 			</div>
 		</section>
 	);

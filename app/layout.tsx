@@ -22,7 +22,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
 	return (
 		<ViewTransitions>
 			<html lang='en'>
-				<body	className={`${nunito.className} antialiased text-gray-400  bg-gray-900 `}	>
+				<body	className={`${nunito.className} antialiased text-gray-400  bg-gray-900 overflow-x-hidden `}	>
 				<MainLayout>{children} </MainLayout>
 				</body>
 			</html>

@@ -14,7 +14,7 @@ const DomainCard: React.FC<domainsDataInterface> = ({ icon, name, tech }) => {
 			variants={itemVariants}
 			whileHover='hover'
 			whileTap='tap'
-			className='group relative p-6 sm:p-8 rounded-2xl border-2 border-gray-700 bg-gray-800 shadow-xl hover:border-indigo-500 transition-all'
+			className='group relative p-4 sm:p-5   rounded-2xl border-2 border-gray-700 bg-gray-800 shadow-xl hover:border-indigo-500 transition-all'
 			style={{
 				background:
 					'linear-gradient(45deg, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%)',

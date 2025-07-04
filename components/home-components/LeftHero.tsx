@@ -1,4 +1,5 @@
 'use client';
+import { Link } from 'next-view-transitions';
 import React from 'react';
 import { FaUsers, FaStar } from 'react-icons/fa';
 
@@ -29,7 +30,7 @@ const LeftHero = () => {
 			</h1>
 
 			{/* Desktop Description */}
-			<p className='text-lg text-neutral-300 hidden sm:block'>
+			<p className='text-lg  hidden sm:block'>
 				Master technical interviews across software engineering, data
 				structures, system design, and more with our AI-curated question bank,
 				real-world mock interview simulations, and personalized feedback from
@@ -38,19 +39,27 @@ const LeftHero = () => {
 			</p>
 
 			{/* Mobile Description */}
-			<p className='text-lg text-neutral-300 sm:hidden'>
+			<p className='text-lg  sm:hidden'>
 				Practice technical interviews with curated questions, mock sessions,
 				expert tips, and real-time feedback to boost your skills and get hired.
 			</p>
 
 			<div className='flex flex-col sm:flex-row gap-4 lg:gap-10'>
-				<button className=' px-8 py-4 bg-indigo-600 rounded-lg text-white font-semibold overflow-hidden hover:scale-105 transition-transform hover:bg-indigo-700'>
-					<span className='relative z-10'>Start Practicing</span>
-				</button>
+				<Link
+					href='/practical-interview'
+					aria-label='Start Practicing'
+					className='px-8 py-4 bg-indigo-600 text-center text-white  font-semibold rounded-lg overflow-hidden transition-transform md:hover:scale-105 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400'
+				>
+					Start Practicing
+				</Link>
 
-				<button className='px-8 py-4 border border-white rounded-lg text-white font-semibold hover:bg-indigo-700 transition-all hover:scale-105'>
+				<Link
+					href='/mock-interview'
+					aria-label='View Questions'
+					className='px-8 py-4 text-center border border-white  font-semibold rounded-lg transition-transform md:hover:scale-105 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 hover:text-white'
+				>
 					View Questions
-				</button>
+				</Link>
 			</div>
 
 			<div className='flex items-center gap-6 text-sm text-neutral-400 mt-4'>

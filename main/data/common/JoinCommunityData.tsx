@@ -4,7 +4,7 @@ export type FeatureItem = {
 	id: number;
 	title: string;
 	description: string;
-	icon: React.ReactNode; 
+	icon: React.ReactNode;
 	bgColor: string;
 	stats: string;
 	linkText: string;

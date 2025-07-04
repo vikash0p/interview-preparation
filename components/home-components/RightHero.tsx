@@ -43,7 +43,7 @@ const RightHero = () => {
 							/>
 						))}
 					</div>
-					<div className='text-neutral-400 text-sm'>
+					<div className=' text-sm'>
 						<span>
 							Question {currentQuestion + 1}/{HeroRightData.length}
 						</span>
@@ -57,7 +57,7 @@ const RightHero = () => {
 					onClick={() => handleNavigation('prev')}
 					className='absolute -left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10'
 				>
-					<FaChevronLeft className='text-neutral-400' />
+					<FaChevronLeft className='text-white' />
 				</button>
 				<button
 					type='button'
@@ -65,16 +65,16 @@ const RightHero = () => {
 					onClick={() => handleNavigation('next')}
 					className='absolute -right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10'
 				>
-					<FaChevronRight className='text-neutral-400' />
+					<FaChevronRight className='text-white' />
 				</button>
 
 				{/* Main Content */}
-				<h3 className='text-neutral-300 text-lg sm:text-xl font-semibold leading-relaxed mb-4'>
+				<h3 className=' text-lg sm:text-xl font-semibold leading-relaxed mb-4'>
 					{HeroRightData[currentQuestion].question}
 				</h3>
 
 				<div className='relative'>
-					<pre className='bg-gray-950 h-72 text-neutral-100 p-4 rounded-lg text-sm text-wrap overflow-x-auto'>
+					<pre className='bg-gray-950 h-72  p-4 rounded-lg text-sm text-wrap overflow-x-auto'>
 						<code>{HeroRightData[currentQuestion].code}</code>
 					</pre>
 					<div className='absolute top-2 right-2 group'>
@@ -96,7 +96,7 @@ const RightHero = () => {
 					</div>
 				</div>
 
-				<div className='mt-4 p-3 bg-black/70 rounded-lg text-sm text-neutral-300 min-h-16 border border-indigo-400'>
+				<div className='mt-4 p-3 bg-black/70 rounded-lg text-sm  min-h-16 border border-indigo-400'>
 					{HeroRightData[currentQuestion].explanation}
 				</div>
 

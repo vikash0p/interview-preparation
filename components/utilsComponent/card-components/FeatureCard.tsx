@@ -24,7 +24,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 			variants={itemVariants}
 			whileHover='hover'
 			whileTap='tap'
-			className='group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 border-gray-700 bg-gray-800 shadow-xl hover:border-indigo-500 transition-colors'
+			className='group relative p-4 sm:p-5 md:p-6 rounded-xl border-2 border-gray-700 bg-gray-800 shadow-2xl hover:border-indigo-500 transition-colors  '
 			style={{
 				background:
 					'linear-gradient(45deg, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%)',
