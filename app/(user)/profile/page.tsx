@@ -1,31 +1,80 @@
 'use client';
+
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+
+interface User {
+	_id: string;
+	name: string;
+	email: string;
+	avatar: string;
+	createdAt: string;
+	updatedAt: string;
+}
+
 export default function Profile() {
+	const [user, setUser] = useState<User | null>(null);
+	console.log("🚀 ~ page.tsx:19 ~ user:", user);
+	const router = useRouter();
+
+	const fetchUser = async () => {
+		try {
+			const response = await axios.get<User>(
+				'https://backend-interview-prap-api.vercel.app/auth/profile',
+				{
+					withCredentials: true,
+				}
+			);
+			setUser(response.data);
+		} catch (error) {
+			console.error('Failed to fetch user:', error);
+		}
+	};
+
+	const handleLogout = async () => {
+		try {
+			await axios.get(
+				'https://backend-interview-prap-api.vercel.app/auth/logout',
+				{ withCredentials: true }
+			);
+			setUser(null);
+			router.push('/login'); // ⬅️ change to your login route
+		} catch (error) {
+			console.error('Logout failed:', error);
+		}
+	};
+
+	useEffect(() => {
+		fetchUser();
+	}, []);
+
 	return (
 		<div className='min-h-screen bg-gray-900 flex items-center justify-center px-4'>
 			<div className='bg-gray-800 rounded-2xl shadow-xl p-8 w-full max-w-md text-white'>
-				{/* Avatar */}
+				{/* Avatar + Info */}
 				<div className='flex flex-col items-center space-y-4'>
-					<div className='relative w-28 h-28'>
-						<Image
-							src={
-								'https://cdn.pixabay.com/photo/2022/07/17/13/41/sunflower-7327456_1280.jpg'
-							}
-							alt='User Avatar'
-							fill
-							sizes='112px'
-							className='rounded-full object-cover border-4 border-gray-700 transition-transform hover:scale-105'
-						/>
-					</div>
-					<h2 className='text-2xl font-semibold'>{'vikash'}</h2>
-					<p className='text-gray-400'>{'vikash@gmail.com'}</p>
+					{user?.avatar && (
+						<div className='relative w-28 h-28'>
+							<Image
+								src={user.avatar}
+								alt='User Avatar'
+								fill
+								sizes='112px'
+								className='rounded-full object-cover border-4 border-gray-700 transition-transform hover:scale-105'
+							/>
+						</div>
+					)}
+					<h2 className='text-2xl font-semibold'>
+						{user?.name || 'Loading...'}
+					</h2>
+					<p className='text-gray-400'>{user?.email || ''}</p>
 				</div>
-
-
 
 				{/* Logout */}
 				<button
-					onClick={()=>{}}
+					onClick={handleLogout}
 					className='mt-6 w-full bg-red-600 hover:bg-red-700 transition-colors text-white py-2 rounded-xl font-medium'
 				>
 					Logout

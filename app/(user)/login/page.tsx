@@ -2,92 +2,54 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
-	const [email, setEmail] = useState('test4@gmail.com');
-	const [password, setPassword] = useState('test@1234');
-	interface User {
-	id: string;
-	email: string;
-	name?: string;
-}
-
-const [user, setUser] = useState<User | null>(null);
-	const [error, setError] = useState<string>('');
-	const [loading, setLoading] = useState(false);
+	const [email, setEmail] = useState('test1@gmail.com');
+	const [password, setPassword] = useState('test@123');
+	const router = useRouter();
 
 	const handleLogin = async () => {
 		try {
-			setLoading(true);
-			setError('');
-			setUser(null);
-
-			// Step 1: POST login
-			await axios.post(
-				'https://backendauthentication.vercel.app/api/auth/login',
+			const response = await axios.post(
+				'https://backend-interview-prap-api.vercel.app/auth/login',
 				{ email, password },
 				{ withCredentials: true }
 			);
-
-			// Step 2: GET user
-			const res = await axios.get(
-				'https://backendauthentication.vercel.app/api/auth/user',
-				{ withCredentials: true }
-			);
-
-			setUser(res.data.user);
-		} catch (err: unknown) {
-			if (axios.isAxiosError(err)) {
-				setError(err.response?.data?.message || 'Login failed');
-			} else {
-				setError('An unexpected error occurred');
-			}
-		} finally {
-			setLoading(false);
+			console.log(response.data);
+			router.push('/profile');
+		} catch (error) {
+			console.error('Login failed:', error);
 		}
 	};
 
 	return (
-		<div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4'>
-			<div className='bg-white p-6 rounded-lg shadow-md w-full max-w-md space-y-4'>
+		<div className='min-h-screen flex flex-col items-center justify-center  px-4'>
+			<div className='bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md space-y-4'>
 				<h1 className='text-2xl font-semibold text-center'>Login</h1>
 
 				<input
 					type='email'
 					placeholder='Email'
-					className='w-full px-4 py-2 border rounded-md'
+					className='w-full px-4 py-2 border rounded-md bg-gray-900'
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 
 				<input
-					type='password'
+					type='text'
 					placeholder='Password'
-					className='w-full px-4 py-2 border rounded-md'
+					className='w-full px-4 py-2 border rounded-md bg-gray-900'
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 
 				<button
 					onClick={handleLogin}
-					disabled={loading}
 					className='w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400'
 				>
-					{loading ? 'Logging in...' : 'Login'}
+					Login
 				</button>
-
-				{error && <p className='text-red-500 text-center'>{error}</p>}
-
-				{user && (
-					<div className='p-4 mt-4 border rounded-md bg-green-100'>
-						<p>
-							<strong>Name:</strong> {user.name}
-						</p>
-						<p>
-							<strong>Email:</strong> {user.email}
-						</p>
-					</div>
-				)}
 			</div>
 		</div>
 	);
