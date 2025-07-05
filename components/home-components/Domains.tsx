@@ -8,9 +8,10 @@ const Domains = () => {
 	return (
 		<section className='mt-10 md:mt-14 lg:mt-20'>
 			<ReusableHeading
-				heading='Domains I Work In Professionally'
-				description='Explore my technical expertise across different domains'
+				heading='Professional Domains Where I Apply My Skills'
+				description='Explore my expertise in diverse technical areas, including web development, UI/UX design, APIs, and system architecture'
 			/>
+
 			{/* Cards */}
 			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
 				{domainsData.map((domain, index) => (

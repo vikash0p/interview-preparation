@@ -17,7 +17,7 @@ const AskQuestion = () => {
 		<section className='mt-10 md:mt-14 lg:mt-20'>
 			<ReusableHeading
 				heading='Frequently Asked Questions for interview'
-				description='Find answers to common questions about interview preparation'
+				description='From platform features to mock interview tips, find all the answers you need to start preparing smarter and faster'
 			/>
 
 			<div className='max-w-7xl mx-auto space-y-4'>
@@ -35,9 +35,7 @@ const AskQuestion = () => {
 							onClick={() => toggleAccordion(index)}
 							className='flex justify-between items-center w-full text-left focus:outline-none'
 						>
-							<h3 className='text-xl font-semibold '>
-								{item.question}
-							</h3>
+							<h3 className='text-xl font-semibold '>{item.question}</h3>
 							<motion.span
 								animate={{
 									rotate: activeIndex === index ? 180 : 0,

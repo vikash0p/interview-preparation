@@ -8,7 +8,7 @@ const MockInterview: React.FC = () => {
 		<section id='mockInterviews' className='py-20 '>
 			<ReusableHeading
 				heading='Mock Interviews with AI for Practice & Progress'
-				description='Enhance your interview skills with our AI-powered mock interviews.'
+				description='Practice common and role-specific questions in real-time with AI feedback to build confidence and refine your answers'
 			/>
 
 			<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 '>
