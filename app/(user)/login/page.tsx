@@ -11,8 +11,7 @@ const Login = () => {
 
 	const handleLogin = async () => {
 		try {
-			const response = await axios.post(
-				'https://backend-interview-prap-api.vercel.app/auth/login',
+			const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
 				{ email, password },
 				{ withCredentials: true }
 			);

@@ -21,8 +21,7 @@ export default function Profile() {
 
 	const fetchUser = async () => {
 		try {
-			const response = await axios.get<User>(
-				'https://backend-interview-prap-api.vercel.app/auth/profile',
+			const response = await axios.get<User>(`${process.env.NEXT_PUBLIC_API_URL}/auth/profile`,
 				{
 					withCredentials: true,
 				}
@@ -35,8 +34,7 @@ export default function Profile() {
 
 	const handleLogout = async () => {
 		try {
-			await axios.get(
-				'https://backend-interview-prap-api.vercel.app/auth/logout',
+			await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/logout`,
 				{ withCredentials: true }
 			);
 			setUser(null);
