@@ -49,6 +49,10 @@ const Login = () => {
 				>
 					Login
 				</button>
+
+				<div>
+					<a href={`${process.env.NEXT_PUBLIC_API_URL}/auth/google`}>login with google</a>
+				</div>
 			</div>
 		</div>
 	);
