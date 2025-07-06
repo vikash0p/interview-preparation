@@ -50,8 +50,9 @@ const Login = () => {
 					Login
 				</button>
 
-				<div>
+				<div className="flex flex-col gap-2">
 					<a href={`${process.env.NEXT_PUBLIC_API_URL}/auth/google`}>login with google</a>
+					<a href={`${process.env.NEXT_PUBLIC_API_URL}/auth/github`}>login with github</a>
 				</div>
 			</div>
 		</div>
