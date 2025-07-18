@@ -37,7 +37,7 @@ function Navbar() {
 	};
 
 	return (
-		<nav className='hidden lg:block z-50 bg-inherit  lg:px-2 xl:px-0 py-4 sticky top-0 left-0 right-0 border-b-2 border-gray-800'>
+		<nav className='hidden lg:block z-50 bg-inherit  lg:px-2 xl:px-0 py-4 sticky top-0 left-0 right-0 '>
 			<div className='max-w-7xl mx-auto flex justify-between items-center gap-6'>
 				{/* Logo */}
 				<div className='flex items-center  text-2xl font-bold'>

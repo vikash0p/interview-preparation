@@ -2,13 +2,12 @@ import { FaCode, FaDatabase, FaMobileAlt, FaPaintBrush } from 'react-icons/fa';
 import { SiNodedotjs, SiTypescript } from 'react-icons/si';
 
 export interface domainsDataInterface {
-name: string;
-icon: JSX.Element;
-tech: string[];
+	name: string;
+	icon: JSX.Element;
+	tech: string[];
 }
 
-
-export const domainsData:domainsDataInterface[] = [
+export const domainsData: domainsDataInterface[] = [
 	{
 		name: 'Frontend',
 		icon: <FaCode />,
