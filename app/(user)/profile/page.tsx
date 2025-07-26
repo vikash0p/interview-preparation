@@ -16,7 +16,6 @@ interface User {
 
 export default function Profile() {
 	const [user, setUser] = useState<User | null>(null);
-	console.log("🚀 ~ page.tsx:19 ~ user:", user);
 	const router = useRouter();
 
 	const fetchUser = async () => {

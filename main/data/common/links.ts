@@ -8,7 +8,7 @@ export const navLinks: NavLinkInterface[] = [
 		label: 'Mock Interviews',
 		href: '/mock-interviews',
 	},
-	{ label: 'Technical Rounds', href: '/practical-interview' },
+	{ label: 'Practical Interview', href: '/practical-interviews' },
 	{ label: 'Tips & Guides', href: '/tips-&-guides' },
 	{ label: 'Support', href: '/contact' },
 	{ label: 'Login', href: '/login' },

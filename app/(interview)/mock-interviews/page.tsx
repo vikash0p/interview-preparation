@@ -1,6 +1,6 @@
-import MockInterviewCard from '@/components/mock-interviews-components/MockInterviewCard';
 import ReusableHeading from '@/components/reusable-components/ReusableHeading';
-import { MOCK_INTERVIEWS_DATA } from '@/main/data/common/mockData';
+import ReusableInterviewCard from "@/components/utilsComponent/card-components/ReusableInterviewCard";
+import { MOCK_INTERVIEWS_DATA } from "@/main/data/mock-interview-data/mockTechnologiesData";
 import React from 'react';
 
 const MockInterviews = () => {
@@ -11,11 +11,33 @@ const MockInterviews = () => {
 				description='Practice real-time mock interviews powered by AI. Get instant feedback and improve your responses for top tech interviews.'
 			/>
 			{/* Flexbox wrapper */}
-			<div className='flex flex-wrap justify-center gap-6 w-full'>
-				{MOCK_INTERVIEWS_DATA.map((item, index) => (
-					<MockInterviewCard key={index} {...item} />
-				))}
-			</div>
+					<div className="flex flex-wrap justify-center gap-14">
+							{
+								MOCK_INTERVIEWS_DATA.map((value)=>{
+									return (
+										<section className='bg-gradient-to-t from-gray-900/10 to-gray-950 p-6 pb-12 rounded-2xl  shadow-2xl space-y-10' key={value.id}>
+											<div className='text-center'>
+												<h2 className='text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-400 pb-2 uppercase'>
+													{value.actionLabel}
+												</h2>
+												<div className='w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto rounded-full' />
+											</div>
+											<div className='flex flex-wrap gap-6 justify-center'>
+												{value.technologies.map((technology) => {
+													return (
+														<ReusableInterviewCard
+															key={technology.id}
+															technology={technology}
+															href={`/mock-interviews/${technology.slug}`}
+														/>
+													);
+												})}
+											</div>
+										</section>
+									);
+								})
+							}
+					</div>
 		</section>
 	);
 };

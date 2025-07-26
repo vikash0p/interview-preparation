@@ -6,14 +6,7 @@ import { FiBook, FiTarget, FiInfo, FiCode } from 'react-icons/fi';
 import CodePreview from "../global-components/CodePreview";
 
 const ReusableContainer = ({ data }: { data: LinkInterface }) => {
-	console.log(
-		'🚀 ~ ReusableContainer.tsx:8 ~ ReusableContainer ~ data:',
-		data.component
-	);
-	console.log(
-		'🚀 ~ ReusableContainer.tsx:9 ~ ReusableContainer ~ data:',
-		data.data
-	);
+	
 
 	const [open, setOpen] = useState(false);
 	const toggleOpen = () => setOpen(!open);

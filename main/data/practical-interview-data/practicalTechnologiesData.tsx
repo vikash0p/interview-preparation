@@ -127,7 +127,7 @@ export const  PRACTICAL_INTERVIEW_DATA: PracticalTechnologiesInterface[] = [
 		id: '9',
 		slug: 'next.js',
 		label: 'Next.js',
-		icon: <SiNextdotjs className='text-black' />,
+		icon: <SiNextdotjs className='text-white' />,
 		category: 'frontend',
 		actionLabel: 'Build fullstack React apps',
 		comingSoon: false,
@@ -394,29 +394,5 @@ export const  PRACTICAL_INTERVIEW_DATA: PracticalTechnologiesInterface[] = [
 		actionLabel: 'Track code changes',
 		comingSoon: false,
 	},
-	{
-		id: '38',
-		slug: 'teamwork',
-		label: 'Teamwork',
-		icon: <FaUsers className='text-green-500' />,
-		category: 'soft-skills',
-		actionLabel: 'Work well together',
-		comingSoon: false,
-	},
-	{
-		id: '39',
-		slug: 'communication',
-		label: 'Communication',
-		icon: <FaUsers className='text-blue-400' />,
-		category: 'soft-skills',
-		actionLabel: 'Share ideas clearly',
-		comingSoon: false,
-	},
+	
 ];
-
-// // Utility functions
-// export const getTechBySlug = (slug: string) =>
-// 	practicalTechnologies.find((tech) => tech.slug === slug);
-
-// export const getTechByCategory = (category: string) =>
-// 	practicalTechnologies.filter((tech) => tech.category === category);
