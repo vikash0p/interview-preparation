@@ -1,5 +1,5 @@
 import React from 'react';
-import { testimonialsData } from '@/main/data/common/testimonialsData';
+import { testimonialsData } from '@/main/data/home/testimonialsData';
 import TestimonialCard from '../utilsComponent/card-components/TestimonialCard';
 import ReusableHeading from '../reusable-components/ReusableHeading';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import MockInterviewCard from '../utilsComponent/card-components/MockInterviewCard';
-import { interviewFeatures } from '@/main/data/common/mockInterviewData';
+import { interviewFeatures } from '@/main/data/home/mockInterviewData';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt } from 'react-icons/fa';
 

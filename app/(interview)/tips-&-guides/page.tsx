@@ -1,5 +1,5 @@
-'use client'
-import { tipsGuidesData } from "@/main/data/common/tipsGuidesData";
+'use client';
+import { tipsGuidesData } from '@/main/data/home/tipsGuidesData';
 import Link from 'next/link';
 export default function TipsPage() {
 	return (

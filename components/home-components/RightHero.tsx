@@ -6,7 +6,7 @@ import {
 	FaChevronRight,
 	FaRegCopy,
 } from '@/main/icons/react-icons';
-import { HeroRightData } from '@/main/data/common/HeroRightData';
+import { HeroRightData } from '@/main/data/home/HeroRightData';
 
 const RightHero = () => {
 	const [copied, setCopied] = useState(false);

@@ -15,7 +15,6 @@ import {
 	FaCode,
 	FaCloud,
 	FaBrain,
-	FaUsers,
 } from 'react-icons/fa';
 import {
 	SiTypescript,
@@ -394,5 +393,5 @@ export const  PRACTICAL_INTERVIEW_DATA: PracticalTechnologiesInterface[] = [
 		actionLabel: 'Track code changes',
 		comingSoon: false,
 	},
-	
+
 ];

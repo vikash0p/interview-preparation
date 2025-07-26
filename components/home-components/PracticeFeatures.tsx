@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { FaChevronRight } from 'react-icons/fa';
-import { practiceData } from '@/main/data/common/practiceData';
+import { practiceData } from '@/main/data/home/practiceData';
 import PracticeCard from '../utilsComponent/card-components/PracticeCard';
 import { Link } from 'next-view-transitions';
 
@@ -24,7 +24,7 @@ const PracticeFeatures = () => {
 				className='w-full mt-6 bg-gray-900  py-4 rounded-xl hover:bg-gray-800 transition-colors flex items-center justify-center group'
 			>
 				<Link href={'/coding/ReactJS'} className='flex items-center' passHref>
-					<span className="text-gray-400">View More Practice Questions</span>
+					<span className='text-gray-400'>View More Practice Questions</span>
 					<FaChevronRight className='ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform' />
 				</Link>
 			</motion.button>

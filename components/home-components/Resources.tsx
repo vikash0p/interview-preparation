@@ -1,5 +1,5 @@
 import React from 'react';
-import { resourcesData } from '@/main/data/common/ResourceData';
+import { resourcesData } from '@/main/data/home/ResourceData';
 import ReusableHeading from '../reusable-components/ReusableHeading';
 import ResourceCard from '../utilsComponent/card-components/ResourceCard';
 

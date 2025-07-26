@@ -1,5 +1,5 @@
 'use client';
-import { domainsData } from '@/main/data/common/domainsData';
+import { domainsData } from '@/main/data/home/domainsData';
 import ReusableHeading from '../reusable-components/ReusableHeading';
 import React from 'react';
 import DomainCard from '../utilsComponent/card-components/DomainCard';

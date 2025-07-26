@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import type { Feature } from "@/main/data/common/mockInterviewData";
+import { motion } from 'framer-motion';
+import type { Feature } from '@/main/data/home/mockInterviewData';
 
 const MockInterviewCard: React.FC<Feature> = ({
 	icon: Icon,

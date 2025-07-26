@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { testimonialInterface } from '@/main/data/common/testimonialsData';
+import type { testimonialInterface } from '@/main/data/home/testimonialsData';
 import { FaStar } from 'react-icons/fa';
 
 interface TestimonialCardProps {
@@ -52,9 +52,7 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
 			</div>
 
 			{/* Testimonial Text */}
-			<p className='relative z-10  leading-relaxed'>
-				{testimonial.text}
-			</p>
+			<p className='relative z-10  leading-relaxed'>{testimonial.text}</p>
 		</motion.div>
 	);
 };

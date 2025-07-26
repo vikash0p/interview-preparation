@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import type { Message } from "@/main/data/common/mockInterviewData";
+import { motion } from 'framer-motion';
+import type { Message } from '@/main/data/home/mockInterviewData';
 
 const ChatBubbleCard: React.FC<{ message: Message }> = ({ message }) => (
 	<motion.div

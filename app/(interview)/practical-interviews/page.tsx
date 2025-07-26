@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { PRACTICAL_INTERVIEW_DATA } from '@/main/data/practical-interview-data/practicalTechnologiesData';
+import { PRACTICAL_INTERVIEW_DATA } from '@/main/data/link/practicalTechnologiesData';
 import ReusableHeading from '@/components/reusable-components/ReusableHeading';
 import ReusableInterviewCard from '@/components/utilsComponent/card-components/ReusableInterviewCard';
 

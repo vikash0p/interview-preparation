@@ -6,7 +6,7 @@ import {
 	techItemVariants,
 } from '@/main/animation/motionVariants';
 import React from 'react';
-import type { domainsDataInterface } from '@/main/data/common/domainsData';
+import type { domainsDataInterface } from '@/main/data/home/domainsData';
 
 const DomainCard: React.FC<domainsDataInterface> = ({ icon, name, tech }) => {
 	return (

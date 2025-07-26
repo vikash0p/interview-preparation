@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { Resource } from '@/main/data/common/ResourceData';
+import type { Resource } from '@/main/data/home/ResourceData';
 
 interface ResourceCardProps {
 	resource: Resource;
@@ -33,9 +33,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
 				>
 					{resource.icon}
 				</div>
-				<h3 className='text-xl font-semibold mb-2 '>
-					{resource.title}
-				</h3>
+				<h3 className='text-xl font-semibold mb-2 '>{resource.title}</h3>
 				<p className='text-gray-400 mb-2'>{resource.description}</p>
 				<div className='flex flex-wrap gap-2'>
 					{resource.tags.map((tag, index) => (

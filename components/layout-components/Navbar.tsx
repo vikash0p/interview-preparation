@@ -2,7 +2,7 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import { useActiveLinkHook } from '@/main/hooks/useActiveLinkHook';
-import { navLinks } from '@/main/data/common/links';
+import { navLinks } from '@/main/data/link/navLinks';
 
 function Navbar() {
 	const { getActiveStatus } = useActiveLinkHook();

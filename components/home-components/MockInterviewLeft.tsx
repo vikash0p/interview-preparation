@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaClock } from 'react-icons/fa';
-import { chatMessages } from '@/main/data/common/mockInterviewData';
+import { chatMessages } from '@/main/data/home/mockInterviewData';
 import ChatBubbleCard from '../utilsComponent/card-components/ChatBubbleCard';
 const MockInterviewLeft = () => {
 	return (

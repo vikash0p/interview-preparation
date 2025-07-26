@@ -5,7 +5,7 @@ import ReusableHeading from '../reusable-components/ReusableHeading';
 import {
 	statsData,
 	JoinCommunityData,
-} from '@/main/data/common/JoinCommunityData';
+} from '@/main/data/home/JoinCommunityData';
 
 const JoinCommunity = () => {
 	return (
@@ -42,9 +42,7 @@ const JoinCommunity = () => {
 							{feature.icon}
 						</div>
 
-						<h3 className='text-xl font-semibold'>
-							{feature.title}
-						</h3>
+						<h3 className='text-xl font-semibold'>{feature.title}</h3>
 						<p className='text-gray-300'>{feature.description}</p>
 
 						<div className='flex items-center justify-between text-sm pt-2'>
