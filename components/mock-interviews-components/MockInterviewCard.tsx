@@ -13,7 +13,7 @@ const MockInterviewCard = ({category,actionLabel,icon,comingSoon}: CategoryItem)
 
 	return (
 		<div
-			className={`group relative ${
+			className={`group relative max-w-sm w-full  ${
 				comingSoon ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
 			} bg-gray-800/60 hover:bg-gray-950 border-2 border-gray-700 p-5 rounded-xl hover:border-indigo-400 transition-all duration-300 shadow-md `}
 		>
