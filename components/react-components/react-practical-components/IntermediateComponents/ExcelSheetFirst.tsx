@@ -98,7 +98,7 @@ export default ExcelSheet;
 
 
 export const excelSheetDataSource = `
-"use client";
+
 import React, { useState } from "react";
 
 type ExcelGrid = string[][];

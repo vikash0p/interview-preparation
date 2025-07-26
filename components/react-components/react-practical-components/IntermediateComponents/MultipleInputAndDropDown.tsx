@@ -127,7 +127,7 @@ export default MultipleInputAndDropDown;
 
 //! multiple input and dropdown functionality data source
 
-export const multipleInputDataSource = `"use client";
+export const multipleInputDataSource = `
 import { X } from "lucide-react";
 import React, { useState } from "react";
 

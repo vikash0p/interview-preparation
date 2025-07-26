@@ -33,7 +33,6 @@ export default LikeButton;
 // !Like Button with data source
 
 export const likeButtonDataSource = `
-"use client";
 import React, { useState } from "react";
 const LikeButton = () => {
   const [like, setLike] = useState(false);

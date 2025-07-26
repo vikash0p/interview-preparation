@@ -65,40 +65,45 @@ const CarouselFirstComponent = () => {
 export default CarouselFirstComponent;
 
 //! carousel data source
+//! carousel data source
 export const carouselFirstData = `
-"use client";
-import { products } from "@/main/data/product";
-import Image from "next/image";
+
+'use client';
 import React, { useState } from "react";
 
+// Generate fake product data with random images
+const products = Array.from({ length: 5 }, (_, i) => ({
+  id: i + 1,
+  // using this url https://picsum.photos/seed/${'using the index' + 1}/400/300
+
+  imageUrl: "https://picsum.photos/seed/" + (i + 1) + "/400/300",
+}));
+
 const CarouselFirstComponent = () => {
-  const [index, setIndex] = useState<number>(0);
+  const [index, setIndex] = useState(0);
   const totalImages = products.length;
 
-  const handlePrev = () => setIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  const handlePrev = () => {
+    setIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  };
 
-  const handleNext = () =>
+  const handleNext = () => {
     setIndex((prev) => (prev < totalImages - 1 ? prev + 1 : prev));
+  };
 
   return (
-    <div className={"flex flex-col items-center justify-center space-y-4 p-4"}>
-      <div
-        className={
-          "relative w-80 h-60 border rounded-md shadow-md overflow-hidden"
-        }
-      >
-        <Image
+    <div className="flex flex-col items-center justify-center space-y-4 p-4">
+      <div className="relative w-80 h-60 border rounded-md shadow-md overflow-hidden">
+        <img
           src={products[index].imageUrl}
           alt={"Image " + products[index].id}
-          className={"object-cover"}
-          fill
-          priority
+          className="object-cover w-full h-full"
         />
       </div>
-      <p className={"text-lg font-medium"}>
-        {"Image " + products[index].id + " of " + products.length}
+      <p className="text-lg font-medium">
+        {"Image " + products[index].id + " of " + totalImages}
       </p>
-      <div className={"flex space-x-4"}>
+      <div className="flex space-x-4">
         <button
           type="button"
           className={
@@ -131,6 +136,4 @@ const CarouselFirstComponent = () => {
 };
 
 export default CarouselFirstComponent;
-
-
 `;

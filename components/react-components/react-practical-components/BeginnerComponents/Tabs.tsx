@@ -56,7 +56,7 @@ export default Tabs;
 
 // !Tabs with data source
 
-export const tabsDataSource = `"use client";
+export const tabsDataSource = `
 import React, { useState } from "react";
 
 const data = [

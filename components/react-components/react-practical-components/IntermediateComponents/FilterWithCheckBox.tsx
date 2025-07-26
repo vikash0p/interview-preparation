@@ -105,7 +105,6 @@ export default FilterWithCheckBox;
 // !Filter with checkbox data source
 
 export const filterWithCheckDataSource = `
-"use client";
 import { products } from "@/main/data/product";
 import Image from "next/image";
 import React, { useState } from "react";

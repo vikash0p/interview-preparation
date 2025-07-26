@@ -31,7 +31,7 @@ export default StarRating;
 
 // !Star Rating with data source
 
-export const starRatingDataSource = `"use client";
+export const starRatingDataSource = `;
 import { StarIcon } from "lucide-react";
 import React, { useState } from "react";
 const StarRating = () => {

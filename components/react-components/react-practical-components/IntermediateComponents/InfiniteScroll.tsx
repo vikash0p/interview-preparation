@@ -164,7 +164,6 @@ export default InfiniteScroll;
 //! --------------------------------------------- infinite scroll data source ---------------------------------------------
 
 export const infiniteScrollDataSource = `
-"use client";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 
 interface Student {

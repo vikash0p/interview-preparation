@@ -109,7 +109,7 @@ export default SearchAndInputWithLocalStorage;
 
 // !Search and Input with Local Storage
 
-export const searchAndInputWithLocalStorageDataSource = `"use client";
+export const searchAndInputWithLocalStorageDataSource = `
 import React, { useEffect, useState } from "react";
 import { CircleX } from "lucide-react";
 const SearchAndInputWithLocalStorage = () => {

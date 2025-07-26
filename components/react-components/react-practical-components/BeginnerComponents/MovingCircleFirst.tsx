@@ -31,7 +31,6 @@ export default MovingCircleFirst;
 
 // !---------------------------------------------------------------- move circle first data source --------------------------------
 export const moveCircleFirstDataSource = `
-'use client';
 import React, { useState, useEffect } from 'react';
 const MovingCircleFirst: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

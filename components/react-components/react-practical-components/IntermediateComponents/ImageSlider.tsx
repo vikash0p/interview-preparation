@@ -83,7 +83,6 @@ export default ImageSliderComponent;
 // ! Image slider data source
 
 export const imageSliderDataSource = `
-"use client";
 import { products } from "@/main/data/product";
 import Image from "next/image";
 import React, { useState } from "react";

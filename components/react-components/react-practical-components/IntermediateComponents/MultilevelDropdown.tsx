@@ -97,7 +97,6 @@ export default MultilevelDropDown;
 // ! ------------------------------------ multilevel dropdown data source -------------------------------------
 
 export const dropDownMenuDataSource = `
-"use client";
 import React, { useState } from "react";
 const data = [
   {

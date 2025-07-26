@@ -59,7 +59,7 @@ export default Timer;
 
 // !Countdown Timer data source
 
-export const timerDataSource = `"use client";
+export const timerDataSource = `
 import React, { useEffect, useState, useRef } from "react";
 const Timer: React.FC = () => {
   const [time, setTime] = useState<number>(60);

@@ -3,8 +3,18 @@ import React, { useState } from 'react';
 import ModelOne from '../global-components/GlobalModel';
 import { LinkInterface } from '../../main/types/types';
 import { FiBook, FiTarget, FiInfo, FiCode } from 'react-icons/fi';
+import CodePreview from "../global-components/CodePreview";
 
 const ReusableContainer = ({ data }: { data: LinkInterface }) => {
+	console.log(
+		'🚀 ~ ReusableContainer.tsx:8 ~ ReusableContainer ~ data:',
+		data.component
+	);
+	console.log(
+		'🚀 ~ ReusableContainer.tsx:9 ~ ReusableContainer ~ data:',
+		data.data
+	);
+
 	const [open, setOpen] = useState(false);
 	const toggleOpen = () => setOpen(!open);
 
@@ -119,6 +129,10 @@ const ReusableContainer = ({ data }: { data: LinkInterface }) => {
 				data={data.data}
 				heading={data.name}
 			/>
+
+			{/*-------------------------------------- add the editor react component here --------------------------------- */}
+
+							<CodePreview data={data.data} />
 		</div>
 	);
 };

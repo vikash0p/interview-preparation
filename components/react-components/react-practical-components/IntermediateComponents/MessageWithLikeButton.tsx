@@ -94,7 +94,7 @@ export default MessageWithLikeButton;
 
 
 // !Message with like button data source
-export const messageWithLikeDataSource = `"use client";
+export const messageWithLikeDataSource = `
 import React, { useState } from "react";
 
 const MessageWithLikeButton = () => {

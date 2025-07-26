@@ -147,7 +147,7 @@ export default MultiLevel;
 
 // ! ------------------------------------ multilevel dropdown data source -------------------------------------
 
-export const multiLevelDataSource = `"use client";
+export const multiLevelDataSource = `
 import React, { useState } from "react";
 
 const userInputFields = [

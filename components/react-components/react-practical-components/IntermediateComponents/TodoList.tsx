@@ -99,7 +99,6 @@ export default TodoList;
 // Todo list with data source
 
 export const todoListDataSource = `
-"use client";
 import React, { useEffect, useState } from "react";
 
 interface Todo {

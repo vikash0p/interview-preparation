@@ -104,7 +104,7 @@ export default ShuffleGifts;
 
 
 // !Shuffle Gifts data source
-export const shuffleGiftsDataSource = `"use client";
+export const shuffleGiftsDataSource = `
 import React, { useState } from "react";
 
 const ShuffleGifts = () => {

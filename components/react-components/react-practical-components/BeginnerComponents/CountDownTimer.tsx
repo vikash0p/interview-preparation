@@ -26,7 +26,6 @@ export default CountDownTimers;
 // !Countdown Timer with data source
 
 export const countDownTimersDataSource = `
-"use client";
 import React, { useEffect, useState } from "react";
 
 const CountDownTimers: React.FC = () => {

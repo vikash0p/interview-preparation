@@ -73,15 +73,10 @@ const BackgroundOneComponent: React.FC = () => {
 export default BackgroundOneComponent
 
 // ! background one data source
-export const backgroundOneData=`
-"use client";
+export const backgroundOneData = `
 import React, { useState } from "react";
-interface Color {
-  id: string;
-  text: string;
-  back: string;
-}
-const colors: Color[] = [
+
+const colors = [
   {
     id: "1",
     text: "white",
@@ -99,10 +94,10 @@ const colors: Color[] = [
   },
 ];
 
-const BackgroundOneComponent: React.FC = () => {
-  const [index, setIndex] = useState<number>(0);
+const BackgroundOneComponent = () => {
+  const [index, setIndex] = useState(0);
 
-  const ColorChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const ColorChangeHandler = (event) => {
     setIndex(Number(event.target.value));
   };
 
@@ -121,22 +116,19 @@ const BackgroundOneComponent: React.FC = () => {
         </h1>
       </div>
 
-      {/* Radio buttons for selecting background color */}
+      {/* Checkbox buttons for selecting background color */}
       <div className="flex space-x-6">
         {colors.map((color, idx) => (
           <label
             key={color.id}
-            htmlFor={'backgroundColor'}
             className="flex items-center space-x-2"
           >
             <input
               type="checkbox"
-              id={'color1'}
-              name="color"
               value={idx}
               checked={index === idx}
               onChange={ColorChangeHandler}
-              className="form-radio h-5 w-5"
+              className="form-checkbox h-5 w-5"
             />
             <span className="text-lg">{color.back}</span>
           </label>
@@ -146,5 +138,6 @@ const BackgroundOneComponent: React.FC = () => {
   );
 };
 
-export default BackgroundOneComponent
-`
+export default BackgroundOneComponent;
+
+`;

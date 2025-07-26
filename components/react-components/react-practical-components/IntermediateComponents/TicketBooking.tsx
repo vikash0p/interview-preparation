@@ -104,7 +104,6 @@ export default TicketBooking;
 // !Ticket Booking data source
 
 export const ticketBookingDataSource = `
-"use client";
 import React, { useState } from "react";
 
 const TicketBooking = () => {

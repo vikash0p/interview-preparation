@@ -147,7 +147,7 @@ export default CountDownComponent;
 
 // !CountDownComponent with data source
 
-export const countDownInterMediateDataSource = `"use client";
+export const countDownInterMediateDataSource = `
 import React, { useEffect, useState } from "react";
 
 interface TimesInterface {

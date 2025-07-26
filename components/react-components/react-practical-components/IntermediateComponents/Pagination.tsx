@@ -148,7 +148,7 @@ export default Pagination;
 // !Pagination  data source
 
 
-export const paginationDataSource = `"use client";
+export const paginationDataSource = `
 import React, { useEffect, useState } from "react";
 interface Student {
   id: number;

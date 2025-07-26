@@ -135,7 +135,8 @@ export default PasswordGenerator
 
 // !------------------------------------ generate password data source --------------------------------
 
-export const generatePasswordDataSource = `"use client";
+export const generatePasswordDataSource = `
+
 import React, { useEffect, useState } from "react";
 interface PasswordOptions {
   range: number;

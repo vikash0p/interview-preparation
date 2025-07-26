@@ -29,7 +29,6 @@ export default DiceRoller;
 // !Dice Roller with data source
 
 export const diceRollerDataSource = `
-"use client";
 import React, { useCallback,  useState } from "react";
 const DiceRoller = () => {
   const [dice, setDice] = useState(0);
