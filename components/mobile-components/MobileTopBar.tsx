@@ -1,17 +1,17 @@
 'use client';
-import { User } from 'lucide-react';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import React from 'react';
+import { LuUser } from 'react-icons/lu'; // 👈 import from react-icons
 
 export const MobileTopBar = () => {
 	return (
-		<div className='  border-gray-800 lg:hidden  flex justify-between items-center px-1 pt-3'>
+		<div className='border-gray-800 lg:hidden flex justify-between items-center px-1 pt-3'>
 			<Link href='/' className='flex items-center' aria-label='Home'>
 				<Image
-					src={'/favicon/interViewPraplogo.png'}
+					src='/favicon/interViewPraplogo.png'
 					alt='logo'
-					className='size-10 '
+					className='size-10'
 					width={40}
 					height={40}
 				/>
@@ -19,11 +19,11 @@ export const MobileTopBar = () => {
 			</Link>
 
 			<Link
-				href={'/login'}
-				className='flex items-center gap-1 px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors bg-gradient-to-r from-gray-950 to-gray-800  rounded-sm'
+				href='/login'
+				className='flex items-center gap-1 px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors bg-gradient-to-r from-gray-950 to-gray-800 rounded-sm'
 				aria-label='Login'
 			>
-				<User className='h-4 w-4' />
+				<LuUser className='h-4 w-4' />
 				<span>Login</span>
 			</Link>
 		</div>

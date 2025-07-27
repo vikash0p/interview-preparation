@@ -54,7 +54,7 @@
     l10-1  4s linear infinite;
 }
 .loader:before {
-  content: "Loading";
+  content: "InterViewPrap";
 }
 @keyframes l10-0 {
   to {background-position-x: 50%,calc(50% + 1em)}
