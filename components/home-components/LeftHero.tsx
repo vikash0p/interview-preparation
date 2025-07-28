@@ -1,7 +1,7 @@
 'use client';
-import { Link } from 'next-view-transitions';
 import React from 'react';
 import { FaUsers, FaStar } from 'react-icons/fa';
+import LinkButton from "../utilsComponent/button-components/LinkButton";
 
 const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
 	const [count, setCount] = React.useState(from);
@@ -25,7 +25,7 @@ const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
 const LeftHero = () => {
 	return (
 		<div className='basis-1/2 space-y-4 sm:space-y-6 lg:space-y-8'>
-			<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400'>
+			<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold  text-gray-400'>
 				Crack Your Dream Job Interview Prap with Confidence
 			</h1>
 
@@ -45,21 +45,17 @@ const LeftHero = () => {
 			</p>
 
 			<div className='flex flex-col sm:flex-row gap-4 lg:gap-10'>
-				<Link
-					href='/practical-interview'
-					aria-label='Start Practicing'
-					className='px-8 py-4 bg-indigo-600 text-center text-white  font-semibold rounded-lg overflow-hidden transition-transform md:hover:scale-105 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400'
-				>
+				<LinkButton href='/practical-interview' ariaLabel='Start Practicing'>
 					Start Practicing
-				</Link>
+				</LinkButton>
 
-				<Link
+				<LinkButton
 					href='/mock-interview'
-					aria-label='View Questions'
-					className='px-8 py-4 text-center border border-white  font-semibold rounded-lg transition-transform md:hover:scale-105 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 hover:text-white'
+					variant='outline'
+					ariaLabel='View Questions'
 				>
 					View Questions
-				</Link>
+				</LinkButton>
 			</div>
 
 			<div className='flex items-center gap-6 text-sm text-neutral-400 mt-4'>

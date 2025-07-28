@@ -15,11 +15,7 @@ const Features = () => {
 				{featuresData.map((feature) => (
 					<FeatureCard
 						key={feature.id}
-						id={feature.id}
-						icon={feature.icon}
-						title={feature.title}
-						description={feature.description}
-						bgColor={feature.bgColor}
+						feature={feature}
 					/>
 				))}
 			</div>

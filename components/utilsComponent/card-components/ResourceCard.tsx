@@ -39,7 +39,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
 					{resource.tags.map((tag, index) => (
 						<span
 							key={index}
-							className={`px-3 py-1 bg-gray-100 text-${resource.color}-600 rounded-full text-sm border`}
+							className={`px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm border`}
 						>
 							{tag}
 						</span>

@@ -1,397 +1,139 @@
-import {
-	FaHtml5,
-	FaCss3Alt,
-	FaJs,
-	FaReact,
-	FaAngular,
-	FaVuejs,
-	FaNodeJs,
-	FaPython,
-	FaJava,
-	FaAws,
-	FaDocker,
-	FaGitAlt,
-	FaServer,
-	FaCode,
-	FaCloud,
-	FaBrain,
-} from 'react-icons/fa';
-import {
-	SiTypescript,
-	SiNextdotjs,
-	SiSvelte,
-	SiExpress,
-	SiPhp,
-	SiDjango,
-	SiRubyonrails,
-	SiSpring,
-	SiDotnet,
-	SiMongodb,
-	SiPostgresql,
-	SiMysql,
-	SiRedis,
-	SiGraphql,
-	SiFlutter,
-	SiSwift,
-	SiKotlin,
-	SiGooglecloud,
-} from 'react-icons/si';
-import { GiArtificialIntelligence } from 'react-icons/gi';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava,
+   FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools } from 'react-icons/fa';
+import { SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql,
+   SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud } from 'react-icons/si';
+import { FaCode, FaServer, FaBrain, FaNetworkWired } from 'react-icons/fa6';
+import { ReactNode } from 'react';
 
-export interface PracticalTechnologiesInterface {
-	id: string;
-	slug: string;
-	label: string;
-	icon: React.ReactNode;
-	category: string;
-	actionLabel: string;
-	comingSoon: boolean;
+export interface TechnologyItem {
+  id: string;
+  slug: string;
+  label: string;
+  category: string;
+  actionLabel: string;
+  comingSoon: boolean;
+  icon: ReactNode;
 }
 
-export const  PRACTICAL_INTERVIEW_DATA: PracticalTechnologiesInterface[] = [
-	// Frontend ('1'-'9')
-	{
-		id: '1',
-		slug: 'html',
-		label: 'HTML',
-		icon: <FaHtml5 className='text-orange-500' />,
-		category: 'frontend',
-		actionLabel: 'Learn web page structure',
-		comingSoon: true,
-	},
-	{
-		id: '2',
-		slug: 'css',
-		label: 'CSS',
-		icon: <FaCss3Alt className='text-blue-500' />,
-		category: 'frontend',
-		actionLabel: 'Style beautiful websites',
-		comingSoon: true,
-	},
-	{
-		id: '3',
-		slug: 'javascript',
-		label: 'JavaScript',
-		icon: <FaJs className='text-yellow-400' />,
-		category: 'frontend',
-		actionLabel: 'Make websites interactive',
-		comingSoon: false,
-	},
-	{
-		id: '4',
-		slug: 'typescript',
-		label: 'TypeScript',
-		icon: <SiTypescript className='text-blue-600' />,
-		category: 'frontend',
-		actionLabel: 'Write safer JavaScript code',
-		comingSoon: false,
-	},
-	{
-		id: '5',
-		slug: 'react',
-		label: 'React',
-		icon: <FaReact className='text-blue-400' />,
-		category: 'frontend',
-		actionLabel: 'Build web apps fast',
-		comingSoon: false,
-	},
-	{
-		id: '6',
-		slug: 'angular',
-		label: 'Angular',
-		icon: <FaAngular className='text-red-500' />,
-		category: 'frontend',
-		actionLabel: 'Create powerful web apps',
-		comingSoon: false,
-	},
-	{
-		id: '7',
-		slug: 'vue',
-		label: 'Vue',
-		icon: <FaVuejs className='text-green-500' />,
-		category: 'frontend',
-		actionLabel: 'Learn easy web frameworks',
-		comingSoon: false,
-	},
-	{
-		id: '8',
-		slug: 'svelte',
-		label: 'Svelte',
-		icon: <SiSvelte className='text-orange-500' />,
-		category: 'frontend',
-		actionLabel: 'Try new web approach',
-		comingSoon: false,
-	},
-	{
-		id: '9',
-		slug: 'next.js',
-		label: 'Next.js',
-		icon: <SiNextdotjs className='text-white' />,
-		category: 'frontend',
-		actionLabel: 'Build fullstack React apps',
-		comingSoon: false,
-	},
+export interface CategoryItem {
+  id: string;
+  slug: string;
+  label: string;
+  comingSoon: boolean;
+  actionLabel: string;
+  icon: ReactNode;
+  technologies: TechnologyItem[];
+}
 
-	// Backend ('10'-'18')
-	{
-		id: '10',
-		slug: 'node.js',
-		label: 'Node.js',
-		icon: <FaNodeJs className='text-green-600' />,
-		category: 'backend',
-		actionLabel: 'Run JavaScript on server',
-		comingSoon: false,
-	},
-	{
-		id: '11',
-		slug: 'express',
-		label: 'Express',
-		icon: <SiExpress className='text-gray-500' />,
-		category: 'backend',
-		actionLabel: 'Make simple web servers',
-		comingSoon: false,
-	},
-	{
-		id: '12',
-		slug: 'php',
-		label: 'PHP',
-		icon: <SiPhp className='text-purple-500' />,
-		category: 'backend',
-		actionLabel: 'Power WordPress websites',
-		comingSoon: false,
-	},
-	{
-		id: '13',
-		slug: 'python',
-		label: 'Python',
-		icon: <FaPython className='text-blue-400' />,
-		category: 'backend',
-		actionLabel: 'Start coding easily',
-		comingSoon: false,
-	},
-	{
-		id: '14',
-		slug: 'django',
-		label: 'Django',
-		icon: <SiDjango className='text-green-700' />,
-		category: 'backend',
-		actionLabel: 'Build websites with Python',
-		comingSoon: false,
-	},
-	{
-		id: '15',
-		slug: 'ruby-on-rails',
-		label: 'Ruby on Rails',
-		icon: <SiRubyonrails className='text-red-600' />,
-		category: 'backend',
-		actionLabel: 'Create apps quickly',
-		comingSoon: false,
-	},
-	{
-		id: '16',
-		slug: 'java',
-		label: 'Java',
-		icon: <FaJava className='text-red-500' />,
-		category: 'backend',
-		actionLabel: 'Learn strong typing',
-		comingSoon: false,
-	},
-	{
-		id: '17',
-		slug: 'spring',
-		label: 'Spring',
-		icon: <SiSpring className='text-green-500' />,
-		category: 'backend',
-		actionLabel: 'Make Java web apps',
-		comingSoon: false,
-	},
-	{
-		id: '18',
-		slug: '.net',
-		label: '.NET',
-		icon: <SiDotnet className='text-purple-600' />,
-		category: 'backend',
-		actionLabel: 'Use Microsoft tools',
-		comingSoon: false,
-	},
-
-	// Databases ('19'-'23')
-	{
-		id: '19',
-		slug: 'mongodb',
-		label: 'MongoDB',
-		icon: <SiMongodb className='text-green-500' />,
-		category: 'database',
-		actionLabel: 'Work with flexible data',
-		comingSoon: false,
-	},
-	{
-		id: '20',
-		slug: 'postgresql',
-		label: 'PostgreSQL',
-		icon: <SiPostgresql className='text-blue-600' />,
-		category: 'database',
-		actionLabel: 'Use powerful SQL database',
-		comingSoon: false,
-	},
-	{
-		id: '21',
-		slug: 'mysql',
-		label: 'MySQL',
-		icon: <SiMysql className='text-blue-500' />,
-		category: 'database',
-		actionLabel: 'Manage common databases',
-		comingSoon: false,
-	},
-	{
-		id: '22',
-		slug: 'redis',
-		label: 'Redis',
-		icon: <SiRedis className='text-red-600' />,
-		category: 'database',
-		actionLabel: 'Store data quickly',
-		comingSoon: false,
-	},
-	{
-		id: '23',
-		slug: 'graphql',
-		label: 'GraphQL',
-		icon: <SiGraphql className='text-pink-600' />,
-		category: 'database',
-		actionLabel: 'Fetch data efficiently',
-		comingSoon: false,
-	},
-
-	// Mobile ('24'-'27')
-	{
-		id: '24',
-		slug: 'react-native',
-		label: 'React Native',
-		icon: <FaReact className='text-blue-400' />,
-		category: 'mobile',
-		actionLabel: 'Make mobile apps',
-		comingSoon: false,
-	},
-	{
-		id: '25',
-		slug: 'flutter',
-		label: 'Flutter',
-		icon: <SiFlutter className='text-blue-500' />,
-		category: 'mobile',
-		actionLabel: 'Build cross-platform apps',
-		comingSoon: false,
-	},
-	{
-		id: '26',
-		slug: 'swift',
-		label: 'Swift',
-		icon: <SiSwift className='text-orange-500' />,
-		category: 'mobile',
-		actionLabel: 'Create iOS apps',
-		comingSoon: false,
-	},
-	{
-		id: '27',
-		slug: 'kotlin',
-		label: 'Kotlin',
-		icon: <SiKotlin className='text-purple-500' />,
-		category: 'mobile',
-		actionLabel: 'Develop Android apps',
-		comingSoon: false,
-	},
-
-	// CS Fundamentals ('28'-'31')
-	{
-		id: '28',
-		slug: 'data-structures',
-		label: 'Data Structures',
-		icon: <FaBrain className='text-indigo-500' />,
-		category: 'cs-fundamentals',
-		actionLabel: 'Organize data efficiently',
-		comingSoon: false,
-	},
-	{
-		id: '29',
-		slug: 'algorithms',
-		label: 'Algorithms',
-		icon: <FaCode className='text-blue-400' />,
-		category: 'cs-fundamentals',
-		actionLabel: 'Solve problems step-by-step',
-		comingSoon: false,
-	},
-	{
-		id: '30',
-		slug: 'oop',
-		label: 'OOP',
-		icon: <GiArtificialIntelligence className='text-yellow-500' />,
-		category: 'cs-fundamentals',
-		actionLabel: 'Code with objects',
-		comingSoon: false,
-	},
-	{
-		id: '31',
-		slug: 'functional-programming',
-		label: 'Functional Programming',
-		icon: <FaCode className='text-green-500' />,
-		category: 'cs-fundamentals',
-		actionLabel: 'Write pure functions',
-		comingSoon: false,
-	},
-
-	// System Design ('32'-'36')
-	{
-		id: '32',
-		slug: 'microservices',
-		label: 'Microservices',
-		icon: <FaServer className='text-blue-500' />,
-		category: 'system-design',
-		actionLabel: 'Build small services',
-		comingSoon: false,
-	},
-	{
-		id: '33',
-		slug: 'cloud-architecture',
-		label: 'Cloud Architecture',
-		icon: <FaCloud className='text-blue-400' />,
-		category: 'system-design',
-		actionLabel: 'Design for cloud',
-		comingSoon: false,
-	},
-	{
-		id: '34',
-		slug: 'aws',
-		label: 'AWS',
-		icon: <FaAws className='text-orange-500' />,
-		category: 'system-design',
-		actionLabel: 'Use Amazon cloud',
-		comingSoon: false,
-	},
-	{
-		id: '35',
-		slug: 'gcp',
-		label: 'Google Cloud',
-		icon: <SiGooglecloud className='text-red-500' />,
-		category: 'system-design',
-		actionLabel: 'Explore Google cloud',
-		comingSoon: false,
-	},
-	{
-		id: '36',
-		slug: 'docker',
-		label: 'Docker',
-		icon: <FaDocker className='text-blue-500' />,
-		category: 'devops',
-		actionLabel: 'Package apps neatly',
-		comingSoon: false,
-	},
-	{
-		id: '37',
-		slug: 'git',
-		label: 'Git',
-		icon: <FaGitAlt className='text-orange-500' />,
-		category: 'devops',
-		actionLabel: 'Track code changes',
-		comingSoon: false,
-	},
-
+export const PRACTICAL_INTERVIEWS_DATA: CategoryItem[] = [
+  {
+    id: 'cat-1',
+    slug: 'frontend',
+    label: 'FRONTEND',
+    comingSoon: false,
+    actionLabel: 'Solve Frontend Interview Tasks',
+    icon: <FaCode className="text-blue-400" />,
+    technologies: [
+      { id: 'tech-1', slug: 'html', label: 'HTML', icon: <FaHtml5 className='text-orange-500' />, category: 'frontend', actionLabel: 'Solve HTML Interview Questions', comingSoon: false },
+      { id: 'tech-2', slug: 'css', label: 'CSS', icon: <FaCss3Alt className='text-blue-500' />, category: 'frontend', actionLabel: 'Fix and Style Layouts', comingSoon: false },
+      { id: 'tech-3', slug: 'javascript', label: 'JAVASCRIPT', icon: <FaJsSquare className='text-yellow-400' />, category: 'frontend', actionLabel: 'Implement JS Interview Logic', comingSoon: false },
+      { id: 'tech-4', slug: 'typescript', label: 'TYPESCRIPT', icon: <SiTypescript className='text-blue-600' />, category: 'frontend', actionLabel: 'Apply TypeScript in Scenarios', comingSoon: false },
+      { id: 'tech-5', slug: 'react', label: 'REACT', icon: <FaReact className='text-sky-500' />, category: 'frontend', actionLabel: 'Build Components in React', comingSoon: false },
+      { id: 'tech-6', slug: 'angular', label: 'ANGULAR', icon: <FaAngular className='text-red-500' />, category: 'frontend', actionLabel: 'Answer Angular Interview Tasks', comingSoon: true },
+      { id: 'tech-7', slug: 'vue', label: 'VUE', icon: <FaVuejs className='text-green-500' />, category: 'frontend', actionLabel: 'Solve Vue.js Coding Challenges', comingSoon: true },
+      { id: 'tech-8', slug: 'svelte', label: 'SVELTE', icon: <SiSvelte className='text-orange-400' />, category: 'frontend', actionLabel: 'Apply Svelte in UI Problems', comingSoon: true },
+      { id: 'tech-9', slug: 'nextjs', label: 'NEXT.JS', icon: <SiNextdotjs className='text-white' />, category: 'frontend', actionLabel: 'Build Pages in Next.js', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-2',
+    slug: 'backend',
+    label: 'BACKEND',
+    comingSoon: false,
+    actionLabel: 'Solve Backend Interview Problems',
+    icon: <FaServer className="text-green-400" />,
+    technologies: [
+      { id: 'tech-10', slug: 'nodejs', label: 'NODE.JS', icon: <FaNodeJs className='text-green-500' />, category: 'backend', actionLabel: 'Build Backend in Node.js', comingSoon: false },
+      { id: 'tech-11', slug: 'express', label: 'EXPRESS', icon: <FaServer className='text-gray-500' />, category: 'backend', actionLabel: 'Implement Express APIs', comingSoon: false },
+      { id: 'tech-12', slug: 'php', label: 'PHP', icon: <FaPhp className='text-indigo-500' />, category: 'backend', actionLabel: 'Write PHP Interview Solutions', comingSoon: false },
+      { id: 'tech-13', slug: 'python', label: 'PYTHON', icon: <FaPython className='text-yellow-500' />, category: 'backend', actionLabel: 'Solve Python Coding Tasks', comingSoon: false },
+      { id: 'tech-14', slug: 'django', label: 'DJANGO', icon: <SiDjango className='text-green-700' />, category: 'backend', actionLabel: 'Create APIs in Django', comingSoon: false },
+      { id: 'tech-15', slug: 'ruby-on-rails', label: 'RUBY ON RAILS', icon: <SiRubyonrails className='text-red-500' />, category: 'backend', actionLabel: 'Build Features with Rails', comingSoon: false },
+      { id: 'tech-16', slug: 'java', label: 'JAVA', icon: <FaJava className='text-red-700' />, category: 'backend', actionLabel: 'Complete Java Interview Scenarios', comingSoon: false },
+      { id: 'tech-17', slug: 'spring', label: 'SPRING', icon: <SiSpring className='text-green-600' />, category: 'backend', actionLabel: 'Code REST APIs with Spring', comingSoon: false },
+      { id: 'tech-18', slug: 'dotnet', label: '.NET', icon: <SiDotnet className='text-purple-600' />, category: 'backend', actionLabel: 'Solve .NET Backend Tasks', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-3',
+    slug: 'database',
+    label: 'DATABASE',
+    comingSoon: false,
+    actionLabel: 'Design and Query Databases',
+    icon: <FaDatabase className="text-yellow-400" />,
+    technologies: [
+      { id: 'tech-19', slug: 'mongodb', label: 'MONGODB', icon: <SiMongodb className='text-green-700' />, category: 'database', actionLabel: 'Query MongoDB Data Sets', comingSoon: false },
+      { id: 'tech-20', slug: 'postgresql', label: 'POSTGRESQL', icon: <SiPostgresql className='text-blue-700' />, category: 'database', actionLabel: 'Design Postgres Schemas', comingSoon: false },
+      { id: 'tech-21', slug: 'mysql', label: 'MYSQL', icon: <SiMysql className='text-blue-500' />, category: 'database', actionLabel: 'Solve MySQL Interview Queries', comingSoon: false },
+      { id: 'tech-22', slug: 'redis', label: 'REDIS', icon: <SiRedis className='text-red-600' />, category: 'database', actionLabel: 'Implement Redis Logic', comingSoon: false },
+      { id: 'tech-23', slug: 'graphql', label: 'GRAPHQL', icon: <SiGraphql className='text-pink-500' />, category: 'database', actionLabel: 'Design GraphQL Queries', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-4',
+    slug: 'mobile-development',
+    label: 'MOBILE DEVELOPMENT',
+    comingSoon: false,
+    actionLabel: 'Build Mobile Interview Apps',
+    icon: <FaMobileAlt className="text-purple-400" />,
+    technologies: [
+      { id: 'tech-24', slug: 'react-native', label: 'REACT NATIVE', icon: <FaReact className='text-blue-400' />, category: 'mobile-development', actionLabel: 'Create Cross-platform UIs', comingSoon: false },
+      { id: 'tech-25', slug: 'flutter', label: 'FLUTTER', icon: <SiFlutter className='text-sky-400' />, category: 'mobile-development', actionLabel: 'Build UIs with Widgets', comingSoon: false },
+      { id: 'tech-26', slug: 'swift', label: 'SWIFT', icon: <SiSwift className='text-orange-400' />, category: 'mobile-development', actionLabel: 'Develop iOS Interview Apps', comingSoon: false },
+      { id: 'tech-27', slug: 'kotlin', label: 'KOTLIN', icon: <SiKotlin className='text-purple-500' />, category: 'mobile-development', actionLabel: 'Code Android Interview Tasks', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-5',
+    slug: 'computer-science',
+    label: 'COMPUTER SCIENCE',
+    comingSoon: false,
+    actionLabel: 'CS Interview Preparation',
+    icon: <FaBrain className="text-red-400" />,
+    technologies: [
+      { id: 'tech-28', slug: 'data-structures', label: 'DATA STRUCTURES', icon: <FaCogs className='text-gray-500' />, category: 'computer-science', actionLabel: 'Implement Interview Structures', comingSoon: false },
+      { id: 'tech-29', slug: 'algorithms', label: 'ALGORITHMS', icon: <FaCogs className='text-gray-500' />, category: 'computer-science', actionLabel: 'Solve Algorithmic Problems', comingSoon: false },
+      { id: 'tech-30', slug: 'oop', label: 'OOP', icon: <FaCogs className='text-gray-500' />, category: 'computer-science', actionLabel: 'Apply OOP Concepts', comingSoon: false },
+      { id: 'tech-31', slug: 'functional-programming', label: 'FUNCTIONAL PROGRAMMING', icon: <FaCogs className='text-gray-500' />, category: 'computer-science', actionLabel: 'Use Functional Patterns', comingSoon: false },
+      { id: 'tech-32', slug: 'design-patterns', label: 'DESIGN PATTERNS', icon: <FaCogs className='text-gray-500' />, category: 'computer-science', actionLabel: 'Apply Design Pattern Solutions', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-7',
+    slug: 'system-design',
+    label: 'SYSTEM DESIGN',
+    comingSoon: false,
+    actionLabel: 'Practice System Design Interviews',
+    icon: <FaNetworkWired className="text-indigo-400" />,
+    technologies: [
+      { id: 'tech-37', slug: 'microservices', label: 'MICROSERVICES', icon: <FaNetworkWired className='text-indigo-500' />, category: 'system-design', actionLabel: 'Design Microservices Architecture', comingSoon: false },
+      { id: 'tech-38', slug: 'monolith', label: 'MONOLITH', icon: <FaNetworkWired className='text-indigo-500' />, category: 'system-design', actionLabel: 'Structure Monolith Systems', comingSoon: false },
+      { id: 'tech-39', slug: 'cloud-architecture', label: 'CLOUD ARCHITECTURE', icon: <FaNetworkWired className='text-indigo-500' />, category: 'system-design', actionLabel: 'Propose Cloud Solutions', comingSoon: false },
+      { id: 'tech-40', slug: 'scaling', label: 'SCALING', icon: <FaNetworkWired className='text-indigo-500' />, category: 'system-design', actionLabel: 'Plan for System Scaling', comingSoon: false }
+    ]
+  },
+  {
+    id: 'cat-8',
+    slug: 'devops',
+    label: 'DEVOPS',
+    comingSoon: false,
+    actionLabel: 'DevOps Interview Readiness',
+    icon: <FaTools className="text-gray-400" />,
+    technologies: [
+      { id: 'tech-41', slug: 'git', label: 'GIT', icon: <FaGitAlt className='text-red-500' />, category: 'devops', actionLabel: 'Solve Git Operations', comingSoon: false },
+      { id: 'tech-42', slug: 'docker', label: 'DOCKER', icon: <FaDocker className='text-blue-500' />, category: 'devops', actionLabel: 'Use Docker in Scenarios', comingSoon: false },
+      { id: 'tech-43', slug: 'aws', label: 'AWS', icon: <FaAws className='text-orange-500' />, category: 'devops', actionLabel: 'Apply AWS Interview Skills', comingSoon: false },
+      { id: 'tech-44', slug: 'gcp', label: 'GCP', icon: <SiGooglecloud className='text-yellow-400' />, category: 'devops', actionLabel: 'Answer GCP-Based Problems', comingSoon: false }
+    ]
+  }
 ];
