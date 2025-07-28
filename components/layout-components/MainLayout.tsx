@@ -1,22 +1,26 @@
+'use client';
+
 import React from 'react';
 import Navbar from './Navbar';
 import ScrollToTop from '../global-components/ScrollToTop';
 import { MobileNav } from './MobileNav';
-import { MobileTopBar } from "../mobile-components/MobileTopBar";
+import { MobileTopBar } from '../mobile-components/MobileTopBar';
+import ReduxProvider from "@/main/redux-toolkit/ReduxProvider";
 
-interface mainLayoutProps {
+
+interface MainLayoutProps {
 	readonly children: React.ReactNode;
 }
 
-const MainLayout: React.FC<mainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 	return (
-		<React.Fragment>
-      <MobileTopBar />
+		<ReduxProvider>
+			<MobileTopBar />
 			<Navbar />
 			<MobileNav />
 			<main>{children}</main>
 			<ScrollToTop />
-		</React.Fragment>
+		</ReduxProvider>
 	);
 };
 
