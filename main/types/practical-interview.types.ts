@@ -62,3 +62,26 @@ export interface IPracticalInterviewApiResponse {
 	results: number;
 	data: IPracticalInterview[];
 }
+
+export interface IPracticalInterviewSingleApiResponse{
+	status: string;
+	data: IPracticalInterview;
+}
+
+export interface IPracticalInterviewsQueryParams {
+	technology: string;
+	category?: string;
+	difficulty?: string;
+}
+
+
+export interface IPracticalInterviewCategoryResponse {
+	status: string;
+	data : string[];
+}
+
+
+export interface IPracticalInterviewSlugsResponse {
+	status: string;
+	data: string[];
+}
