@@ -1,22 +1,38 @@
-import React from 'react'
+'use client';
 
-const SlugPage = async ({params}:{params:{slug:string, technology:string}}) => {
-  const {technology, slug } = params;
+import { notFound, useParams } from 'next/navigation';
+import { useGetInterviewBySlugQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
+import React from 'react';
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/practical-interviews/technology/${technology}/slug/${slug} `	);
+const SlugPage = () => {
+	const params = useParams();
 
-      const singleInterview = await res.json();
-      console.log("🚀 ~ page.tsx:9 ~ singleInterview:", singleInterview);
+	// Force the params to be string
+	const technology = Array.isArray(params.technology)
+		? params.technology[0]
+		: params.technology;
+	const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
 
-  return (
-    <div>
-      <pre>
-        {
-          JSON.stringify(singleInterview, null, 2)
-        }
-      </pre>
-    </div>
-  )
-}
+	const {
+		data: interview,
+		isError,
+		isLoading,
+	} = useGetInterviewBySlugQuery({
+		technology,
+		slug,
+	});
 
-export default SlugPage
+	return (
+		<div className='p-4'>
+			{isLoading && <p>Loading...</p>}
+			{isError && notFound() }
+			{!isLoading && !isError && interview && (
+				<pre className='bg-gray-100 p-4 rounded text-sm overflow-x-auto'>
+					{JSON.stringify(interview, null, 2)}
+				</pre>
+			)}
+		</div>
+	);
+};
+
+export default SlugPage;

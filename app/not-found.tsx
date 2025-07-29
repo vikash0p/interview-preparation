@@ -1,91 +1,156 @@
 'use client'
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { FaExclamationTriangle, FaHome, FaSearch } from "react-icons/fa";
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+	FaExclamationTriangle,
+	FaHome,
+	FaSearch,
+	FaBook,
+	FaEnvelope,
+} from 'react-icons/fa';
 
 export default function NotFound() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white px-4">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center flex flex-col items-center max-w-2xl"
-      >
-        {/* Animated Icon */}
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          <FaExclamationTriangle className="text-yellow-500 text-6xl mb-4 mx-auto" />
-        </motion.div>
+	return (
+		<div className='min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4 flex flex-col items-center justify-center'>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.5 }}
+				className='max-w-4xl w-full text-center flex flex-col items-center'
+			>
+				{/* Animated Error Icon */}
+				<motion.div
+					initial={{ scale: 0, rotate: -30 }}
+					animate={{ scale: 1, rotate: 0 }}
+					transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+					className='mb-8 relative'
+				>
+					<div className='absolute -inset-4 bg-red-500/20 rounded-full blur-md animate-pulse'></div>
+					<FaExclamationTriangle className='text-7xl text-red-400 mx-auto' />
+				</motion.div>
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-4xl font-bold mb-2"
-        >
-          404 - Page Not Found
-        </motion.h2>
+				{/* Main Content */}
+				<div className='space-y-6'>
+					{/* Heading */}
+					<motion.h1
+						initial={{ y: -20, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.2, duration: 0.5 }}
+						className='text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400'
+					>
+						Interview Prep Page Not Found
+					</motion.h1>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="text-lg text-gray-400 mb-6"
-        >
-          Oops! The page you are looking for doesn’t exist or has been moved.
-          Here are some helpful links:
-        </motion.p>
+					{/* Description */}
+					<motion.p
+						initial={{ y: -10, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.4, duration: 0.5 }}
+						className='text-lg text-gray-300 max-w-2xl mx-auto'
+					>
+						The technical interview resource you&apos;re looking for
+						doesn`&apos;t exist or has been moved. Don`&apos;t worry - we`&apos;ve got
+						plenty of other materials to help you prepare!
+					</motion.p>
 
-        {/* Helpful Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4"
-        >
-          <Link href="/">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center px-6 py-3 bg-indigo-600 font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition gap-2"
-            >
-              <FaHome className="text-lg" />
-              Return Home
-            </motion.button>
-          </Link>
-          <Link href="/search">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition gap-2"
-            >
-              <FaSearch className="text-lg" />
-              Search Page
-            </motion.button>
-          </Link>
-        </motion.div>
+					{/* Suggested Actions */}
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.6, duration: 0.5 }}
+						className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'
+					>
+						<Link href='/' className='group'>
+							<motion.div
+								whileHover={{ y: -5 }}
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-indigo-400 transition-all'
+							>
+								<div className='flex items-center gap-4'>
+									<div className='p-3 bg-indigo-500/20 rounded-lg text-indigo-400 group-hover:bg-indigo-500/30 transition'>
+										<FaHome className='text-xl' />
+									</div>
+									<div className='text-left'>
+										<h3 className='font-semibold text-lg'>Return Home</h3>
+										<p className='text-sm text-gray-400'>
+											Back to the main dashboard
+										</p>
+									</div>
+								</div>
+							</motion.div>
+						</Link>
 
-        {/* Additional Help Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="mt-8 text-gray-400"
-        >
-          <p className="text-sm">
-            Need more help?{" "}
-            <a href="/contact" className="text-indigo-500 hover:underline">
-              Contact Support
-            </a>
-          </p>
-        </motion.div>
-      </motion.div>
-    </div>
-  );
+						<Link href='/practical-interviews' className='group'>
+							<motion.div
+								whileHover={{ y: -5 }}
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-blue-400 transition-all'
+							>
+								<div className='flex items-center gap-4'>
+									<div className='p-3 bg-blue-500/20 rounded-lg text-blue-400 group-hover:bg-blue-500/30 transition'>
+										<FaSearch className='text-xl' />
+									</div>
+									<div className='text-left'>
+										<h3 className='font-semibold text-lg'>Browse Interviews</h3>
+										<p className='text-sm text-gray-400'>
+											Explore all interview questions
+										</p>
+									</div>
+								</div>
+							</motion.div>
+						</Link>
+
+						<Link href='/resources' className='group'>
+							<motion.div
+								whileHover={{ y: -5 }}
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-purple-400 transition-all'
+							>
+								<div className='flex items-center gap-4'>
+									<div className='p-3 bg-purple-500/20 rounded-lg text-purple-400 group-hover:bg-purple-500/30 transition'>
+										<FaBook className='text-xl' />
+									</div>
+									<div className='text-left'>
+										<h3 className='font-semibold text-lg'>Study Resources</h3>
+										<p className='text-sm text-gray-400'>
+											View learning materials
+										</p>
+									</div>
+								</div>
+							</motion.div>
+						</Link>
+					</motion.div>
+
+					{/* Additional Help */}
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.8, duration: 0.5 }}
+						className='mt-12 pt-6 border-t border-gray-700/50'
+					>
+						<div className='inline-flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-full'>
+							<FaEnvelope className='text-yellow-400' />
+							<span className='text-sm'>Need help?</span>
+							<Link
+								href='/contact'
+								className='text-yellow-400 hover:underline font-medium text-sm'
+							>
+								Contact our support team
+							</Link>
+						</div>
+					</motion.div>
+				</div>
+			</motion.div>
+
+			{/* Footer Note */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 1, duration: 0.5 }}
+				className='mt-16 text-center text-xs text-gray-500'
+			>
+				<p>
+					Interview Prep Platform • Helping developers succeed in technical
+					interviews since 2023
+				</p>
+			</motion.div>
+		</div>
+	);
 }
