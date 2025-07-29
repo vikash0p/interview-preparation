@@ -6,7 +6,7 @@ import { FaRobot } from 'react-icons/fa';
 
 export default function AIInterviewPage() {
 	return (
-		<main className='min-h-screen px-6 py-16 bg-gradient-to-br from-gray-900 to-black text-white'>
+		<main className='min-h-screen px-6 py-16  text-gray-400'>
 			<section className='max-w-4xl mx-auto text-center'>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}

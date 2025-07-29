@@ -1,14 +1,13 @@
-'use client'
-import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
-
-
+'use client';
+import { usePathname } from 'next/navigation';
 
 export const useActiveLinkHook = () => {
 	const pathname = usePathname();
-	const selectedSegment = useSelectedLayoutSegment();
 
 	const getActiveStatus = (link: string) => {
-		return pathname === link || selectedSegment === link.split('/')[1];
+
+		if (link === '/') return pathname === '/';
+		return pathname === link || pathname.startsWith(link + '/');
 	};
 
 	return {

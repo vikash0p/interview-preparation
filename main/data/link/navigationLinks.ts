@@ -1,6 +1,6 @@
 import { NavLinkInterface } from '@/main/types/navLink.types';
 
-export const navLinks: NavLinkInterface[] = [
+export const NAVIGATION_LINKS: NavLinkInterface[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'AI Interviews', href: '/ai-interview' },
 
@@ -10,6 +10,6 @@ export const navLinks: NavLinkInterface[] = [
 	},
 	{ label: 'Practical Interview', href: '/practical-interviews' },
 	{ label: 'Tips & Guides', href: '/tips-&-guides' },
+	{ label: 'About', href: '/About' },
 	{ label: 'Support', href: '/contact' },
-	{ label: 'Login', href: '/login' },
 ];
