@@ -58,7 +58,7 @@ const Login = () => {
 						login with github
 					</a>
 
-					
+
 				</div>
 			</div>
 		</div>
