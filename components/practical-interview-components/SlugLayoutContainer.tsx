@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { ISlugLayoutProps } from '@/main/types/practical-interview.types';
 import { useSidebarStore } from '@/main/zustand/store/useSidebarStore';
 import SideBarButton from "../utilsComponent/button-components/SideBarButton";
-const SlugContainer: React.FC<ISlugLayoutProps> = ({ child, sideBar }) => {
+const SlugLayoutContainer: React.FC<ISlugLayoutProps> = ({ child, sideBar }) => {
 	const { isSidebarOpen, isMobile,  closeSidebar, setMobile } =	useSidebarStore();
 
 	useEffect(() => {
@@ -41,4 +41,4 @@ const SlugContainer: React.FC<ISlugLayoutProps> = ({ child, sideBar }) => {
 	);
 };
 
-export default SlugContainer;
+export default SlugLayoutContainer;
