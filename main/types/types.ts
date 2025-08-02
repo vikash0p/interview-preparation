@@ -34,3 +34,13 @@ export  interface JavaScriptMockInterface {
     answer: string;
     link: string;
   }
+
+
+
+export  interface ISideBarCardProps {
+		slug: string;
+		index: number;
+		isActive: boolean;
+		onClick: (slug: string) => void;
+		setRef: (el: HTMLLIElement | null) => void;
+	}

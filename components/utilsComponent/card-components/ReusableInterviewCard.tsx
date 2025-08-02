@@ -13,10 +13,13 @@ interface PracticalCardProps {
 		actionLabel: string;
 		comingSoon?: boolean;
 	};
-	href:string;
+	href: string;
 }
 
-const ReusableInterviewCard: React.FC<PracticalCardProps> = ({	technology,href}) => {
+const ReusableInterviewCard: React.FC<PracticalCardProps> = ({
+	technology,
+	href,
+}) => {
 	const { slug, icon, label, actionLabel, comingSoon } = technology;
 
 	return (
@@ -45,6 +48,7 @@ const ReusableInterviewCard: React.FC<PracticalCardProps> = ({	technology,href})
 				</div>
 			) : (
 				<Link
+					scroll={false}
 					href={href}
 					passHref
 					className='flex gap-5 items-center relative z-10'

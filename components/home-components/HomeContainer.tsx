@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Hero from "./Hero";
 
-const Hero = dynamic(() => import('./Hero'), { ssr: false });
+
 const Features = dynamic(() => import('./Features'), { ssr: false });
 const Domains = dynamic(() => import('./Domains'), { ssr: false });
 const Practice = dynamic(() => import('./Practice'), { ssr: false });

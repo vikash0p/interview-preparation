@@ -6,7 +6,7 @@ import { buildQueryString } from "./practicalInterviewUtils";
 
 export const practicalInterviewApi = baseApi.injectEndpoints({
 	endpoints: (builder) => ({
-		// 1️⃣ Get All Interviews by Technology (optional filters)
+		// 1️. Get All Interviews by Technology (optional filters)
 		getInterviewsByTechnology: builder.query<types.IPracticalInterviewApiResponse,types.IPracticalInterviewsQueryParams	>({
 			query: ({ technology, category, difficulty }) => {
 				const queryStr = buildQueryString({ category, difficulty });
@@ -14,26 +14,27 @@ export const practicalInterviewApi = baseApi.injectEndpoints({
 				return {
 					url: `/practical-interviews/technology/${technology}?${queryStr}`,
 					method: 'GET',
+
 				};
 			},
 			providesTags: ['PracticalInterview'],
 		}),
 
-		// 2️⃣ Get Interview by Technology + Slug
+		// 2 Get Interview by Technology + Slug
 		getInterviewBySlug: builder.query<types.IPracticalInterviewSingleApiResponse,{ technology: string; slug: string }>({
 			query: ({ technology, slug }) =>
 				`/practical-interviews/technology/${technology}/slug/${slug}`,
 			providesTags: ['PracticalInterview'],
 		}),
 
-		// 3️⃣ Get All Slugs by Technology
+		// 3️ Get All Slugs by Technology
 		getAllSlugsByTechnology: builder.query<types.IPracticalInterviewSlugsResponse,	string>({
 			query: (technology) =>
 				`/practical-interviews/technology/${technology}/get-all-slug`,
 			providesTags: ['PracticalInterview'],
 		}),
 
-		// 4️⃣ Get All category by Technology
+		// 4️ Get All category by Technology
 		getAllCategoriesByTechnology: builder.query<types.IPracticalInterviewCategoryResponse,	string	>({
 			query: (technology) =>
 				`/practical-interviews/technology/${technology}/get-all-category`,

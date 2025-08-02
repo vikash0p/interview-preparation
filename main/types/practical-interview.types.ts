@@ -83,5 +83,13 @@ export interface IPracticalInterviewCategoryResponse {
 
 export interface IPracticalInterviewSlugsResponse {
 	status: string;
+	results: number;
+	technology: string;
 	data: string[];
+}
+
+export interface ISlugLayoutProps {
+	child?: React.ReactNode;
+	children?: React.ReactNode;
+	sideBar: React.ReactNode
 }

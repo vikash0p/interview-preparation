@@ -1,38 +1,20 @@
-'use client';
+import React from 'react'
 
-import { notFound, useParams } from 'next/navigation';
-import { useGetInterviewBySlugQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
-import React from 'react';
+const SingleId = async ({params}:{params:{slug:string,technology:string}}) => {
+	const { slug,technology } = params
 
-const SlugPage = () => {
-	const params = useParams();
+	const res= await fetch(`http://localhost:5000/api/practical-interviews/technology/${technology}/slug/${slug}`)
+	const result = await res.json();
 
-	// Force the params to be string
-	const technology = Array.isArray(params.technology)
-		? params.technology[0]
-		: params.technology;
-	const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
-
-	const {
-		data: interview,
-		isError,
-		isLoading,
-	} = useGetInterviewBySlugQuery({
-		technology,
-		slug,
-	});
 
 	return (
-		<div className='p-4'>
-			{isLoading && <p>Loading...</p>}
-			{isError && notFound() }
-			{!isLoading && !isError && interview && (
-				<pre className='bg-gray-100 p-4 rounded text-sm overflow-x-auto'>
-					{JSON.stringify(interview, null, 2)}
-				</pre>
-			)}
-		</div>
-	);
-};
+		<div>
+		technology	-{slug}
+			<pre className='text-wrap'>
+				{JSON.stringify(result, null, 2)}
+			</pre>
+			</div>
+	)
+}
 
-export default SlugPage;
+export default SingleId

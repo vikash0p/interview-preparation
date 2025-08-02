@@ -155,6 +155,10 @@ const ReusableTechnologyCard: React.FC<ReusableTechnologyCardProps> = ({
 			<div className='p-2 py-6 pt-0 mt-auto'>
 				<div className='pt-4 border-t border-gray-700 flex items-center justify-between flex-wrap gap-3'>
 					<Link
+						aria-label={`Solve ${interview.title} interview`}
+						title={`Solve ${interview.title} interview`}
+						// rel='noopener noreferrer'
+						scroll={false}
 						href={`/practical-interviews/${interview.technology}/${interview.slug}`}
 						className='inline-block px-5 py-2 text-sm font-medium rounded-md bg-indigo-600 text-white hover:bg-indigo-500 transition-all'
 					>

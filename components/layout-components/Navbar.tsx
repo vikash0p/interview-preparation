@@ -9,7 +9,7 @@ function Navbar() {
 	const { getActiveStatus } = useActiveLinkHook();
 
 	return (
-		<nav className='hidden lg:block bg-inherit z-50 py-4 sticky top-0 left-0 right-0'>
+		<nav className='hidden lg:block bg-inherit z-50 py-4  '>
 			<div className='max-w-7xl mx-auto flex justify-between items-center px-4'>
 				{/* Logo Section */}
 				<div className='flex items-center gap-10'>
