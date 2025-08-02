@@ -32,10 +32,10 @@ const SlugLayoutContainer: React.FC<ISlugLayoutProps> = ({ child, sideBar }) => 
 			</aside>
 
 			{/* Main Content */}
-			<div className={`flex-1 transition-all duration-300 bg-gray-950/50  `}>
+			<div className={`flex-1 transition-all duration-500 ease-in-out  `}>
 				<div>{isMobile && <SideBarButton />}</div>
 
-				<main className='p-6 pt-16 max-md:pt-20'>{child}</main>
+				<main className='p-4'>{child}</main>
 			</div>
 		</section>
 	);

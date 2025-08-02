@@ -1,16 +1,9 @@
 export const dynamic = 'force-dynamic';
-import React from 'react'
+import SlugSingleContainer from '@/components/practical-interview-components/slug-components/SlugSingleContainer';
+import React from 'react';
 
-const SingleId = async ({params}:{params:{slug:string,technology:string}}) => {
+const SingleId = () => {
+	return <SlugSingleContainer />;
+};
 
-
-
-
-	return (
-		<div>
-				{params.slug} - {params.technology}
-			</div>
-	)
-}
-
-export default SingleId
+export default SingleId;
