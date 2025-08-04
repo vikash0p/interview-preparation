@@ -44,7 +44,7 @@ const SideBarContainer = () => {
   return (
     <section
       ref={containerRef}
-      className="h-screen overflow-y-auto overflow-x-hidden bg-gradient-to-b from-gray-800 to-gray-900  sticky top-0 "
+      className="h-screen overflow-y-auto overflow-x-hidden bg-gray-800/60  sticky top-0 "
       aria-label={`${technology} interview questions`}
     >
       <div className={`flex flex-col gap-3   ${isSidebarOpen ? 'items-start' : 'items-center py-2'}`}>

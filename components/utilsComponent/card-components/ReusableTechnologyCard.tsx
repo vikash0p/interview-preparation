@@ -66,7 +66,7 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
           </p>
           <p>
             <span className="font-semibold text-gray-300">Requirements -</span>{' '}
-            {interview.requirements.map((value) => (
+            {interview.requirements.map(value => (
               <span
                 key={value}
                 className="inline-block bg-gray-800 text-gray-300 px-3 py-1 rounded-full mr-2 mb-2 text-xs"

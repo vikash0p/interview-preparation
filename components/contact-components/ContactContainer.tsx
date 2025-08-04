@@ -81,7 +81,7 @@ const ContactContainer = () => {
     e.preventDefault();
     setIsLoading(true);
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 1500));
     setIsLoading(false);
     setSubmitted(true);
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });

@@ -12,7 +12,7 @@ const MockInterviews = () => {
       />
       {/* Flexbox wrapper */}
       <div className="flex flex-wrap justify-center gap-14">
-        {MOCK_INTERVIEWS_DATA.map((value) => {
+        {MOCK_INTERVIEWS_DATA.map(value => {
           return (
             <section
               className="bg-gradient-to-t from-gray-900/10 to-gray-950 p-6 pb-12 rounded-2xl  shadow-2xl space-y-10"
@@ -26,7 +26,7 @@ const MockInterviews = () => {
                 <div className="w-48 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto rounded-full" />
               </div>
               <div className="flex flex-wrap gap-6 justify-center">
-                {value.technologies.map((technology) => {
+                {value.technologies.map(technology => {
                   return (
                     <ReusableInterviewCard
                       key={technology.id}

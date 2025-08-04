@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', changeFreq: 'yearly', priority: 0.5 },
   ];
 
-  return staticRoutes.map((route) => ({
+  return staticRoutes.map(route => ({
     url: `${baseUrl}${route.path}`,
     lastModified: new Date().toISOString(),
     changeFrequency: route.changeFreq as MetadataRoute.Sitemap[0]['changeFrequency'],

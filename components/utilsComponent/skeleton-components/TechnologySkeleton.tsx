@@ -14,7 +14,7 @@ export const TechnologySkeleton = () => {
         <div className="h-4 w-5/6 rounded bg-white/10"></div>
         <div className="h-4 w-2/3 rounded bg-white/10"></div>
         <div className="flex flex-wrap gap-2 mt-2">
-          {[1, 2, 3].map((item) => (
+          {[1, 2, 3].map(item => (
             <div key={item} className="h-6 w-16 rounded-full bg-white/10"></div>
           ))}
         </div>

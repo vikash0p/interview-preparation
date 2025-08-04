@@ -5,7 +5,7 @@ import React from 'react';
 export const SideBarCardLoading = () => {
   return (
     <>
-      {[...Array(20)].map((i) => (
+      {[...Array(20)].map(i => (
         <motion.li
           key={`skeleton-${i}`}
           className="relative flex items-center gap-2 h-12"

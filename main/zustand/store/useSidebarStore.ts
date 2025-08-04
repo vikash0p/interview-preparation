@@ -9,12 +9,12 @@ interface SidebarStore {
   setMobile: (value: boolean) => void;
 }
 
-export const useSidebarStore = create<SidebarStore>((set) => ({
+export const useSidebarStore = create<SidebarStore>(set => ({
   isSidebarOpen: true,
   isMobile: false,
 
   // Toggle sidebar open/close
-  toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+  toggleSidebar: () => set(state => ({ isSidebarOpen: !state.isSidebarOpen })),
 
   // Explicitly open the sidebar
   openSidebar: () => set({ isSidebarOpen: true }),

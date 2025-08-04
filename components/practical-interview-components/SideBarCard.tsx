@@ -69,7 +69,7 @@ export const SideBarCard: React.FC<ISideBarCardProps> = ({ slug, index, isActive
         aria-current={isActive ? 'page' : undefined}
       >
         <div className="flex items-center justify-between">
-          <span>{slug.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase())}</span>
+          <span>{slug.replace(/-/g, ' ').replace(/^./, c => c.toUpperCase())}</span>
           {isPending ? (
             <FaSpinner className="animate-spin h-3 w-3 text-white" />
           ) : (

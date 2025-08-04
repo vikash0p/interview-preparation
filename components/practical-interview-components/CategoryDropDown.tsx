@@ -17,7 +17,7 @@ const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, cur
     <div className="relative inline-block mr-2 mb-2">
       <motion.div animate={open ? 'open' : 'closed'}>
         <button
-          onClick={() => setOpen((pv) => !pv)}
+          onClick={() => setOpen(pv => !pv)}
           className="flex items-center gap-2 px-5 py-2 rounded-sm text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors"
         >
           <span>{currentCategory ? `Category: ${currentCategory}` : 'Filter by Category'}</span>
@@ -33,7 +33,7 @@ const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, cur
           style={{ originY: 'top', translateX: '-50%' }}
           className="flex flex-col gap-2 p-2 rounded-sm bg-gray-950 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-10"
         >
-          {categories.map((category) => (
+          {categories.map(category => (
             <Option
               key={category}
               text={category}

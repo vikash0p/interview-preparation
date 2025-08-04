@@ -54,7 +54,7 @@ const ModelOne: React.FC<ModelOneProps> = ({ open, toggleOpen, data, heading }) 
         className={`relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 max-w-6xl w-full mx-4 rounded-sm shadow-2xl transform transition-all duration-300 ${
           open ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
-        onClick={(e) => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
       >
         {/* Modal Header */}
         <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700 bg-gray-900/50 rounded-t-xl">

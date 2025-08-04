@@ -26,7 +26,7 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(expendData);
 
   const toggleSection = (section: string) => {
-    setExpandedSections((prev) => ({
+    setExpandedSections(prev => ({
       ...prev,
       [section]: !prev[section],
     }));

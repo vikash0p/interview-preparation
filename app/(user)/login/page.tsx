@@ -33,7 +33,7 @@ const Login = () => {
           placeholder="Email"
           className="w-full px-4 py-2 border rounded-sm bg-gray-900"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
         />
 
         <input
@@ -41,7 +41,7 @@ const Login = () => {
           placeholder="Password"
           className="w-full px-4 py-2 border rounded-sm bg-gray-900"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={e => setPassword(e.target.value)}
         />
 
         <button

@@ -8,7 +8,7 @@ const RightHero = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleNavigation = (direction: 'prev' | 'next') => {
-    setCurrentQuestion((prev) =>
+    setCurrentQuestion(prev =>
       direction === 'next'
         ? (prev + 1) % HeroRightData.length
         : (prev - 1 + HeroRightData.length) % HeroRightData.length
@@ -31,7 +31,7 @@ const RightHero = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:justify-between items-center mb-6 gap-4">
           <div className="flex items-center gap-3">
-            {['red', 'yellow', 'green'].map((color) => (
+            {['red', 'yellow', 'green'].map(color => (
               <div key={color} className={`w-3 h-3 rounded-full bg-${color}-500`} />
             ))}
           </div>
@@ -102,7 +102,7 @@ const RightHero = () => {
               indices = Array.from({ length: 5 }, (_, i) => start + i);
             }
 
-            return indices.map((index) => (
+            return indices.map(index => (
               <button
                 type="button"
                 key={index}

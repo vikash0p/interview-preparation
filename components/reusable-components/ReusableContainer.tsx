@@ -46,7 +46,7 @@ const ReusableContainer = ({ data }: { data: LinkInterface }) => {
               Technologies
             </h3>
             <div className="flex flex-wrap gap-2 mt-2">
-              {data.tags.map((tag) => (
+              {data.tags.map(tag => (
                 <span key={tag} className="px-3 py-1 bg-blue-600/20 rounded-full text-sm text-blue-300">
                   {tag}
                 </span>

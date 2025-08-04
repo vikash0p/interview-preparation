@@ -25,7 +25,7 @@ export const SideBarCardError: React.FC<SideBarCardErrorProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-red-50 border border-red-200 rounded-sm p-4 flex flex-col items-center text-center mt-20 gap-4 shadow-sm text-red-800"
+      className="bg-red-50/80  border border-red-200 rounded-sm p-4 flex flex-col items-center text-center mt-20 gap-4 shadow-sm text-red-800"
       variants={fadeInUp}
       initial="hidden"
       animate="visible"

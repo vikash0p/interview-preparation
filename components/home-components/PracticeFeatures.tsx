@@ -14,7 +14,7 @@ const PracticeFeatures = () => {
       viewport={{ once: true }}
       className="space-y-6"
     >
-      {practiceData.map((feature) => (
+      {practiceData.map(feature => (
         <PracticeCard key={feature.id} {...feature} />
       ))}
 

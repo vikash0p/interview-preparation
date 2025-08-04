@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-const SlugLoading = () => {
+export const SlugLoading = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-900">
       <div className="animate-pulse flex flex-col items-center gap-4">
@@ -11,5 +11,3 @@ const SlugLoading = () => {
     </div>
   );
 };
-
-export default SlugLoading;

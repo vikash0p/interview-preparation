@@ -12,7 +12,7 @@ const Features = () => {
         description="Everything you need to succeed in your next interview — from preparation tips to real-world practice"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {featuresData.map((feature) => (
+        {featuresData.map(feature => (
           <FeatureCard key={feature.id} feature={feature} />
         ))}
       </div>

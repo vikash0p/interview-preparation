@@ -9,7 +9,7 @@ export const copyToClipboard = (text: string) => {
         autoClose: 2000,
       });
     })
-    .catch((error) => {
+    .catch(error => {
       toast.error('Failed to copy text.', {
         position: 'bottom-right',
         autoClose: 2000,

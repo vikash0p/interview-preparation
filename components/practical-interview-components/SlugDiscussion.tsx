@@ -81,7 +81,7 @@ const SlugDiscussion = () => {
     if (!replyContent.trim()) return;
 
     setComments(
-      comments.map((comment) => {
+      comments.map(comment => {
         if (comment.id === commentId) {
           return {
             ...comment,
@@ -111,11 +111,11 @@ const SlugDiscussion = () => {
   const toggleLike = (commentId: number, isReply = false, parentId?: number) => {
     if (isReply && parentId !== undefined) {
       setComments(
-        comments.map((comment) => {
+        comments.map(comment => {
           if (comment.id === parentId) {
             return {
               ...comment,
-              replies: comment.replies.map((reply) => {
+              replies: comment.replies.map(reply => {
                 if (reply.id === commentId) {
                   return {
                     ...reply,
@@ -132,7 +132,7 @@ const SlugDiscussion = () => {
       );
     } else {
       setComments(
-        comments.map((comment) => {
+        comments.map(comment => {
           if (comment.id === commentId) {
             return {
               ...comment,
@@ -153,7 +153,7 @@ const SlugDiscussion = () => {
 
   const saveEdit = (commentId: number) => {
     setComments(
-      comments.map((comment) => {
+      comments.map(comment => {
         if (comment.id === commentId) {
           return { ...comment, content: editContent };
         }
@@ -165,7 +165,7 @@ const SlugDiscussion = () => {
   };
 
   const deleteComment = (commentId: number) => {
-    setComments(comments.filter((comment) => comment.id !== commentId));
+    setComments(comments.filter(comment => comment.id !== commentId));
   };
 
   return (
@@ -212,7 +212,7 @@ const SlugDiscussion = () => {
 
         <textarea
           value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
+          onChange={e => setNewComment(e.target.value)}
           placeholder="What are your thoughts?"
           className="w-full bg-gray-800 border border-gray-700 rounded-sm p-4 text-gray-200 mb-3 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
@@ -231,7 +231,7 @@ const SlugDiscussion = () => {
 
       {/* Comments List */}
       <div className="space-y-6">
-        {comments.map((comment) => (
+        {comments.map(comment => (
           <div key={comment.id} className="bg-gray-800/30 rounded-sm border border-gray-700 p-4">
             {/* Comment Header */}
             <div className="flex gap-3 mb-3">
@@ -254,7 +254,7 @@ const SlugDiscussion = () => {
               <div className="mb-3">
                 <textarea
                   value={editContent}
-                  onChange={(e) => setEditContent(e.target.value)}
+                  onChange={e => setEditContent(e.target.value)}
                   className="w-full bg-gray-800 border border-gray-700 rounded-sm p-3 text-gray-200 mb-2 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <div className="flex gap-2">
@@ -324,7 +324,7 @@ const SlugDiscussion = () => {
               <div className="mt-4 pl-4 border-l-2 border-gray-700">
                 <textarea
                   value={replyContent}
-                  onChange={(e) => setReplyContent(e.target.value)}
+                  onChange={e => setReplyContent(e.target.value)}
                   placeholder={`Replying to ${comment.user}...`}
                   className="w-full bg-gray-800 border border-gray-700 rounded-sm p-3 text-gray-200 mb-2 min-h-[80px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
@@ -349,7 +349,7 @@ const SlugDiscussion = () => {
             {/* Replies */}
             {comment.replies.length > 0 && (
               <div className="mt-4 pl-4 border-l-2 border-gray-700 space-y-4">
-                {comment.replies.map((reply) => (
+                {comment.replies.map(reply => (
                   <div key={reply.id} className="pt-4">
                     <div className="flex gap-3 mb-2">
                       <div className="bg-gray-700 border-2 border-dashed rounded-sm w-10 h-10 flex items-center justify-center">

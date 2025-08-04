@@ -3,7 +3,7 @@ import { baseApi } from '../baseApi';
 import { buildQueryString } from './practicalInterviewUtils';
 
 export const practicalInterviewApi = baseApi.injectEndpoints({
-  endpoints: (builder) => ({
+  endpoints: builder => ({
     // 1️. Get All Interviews by Technology (optional filters)
     getInterviewsByTechnology: builder.query<
       types.IPracticalInterviewApiResponse,
@@ -30,13 +30,13 @@ export const practicalInterviewApi = baseApi.injectEndpoints({
 
     // 3️ Get All Slugs by Technology
     getAllSlugsByTechnology: builder.query<types.IPracticalInterviewSlugsResponse, string>({
-      query: (technology) => `/practical-interviews/technology/${technology}/get-all-slug`,
+      query: technology => `/practical-interviews/technology/${technology}/get-all-slug`,
       providesTags: ['PracticalInterview'],
     }),
 
     // 4️ Get All category by Technology
     getAllCategoriesByTechnology: builder.query<types.IPracticalInterviewCategoryResponse, string>({
-      query: (technology) => `/practical-interviews/technology/${technology}/get-all-category`,
+      query: technology => `/practical-interviews/technology/${technology}/get-all-category`,
       providesTags: ['PracticalInterview'],
     }),
   }),

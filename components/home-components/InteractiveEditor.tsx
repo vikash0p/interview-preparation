@@ -65,7 +65,7 @@ console.log("z:", z);`);
           defaultLanguage="javascript"
           value={code}
           theme="vs-dark"
-          onChange={(value) => setCode(value || '')}
+          onChange={value => setCode(value || '')}
           options={{
             fontSize: 14,
             minimap: { enabled: false },

@@ -8,7 +8,7 @@ const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCount((prev) => {
+      setCount(prev => {
         if (prev >= to) {
           clearInterval(timer);
           return to;

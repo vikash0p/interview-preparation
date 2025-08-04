@@ -20,7 +20,7 @@ export default function RegisterPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormState((prev) => ({
+    setFormState(prev => ({
       ...prev,
       [name]: value,
     }));

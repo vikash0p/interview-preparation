@@ -18,7 +18,7 @@ const DifficultyDropDown: React.FC<Props> = ({ currentDifficulty, updateSearchPa
     <div className="relative inline-block mr-2 mb-2">
       <motion.div animate={open ? 'open' : 'closed'}>
         <button
-          onClick={() => setOpen((pv) => !pv)}
+          onClick={() => setOpen(pv => !pv)}
           className="flex items-center gap-2 px-3 py-2 rounded-sm text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors"
         >
           <span>{currentDifficulty ? `Difficulty: ${currentDifficulty}` : 'Filter by Difficulty'}</span>
@@ -34,7 +34,7 @@ const DifficultyDropDown: React.FC<Props> = ({ currentDifficulty, updateSearchPa
           style={{ originY: 'top', translateX: '-50%' }}
           className="flex flex-col gap-2 p-2 rounded-sm bg-gray-950 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-10"
         >
-          {difficulties.map((level) => (
+          {difficulties.map(level => (
             <Option
               key={level}
               text={level}
