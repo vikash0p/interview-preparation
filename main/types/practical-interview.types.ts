@@ -106,3 +106,16 @@ export interface ISideBarCardProps {
 	onClick: (slug: string) => void;
 	setRef: (el: HTMLLIElement | null) => void;
 }
+
+
+export interface IPracticalCardProps {
+	technology: {
+		id: string;
+		slug: string;
+		icon: React.ReactNode;
+		label: string;
+		actionLabel: string;
+		comingSoon?: boolean;
+	};
+	href: string;
+}

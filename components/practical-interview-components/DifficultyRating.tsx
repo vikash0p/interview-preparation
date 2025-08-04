@@ -5,7 +5,7 @@ interface Props {
 	rating: number  ;
 }
 
-const DifficultyRating: React.FC<Props> = ({ rating }) => {
+export const DifficultyRating: React.FC<Props> = ({ rating }) => {
 	const stars = [];
 
 	for (let i = 1; i <= 5; i++) {
@@ -25,5 +25,3 @@ const DifficultyRating: React.FC<Props> = ({ rating }) => {
 		</div>
 	);
 };
-
-export default DifficultyRating;

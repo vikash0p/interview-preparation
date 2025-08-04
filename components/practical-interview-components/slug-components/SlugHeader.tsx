@@ -1,5 +1,5 @@
 import React from 'react'
-import DifficultyRating from "../DifficultyRating";
+import {DifficultyRating} from "../DifficultyRating";
 import {FaClock,FaEye,FaThumbsUp,FaShareAlt,FaBookmark,FaFire,FaChartLine,FaHistory} from 'react-icons/fa';
 import { toast } from "react-toastify";
 import { ISlugDataProps } from '../../../main/types/practical-interview.types';

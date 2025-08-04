@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { notFound, useParams, useSearchParams } from 'next/navigation';
-import ReusableTechnologyCard from '@/components/utilsComponent/card-components/ReusableTechnologyCard';
+import { ReusableTechnologyCard } from '@/components/utilsComponent/card-components/ReusableTechnologyCard';
 import { useGetInterviewsByTechnologyQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
 import { IPracticalInterview } from '../../main/types/practical-interview.types';
-import TechnologySkeleton from '../utilsComponent/skeleton-components/TechnologySkeleton';
+import { TechnologySkeleton } from '../utilsComponent/skeleton-components/TechnologySkeleton';
 const PracticalInterviewContainer = () => {
 	const params = useParams();
 	const searchParams = useSearchParams();
@@ -35,7 +35,6 @@ const PracticalInterviewContainer = () => {
 								interview={interview}
 							/>
 					  ))}
-				{}
 			</div>
 		</div>
 	);
