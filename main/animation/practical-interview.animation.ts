@@ -5,25 +5,6 @@ export const fadeInUp = {
 	exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
 };
 
-export const fadeInLeft = {
-	hidden: { opacity: 0, x: -20 },
-	visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-};
-
-export const fadeIn = {
-	hidden: { opacity: 0 },
-	visible: { opacity: 1, transition: { duration: 0.3, ease: 'easeOut' } },
-};
-
-export const scaleIn = {
-	hidden: { scale: 0.95, opacity: 0 },
-	visible: {
-		scale: 1,
-		opacity: 1,
-		transition: { duration: 0.3, ease: 'easeOut' },
-	},
-};
-
 export const rotate = {
 	animate: {
 		rotate: 360,
@@ -61,3 +42,19 @@ export const activeIndicatorVariants = {
 	},
 	exit: { width: '0%', opacity: 0 },
 };
+
+
+
+export	const contentVariants = {
+		initial: (direction: number) => ({ opacity: 0, x: direction * 50 }),
+		animate: {
+			opacity: 1,
+			x: 0,
+			transition: { type: 'spring', stiffness: 300, damping: 30 },
+		},
+		exit: (direction: number) => ({
+			opacity: 0,
+			x: -direction * 50,
+			transition: { type: 'spring', stiffness: 300, damping: 30 },
+		}),
+	};

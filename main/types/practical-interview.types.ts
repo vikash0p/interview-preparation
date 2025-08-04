@@ -93,3 +93,7 @@ export interface ISlugLayoutProps {
 	children?: React.ReactNode;
 	sideBar: React.ReactNode
 }
+
+export interface ISlugDataProps{
+	data:IPracticalInterview
+}

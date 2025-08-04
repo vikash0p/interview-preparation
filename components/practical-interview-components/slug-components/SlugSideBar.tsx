@@ -26,13 +26,7 @@ const copyToClipboard = (text: string) => {
 };
 
 const SlugSideBar: React.FC<ISlugSideBarProps> = ({ data }) => {
-	const [expandedSections, setExpandedSections] = useState<
-		Record<string, boolean>
-	>({
-		hints: false,
-		mistakes: false,
-		challenges: false,
-	});
+	const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({	hints: false,	mistakes: false,	challenges: false,});
 
 	const toggleSection = (section: string) => {
 		setExpandedSections((prev) => ({
@@ -78,6 +72,7 @@ const SlugSideBar: React.FC<ISlugSideBarProps> = ({ data }) => {
 					))}
 				</div>
 			</div>
+			
 			{/* Hints Card */}
 			<div className='bg-gray-800/50 rounded-xl border border-gray-800 overflow-hidden'>
 				<button
