@@ -1,8 +1,7 @@
-'use client'
-import React from "react";
-import { motion } from "framer-motion";
-import * as Icons from "react-icons/fa";
-
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import * as Icons from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -22,24 +21,18 @@ const itemVariants = {
 
 const footerData = {
   description: {
-    title: "Interview Prep",
-    text: "Your ultimate resource for interview preparation across all domains.",
+    title: 'Interview Prep',
+    text: 'Your ultimate resource for interview preparation across all domains.',
   },
   socialLinks: [
-    { href: "#", icon: "FaFacebookF" as keyof typeof Icons },
-    { href: "#", icon: "FaTwitter" as keyof typeof Icons },
-    { href: "#", icon: "FaLinkedinIn" as keyof typeof Icons },
+    { href: '#', icon: 'FaFacebookF' as keyof typeof Icons },
+    { href: '#', icon: 'FaTwitter' as keyof typeof Icons },
+    { href: '#', icon: 'FaLinkedinIn' as keyof typeof Icons },
   ],
-  quickLinks: ["Home", "Practice Tests", "Mock Interviews", "Resources"],
-  categories: ["Technical", "HR", "Behavioral", "Domain Specific"],
-  contact: [
-    "support@interviewprep.com",
-    "+1 (555) 123-4567",
-    "123 Interview Street",
-    "San Francisco, CA 94105",
-  ],
+  quickLinks: ['Home', 'Practice Tests', 'Mock Interviews', 'Resources'],
+  categories: ['Technical', 'HR', 'Behavioral', 'Domain Specific'],
+  contact: ['support@interviewprep.com', '+1 (555) 123-4567', '123 Interview Street', 'San Francisco, CA 94105'],
 };
-
 
 const Footer = () => {
   return (
@@ -52,9 +45,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Description */}
         <motion.div className="space-y-4" variants={itemVariants}>
-          <h3 className="text-xl font-bold text-white">
-            {footerData.description.title}
-          </h3>
+          <h3 className="text-xl font-bold text-white">{footerData.description.title}</h3>
           <p className="text-sm">{footerData.description.text}</p>
           <div className="flex space-x-4">
             {footerData.socialLinks.map((link, index) => {
@@ -108,10 +99,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <motion.div
-        className="border-t border-gray-400 mt-12 pt-8"
-        variants={itemVariants}
-      >
+      <motion.div className="border-t border-gray-400 mt-12 pt-8" variants={itemVariants}>
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">© 2025 Interview Prep. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">

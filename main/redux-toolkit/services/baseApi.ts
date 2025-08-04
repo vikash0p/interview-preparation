@@ -3,7 +3,6 @@ import type { BaseQueryFn, FetchArgs, FetchBaseQueryError } from '@reduxjs/toolk
 
 export const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
-
 export const baseQuery = fetchBaseQuery({
   baseUrl,
   credentials: 'include',

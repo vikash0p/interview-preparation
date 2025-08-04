@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const SavedQuestions = () => {
-  return (
-    <div>SavedQuestions</div>
-  )
-}
+  return <div>SavedQuestions</div>;
+};
 
-export default SavedQuestions
+export default SavedQuestions;

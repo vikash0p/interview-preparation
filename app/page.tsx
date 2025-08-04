@@ -1,12 +1,11 @@
-import HomeContainer from "@/components/home-components/HomeContainer";
-import { HomeMetaData } from "@/main/meta/HomeMetaData";
+import HomeContainer from '@/components/home-components/HomeContainer';
+import { HomeMetaData } from '@/main/meta/HomeMetaData';
 
-
-import React from "react";
+import React from 'react';
 
 export const metadata = HomeMetaData;
 
-const page =  () => {
+const page = () => {
   return <HomeContainer />;
 };
 

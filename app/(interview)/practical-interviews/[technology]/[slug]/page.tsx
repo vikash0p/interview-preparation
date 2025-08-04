@@ -3,7 +3,7 @@ import SlugSingleContainer from '@/components/practical-interview-components/slu
 import React from 'react';
 
 const SingleId = () => {
-	return <SlugSingleContainer />;
+  return <SlugSingleContainer />;
 };
 
 export default SingleId;

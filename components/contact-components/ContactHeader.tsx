@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 const ContactHeader = () => {
   return (
@@ -17,9 +16,8 @@ const ContactHeader = () => {
         transition={{ delay: 0.3 }}
         className="text-xl text-gray-300 max-w-2xl mx-auto"
       >
-        Reach out to our expert team for personalized guidance, technical
-        support, or partnership opportunities. We&apos;re here to help you
-        succeed!
+        Reach out to our expert team for personalized guidance, technical support, or partnership opportunities.
+        We&apos;re here to help you succeed!
       </motion.p>
     </div>
   );

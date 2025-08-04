@@ -1,7 +1,7 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { IoIosArrowUp } from "react-icons/io";
-import { motion, AnimatePresence } from "framer-motion";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { IoIosArrowUp } from 'react-icons/io';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,8 +14,8 @@ const ScrollToTop = () => {
         setIsVisible(false);
       }
     };
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const ScrollToTop = () => {
           transition={{ duration: 0.3 }}
         >
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-white p-3 rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none shadow-lg"
             aria-label="Scroll to top"
           >

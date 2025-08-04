@@ -3,41 +3,32 @@
 import { useEffect } from 'react';
 import { RiErrorWarningFill, RiRefreshLine, RiHomeLine } from 'react-icons/ri';
 
-export default function GlobalError({
-	error,
-	reset,
-}: {
-	error: Error & { digest?: string };
-	reset: () => void;
-}) {
-	const errorCode = error.digest || 'ERR_GLOBAL_500';
+export default function GlobalError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  const errorCode = error.digest || 'ERR_GLOBAL_500';
 
-	useEffect(() => {
-		// Log error to analytics service
-		console.error('Global Error:', error);
-	}, [error]);
+  useEffect(() => {
+    // Log error to analytics service
+    console.error('Global Error:', error);
+  }, [error]);
 
-	const handleReset = () => {
-		reset();
-		window.location.reload();
-	};
+  const handleReset = () => {
+    reset();
+    window.location.reload();
+  };
 
-	const handleGoHome = () => {
-		window.location.href = '/';
-	};
+  const handleGoHome = () => {
+    window.location.href = '/';
+  };
 
-	return (
-		<html lang='en' className='h-full'>
-			<head>
-				<title>Oops! Something went wrong</title>
-				<meta charSet='UTF-8' />
-				<meta
-					name='description'
-					content='We encountered an unexpected issue. Please try again or contact support.'
-				/>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
-				<style>{`
+  return (
+    <html lang="en" className="h-full">
+      <head>
+        <title>Oops! Something went wrong</title>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="We encountered an unexpected issue. Please try again or contact support." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <style>{`
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -170,45 +161,36 @@ export default function GlobalError({
             }
           }
         `}</style>
-			</head>
-			<body>
-				<div className='error-container'>
-					<RiErrorWarningFill className='error-icon' />
-					<h1>Oops! Something went wrong</h1>
+      </head>
+      <body>
+        <div className="error-container">
+          <RiErrorWarningFill className="error-icon" />
+          <h1>Oops! Something went wrong</h1>
 
-					<p className='error-message'>
-						We encountered an unexpected issue while loading the application.
-						This might be temporary, so please try again.
-					</p>
+          <p className="error-message">
+            We encountered an unexpected issue while loading the application. This might be temporary, so please try
+            again.
+          </p>
 
-					<p>
-						Error Code: <span className='error-code'>{errorCode}</span>
-					</p>
+          <p>
+            Error Code: <span className="error-code">{errorCode}</span>
+          </p>
 
-					<div className='action-buttons'>
-						<button
-							className='primary-btn'
-							onClick={handleReset}
-							aria-label='Retry loading the application'
-						>
-							<RiRefreshLine /> Try Again
-						</button>
+          <div className="action-buttons">
+            <button className="primary-btn" onClick={handleReset} aria-label="Retry loading the application">
+              <RiRefreshLine /> Try Again
+            </button>
 
-						<button
-							className='secondary-btn'
-							onClick={handleGoHome}
-							aria-label='Go to homepage'
-						>
-							<RiHomeLine /> Go to Homepage
-						</button>
-					</div>
+            <button className="secondary-btn" onClick={handleGoHome} aria-label="Go to homepage">
+              <RiHomeLine /> Go to Homepage
+            </button>
+          </div>
 
-					<p className='support-link'>
-						Need help?{' '}
-						<a href='mailto:support@example.com'>Contact our support team</a>
-					</p>
-				</div>
-			</body>
-		</html>
-	);
+          <p className="support-link">
+            Need help? <a href="mailto:support@example.com">Contact our support team</a>
+          </p>
+        </div>
+      </body>
+    </html>
+  );
 }

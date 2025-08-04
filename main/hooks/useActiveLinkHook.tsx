@@ -2,15 +2,14 @@
 import { usePathname } from 'next/navigation';
 
 export const useActiveLinkHook = () => {
-	const pathname = usePathname();
+  const pathname = usePathname();
 
-	const getActiveStatus = (link: string) => {
+  const getActiveStatus = (link: string) => {
+    if (link === '/') return pathname === '/';
+    return pathname === link || pathname.startsWith(link + '/');
+  };
 
-		if (link === '/') return pathname === '/';
-		return pathname === link || pathname.startsWith(link + '/');
-	};
-
-	return {
-		getActiveStatus,
-	};
+  return {
+    getActiveStatus,
+  };
 };

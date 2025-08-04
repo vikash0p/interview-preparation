@@ -2,7 +2,7 @@ import SideBarContainer from '@/components/practical-interview-components/SideBa
 import React from 'react';
 
 const PracticalInterviewSlugSideBar = () => {
-	return <SideBarContainer />;
+  return <SideBarContainer />;
 };
 
 export default PracticalInterviewSlugSideBar;

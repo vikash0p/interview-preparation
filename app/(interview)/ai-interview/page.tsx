@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const AiInterview = () => {
-	return (
-		<div>AiInterview</div>
-	)
-}
+  return <div>AiInterview</div>;
+};
 
-export default AiInterview
+export default AiInterview;

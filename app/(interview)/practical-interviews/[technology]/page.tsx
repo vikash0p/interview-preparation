@@ -1,12 +1,8 @@
-import PracticalInterviewContainer from "@/components/practical-interview-components/PracticalInterviewContainer"
-import React from 'react'
+import PracticalInterviewContainer from '@/components/practical-interview-components/PracticalInterviewContainer';
+import React from 'react';
 
 const PracticalInterviewTechnology = () => {
-	return (
+  return <PracticalInterviewContainer />;
+};
 
-		<PracticalInterviewContainer />
-
-	)
-}
-
-export default PracticalInterviewTechnology
+export default PracticalInterviewTechnology;
