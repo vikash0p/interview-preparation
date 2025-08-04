@@ -22,7 +22,7 @@ const CategoryDropDown: React.FC<Props> = ({
 			<motion.div animate={open ? 'open' : 'closed'}>
 				<button
 					onClick={() => setOpen((pv) => !pv)}
-					className='flex items-center gap-2 px-5 py-2 rounded-md text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors'
+					className='flex items-center gap-2 px-5 py-2 rounded-sm text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors'
 				>
 					<span>
 						{currentCategory
@@ -39,7 +39,7 @@ const CategoryDropDown: React.FC<Props> = ({
 					animate={open ? 'open' : 'closed'}
 					variants={wrapperVariants}
 					style={{ originY: 'top', translateX: '-50%' }}
-					className='flex flex-col gap-2 p-2 rounded-lg bg-gray-950 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-10'
+					className='flex flex-col gap-2 p-2 rounded-sm bg-gray-950 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-10'
 				>
 					{categories.map((category) => (
 						<Option
@@ -75,7 +75,7 @@ const Option: React.FC<OptionProps> = ({
 				updateSearchParams();
 				setOpen(false);
 			}}
-			className='w-full p-2 text-md font-medium whitespace-nowrap rounded-md hover:bg-white/10 text-gray-400 hover:text-gray-300 transition-colors cursor-pointer'
+			className='w-full p-2 text-md font-medium whitespace-nowrap rounded-sm hover:bg-white/10 text-gray-400 hover:text-gray-300 transition-colors cursor-pointer'
 		>
 			<span>{text}</span>
 		</motion.li>

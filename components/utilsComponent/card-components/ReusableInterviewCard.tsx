@@ -28,11 +28,11 @@ const ReusableInterviewCard: React.FC<PracticalCardProps> = ({
 				comingSoon
 					? 'opacity-80 cursor-not-allowed border-2 border-yellow-400/30'
 					: 'cursor-pointer hover:bg-gradient-to-r hover:from-gray-950 border-2 border-gray-700 hover:to-gray-900 hover:border-gray-500 hover:shadow-lg hover:shadow-indigo-500/10'
-			} bg-gradient-to-r from-gray-900 to-gray-800 border-2  p-6 rounded-xl transition-all duration-300`}
+			} bg-gradient-to-r from-gray-900 to-gray-800 border-2  p-6 rounded-sm transition-all duration-300`}
 		>
 			{comingSoon ? (
 				<div className='flex gap-5 items-center relative z-10 opacity-70'>
-					<div className='p-3 rounded-lg bg-gray-700/50 transition-all duration-300'>
+					<div className='p-3 rounded-sm bg-gray-700/50 transition-all duration-300'>
 						<div className='text-3xl text-gray-500 transition-colors duration-300'>
 							<FaLock className='text-yellow-400' />
 						</div>
@@ -53,7 +53,7 @@ const ReusableInterviewCard: React.FC<PracticalCardProps> = ({
 					passHref
 					className='flex gap-5 items-center relative z-10'
 				>
-					<div className='p-3 rounded-lg bg-black/30 group-hover:bg-indigo-500/20 transition-all duration-300'>
+					<div className='p-3 rounded-sm bg-black/30 group-hover:bg-indigo-500/20 transition-all duration-300'>
 						<div className='text-3xl text-gray-300 group-hover:text-indigo-300 transition-colors duration-300'>
 							{icon}
 						</div>

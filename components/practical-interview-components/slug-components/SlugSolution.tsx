@@ -1,25 +1,25 @@
-'use client'
-import React, { useState } from 'react'
-import { FaCopy, FaLightbulb } from "react-icons/fa";
+'use client';
+import React, { useState } from 'react';
+import { FaCopy, FaLightbulb } from 'react-icons/fa';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 import { ISlugDataProps } from '../../../main/types/practical-interview.types';
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    toast.success('Copied to clipboard!', {
-      position: 'bottom-right',
-      autoClose: 2000,
-    });
-  };
+const copyToClipboard = (text: string) => {
+	navigator.clipboard.writeText(text);
+	toast.success('Copied to clipboard!', {
+		position: 'bottom-right',
+		autoClose: 2000,
+	});
+};
 
-const SlugSolution:React.FC<ISlugDataProps> = ({data}) => {
-  		const [showSolution, setShowSolution] = useState(false);
+const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
+	const [showSolution, setShowSolution] = useState(false);
 
-  return (
+	return (
 		<div className='space-y-8'>
-			<div className='p-5 bg-indigo-500/10 rounded-xl border border-indigo-500/30'>
+			<div className='p-5 bg-indigo-500/10 rounded-sm border border-indigo-500/30'>
 				<div className='flex items-start gap-4'>
 					<FaLightbulb className='text-indigo-400 text-xl mt-1 flex-shrink-0' />
 					<div>
@@ -38,7 +38,7 @@ const SlugSolution:React.FC<ISlugDataProps> = ({data}) => {
 				<div className='text-center py-12'>
 					<button
 						onClick={() => setShowSolution(true)}
-						className='px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors shadow-lg hover:shadow-indigo-500/20'
+						className='px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-sm font-medium transition-colors shadow-lg hover:shadow-indigo-500/20'
 					>
 						Reveal Solution
 					</button>
@@ -52,12 +52,12 @@ const SlugSolution:React.FC<ISlugDataProps> = ({data}) => {
 						<h2 className='text-xl font-semibold text-white'>Solution Code</h2>
 						<button
 							onClick={() => copyToClipboard(data.solutionCode)}
-							className='flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'
+							className='flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-sm transition-colors'
 						>
 							<FaCopy /> Copy
 						</button>
 					</div>
-					<div className='rounded-xl overflow-hidden border border-gray-800'>
+					<div className='rounded-sm overflow-hidden border border-gray-800'>
 						<SyntaxHighlighter
 							language='javascript'
 							style={atomDark}
@@ -76,6 +76,6 @@ const SlugSolution:React.FC<ISlugDataProps> = ({data}) => {
 			)}
 		</div>
 	);
-}
+};
 
-export default SlugSolution
+export default SlugSolution;

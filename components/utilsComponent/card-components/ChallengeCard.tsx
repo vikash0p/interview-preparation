@@ -3,7 +3,6 @@ import { Link } from 'next-view-transitions';
 import { FiChevronRight } from 'react-icons/fi';
 import { IoStar } from 'react-icons/io5';
 
-
 interface ChallengeCardProps {
 	id: string;
 	name: string;
@@ -39,14 +38,19 @@ const getStarCount = (level: string) => {
 	}
 };
 
-export const ChallengeCard: React.FC<ChallengeCardProps> = ({	id,	name,	url,	level}) => {
+export const ChallengeCard: React.FC<ChallengeCardProps> = ({
+	id,
+	name,
+	url,
+	level,
+}) => {
 	const starCount = getStarCount(level);
 
 	return (
 		<Link
 			href={`/practical-interview/react/${url}`}
 			key={id}
-			className='group relative border border-gray-800 p-6 rounded-xl bg-gradient-to-l from-gray-800 to-gray-900 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10'
+			className='group relative border border-gray-800 p-6 rounded-sm bg-gradient-to-l from-gray-800 to-gray-900 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10'
 		>
 			<div className='flex items-start justify-between'>
 				<div>

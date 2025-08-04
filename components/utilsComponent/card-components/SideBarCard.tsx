@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {listItemVariants,activeIndicatorVariants,} from '@/main/animation/practical-interview.animation';
+import {
+	listItemVariants,
+	activeIndicatorVariants,
+} from '@/main/animation/practical-interview.animation';
 
 interface SideBarCardProps {
 	slug: string;
@@ -44,7 +47,7 @@ const SideBarCard: React.FC<SideBarCardProps> = ({
 			<AnimatePresence>
 				{isActive && (
 					<motion.div
-						className='absolute left-4 w-[calc(100%-1rem)] h-full bg-blue-500/20 rounded-lg'
+						className='absolute left-4 w-[calc(100%-1rem)] h-full bg-blue-500/20 rounded-sm'
 						variants={activeIndicatorVariants}
 						initial='hidden'
 						animate='visible'
@@ -55,7 +58,7 @@ const SideBarCard: React.FC<SideBarCardProps> = ({
 
 			<motion.button
 				onClick={() => onClick(slug)}
-				className='relative z-10 flex-1 text-left px-3 py-2 rounded-lg'
+				className='relative z-10 flex-1 text-left px-3 py-2 rounded-sm'
 				animate={{
 					color: isActive ? 'white' : 'rgb(229, 231, 235)',
 					fontWeight: isActive ? 500 : 400,

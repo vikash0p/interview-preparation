@@ -16,7 +16,7 @@ const ChatBubbleCard: React.FC<{ message: Message }> = ({ message }) => (
 			<message.icon />
 		</motion.div>
 		<motion.div
-			className={`rounded-lg p-4 flex-1 ${
+			className={`rounded-sm p-4 flex-1 ${
 				message.type === 'ai'
 					? 'bg-indigo-500/10 border border-indigo-500/30'
 					: 'bg-green-500/10 border border-green-500/30'

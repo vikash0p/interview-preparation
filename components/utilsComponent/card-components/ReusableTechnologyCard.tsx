@@ -1,8 +1,8 @@
-import DifficultyRating from "@/components/practical-interview-components/DifficultyRating";
+import DifficultyRating from '@/components/practical-interview-components/DifficultyRating';
 import { IPracticalInterview } from '@/main/types/practical-interview.types';
 import { Link } from 'next-view-transitions';
 import React from 'react';
-import { BiShare } from "react-icons/bi";
+import { BiShare } from 'react-icons/bi';
 import {
 	FiClock,
 	FiEye,
@@ -53,7 +53,7 @@ const ReusableTechnologyCard: React.FC<ReusableTechnologyCardProps> = ({
 
 	return (
 		<article
-			className='group relative flex flex-col justify-between bg-gray-950/30 hover:bg-gray-950 rounded-xl shadow-md overflow-hidden border border-gray-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
+			className='group relative flex flex-col justify-between bg-gray-950/30 hover:bg-gray-950 rounded-sm shadow-md overflow-hidden border border-gray-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
 			aria-labelledby={`card-title-${interview._id}`}
 		>
 			<div className='p-2 flex flex-col gap-4'>
@@ -99,7 +99,7 @@ const ReusableTechnologyCard: React.FC<ReusableTechnologyCardProps> = ({
 						{interview.requirements.map((value) => (
 							<span
 								key={value}
-								className='inline-block bg-gray-800 text-gray-300 px-2 py-1 rounded-md mr-2 mb-2 text-xs'
+								className='inline-block bg-gray-800 text-gray-300 px-2 py-1 rounded-sm mr-2 mb-2 text-xs'
 							>
 								{value}
 							</span>
@@ -160,20 +160,20 @@ const ReusableTechnologyCard: React.FC<ReusableTechnologyCardProps> = ({
 						// rel='noopener noreferrer'
 						scroll={false}
 						href={`/practical-interviews/${interview.technology}/${interview.slug}`}
-						className='inline-block px-5 py-2 text-sm font-medium rounded-md bg-indigo-600 text-white hover:bg-indigo-500 transition-all'
+						className='inline-block px-5 py-2 text-sm font-medium rounded-sm bg-indigo-600 text-white hover:bg-indigo-500 transition-all'
 					>
 						Solve This Challenge{' '}
 					</Link>
 					<div className='flex gap-2'>
 						<button
-							className='p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors'
+							className='p-2 rounded-sm hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors'
 							aria-label='Bookmark this interview'
 							title='Bookmark'
 						>
 							<FiBookmark className='w-5 h-5' />
 						</button>
 						<button
-							className='p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors'
+							className='p-2 rounded-sm hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors'
 							aria-label='Share this interview'
 							title='Share'
 						>

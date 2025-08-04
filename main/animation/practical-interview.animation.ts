@@ -58,3 +58,26 @@ export	const contentVariants = {
 			transition: { type: 'spring', stiffness: 300, damping: 30 },
 		}),
 	};
+
+
+
+export const sectionVariants = {
+	collapsed: {
+		height: 0,
+		opacity: 0,
+		overflow: 'hidden',
+		transition: {
+			height: { duration: 0.2, ease: 'easeInOut' },
+			opacity: { duration: 0.2, ease: 'easeInOut' },
+		},
+	},
+	expanded: {
+		height: 'auto',
+		opacity: 1,
+		overflow: 'visible',
+		transition: {
+			height: { duration: 0.2, ease: 'easeInOut' },
+			opacity: { duration: 0.2, ease: 'easeInOut' },
+		},
+	},
+};

@@ -74,7 +74,7 @@ const RightHero = () => {
 				</h3>
 
 				<div className='relative'>
-					<pre className='bg-gray-950 h-72  p-4 rounded-lg text-sm text-wrap overflow-x-auto'>
+					<pre className='bg-gray-950 h-72  p-4 rounded-sm text-sm text-wrap overflow-x-auto'>
 						<code>{HeroRightData[currentQuestion].code}</code>
 					</pre>
 					<div className='absolute top-2 right-2 group'>
@@ -82,7 +82,7 @@ const RightHero = () => {
 							type='button'
 							aria-label='Copy code to clipboard'
 							onClick={handleCopy}
-							className='p-2 rounded-lg bg-indigo-800 hover:bg-indigo-700 transition-colors'
+							className='p-2 rounded-sm bg-indigo-800 hover:bg-indigo-700 transition-colors'
 						>
 							{copied ? (
 								<FaCheck className='text-green-400' />
@@ -96,7 +96,7 @@ const RightHero = () => {
 					</div>
 				</div>
 
-				<div className='mt-4 p-3 bg-black/70 rounded-lg text-sm  min-h-16 border border-indigo-400'>
+				<div className='mt-4 p-3 bg-black/70 rounded-sm text-sm  min-h-16 border border-indigo-400'>
 					{HeroRightData[currentQuestion].explanation}
 				</div>
 

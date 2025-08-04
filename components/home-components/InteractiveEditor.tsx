@@ -30,7 +30,7 @@ console.log("z:", z);`);
 			const runner = new Function('console', code);
 			runner(customConsole);
 			setOutput(capturedLogs.join('\n'));
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		} catch (err: any) {
 			setOutput(err.toString());
 		}
@@ -59,28 +59,27 @@ console.log("z:", z);`);
 			</div>
 
 			{/* Monaco Editor */}
-			<div className='h-96 border rounded-lg overflow-hidden'>
+			<div className='h-96 border rounded-sm overflow-hidden'>
 				<Editor
 					height='100%'
 					defaultLanguage='javascript'
 					value={code}
 					theme='vs-dark'
 					onChange={(value) => setCode(value || '')}
-          options={{
-            fontSize: 14,
-            minimap: { enabled: false },
-            automaticLayout: true,
-            scrollBeyondLastLine: false,
-            wordWrap: 'on',
-            wrappingIndent: 'indent',
-            lineNumbers: 'on',
-
-          }}
+					options={{
+						fontSize: 14,
+						minimap: { enabled: false },
+						automaticLayout: true,
+						scrollBeyondLastLine: false,
+						wordWrap: 'on',
+						wrappingIndent: 'indent',
+						lineNumbers: 'on',
+					}}
 				/>
 			</div>
 
 			{/* Console Output */}
-			<div className='mt-6 p-4 bg-gray-900 rounded-lg'>
+			<div className='mt-6 p-4 bg-gray-900 rounded-sm'>
 				<div className='text-sm text-gray-400 mb-2'>Console Output:</div>
 				<pre className='text-green-400 font-mono text-sm whitespace-pre-wrap'>
 					{output || '/* Output will appear here */'}
@@ -93,7 +92,7 @@ console.log("z:", z);`);
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					onClick={resetCode}
-					className='px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors'
+					className='px-4 py-2 bg-gray-700 text-white rounded-sm hover:bg-gray-600 transition-colors'
 				>
 					Reset
 				</motion.button>
@@ -101,7 +100,7 @@ console.log("z:", z);`);
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					onClick={runCode}
-					className='px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-md hover:from-indigo-700 hover:to-purple-700 transition-colors flex items-center'
+					className='px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-sm hover:from-indigo-700 hover:to-purple-700 transition-colors flex items-center'
 				>
 					Run Code
 					<FaChevronRight className='ml-2 w-4 h-4' />

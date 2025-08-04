@@ -1,27 +1,25 @@
-import React from 'react'
+import React from 'react';
 import { ISlugDataProps } from '../../../main/types/practical-interview.types';
-import {  FaCheck, FaCopy } from 'react-icons/fa';
+import { FaCheck, FaCopy } from 'react-icons/fa';
 import { MdTipsAndUpdates } from 'react-icons/md';
 import { toast } from 'react-toastify';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+const copyToClipboard = (text: string) => {
+	navigator.clipboard.writeText(text);
+	toast.success('Copied to clipboard!', {
+		position: 'bottom-right',
+		autoClose: 2000,
+	});
+};
 
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    toast.success('Copied to clipboard!', {
-      position: 'bottom-right',
-      autoClose: 2000,
-    });
-  };
-
-const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
-  return (
+const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
+	return (
 		<div className='space-y-8'>
 			<section>
 				<h2 className='text-xl font-semibold text-white mb-4'>Description</h2>
-				<div className='prose prose-invert max-w-none bg-gray-800/50 p-6 rounded-xl border border-gray-800'>
+				<div className='prose prose-invert max-w-none bg-gray-800/50 p-6 rounded-sm border border-gray-800'>
 					<p className='text-gray-300 leading-relaxed'>{data.description}</p>
 					<p className='mt-4 text-gray-300 leading-relaxed'>
 						{data.detailedExplanation}
@@ -35,7 +33,7 @@ const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
 					{data.requirements?.map((req, idx) => (
 						<div
 							key={idx}
-							className='flex items-start p-4 bg-gray-800/50 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors'
+							className='flex items-start px-4 py-3 bg-gray-800/50 rounded-sm border border-gray-800 hover:border-gray-700 transition-colors'
 						>
 							<div className='flex-shrink-0 mt-0.5 mr-3'>
 								<div className='w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center'>
@@ -54,7 +52,7 @@ const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
 					{data.prerequisites?.map((req, idx) => (
 						<span
 							key={idx}
-							className='px-4 py-2 bg-gray-800/50 text-gray-300 rounded-lg border border-gray-800 hover:bg-gray-800 transition-colors'
+							className='px-6 py-2 bg-gray-800/50 text-gray-300 rounded-sm border border-gray-800 hover:bg-gray-800 transition-colors'
 						>
 							{req}
 						</span>
@@ -63,7 +61,7 @@ const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
 			</section>
 
 			<section>
-				<div className='p-5 bg-yellow-500/10 rounded-xl border border-yellow-500/30'>
+				<div className='p-5 bg-yellow-500/10 rounded-sm border border-yellow-500/30'>
 					<div className='flex items-start gap-4'>
 						<MdTipsAndUpdates className='text-yellow-400 text-xl mt-1 flex-shrink-0' />
 						<div>
@@ -81,12 +79,12 @@ const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
 					<h2 className='text-xl font-semibold text-white'>Starter Code</h2>
 					<button
 						onClick={() => copyToClipboard(data.starterCode)}
-						className='flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'
+						className='flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-sm transition-colors'
 					>
 						<FaCopy /> Copy
 					</button>
 				</div>
-				<div className='rounded-xl overflow-hidden border border-gray-800'>
+				<div className='rounded-sm overflow-hidden border border-gray-800'>
 					<SyntaxHighlighter
 						language='javascript'
 						style={atomDark}
@@ -104,6 +102,6 @@ const SlugProblemStatement : React.FC<ISlugDataProps> = ({ data}) => {
 			</section>
 		</div>
 	);
-}
+};
 
-export default SlugProblemStatement
+export default SlugProblemStatement;

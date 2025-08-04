@@ -24,7 +24,7 @@ const AskQuestion = () => {
 				{faqData.map((item, index) => (
 					<motion.div
 						key={index}
-						className='group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300'
+						className='group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-sm hover:border-indigo-500 transition-all duration-300'
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: index * 0.1 }}

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -49,8 +49,8 @@ export default function NotFound() {
 						className='text-lg text-gray-300 max-w-2xl mx-auto'
 					>
 						The technical interview resource you&apos;re looking for
-						doesn`&apos;t exist or has been moved. Don`&apos;t worry - we`&apos;ve got
-						plenty of other materials to help you prepare!
+						doesn`&apos;t exist or has been moved. Don`&apos;t worry -
+						we`&apos;ve got plenty of other materials to help you prepare!
 					</motion.p>
 
 					{/* Suggested Actions */}
@@ -63,10 +63,10 @@ export default function NotFound() {
 						<Link href='/' className='group'>
 							<motion.div
 								whileHover={{ y: -5 }}
-								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-indigo-400 transition-all'
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-indigo-400 transition-all'
 							>
 								<div className='flex items-center gap-4'>
-									<div className='p-3 bg-indigo-500/20 rounded-lg text-indigo-400 group-hover:bg-indigo-500/30 transition'>
+									<div className='p-3 bg-indigo-500/20 rounded-sm text-indigo-400 group-hover:bg-indigo-500/30 transition'>
 										<FaHome className='text-xl' />
 									</div>
 									<div className='text-left'>
@@ -82,10 +82,10 @@ export default function NotFound() {
 						<Link href='/practical-interviews' className='group'>
 							<motion.div
 								whileHover={{ y: -5 }}
-								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-blue-400 transition-all'
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-blue-400 transition-all'
 							>
 								<div className='flex items-center gap-4'>
-									<div className='p-3 bg-blue-500/20 rounded-lg text-blue-400 group-hover:bg-blue-500/30 transition'>
+									<div className='p-3 bg-blue-500/20 rounded-sm text-blue-400 group-hover:bg-blue-500/30 transition'>
 										<FaSearch className='text-xl' />
 									</div>
 									<div className='text-left'>
@@ -101,10 +101,10 @@ export default function NotFound() {
 						<Link href='/resources' className='group'>
 							<motion.div
 								whileHover={{ y: -5 }}
-								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-purple-400 transition-all'
+								className='h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-purple-400 transition-all'
 							>
 								<div className='flex items-center gap-4'>
-									<div className='p-3 bg-purple-500/20 rounded-lg text-purple-400 group-hover:bg-purple-500/30 transition'>
+									<div className='p-3 bg-purple-500/20 rounded-sm text-purple-400 group-hover:bg-purple-500/30 transition'>
 										<FaBook className='text-xl' />
 									</div>
 									<div className='text-left'>

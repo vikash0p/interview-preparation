@@ -20,7 +20,8 @@ export default function Profile() {
 
 	const fetchUser = async () => {
 		try {
-			const response = await axios.get<User>(`${process.env.NEXT_PUBLIC_API_URL}/auth/profile`,
+			const response = await axios.get<User>(
+				`${process.env.NEXT_PUBLIC_API_URL}/auth/profile`,
 				{
 					withCredentials: true,
 				}
@@ -33,9 +34,9 @@ export default function Profile() {
 
 	const handleLogout = async () => {
 		try {
-			await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/logout`,
-				{ withCredentials: true }
-			);
+			await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/auth/logout`, {
+				withCredentials: true,
+			});
 			setUser(null);
 			router.push('/login'); // ⬅️ change to your login route
 		} catch (error) {
@@ -72,7 +73,7 @@ export default function Profile() {
 				{/* Logout */}
 				<button
 					onClick={handleLogout}
-					className='mt-6 w-full bg-red-600 hover:bg-red-700 transition-colors text-white py-2 rounded-xl font-medium'
+					className='mt-6 w-full bg-red-600 hover:bg-red-700 transition-colors text-white py-2 rounded-sm font-medium'
 				>
 					Logout
 				</button>

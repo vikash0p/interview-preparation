@@ -1,6 +1,6 @@
 'use client';
 
-import { mobileLink } from "@/main/data/link/mobileLink";
+import { mobileLink } from '@/main/data/link/mobileLink';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -18,10 +18,8 @@ export const MobileNav = () => {
 						<Link
 							key={index}
 							href={item.href}
-							className={`flex flex-col items-center px-4 py-1 text-xs rounded-md transition-colors ${
-								isActive
-									? 'text-indigo-400'
-									: 'text-gray-300 hover:text-white'
+							className={`flex flex-col items-center px-4 py-1 text-xs rounded-sm transition-colors ${
+								isActive ? 'text-indigo-400' : 'text-gray-300 hover:text-white'
 							}`}
 							aria-label={item.ariaLabel}
 						>
