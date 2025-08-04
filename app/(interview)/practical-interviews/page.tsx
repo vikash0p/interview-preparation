@@ -1,8 +1,8 @@
 
 import React from 'react';
-import ReusableHeading from '@/components/reusable-components/ReusableHeading';
 import ReusableInterviewCard from '@/components/utilsComponent/card-components/ReusableInterviewCard';
 import { PRACTICAL_INTERVIEWS_DATA } from "@/main/data/link/practicalTechnologiesData";
+import { ReusableHeading } from "@/components/reusable-components/ReusableHeading";
 
 const PracticalInterviews = () => {
 

@@ -5,7 +5,7 @@ import {
 	listItemVariants,
 	activeIndicatorVariants,
 } from '../../main/animation/practical-interview.animation';
-import { ISideBarCardProps } from '../../main/types/types';
+import { ISideBarCardProps } from '../../main/types/practical-interview.types';
 import { useSidebarStore } from '@/main/zustand/store/useSidebarStore';
 
 const SideBarCard: React.FC<ISideBarCardProps> = ({

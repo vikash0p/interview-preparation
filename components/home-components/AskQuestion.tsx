@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { faqData } from '@/main/data/home/faqData';
-import ReusableHeading from '../reusable-components/ReusableHeading';
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const AskQuestion = () => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);

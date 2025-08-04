@@ -1,8 +1,8 @@
 'use client';
 import { featuresData } from '@/main/data/home/featuresData';
 import React from 'react';
-import ReusableHeading from '../reusable-components/ReusableHeading';
 import FeatureCard from '../utilsComponent/card-components/FeatureCard';
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const Features = () => {
 	return (

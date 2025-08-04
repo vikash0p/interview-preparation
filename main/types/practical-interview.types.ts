@@ -97,3 +97,12 @@ export interface ISlugLayoutProps {
 export interface ISlugDataProps{
 	data:IPracticalInterview
 }
+
+
+export interface ISideBarCardProps {
+	slug: string;
+	index: number;
+	isActive: boolean;
+	onClick: (slug: string) => void;
+	setRef: (el: HTMLLIElement | null) => void;
+}

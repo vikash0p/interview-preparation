@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import ReusableHeading from '../reusable-components/ReusableHeading';
 import PracticeFeatures from "./PracticeFeatures";
 import InteractiveEditor from "./InteractiveEditor";
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const Practice = () => {
 	return (

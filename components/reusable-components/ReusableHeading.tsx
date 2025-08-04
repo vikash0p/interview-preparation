@@ -1,17 +1,10 @@
 'use client';
 import React from 'react';
+import { IReusableHeadingProps } from '@/main/types/global.types';
 
-interface ReusableHeadingProps {
-	heading?: string;
-	description?: string;
-}
-
-const ReusableHeading = ({ heading, description }: ReusableHeadingProps) => {
+export const ReusableHeading = ({ heading, description }: IReusableHeadingProps) => {
 	return (
-		<div
-
-			className='text-center  px-4 mb-8'
-		>
+		<div className='text-center  px-4 mb-8'>
 			<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-mono text-gray-400'>
 				{heading}
 			</h2>
@@ -21,5 +14,3 @@ const ReusableHeading = ({ heading, description }: ReusableHeadingProps) => {
 		</div>
 	);
 };
-
-export default ReusableHeading;

@@ -1,8 +1,8 @@
 'use client';
 import { domainsData } from '@/main/data/home/domainsData';
-import ReusableHeading from '../reusable-components/ReusableHeading';
 import React from 'react';
 import DomainCard from '../utilsComponent/card-components/DomainCard';
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const Domains = () => {
 	return (

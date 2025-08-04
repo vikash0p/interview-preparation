@@ -1,10 +1,23 @@
 'use client';
 import React, { useState } from 'react';
 import ModelOne from '../global-components/GlobalModel';
-import { LinkInterface } from '../../main/types/types';
 import { FiBook, FiTarget, FiInfo, FiCode } from 'react-icons/fi';
 import CodePreview from '../global-components/CodePreview';
-
+export interface LinkInterface {
+	id: string;
+	name: string;
+	url: string;
+	component: React.ReactNode;
+	data: string;
+	level: string;
+	description: string;
+	tags: string[];
+	estimatedTime: number;
+	prerequisites: string[];
+	objectives: string[];
+	tips: string;
+	challenges: string | string[];
+}
 const ReusableContainer = ({ data }: { data: LinkInterface }) => {
 	const [open, setOpen] = useState(false);
 	const toggleOpen = () => setOpen(!open);

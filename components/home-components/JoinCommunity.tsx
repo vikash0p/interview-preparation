@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import ReusableHeading from '../reusable-components/ReusableHeading';
 import {
 	statsData,
 	JoinCommunityData,
 } from '@/main/data/home/JoinCommunityData';
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const JoinCommunity = () => {
 	return (

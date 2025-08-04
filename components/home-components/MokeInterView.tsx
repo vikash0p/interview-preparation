@@ -1,7 +1,7 @@
 import React from 'react';
-import ReusableHeading from '../reusable-components/ReusableHeading';
 import MockInterviewRight from './MockInterviewRight';
 import MockInterviewLeft from './MockInterviewLeft';
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 
 const MockInterview: React.FC = () => {
 	return (

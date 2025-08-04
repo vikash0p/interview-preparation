@@ -1,8 +1,7 @@
 import React from 'react';
 import { testimonialsData } from '@/main/data/home/testimonialsData';
 import TestimonialCard from '../utilsComponent/card-components/TestimonialCard';
-import ReusableHeading from '../reusable-components/ReusableHeading';
-
+import { ReusableHeading } from "../reusable-components/ReusableHeading";
 const SuccessStory = () => {
 	return (
 		<section className='mt-10 md:mt-14 lg:mt-20'>
