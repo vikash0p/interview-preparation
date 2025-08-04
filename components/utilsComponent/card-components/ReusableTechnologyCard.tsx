@@ -21,7 +21,7 @@ import { useRouter } from 'next/navigation';
 export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }> = ({ interview }) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
-
+  const { label, icon, color } = getPopularityUtils(interview.popularity);
   const handleSolveClick = () => {
     if (isPending) return;
     startTransition(() => {
@@ -84,14 +84,9 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
           </span>
 
           {/* Popularity */}
-          {(() => {
-            const { label, icon } = getPopularityUtils(interview.popularity);
-            return (
-              <span className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-800/50 text-gray-300">
-                {icon} {label}
-              </span>
-            );
-          })()}
+          <span className={`flex items-center gap-1 px-3 py-1.5 rounded-full ${color}`}>
+            {icon} {label}
+          </span>
         </div>
 
         <div>

@@ -1,12 +1,15 @@
-import { toast } from 'react-toastify';
+import { Bounce, toast } from 'react-toastify';
 
 export const copyToClipboard = (text: string) => {
   navigator.clipboard
     .writeText(text)
     .then(() => {
       toast.success('Copied to clipboard!', {
-        position: 'bottom-right',
+        position: 'top-right',
         autoClose: 2000,
+        theme: 'dark',
+        transition:Bounce
+
       });
     })
     .catch(error => {

@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa';
 import { MdOutlineSort, MdSortByAlpha } from 'react-icons/md';
 
-const SlugDiscussion = () => {
+export const SlugDiscussion = () => {
   const [comments, setComments] = useState([
     {
       id: 1,
@@ -400,5 +400,3 @@ const SlugDiscussion = () => {
     </div>
   );
 };
-
-export default SlugDiscussion;

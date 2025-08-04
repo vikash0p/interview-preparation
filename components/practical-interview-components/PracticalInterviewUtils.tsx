@@ -5,22 +5,26 @@ export const getPopularityUtils = (popularity: string) => {
     case 'high':
       return {
         label: 'Most Popular',
-        icon: <FiTrendingUp className="text-orange-400" />,
+        color: 'bg-red-500/20 text-red-400',
+        icon: <FiTrendingUp className="mr-1" />,
       };
     case 'normal':
       return {
         label: 'Popular',
-        icon: <FiActivity className="text-yellow-400" />,
+        color: 'bg-sky-500/20 text-sky-400',
+        icon: <FiActivity className="mr-1" />,
       };
     case 'low':
       return {
         label: 'Less Popular',
-        icon: <FiTrendingDown className="text-gray-400" />,
+        color: 'bg-gray-500/20 text-gray-400',
+        icon: <FiTrendingDown className="mr-1" />,
       };
     default:
       return {
         label: 'Less Popular',
-        icon: <FiTrendingDown className="text-gray-400" />,
+        color: 'bg-gray-500/20 text-gray-400',
+        icon: <FiTrendingDown className="mr-1" />,
       };
   }
 };

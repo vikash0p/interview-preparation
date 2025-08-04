@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
-import { FaExclamationTriangle, FaRedo, FaHome, FaHeadset } from 'react-icons/fa';
+import { FaExclamationTriangle, FaRedo, FaHome, FaHeadset } from '@/main/icons/practical-interview.icons';
 
-const SlugError = () => {
+export const SlugError = () => {
   const errorCode = 'ERR_404';
   const timestamp = new Date().toLocaleString();
 
@@ -69,5 +70,3 @@ const SlugError = () => {
     </div>
   );
 };
-
-export default SlugError;

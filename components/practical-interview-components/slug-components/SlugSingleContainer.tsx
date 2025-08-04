@@ -1,39 +1,33 @@
 'use client';
+
 import { useParams } from 'next/navigation';
 import { useGetInterviewBySlugQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
-import {SlugLoading} from '@/components/utilsComponent/loading-components/SlugLoading';
-import SlugError from '@/components/utilsComponent/error-components/SlugError';
-import SlugHeader from './SlugHeader';
+import { SlugLoading } from '@/components/utilsComponent/loading-components/SlugLoading';
+import { SlugError } from '@/components/utilsComponent/error-components/SlugError';
+import { SlugHeader } from './SlugHeader';
 import SlugSideBar from './SlugSideBar';
 import SlugMainContent from './SlugMainContent';
 
 const SlugSingleContainer = () => {
-  const params = useParams();
-  const slug = params?.slug as string;
-  const technology = params?.technology as string;
-
-  const { data, isLoading, isError } = useGetInterviewBySlugQuery({ technology, slug});
+  const { slug, technology } = useParams() as { slug: string; technology: string };
+  const { data, isLoading, isError } = useGetInterviewBySlugQuery({ technology, slug });
 
   if (isLoading) return <SlugLoading />;
+  if (isError || !data || !data.data) return <SlugError />;
 
-  if (isError || !data) return <SlugError />;
-
-  if (!data?.data) return null;
+  const interviewData = data.data;
 
   return (
-    <div className="bg-gray-900 min-h-screen text-gray-300">
-      {/* Header Section */}
-      <SlugHeader data={data?.data} />
-      {/* Main Content */}
-      <div className=" pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <SlugMainContent data={data?.data} />
+    <main className="min-h-screen bg-gray-900 text-gray-300">
+      {/* Header */}
+      <SlugHeader data={interviewData} />
 
-          {/* Sidebar */}
-          <SlugSideBar data={data?.data} />
-        </div>
-      </div>
-    </div>
+      {/* Content Grid */}
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12 ">
+        <SlugMainContent data={interviewData} />
+        <SlugSideBar data={interviewData} />
+      </section>
+    </main>
   );
 };
 

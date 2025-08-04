@@ -1,15 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import {
-  FaLightbulb,
-  FaExclamationTriangle,
-  FaChevronDown,
-  FaChevronUp,
-  FaCopy,
-} from '@/main/icons/practical-interview.icons';
+import { FaLightbulb, FaExclamationTriangle, FaChevronDown, FaChevronUp, FaCopy,MdTipsAndUpdates} from '@/main/icons/practical-interview.icons';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { MdTipsAndUpdates } from 'react-icons/md';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
 import SlugSideBarHeader from './SlugSideBarHeader';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';

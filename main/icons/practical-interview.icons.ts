@@ -7,6 +7,17 @@ export {
   FaCopy,
   FaArrowRight,
   FaLock,
+  FaRedo,
+  FaHome,
+  FaHeadset,
+  FaClock,
+  FaEye,
+  FaThumbsUp,
+  FaShareAlt,
+  FaBookmark,
+  FaFire,
+  FaChartLine,
+  FaHistory,
 } from 'react-icons/fa';
 export { BiShare } from 'react-icons/bi';
 export {
@@ -21,3 +32,4 @@ export {
   FiTrendingDown,
   FiActivity,
 } from 'react-icons/fi';
+export { MdTipsAndUpdates } from 'react-icons/md';

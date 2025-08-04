@@ -1,20 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import { FaCopy, FaLightbulb } from 'react-icons/fa';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { toast } from 'react-toastify';
-import { ISlugDataProps } from '../../../main/types/practical-interview.types';
+import { FaCopy, FaLightbulb } from '@/main/icons/practical-interview.icons';
+import { ISlugDataProps } from '@/main/types/practical-interview.types';
+import { copyToClipboard } from '@/main/utils/copyToClipboard';
 
-const copyToClipboard = (text: string) => {
-  navigator.clipboard.writeText(text);
-  toast.success('Copied to clipboard!', {
-    position: 'bottom-right',
-    autoClose: 2000,
-  });
-};
-
-const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
+export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
@@ -44,34 +34,24 @@ const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
         </div>
       ) : (
         <div>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-semibold text-white">Solution Code</h2>
-            <button
-              onClick={() => copyToClipboard(data.solutionCode)}
-              className="flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-sm transition-colors"
-            >
-              <FaCopy /> Copy
-            </button>
-          </div>
-          <div className="rounded-sm overflow-hidden border border-gray-800">
-            <SyntaxHighlighter
-              language="javascript"
-              style={atomDark}
-              showLineNumbers
-              customStyle={{
-                margin: 0,
-                borderRadius: '0.75rem',
-                background: '#1e1e2d',
-                fontSize: '14px',
-              }}
-            >
-              {data.solutionCode}
-            </SyntaxHighlighter>
-          </div>
+          <section>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold text-gray-300">Solution Code</h2>
+              <button
+                onClick={() => copyToClipboard(data.starterCode)}
+                className="flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-sm transition-colors"
+              >
+                <FaCopy /> Copy
+              </button>
+            </div>
+            <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
+              <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
+                <code>{data.starterCode}</code>
+              </pre>
+            </div>
+          </section>
         </div>
       )}
     </div>
   );
 };
-
-export default SlugSolution;
