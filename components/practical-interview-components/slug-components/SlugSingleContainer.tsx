@@ -2,22 +2,22 @@
 import { useParams } from 'next/navigation';
 import { useGetInterviewBySlugQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
 import SlugLoading from '@/components/utilsComponent/loading-components/SlugLoading';
-import SlugError from '@/components/utilsComponent/error-compponents/SlugError';
+import SlugError from '@/components/utilsComponent/error-components/SlugError';
 import SlugHeader from './SlugHeader';
 import SlugSideBar from './SlugSideBar';
-import SlugMainContent from "./SlugMainContent";
+import SlugMainContent from './SlugMainContent';
 
 const SlugSingleContainer = () => {
 	const params = useParams();
 	const slug = params?.slug as string;
 	const technology = params?.technology as string;
 
-	const { data, isLoading, isError } = useGetInterviewBySlugQuery({technology,	slug,});
+	const { data, isLoading, isError } = useGetInterviewBySlugQuery({
+		technology,
+		slug,
+	});
 
-
-
-
-	if (isLoading)return <SlugLoading />;
+	if (isLoading) return <SlugLoading />;
 
 	if (isError || !data) return <SlugError />;
 

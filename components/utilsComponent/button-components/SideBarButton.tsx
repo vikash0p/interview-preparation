@@ -3,7 +3,7 @@ import { useSidebarStore } from "@/main/zustand/store/useSidebarStore";
 import React from 'react'
 import { FiSidebar, FiX } from 'react-icons/fi';
 
-const SideBarButton = () => {
+export const SideBarButton = () => {
   const {toggleSidebar,isSidebarOpen}=useSidebarStore();
   return (
 <button
@@ -19,5 +19,3 @@ const SideBarButton = () => {
       </button>
   )
 }
-
-export default SideBarButton

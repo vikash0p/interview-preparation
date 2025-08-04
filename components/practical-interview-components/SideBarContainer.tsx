@@ -3,19 +3,18 @@ import React, { useRef } from 'react';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGetAllSlugsByTechnologyQuery } from '@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi';
-import SideBarHeader from './SideBarHeader';
-import SideBarCard from './SideBarCard'; // Import the new component
-import SideBarCardLoading from '../utilsComponent/loading-components/SideBarCardLoading';
-import SideBarCardError from '../utilsComponent/error-compponents/SideBarCardError';
-import { useSidebarStore } from "@/main/zustand/store/useSidebarStore";
+import { SideBarHeader } from './SideBarHeader';
+import { SideBarCard } from './SideBarCard';
+import { SideBarCardLoading } from '../utilsComponent/loading-components/SideBarCardLoading';
+import {SideBarCardError} from '../utilsComponent/error-components/SideBarCardError';
+import { useSidebarStore } from '@/main/zustand/store/useSidebarStore';
 
 const SideBarContainer = () => {
 	const pathname = usePathname();
 	const params = useParams();
 	const technology = params?.technology as string;
 	const router = useRouter();
-	const { data, isLoading, refetch, isError } =
-		useGetAllSlugsByTechnologyQuery(technology);
+	const { data, isLoading, refetch, isError } =	useGetAllSlugsByTechnologyQuery(technology);
 
 	const slugs: string[] = React.useMemo(() => data?.data ?? [], [data]);
 
@@ -40,7 +39,7 @@ const SideBarContainer = () => {
 		router.push(`/practical-interviews/${technology}/${slug}`);
 	};
 
-	const {isSidebarOpen}=useSidebarStore()
+	const { isSidebarOpen } = useSidebarStore();
 
 	return (
 		<section
@@ -54,7 +53,11 @@ const SideBarContainer = () => {
 				}`}
 			>
 				<SideBarHeader />
-				<motion.ul className={`space-y-3 mb-28 lg:mb-10  ${isSidebarOpen ? 'w-full' : ''} `}>
+				<motion.ul
+					className={`space-y-3 mb-28 lg:mb-10  ${
+						isSidebarOpen ? 'w-full' : ''
+					} `}
+				>
 					<AnimatePresence mode='wait'>
 						{isError ? (
 							<SideBarCardError

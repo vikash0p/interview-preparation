@@ -2,7 +2,7 @@ import { listItemVariants } from '@/main/animation/practical-interview.animation
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const SideBarCardLoading = () => {
+export const SideBarCardLoading = () => {
 	return (
 		<>
 			{[...Array(20)].map((i) => (
@@ -22,5 +22,3 @@ const SideBarCardLoading = () => {
 		</>
 	);
 };
-
-export default SideBarCardLoading;

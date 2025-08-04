@@ -18,7 +18,7 @@ const fadeInUp = {
 	},
 };
 
-const SideBarCardError: React.FC<SideBarCardErrorProps> = ({
+export const SideBarCardError: React.FC<SideBarCardErrorProps> = ({
 	message = 'Something went wrong!',
 	description = 'Unable to load sidebar content. Please check your connection or try again later.',
 	onRetry,
@@ -51,5 +51,3 @@ const SideBarCardError: React.FC<SideBarCardErrorProps> = ({
 		</motion.div>
 	);
 };
-
-export default SideBarCardError;
