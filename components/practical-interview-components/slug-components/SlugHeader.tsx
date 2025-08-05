@@ -1,6 +1,6 @@
 import React from 'react';
 import { DifficultyRating } from '../DifficultyRating';
-import { FaClock, FaEye, FaThumbsUp, FaShareAlt, FaBookmark, FiClock } from '@/main/icons/practical-interview.icons';
+import { FaClock, FaEye, FaThumbsUp, FaShareAlt, FaBookmark, FiClock } from '@/main/icons/react-global-icons';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { getDifficultyUtils, getPopularityUtils } from '../PracticalInterviewUtils';
 
@@ -38,22 +38,22 @@ export const SlugHeader: React.FC<ISlugDataProps> = ({ data }) => {
             <DifficultyRating rating={data?.difficultyRating ?? 0} />
 
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-sm">
+              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-md">
                 <FaEye className="text-indigo-400" />
                 <span>{data.views} views</span>
               </div>
-              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-sm">
+              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-md">
                 <FaThumbsUp className="text-green-400" />
                 <span>{data.likes}</span>
               </div>
-              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-sm">
+              <div className="flex items-center gap-2 text-sm bg-gray-800/50 px-3 py-1.5 rounded-md">
                 <FaBookmark className="text-blue-400" />
                 <span>{data.bookmarks}</span>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-sm border border-gray-800">
+              <div className="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-md border border-gray-800">
                 <div className="text-indigo-400">{<FaClock />}</div>
                 <div className="flex gap-1 items-center">
                   <div className="text-sm font-medium text-white">{data.totalTimeSpent}</div>
@@ -68,7 +68,7 @@ export const SlugHeader: React.FC<ISlugDataProps> = ({ data }) => {
           {/* Like Button */}
           <button
             aria-label="Like"
-            className="py-3 px-5 rounded-sm bg-gray-800/50 hover:bg-gray-800 transition-colors tooltip"
+            className="py-3 px-5 rounded-md bg-gray-800/50 hover:bg-gray-800 transition-colors tooltip"
             data-tooltip="Like this challenge"
           >
             <FaThumbsUp className="text-gray-300 group-hover:text-green-400 transition-colors duration-300" />
@@ -77,7 +77,7 @@ export const SlugHeader: React.FC<ISlugDataProps> = ({ data }) => {
           {/* Share Button */}
           <button
             aria-label="Share"
-            className="py-3 px-5 rounded-sm bg-gray-800/50 hover:bg-gray-800 transition-colors tooltip"
+            className="py-3 px-5 rounded-md bg-gray-800/50 hover:bg-gray-800 transition-colors tooltip"
             data-tooltip="Share challenge"
           >
             <FaShareAlt className="text-gray-300 group-hover:text-fuchsia-400 transition-colors duration-300" />
@@ -86,7 +86,7 @@ export const SlugHeader: React.FC<ISlugDataProps> = ({ data }) => {
           {/* Bookmark / Save Button */}
           <button
             aria-label="Bookmark"
-            className="flex items-center px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-sm text-sm font-medium transition-colors duration-300"
+            className="flex items-center px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-medium transition-colors duration-300"
           >
             <FaBookmark className="mr-2" />
             Save

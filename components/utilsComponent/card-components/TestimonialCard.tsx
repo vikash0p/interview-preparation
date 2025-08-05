@@ -17,7 +17,7 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
 
   return (
     <motion.div
-      className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-sm transition-all duration-300 hover:border-indigo-500"
+      className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-md transition-all duration-300 hover:border-indigo-500"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{
@@ -28,7 +28,7 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
       transition={{ delay: index * 0.05 }}
     >
       {/* Hover overlay */}
-      <div className="absolute inset-0 rounded-sm bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+      <div className="absolute inset-0 rounded-md bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
       {/* Header: Avatar & Name */}
       <div className="relative z-10 flex items-center mb-4">

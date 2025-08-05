@@ -29,7 +29,7 @@ const ReusableContainer = ({ data }: { data: LinkInterface }) => {
         <h2 className="text-2xl font-semibold text-white">{data.name}</h2>
         <button
           onClick={toggleOpen}
-          className="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 transition rounded-sm text-white font-medium shadow-md"
+          className="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 transition rounded-md text-white font-medium shadow-md"
         >
           View Full Code
         </button>
@@ -75,7 +75,7 @@ const ReusableContainer = ({ data }: { data: LinkInterface }) => {
               <FiInfo className="text-rose-400" />
               Pro Tips & Challenges
             </h3>
-            <div className="bg-gray-800/30 p-4 rounded-sm shadow-md mt-2">
+            <div className="bg-gray-800/30 p-4 rounded-md shadow-md mt-2">
               <p className="text-gray-300 mb-2">
                 <span className="font-medium text-emerald-400">Tip:</span> {data.tips}
               </p>
@@ -89,9 +89,9 @@ const ReusableContainer = ({ data }: { data: LinkInterface }) => {
         {/* Right Section */}
         <div className="space-y-6">
           {/* Live Preview */}
-          <div className="border border-gray-700 rounded-sm p-4 bg-gray-800/20 shadow-md">
+          <div className="border border-gray-700 rounded-md p-4 bg-gray-800/20 shadow-md">
             <h3 className="text-lg font-semibold text-white mb-4">Live Preview</h3>
-            <div className="min-h-[200px] flex items-center justify-center bg-gray-900 rounded-sm p-4">
+            <div className="min-h-[200px] flex items-center justify-center bg-gray-900 rounded-md p-4">
               {data.component}
             </div>
           </div>

@@ -15,7 +15,7 @@ const Pricing = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="el-hrv3or9j">
           {/* Free Plan */}
           <div
-            className="bg-neutral-800 rounded-sm p-8 border border-neutral-700 hover:border-indigo-500 transition-colors animate__animated animate__fadeInUp"
+            className="bg-neutral-800 rounded-md p-8 border border-neutral-700 hover:border-indigo-500 transition-colors animate__animated animate__fadeInUp"
             id="el-ltpijumo"
           >
             <div className="text-center mb-8" id="el-w0qqlofw">
@@ -88,7 +88,7 @@ const Pricing = () => {
               </li>
             </ul>
             <button
-              className="w-full py-3 bg-neutral-700 text-white rounded-sm hover:bg-neutral-600 transition-colors"
+              className="w-full py-3 bg-neutral-700 text-white rounded-md hover:bg-neutral-600 transition-colors"
               id="el-uok6tzoo"
             >
               Get Started
@@ -96,7 +96,7 @@ const Pricing = () => {
           </div>
           {/* Pro Plan */}
           <div
-            className="bg-neutral-800 rounded-sm p-8 border-2 border-indigo-500 transform scale-105 animate__animated animate__fadeInUp"
+            className="bg-neutral-800 rounded-md p-8 border-2 border-indigo-500 transform scale-105 animate__animated animate__fadeInUp"
             style={{ animationDelay: '0.2s' }}
             id="el-rcmk8bq1"
           >
@@ -193,7 +193,7 @@ const Pricing = () => {
               </li>
             </ul>
             <button
-              className="w-full py-3 bg-indigo-600 text-white rounded-sm hover:bg-indigo-700 transition-colors"
+              className="w-full py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
               id="el-dg7hsd2y"
             >
               Start Pro Trial
@@ -201,7 +201,7 @@ const Pricing = () => {
           </div>
           {/* Enterprise Plan */}
           <div
-            className="bg-neutral-800 rounded-sm p-8 border border-neutral-700 hover:border-indigo-500 transition-colors animate__animated animate__fadeInUp"
+            className="bg-neutral-800 rounded-md p-8 border border-neutral-700 hover:border-indigo-500 transition-colors animate__animated animate__fadeInUp"
             style={{ animationDelay: '0.4s' }}
             id="el-qmk3ab8j"
           >
@@ -293,7 +293,7 @@ const Pricing = () => {
               </li>
             </ul>
             <button
-              className="w-full py-3 bg-neutral-700 text-white rounded-sm hover:bg-neutral-600 transition-colors"
+              className="w-full py-3 bg-neutral-700 text-white rounded-md hover:bg-neutral-600 transition-colors"
               id="el-r8nn8kma"
             >
               Contact Sales

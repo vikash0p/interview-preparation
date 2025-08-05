@@ -18,7 +18,7 @@ const JoinCommunity = () => {
         {JoinCommunityData.map((feature, index) => (
           <motion.div
             key={feature.id}
-            className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-sm hover:border-indigo-500 transition-all duration-300 space-y-2"
+            className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-md hover:border-indigo-500 transition-all duration-300 space-y-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
@@ -27,10 +27,10 @@ const JoinCommunity = () => {
               boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-md pointer-events-none" />
 
             <div
-              className={`w-14 h-14 ${feature.bgColor} rounded-sm flex items-center justify-center ${
+              className={`w-14 h-14 ${feature.bgColor} rounded-md flex items-center justify-center ${
                 feature.title === 'Live Events' ? 'text-green-400' : ''
               }`}
             >
@@ -67,7 +67,7 @@ const JoinCommunity = () => {
       {/* CTA */}
       <div className="mt-10 lg:mt-16 text-center">
         <motion.button
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-sm transition-all transform hover:scale-105"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md transition-all transform hover:scale-105"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}

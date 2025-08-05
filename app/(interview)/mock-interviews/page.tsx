@@ -1,5 +1,5 @@
 import { ReusableHeading } from '@/components/reusable-components/ReusableHeading';
-import ReusableInterviewCard from '@/components/utilsComponent/card-components/ReusableInterviewCard';
+import {ReusableInterviewCard} from '@/components/utilsComponent/card-components/ReusableInterviewCard';
 import { MOCK_INTERVIEWS_DATA } from '@/main/data/link/mockTechnologiesData';
 import React from 'react';
 

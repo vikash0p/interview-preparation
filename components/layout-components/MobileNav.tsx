@@ -18,7 +18,7 @@ export const MobileNav = () => {
             <Link
               key={index}
               href={item.href}
-              className={`flex flex-col items-center px-4 py-1 text-xs rounded-sm transition-colors ${
+              className={`flex flex-col items-center px-4 py-1 text-xs rounded-md transition-colors ${
                 isActive ? 'text-indigo-400' : 'text-gray-300 hover:text-white'
               }`}
               aria-label={item.ariaLabel}

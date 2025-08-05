@@ -169,7 +169,7 @@ export const SlugDiscussion = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-gray-100 p-6 rounded-sm">
+    <div className="bg-gray-900 text-gray-100 p-6 rounded-md">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Discussion ({comments.length})</h2>
 
@@ -178,7 +178,7 @@ export const SlugDiscussion = () => {
           <div className="flex gap-1">
             <button
               onClick={() => setSortBy('recent')}
-              className={`px-3 py-1 rounded-sm flex items-center gap-1 text-sm ${
+              className={`px-3 py-1 rounded-md flex items-center gap-1 text-sm ${
                 sortBy === 'recent' ? 'bg-indigo-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -187,7 +187,7 @@ export const SlugDiscussion = () => {
             </button>
             <button
               onClick={() => setSortBy('popular')}
-              className={`px-3 py-1 rounded-sm flex items-center gap-1 text-sm ${
+              className={`px-3 py-1 rounded-md flex items-center gap-1 text-sm ${
                 sortBy === 'popular' ? 'bg-indigo-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -199,9 +199,9 @@ export const SlugDiscussion = () => {
       </div>
 
       {/* New Comment Form */}
-      <div className="mb-8 bg-gray-800/50 p-4 rounded-sm border border-gray-700">
+      <div className="mb-8 bg-gray-800/50 p-4 rounded-md border border-gray-700">
         <div className="flex gap-3 mb-3">
-          <div className="bg-gray-700 border-2 border-dashed rounded-sm w-16 h-16 flex items-center justify-center">
+          <div className="bg-gray-700 border-2 border-dashed rounded-md w-16 h-16 flex items-center justify-center">
             <FaUserCircle className="text-3xl text-gray-500" />
           </div>
           <div className="flex-1">
@@ -214,14 +214,14 @@ export const SlugDiscussion = () => {
           value={newComment}
           onChange={e => setNewComment(e.target.value)}
           placeholder="What are your thoughts?"
-          className="w-full bg-gray-800 border border-gray-700 rounded-sm p-4 text-gray-200 mb-3 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full bg-gray-800 border border-gray-700 rounded-md p-4 text-gray-200 mb-3 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
 
         <div className="flex justify-end">
           <button
             onClick={handleAddComment}
             disabled={!newComment.trim()}
-            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-sm flex items-center gap-2"
+            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md flex items-center gap-2"
           >
             <FaRegPaperPlane />
             Post Comment
@@ -232,10 +232,10 @@ export const SlugDiscussion = () => {
       {/* Comments List */}
       <div className="space-y-6">
         {comments.map(comment => (
-          <div key={comment.id} className="bg-gray-800/30 rounded-sm border border-gray-700 p-4">
+          <div key={comment.id} className="bg-gray-800/30 rounded-md border border-gray-700 p-4">
             {/* Comment Header */}
             <div className="flex gap-3 mb-3">
-              <div className="bg-gray-700 border-2 border-dashed rounded-sm w-12 h-12 flex items-center justify-center">
+              <div className="bg-gray-700 border-2 border-dashed rounded-md w-12 h-12 flex items-center justify-center">
                 <FaUserCircle className="text-xl text-gray-500" />
               </div>
               <div className="flex-1">
@@ -255,18 +255,18 @@ export const SlugDiscussion = () => {
                 <textarea
                   value={editContent}
                   onChange={e => setEditContent(e.target.value)}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-sm p-3 text-gray-200 mb-2 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-md p-3 text-gray-200 mb-2 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <div className="flex gap-2">
                   <button
                     onClick={() => saveEdit(comment.id)}
-                    className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded-sm"
+                    className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded-md"
                   >
                     Save
                   </button>
                   <button
                     onClick={() => setEditingComment(null)}
-                    className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-sm"
+                    className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md"
                   >
                     Cancel
                   </button>
@@ -300,7 +300,7 @@ export const SlugDiscussion = () => {
                 <button className="text-gray-400 hover:text-gray-200 p-1">
                   <FaEllipsisH />
                 </button>
-                <div className="absolute right-0 mt-1 w-40 bg-gray-800 border border-gray-700 rounded-sm shadow-lg py-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-10">
+                <div className="absolute right-0 mt-1 w-40 bg-gray-800 border border-gray-700 rounded-md shadow-lg py-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-10">
                   <button
                     onClick={() => startEdit(comment.id, comment.content)}
                     className="flex items-center gap-2 w-full px-4 py-2 hover:bg-gray-700 text-sm"
@@ -326,19 +326,19 @@ export const SlugDiscussion = () => {
                   value={replyContent}
                   onChange={e => setReplyContent(e.target.value)}
                   placeholder={`Replying to ${comment.user}...`}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-sm p-3 text-gray-200 mb-2 min-h-[80px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full bg-gray-800 border border-gray-700 rounded-md p-3 text-gray-200 mb-2 min-h-[80px] focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <div className="flex gap-2">
                   <button
                     onClick={() => handleAddReply(comment.id)}
                     disabled={!replyContent.trim()}
-                    className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-sm text-sm"
+                    className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md text-sm"
                   >
                     Post Reply
                   </button>
                   <button
                     onClick={() => setReplyingTo(null)}
-                    className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-sm text-sm"
+                    className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-sm"
                   >
                     Cancel
                   </button>
@@ -352,7 +352,7 @@ export const SlugDiscussion = () => {
                 {comment.replies.map(reply => (
                   <div key={reply.id} className="pt-4">
                     <div className="flex gap-3 mb-2">
-                      <div className="bg-gray-700 border-2 border-dashed rounded-sm w-10 h-10 flex items-center justify-center">
+                      <div className="bg-gray-700 border-2 border-dashed rounded-md w-10 h-10 flex items-center justify-center">
                         <FaUserCircle className="text-lg text-gray-500" />
                       </div>
                       <div className="flex-1">

@@ -25,13 +25,13 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center  px-4">
-      <div className="bg-gray-800 p-6 rounded-sm shadow-md w-full max-w-md space-y-4">
+      <div className="bg-gray-800 p-6 rounded-md shadow-md w-full max-w-md space-y-4">
         <h1 className="text-2xl font-semibold text-center">Login</h1>
 
         <input
           type="email"
           placeholder="Email"
-          className="w-full px-4 py-2 border rounded-sm bg-gray-900"
+          className="w-full px-4 py-2 border rounded-md bg-gray-900"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
@@ -39,14 +39,14 @@ const Login = () => {
         <input
           type="text"
           placeholder="Password"
-          className="w-full px-4 py-2 border rounded-sm bg-gray-900"
+          className="w-full px-4 py-2 border rounded-md bg-gray-900"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
 
         <button
           onClick={handleLogin}
-          className="w-full bg-blue-600 text-white py-2 rounded-sm hover:bg-blue-700 disabled:bg-gray-400"
+          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400"
         >
           Login
         </button>

@@ -14,7 +14,7 @@ const MockInterviewRight = () => {
       </div>
 
       <motion.button
-        className="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-sm transition-colors mt-8 font-medium flex items-center justify-center gap-2"
+        className="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md transition-colors mt-8 font-medium flex items-center justify-center gap-2"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >

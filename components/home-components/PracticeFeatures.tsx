@@ -21,7 +21,7 @@ const PracticeFeatures = () => {
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full mt-6 bg-gray-900  py-4 rounded-sm hover:bg-gray-800 transition-colors flex items-center justify-center group"
+        className="w-full mt-6 bg-gray-900  py-4 rounded-md hover:bg-gray-800 transition-colors flex items-center justify-center group"
       >
         <Link href={'/coding/ReactJS'} className="flex items-center" passHref>
           <span className="text-gray-400">View More Practice Questions</span>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TechnologySkeleton = () => {
   return (
-    <article className="w-full max-w-sm h-[420px] flex flex-col justify-between bg-gray-900/20 border border-gray-700 rounded-sm shadow-sm animate-pulse p-4">
+    <article className="w-full max-w-sm h-[420px] flex flex-col justify-between bg-gray-900/20 border border-gray-700 rounded-md shadow-sm animate-pulse p-4">
       <div className="flex justify-between mb-4">
         <div className="h-6 w-24 rounded-full bg-white/10"></div>
         <div className="h-6 w-20 rounded-full bg-white/10"></div>

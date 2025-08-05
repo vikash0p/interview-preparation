@@ -1,9 +1,22 @@
 'use client';
 import React, { useTransition } from 'react';
 import { DifficultyRating } from '@/components/practical-interview-components/DifficultyRating';
-import {BiShare,FiClock,FiEye,FiHeart,FiBookmark,FiShare2,FiCode,FiZap,FaSpinner} from '@/main/icons/practical-interview.icons';
+import {
+  BiShare,
+  FiClock,
+  FiEye,
+  FiHeart,
+  FiBookmark,
+  FiShare2,
+  FiCode,
+  FiZap,
+  FaSpinner,
+} from '@/main/icons/react-global-icons';
 import { IPracticalInterview } from '@/main/types/practical-interview.types';
-import { getPopularityUtils, getDifficultyUtils} from '@/components/practical-interview-components/PracticalInterviewUtils';
+import {
+  getPopularityUtils,
+  getDifficultyUtils,
+} from '@/components/practical-interview-components/PracticalInterviewUtils';
 import { useRouter } from 'next/navigation';
 
 export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }> = ({ interview }) => {
@@ -112,7 +125,7 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
             disabled={isPending}
             aria-label={`Solve ${interview.title} interview`}
             title={`Solve ${interview.title} interview`}
-            className={`relative inline-flex items-center justify-center gap-2 px-5 py-2 text-sm font-medium rounded-sm
+            className={`relative inline-flex items-center justify-center gap-2 px-5 py-2 text-sm font-medium rounded-md
     bg-indigo-600 text-white hover:bg-indigo-500 transition-all
     ${isPending ? 'opacity-70 cursor-not-allowed' : ''}
   `}
@@ -132,14 +145,14 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
 
           <div className="flex gap-2">
             <button
-              className="p-2 rounded-sm hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors"
+              className="p-2 rounded-md hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors"
               aria-label="Bookmark this interview"
               title="Bookmark"
             >
               <FiBookmark className="w-5 h-5" />
             </button>
             <button
-              className="p-2 rounded-sm hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors"
+              className="p-2 rounded-md hover:bg-white/10 text-gray-400 hover:text-indigo-400 transition-colors"
               aria-label="Share this interview"
               title="Share"
             >

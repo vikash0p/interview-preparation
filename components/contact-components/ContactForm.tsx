@@ -29,7 +29,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.4 }}
-      className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-sm shadow-2xl border border-gray-700"
+      className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-md shadow-2xl border border-gray-700"
     >
       <h2 className="text-2xl font-bold mb-8 text-indigo-400">Send Your Inquiry</h2>
       {submitted ? (
@@ -46,7 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
               type="text"
               name="name"
               required
-              className="w-full px-4 py-3 bg-gray-700 rounded-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               value={formData.name}
               onChange={handleChange}
             />
@@ -59,7 +59,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 bg-gray-700 rounded-sm focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-3 bg-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -69,7 +69,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
               <input
                 type="tel"
                 name="phone"
-                className="w-full px-4 py-3 bg-gray-700 rounded-sm focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-3 bg-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -82,7 +82,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
               type="text"
               name="subject"
               required
-              className="w-full px-4 py-3 bg-gray-700 rounded-sm focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 bg-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500"
               value={formData.subject}
               onChange={handleChange}
             />
@@ -94,7 +94,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
               name="message"
               required
               rows={5}
-              className="w-full px-4 py-3 bg-gray-700 rounded-sm focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 bg-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500"
               value={formData.message}
               onChange={handleChange}
             />
@@ -103,7 +103,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, setFormData, submit
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 bg-indigo-500 text-gray-900 font-bold rounded-sm hover:bg-indigo-600 transition-colors flex items-center justify-center gap-2"
+            className="w-full py-4 bg-indigo-500 text-gray-900 font-bold rounded-md hover:bg-indigo-600 transition-colors flex items-center justify-center gap-2"
           >
             {isLoading ? (
               <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900" />

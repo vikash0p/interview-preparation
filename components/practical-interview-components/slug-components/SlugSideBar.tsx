@@ -1,14 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaLightbulb, FaExclamationTriangle, FaCopy, MdTipsAndUpdates } from '@/main/icons/practical-interview.icons';
+import { FaLightbulb, FaExclamationTriangle, FaCopy, MdTipsAndUpdates } from '@/main/icons/react-global-icons';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
 import { SlugSideBarHeader } from './SlugSideBarHeader';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { ExpandableSectionButton } from '@/components/utilsComponent/button-components/ExpandableSectionButton';
-import { collapseVariants,listItemVariant } from "@/main/animation/practical-interview.animation";
-
-
+import { collapseVariants, listItemVariant } from '@/main/animation/practical-interview.animation';
 
 const expandData = {
   hints: false,
@@ -31,7 +29,7 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
       <SlugSideBarHeader data={data} />
 
       {/* Hints Section */}
-      <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
+      <div className="bg-gray-800/50 rounded-md border border-gray-800 overflow-hidden">
         <ExpandableSectionButton
           onClick={() => toggleSection('hints')}
           expanded={expandedSections.hints}
@@ -91,7 +89,7 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
       </div>
 
       {/* Mistakes Section */}
-      <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
+      <div className="bg-gray-800/50 rounded-md border border-gray-800 overflow-hidden">
         <ExpandableSectionButton
           onClick={() => toggleSection('mistakes')}
           expanded={expandedSections.mistakes}
@@ -131,7 +129,7 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
 
       {/* Challenges Section */}
       {data.challenges && (
-        <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
+        <div className="bg-gray-800/50 rounded-md border border-gray-800 overflow-hidden">
           <ExpandableSectionButton
             onClick={() => toggleSection('challenges')}
             expanded={expandedSections.challenges}

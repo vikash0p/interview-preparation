@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaExclamationTriangle, FaRedo, FaHome, FaHeadset } from '@/main/icons/practical-interview.icons';
+import { FaExclamationTriangle, FaRedo, FaHome, FaHeadset } from '@/main/icons/react-global-icons';
 
 export const SlugError = () => {
   const errorCode = 'ERR_404';

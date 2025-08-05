@@ -2,9 +2,9 @@
 import React, { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { IPracticalCardProps } from '@/main/types/practical-interview.types';
-import { FaLock, FaArrowRight,FaSpinner } from '@/main/icons/practical-interview.icons';
+import { FaLock, FaArrowRight, FaSpinner } from '@/main/icons/react-global-icons';
 
-const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href }) => {
+export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href }) => {
   const { slug, icon, label, actionLabel, comingSoon } = technology;
   const router = useRouter();
 
@@ -20,7 +20,7 @@ const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href
   return (
     <div
       onClick={handleClick}
-      className={`group relative overflow-hidden w-full max-w-sm p-6 rounded-sm transition-all duration-300
+      className={`group relative overflow-hidden w-full max-w-sm p-6 rounded-md transition-all duration-300
         ${
           comingSoon
             ? 'opacity-80 cursor-not-allowed border-2 border-yellow-400/30'
@@ -39,7 +39,7 @@ const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href
 
       {comingSoon ? (
         <div className="flex gap-5 items-center relative z-10 opacity-70">
-          <div className="p-3 rounded-sm bg-gray-700/50 transition-all duration-300">
+          <div className="p-3 rounded-md bg-gray-700/50 transition-all duration-300">
             <div className="text-3xl text-gray-500 transition-colors duration-300">
               <FaLock className="text-yellow-400" />
             </div>
@@ -53,7 +53,7 @@ const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href
         </div>
       ) : (
         <div className="flex gap-5 items-center relative z-10">
-          <div className="p-3 rounded-sm bg-black/30 group-hover:bg-indigo-500/20 transition-all duration-300">
+          <div className="p-3 rounded-md bg-black/30 group-hover:bg-indigo-500/20 transition-all duration-300">
             <div className="text-3xl text-gray-300 group-hover:text-indigo-300 transition-colors duration-300">
               {icon}
             </div>
@@ -79,5 +79,3 @@ const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href
     </div>
   );
 };
-
-export default ReusableInterviewCard;

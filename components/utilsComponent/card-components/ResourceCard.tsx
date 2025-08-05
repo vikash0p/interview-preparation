@@ -11,7 +11,7 @@ interface ResourceCardProps {
 const ResourceCard: React.FC<ResourceCardProps> = ({ resource, animationDelay }) => {
   return (
     <motion.div
-      className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 rounded-sm p-4 hover:shadow-xl shadow-2xl hover:border-indigo-500 transition-all duration-300"
+      className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 rounded-md p-4 hover:shadow-xl shadow-2xl hover:border-indigo-500 transition-all duration-300"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{
@@ -22,10 +22,10 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, animationDelay })
       transition={{ delay: animationDelay }}
     >
       {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-md pointer-events-none" />
 
       <div className="mb-3 relative z-10">
-        <div className={`w-12 h-12 bg-${resource.color}-100 rounded-sm flex items-center justify-center mb-2`}>
+        <div className={`w-12 h-12 bg-${resource.color}-100 rounded-md flex items-center justify-center mb-2`}>
           {resource.icon}
         </div>
         <h3 className="text-xl font-semibold mb-2 ">{resource.title}</h3>

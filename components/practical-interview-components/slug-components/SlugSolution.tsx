@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { FaCopy, FaLightbulb } from '@/main/icons/practical-interview.icons';
+import { FaCopy, FaLightbulb } from '@/main/icons/react-global-icons';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
 
@@ -9,7 +9,7 @@ export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
 
   return (
     <div className="space-y-8">
-      <div className="p-5 bg-indigo-500/10 rounded-sm border border-indigo-500/30">
+      <div className="p-5 bg-indigo-500/10 rounded-md border border-indigo-500/30">
         <div className="flex items-start gap-4">
           <FaLightbulb className="text-indigo-400 text-xl mt-1 flex-shrink-0" />
           <div>
@@ -26,7 +26,7 @@ export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
         <div className="text-center py-12">
           <button
             onClick={() => setShowSolution(true)}
-            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-sm font-medium transition-colors shadow-lg hover:shadow-indigo-500/20"
+            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium transition-colors shadow-lg hover:shadow-indigo-500/20"
           >
             Reveal Solution
           </button>
@@ -39,7 +39,7 @@ export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
               <h2 className="text-xl font-semibold text-gray-300">Solution Code</h2>
               <button
                 onClick={() => copyToClipboard(data.starterCode)}
-                className="flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-sm transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
               >
                 <FaCopy /> Copy
               </button>

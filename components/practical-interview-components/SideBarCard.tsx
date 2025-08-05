@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { listItemVariants, activeIndicatorVariants } from '../../main/animation/practical-interview.animation';
 import { ISideBarCardProps } from '@/main/types/practical-interview.types';
 import { useSidebarStore } from '@/main/zustand/store/useSidebarStore';
-import { FaSpinner } from '@/main/icons/practical-interview.icons';
+import { FaSpinner } from '@/main/icons/react-global-icons';
 
 export const SideBarCard: React.FC<ISideBarCardProps> = ({ slug, index, isActive, onClick, setRef }) => {
   const { isSidebarOpen } = useSidebarStore();
@@ -43,7 +43,7 @@ export const SideBarCard: React.FC<ISideBarCardProps> = ({ slug, index, isActive
         {isActive && (
           <motion.div
             className={
-              `absolute left-4 w-[calc(100%-1rem)] h-full bg-indigo-500/30 rounded-sm ` +
+              `absolute left-4 w-[calc(100%-1rem)] h-full bg-indigo-500/30 rounded-md ` +
               (!isSidebarOpen ? 'hidden' : '')
             }
             variants={activeIndicatorVariants}

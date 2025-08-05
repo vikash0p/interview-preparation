@@ -56,10 +56,10 @@ export default function NotFound() {
             <Link href="/" className="group">
               <motion.div
                 whileHover={{ y: -5 }}
-                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-indigo-400 transition-all"
+                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-md hover:border-indigo-400 transition-all"
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-indigo-500/20 rounded-sm text-indigo-400 group-hover:bg-indigo-500/30 transition">
+                  <div className="p-3 bg-indigo-500/20 rounded-md text-indigo-400 group-hover:bg-indigo-500/30 transition">
                     <FaHome className="text-xl" />
                   </div>
                   <div className="text-left">
@@ -73,10 +73,10 @@ export default function NotFound() {
             <Link href="/practical-interviews" className="group">
               <motion.div
                 whileHover={{ y: -5 }}
-                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-blue-400 transition-all"
+                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-md hover:border-blue-400 transition-all"
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-blue-500/20 rounded-sm text-blue-400 group-hover:bg-blue-500/30 transition">
+                  <div className="p-3 bg-blue-500/20 rounded-md text-blue-400 group-hover:bg-blue-500/30 transition">
                     <FaSearch className="text-xl" />
                   </div>
                   <div className="text-left">
@@ -90,10 +90,10 @@ export default function NotFound() {
             <Link href="/resources" className="group">
               <motion.div
                 whileHover={{ y: -5 }}
-                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-sm hover:border-purple-400 transition-all"
+                className="h-full p-6 bg-gray-800/50 border border-gray-700 rounded-md hover:border-purple-400 transition-all"
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-purple-500/20 rounded-sm text-purple-400 group-hover:bg-purple-500/30 transition">
+                  <div className="p-3 bg-purple-500/20 rounded-md text-purple-400 group-hover:bg-purple-500/30 transition">
                     <FaBook className="text-xl" />
                   </div>
                   <div className="text-left">

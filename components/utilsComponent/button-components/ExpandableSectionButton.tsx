@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaChevronDown, FaChevronUp } from '@/main/icons/practical-interview.icons';
+import { FaChevronDown, FaChevronUp } from '@/main/icons/react-global-icons';
 import { motion } from 'framer-motion';
 
 interface ExpandableSectionButtonProps {

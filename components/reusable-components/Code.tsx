@@ -14,7 +14,7 @@ const Code = ({ data, toggleOpen, open }: { data: string; open: boolean; toggleO
 
   return (
     <div className="w-full mx-auto max-w-4xl group">
-      <div className="bg-[#0d1117] rounded-sm border   overflow-hidden custom-scrollbar">
+      <div className="bg-[#0d1117] rounded-md border   overflow-hidden custom-scrollbar">
         {/* Header with controls */}
         <div className="flex items-center justify-between px-4 py-3 bg-[#181d28]">
           <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ const Code = ({ data, toggleOpen, open }: { data: string; open: boolean; toggleO
           <div className="flex items-center gap-2">
             <button
               onClick={toggleOpen}
-              className="flex items-center gap-1.5 text-neutral-300 hover:text-white px-3 py-1.5 rounded-sm transition-colors duration-200"
+              className="flex items-center gap-1.5 text-neutral-300 hover:text-white px-3 py-1.5 rounded-md transition-colors duration-200"
             >
               {open ? <FiChevronUp /> : <FiChevronDown />}
               <span className="text-sm">{open ? 'Collapse' : 'Expand'}</span>
@@ -36,7 +36,7 @@ const Code = ({ data, toggleOpen, open }: { data: string; open: boolean; toggleO
 
             <button
               onClick={handleCopy}
-              className="flex items-center gap-1.5 text-neutral-300 hover:text-white px-3 py-1.5 rounded-sm transition-colors duration-200"
+              className="flex items-center gap-1.5 text-neutral-300 hover:text-white px-3 py-1.5 rounded-md transition-colors duration-200"
               aria-label="Copy code"
             >
               {copied ? (

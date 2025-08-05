@@ -61,7 +61,7 @@ export default function RegisterPage() {
               name="name"
               value={formState.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 rounded-sm bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="John Doe"
             />
           </div>
@@ -76,7 +76,7 @@ export default function RegisterPage() {
               name="email"
               value={formState.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 rounded-sm bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="you@example.com"
             />
           </div>
@@ -91,7 +91,7 @@ export default function RegisterPage() {
               name="password"
               value={formState.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 rounded-sm bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="••••••••"
             />
           </div>
@@ -106,7 +106,7 @@ export default function RegisterPage() {
               name="avatar"
               value={formState.avatar}
               onChange={handleChange}
-              className="w-full px-4 py-2 rounded-sm bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="https://example.com/avatar.jpg"
             />
           </div>
@@ -116,7 +116,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className={`w-full bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-semibold py-2 px-4 rounded-sm flex items-center justify-center ${
+            className={`w-full bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center ${
               isLoading ? 'opacity-75 cursor-not-allowed' : ''
             }`}
           >

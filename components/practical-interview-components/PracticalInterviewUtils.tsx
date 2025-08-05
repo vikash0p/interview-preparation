@@ -1,4 +1,4 @@
-import { FiTrendingUp, FiActivity, FiTrendingDown } from '@/main/icons/practical-interview.icons';
+import { FiTrendingUp, FiActivity, FiTrendingDown } from '@/main/icons/react-global-icons';
 
 export const getPopularityUtils = (popularity: string) => {
   switch (popularity) {

@@ -51,7 +51,7 @@ const ModelOne: React.FC<ModelOneProps> = ({ open, toggleOpen, data, heading }) 
     >
       {/* Modal Container */}
       <div
-        className={`relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 max-w-6xl w-full mx-4 rounded-sm shadow-2xl transform transition-all duration-300 ${
+        className={`relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 max-w-6xl w-full mx-4 rounded-md shadow-2xl transform transition-all duration-300 ${
           open ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         onClick={e => e.stopPropagation()}
@@ -65,18 +65,18 @@ const ModelOne: React.FC<ModelOneProps> = ({ open, toggleOpen, data, heading }) 
           <div className="flex items-center gap-4">
             <button
               onClick={copyToClipboard}
-              className="p-2 hover:bg-gray-700/30 rounded-sm group relative"
+              className="p-2 hover:bg-gray-700/30 rounded-md group relative"
               aria-label="Copy code"
             >
               <AiOutlineCopy className="text-xl text-gray-300 hover:text-white transition-colors" />
               {copied && (
-                <span className="absolute -top-8 right-0 bg-gray-700 px-2 py-1 rounded-sm text-sm flex items-center gap-1">
+                <span className="absolute -top-8 right-0 bg-gray-700 px-2 py-1 rounded-md text-sm flex items-center gap-1">
                   <FiCheckCircle className="text-emerald-400" />
                   Copied!
                 </span>
               )}
             </button>
-            <button onClick={toggleOpen} className="p-2 hover:bg-gray-700/30 rounded-sm" aria-label="Close modal">
+            <button onClick={toggleOpen} className="p-2 hover:bg-gray-700/30 rounded-md" aria-label="Close modal">
               <AiOutlineClose className="text-xl text-gray-300 hover:text-white transition-colors" />
             </button>
           </div>

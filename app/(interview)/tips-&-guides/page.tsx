@@ -11,7 +11,7 @@ export default function TipsPage() {
             <Link
               key={i}
               href={`/tips/${tip.slug}`}
-              className="bg-gray-800 border border-gray-700 rounded-sm p-6 hover:border-cyan-500 transition"
+              className="bg-gray-800 border border-gray-700 rounded-md p-6 hover:border-cyan-500 transition"
             >
               <div className="mb-4">{tip.icon}</div>
               <h2 className="text-xl font-semibold mb-2">{tip.title}</h2>
