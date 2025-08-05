@@ -12,18 +12,18 @@ const PracticalInterviews = () => {
       />
 
       <div className="flex flex-wrap justify-center gap-14">
-        {PRACTICAL_INTERVIEWS_DATA.map(value => {
+        {PRACTICAL_INTERVIEWS_DATA.map(practical => {
           return (
-            <section className="bg-gray-950/60 p-6 pb-12 rounded-2xl space-y-10 w-full" key={value.id}>
+            <section className="bg-gray-950/60 p-6 pb-12 rounded-2xl space-y-10 w-full" key={practical.id}>
               <div className="text-center flex flex-col items-center gap-4">
-                <div className="text-3xl bg-white/10 p-4 rounded-full">{value.icon} </div>
+                <div className="text-3xl bg-white/10 p-4 rounded-full">{practical.icon} </div>
                 <h2 className="text-3xl font-medium font-mono bg-clip-text  text-gray-300  pb-2 uppercase">
-                  {value.actionLabel}
+                  {practical.actionLabel}
                 </h2>
                 <div className="w-48 h-1 bg-gray-400 mx-auto rounded-full" />
               </div>
               <div className="flex flex-wrap gap-6 justify-center">
-                {value.technologies.map(technology => {
+                {practical.technologies.map(technology => {
                   return (
                     <ReusableInterviewCard
                       key={technology.id}

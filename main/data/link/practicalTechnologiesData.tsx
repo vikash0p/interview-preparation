@@ -1,42 +1,8 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaAngular,
-  FaVuejs,
-  FaNodeJs,
-  FaPhp,
-  FaPython,
-  FaJava,
-  FaGitAlt,
-  FaDocker,
-  FaAws,
-  FaDatabase,
-  FaMobileAlt,
-  FaCogs,
-  FaTools,
-} from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiSvelte,
-  SiNextdotjs,
-  SiDjango,
-  SiRubyonrails,
-  SiSpring,
-  SiDotnet,
-  SiPostgresql,
-  SiMongodb,
-  SiMysql,
-  SiRedis,
-  SiGraphql,
-  SiFlutter,
-  SiKotlin,
-  SiSwift,
-  SiGooglecloud,
-} from 'react-icons/si';
-import { FaCode, FaServer, FaBrain, FaNetworkWired } from 'react-icons/fa6';
 import { ReactNode } from 'react';
+
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools } from '@/main/icons/react-global-icons';
+import { SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql, SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud } from '@/main/icons/react-global-icons';
+import { FaCode, FaServer, FaBrain, FaNetworkWired } from '@/main/icons/react-global-icons';
 
 export interface TechnologyItem {
   id: string;
