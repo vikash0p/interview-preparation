@@ -2,7 +2,7 @@ import React from 'react';
 import { ISlugDataProps } from '../../../main/types/practical-interview.types';
 import { FaCheck } from '@/main/icons/practical-interview.icons';
 
-const SlugSideBarHeader: React.FC<ISlugDataProps> = ({ data }) => {
+export const SlugSideBarHeader: React.FC<ISlugDataProps> = ({ data }) => {
   return (
     <div className="space-y-6">
       <div className="bg-gray-800/50 p-6 rounded-sm border border-gray-800">
@@ -28,7 +28,7 @@ const SlugSideBarHeader: React.FC<ISlugDataProps> = ({ data }) => {
         <h3 className="font-semibold text-lg text-white mb-4">Concepts Tested</h3>
         <div className="flex flex-wrap gap-2">
           {data.conceptsTested?.map((concept, idx) => (
-            <span key={idx} className="px-3 py-1.5 bg-indigo-500/10 text-gray-300 rounded-sm text-sm">
+            <span key={idx} className="px-3 py-1.5 bg-black/30 text-gray-300 rounded-sm text-sm">
               {concept}
             </span>
           ))}
@@ -37,5 +37,3 @@ const SlugSideBarHeader: React.FC<ISlugDataProps> = ({ data }) => {
     </div>
   );
 };
-
-export default SlugSideBarHeader;

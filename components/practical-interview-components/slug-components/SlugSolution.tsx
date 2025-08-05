@@ -46,7 +46,7 @@ export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
             </div>
             <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
               <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
-                <code>{data.starterCode}</code>
+                <code>{data.solutionCode}</code>
               </pre>
             </div>
           </section>

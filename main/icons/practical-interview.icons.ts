@@ -18,6 +18,7 @@ export {
   FaFire,
   FaChartLine,
   FaHistory,
+  FaSpinner,
 } from 'react-icons/fa';
 export { BiShare } from 'react-icons/bi';
 export {

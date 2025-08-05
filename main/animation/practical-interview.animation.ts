@@ -56,23 +56,37 @@ export const contentVariants = {
   }),
 };
 
-export const sectionVariants = {
-  collapsed: {
-    height: 0,
-    opacity: 0,
-    overflow: 'hidden',
-    transition: {
-      height: { duration: 0.2, ease: 'easeInOut' },
-      opacity: { duration: 0.2, ease: 'easeInOut' },
-    },
-  },
-  expanded: {
-    height: 'auto',
+export const collapseVariants = {
+  initial: { opacity: 0, height: 0 },
+  animate: {
     opacity: 1,
-    overflow: 'visible',
+    height: 'auto',
     transition: {
-      height: { duration: 0.2, ease: 'easeInOut' },
-      opacity: { duration: 0.2, ease: 'easeInOut' },
+      opacity: { duration: 0.1 },
+      height: { duration: 0.1 },
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
+  exit: {
+    opacity: 0,
+    height: 0,
+    transition: {
+      opacity: { duration: 0.1 },
+      height: { duration: 0.1 },
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+};
+
+export const listItemVariant = {
+  hidden: { opacity: 0, y: -8 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.05,
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  }),
 };

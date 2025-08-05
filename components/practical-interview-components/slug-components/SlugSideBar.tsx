@@ -1,23 +1,23 @@
 'use client';
 import React, { useState } from 'react';
-import { FaLightbulb, FaExclamationTriangle, FaChevronDown, FaChevronUp, FaCopy,MdTipsAndUpdates} from '@/main/icons/practical-interview.icons';
-
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { copyToClipboard } from '@/main/utils/copyToClipboard';
-import SlugSideBarHeader from './SlugSideBarHeader';
-import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sectionVariants } from '@/main/animation/practical-interview.animation';
+import { FaLightbulb, FaExclamationTriangle, FaCopy, MdTipsAndUpdates } from '@/main/icons/practical-interview.icons';
+import { copyToClipboard } from '@/main/utils/copyToClipboard';
+import { SlugSideBarHeader } from './SlugSideBarHeader';
+import { ISlugDataProps } from '@/main/types/practical-interview.types';
+import { ExpandableSectionButton } from '@/components/utilsComponent/button-components/ExpandableSectionButton';
+import { collapseVariants,listItemVariant } from "@/main/animation/practical-interview.animation";
 
-const expendData = {
+
+
+const expandData = {
   hints: false,
   mistakes: false,
   challenges: false,
 };
 
 const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(expendData);
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(expandData);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => ({
@@ -30,33 +30,34 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
     <div className="lg:col-span-1 space-y-6">
       <SlugSideBarHeader data={data} />
 
-      {/* Hints */}
+      {/* Hints Section */}
       <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
-        <button
-          className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/30 transition-transform duration-500 ease-in-out"
+        <ExpandableSectionButton
           onClick={() => toggleSection('hints')}
-        >
-          <h3 className="font-semibold text-lg text-white flex items-center">
-            <div className="w-6 h-6 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3">
-              <FaLightbulb className="text-yellow-400 text-xs" />
-            </div>
-            Hints
-          </h3>
-          {expandedSections.hints ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
+          expanded={expandedSections.hints}
+          icon={<FaLightbulb className="text-yellow-400 text-xs bg-yellow-500/20 w-6 h-6 rounded-full p-1" />}
+          title="Hints"
+        />
 
         <AnimatePresence initial={false}>
           {expandedSections.hints && (
             <motion.div
-              variants={sectionVariants}
-              initial="collapsed"
-              animate="expanded"
-              exit="collapsed"
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="px-6 pb-6 pt-2 space-y-4"
+              key="hints"
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={collapseVariants}
+              className="px-6 pb-6 pt-2 space-y-4 overflow-hidden"
             >
               {data.hints?.map((hint, idx) => (
-                <div key={idx} className="group">
+                <motion.div
+                  key={idx}
+                  custom={idx}
+                  initial="hidden"
+                  animate="visible"
+                  variants={listItemVariant}
+                  className="group"
+                >
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 mt-1">
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-700 text-xs font-medium">
@@ -73,95 +74,88 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
                           >
                             <FaCopy />
                           </button>
-                          <SyntaxHighlighter
-                            language="javascript"
-                            style={a11yDark}
-                            customStyle={{
-                              margin: 0,
-                              borderRadius: '0.5rem',
-                              background: '#1e1e2d',
-                              fontSize: '13px',
-                              padding: '1rem',
-                            }}
-                          >
-                            {hint.codeSnippet}
-                          </SyntaxHighlighter>
+                          <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
+                            <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
+                              <code>{hint.codeSnippet}</code>
+                            </pre>
+                          </div>
                         </div>
                       )}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      {/* Mistakes */}
+      {/* Mistakes Section */}
       <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
-        <button
-          className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/30 transition-colors"
+        <ExpandableSectionButton
           onClick={() => toggleSection('mistakes')}
-        >
-          <h3 className="font-semibold text-lg text-white flex items-center">
-            <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mr-3">
-              <FaExclamationTriangle className="text-red-400 text-xs" />
-            </div>
-            Common Mistakes
-          </h3>
-          {expandedSections.mistakes ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
+          expanded={expandedSections.mistakes}
+          icon={<FaExclamationTriangle className="text-red-400 text-xs bg-red-500/20 w-6 h-6 rounded-full p-1" />}
+          title="Common Mistakes"
+        />
 
         <AnimatePresence initial={false}>
           {expandedSections.mistakes && (
             <motion.div
-              variants={sectionVariants}
-              initial="collapsed"
-              animate="expanded"
-              exit="collapsed"
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="px-6 pb-6 pt-2 space-y-3"
+              key="mistakes"
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={collapseVariants}
+              className="px-6 pb-6 pt-2 space-y-3 overflow-hidden"
             >
               {data.commonMistakes?.map((mistake, idx) => (
-                <div key={idx} className="flex items-start">
+                <motion.div
+                  key={idx}
+                  custom={idx}
+                  initial="hidden"
+                  animate="visible"
+                  variants={listItemVariant}
+                  className="flex items-start"
+                >
                   <div className="flex-shrink-0 mt-1 mr-3">
                     <div className="w-2 h-2 rounded-full bg-red-400"></div>
                   </div>
                   <span className="text-gray-300">{mistake}</span>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      {/* Challenge */}
+      {/* Challenges Section */}
       {data.challenges && (
         <div className="bg-gray-800/50 rounded-sm border border-gray-800 overflow-hidden">
-          <button
-            className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/30 transition-colors"
+          <ExpandableSectionButton
             onClick={() => toggleSection('challenges')}
-          >
-            <h3 className="font-semibold text-lg text-white flex items-center">
-              <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
-                <MdTipsAndUpdates className="text-purple-400 text-xs" />
-              </div>
-              Extra Challenge
-            </h3>
-            {expandedSections.challenges ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
+            expanded={expandedSections.challenges}
+            icon={<MdTipsAndUpdates className="text-purple-400 text-xs bg-purple-500/20 w-6 h-6 rounded-full p-1" />}
+            title="Extra Challenge"
+          />
 
           <AnimatePresence initial={false}>
             {expandedSections.challenges && (
               <motion.div
-                variants={sectionVariants}
-                initial="collapsed"
-                animate="expanded"
-                exit="collapsed"
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="px-6 pb-6 pt-2"
+                key="challenges"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={collapseVariants}
+                className="px-6 pb-6 pt-2 overflow-hidden"
               >
-                <p className="text-gray-300">{data.challenges}</p>
+                <motion.p
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+                  className="text-gray-300"
+                >
+                  {data.challenges}
+                </motion.p>
               </motion.div>
             )}
           </AnimatePresence>

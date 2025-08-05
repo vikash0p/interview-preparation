@@ -1,21 +1,9 @@
 'use client';
 import React, { useTransition } from 'react';
 import { DifficultyRating } from '@/components/practical-interview-components/DifficultyRating';
-import {
-  BiShare,
-  FiClock,
-  FiEye,
-  FiHeart,
-  FiBookmark,
-  FiShare2,
-  FiCode,
-  FiZap,
-} from '@/main/icons/practical-interview.icons';
+import {BiShare,FiClock,FiEye,FiHeart,FiBookmark,FiShare2,FiCode,FiZap,FaSpinner} from '@/main/icons/practical-interview.icons';
 import { IPracticalInterview } from '@/main/types/practical-interview.types';
-import {
-  getPopularityUtils,
-  getDifficultyUtils,
-} from '@/components/practical-interview-components/PracticalInterviewUtils';
+import { getPopularityUtils, getDifficultyUtils} from '@/components/practical-interview-components/PracticalInterviewUtils';
 import { useRouter } from 'next/navigation';
 
 export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }> = ({ interview }) => {
@@ -131,12 +119,10 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
           >
             {isPending ? (
               <>
-                {/* Invisible text preserves width/height */}
                 <span className="invisible pointer-events-none">Solve This Challenge</span>
 
-                {/* Absolutely centered spinner */}
                 <span className="absolute inset-0 flex items-center justify-center">
-                  <span className="w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin" />
+                  <FaSpinner className="w-4 h-4 text-white animate-spin" />
                 </span>
               </>
             ) : (

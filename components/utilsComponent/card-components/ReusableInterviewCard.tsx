@@ -2,7 +2,7 @@
 import React, { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { IPracticalCardProps } from '@/main/types/practical-interview.types';
-import { FaLock, FaArrowRight } from '@/main/icons/practical-interview.icons';
+import { FaLock, FaArrowRight,FaSpinner } from '@/main/icons/practical-interview.icons';
 
 const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href }) => {
   const { slug, icon, label, actionLabel, comingSoon } = technology;
@@ -32,7 +32,8 @@ const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href
       {/* Loading spinner */}
       {isPending && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-20">
-          <div className="w-8 h-8 border-4 border-t-transparent border-white rounded-full animate-spin" />
+          {/* <div className="w-8 h-8 border-4 border-t-transparent border-white rounded-full animate-spin" /> */}
+          <FaSpinner className="w-8 h-8 text-white animate-spin" />
         </div>
       )}
 
