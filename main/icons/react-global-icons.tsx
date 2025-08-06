@@ -14,6 +14,6 @@ export { FiChevronDown } from 'react-icons/fi';
 
 export { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools, FaUsers } from 'react-icons/fa';
 
-export {SiTypescript,SiSvelte,SiNextdotjs,SiDjango,SiRubyonrails,SiSpring,SiDotnet,SiPostgresql,SiMongodb,SiMysql,SiRedis,SiGraphql,SiFlutter, SiKotlin, SiSwift,SiGooglecloud,} from 'react-icons/si';
+export { SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql, SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud, SiExpress } from 'react-icons/si';
 
 export { FaCode, FaServer, FaBrain, FaNetworkWired } from 'react-icons/fa6';

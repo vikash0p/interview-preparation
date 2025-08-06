@@ -1,4 +1,3 @@
-// src/components/practical-interview/PracticalInterviewContainer.tsx
 'use client';
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,7 +24,7 @@ const PracticalInterviewContainer: React.FC = () => {
 
   return (
     <div className="">
-      <TechnologyHeader />
+      {interviews.length > 18 && <TechnologyHeader />}
 
       <AnimatePresence mode="wait">
         <motion.div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full p-4" variants={motionVariants.container} initial="hidden" animate="visible" exit="exit" key={`${technology}-${category}-${difficulty}`}>
