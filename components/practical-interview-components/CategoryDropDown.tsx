@@ -28,7 +28,7 @@ export const CategoryDropDown = () => {
   return (
     <div className="relative inline-block mr-2 mb-2">
       <motion.div animate={open ? 'open' : 'closed'}>
-        <button onClick={() => setOpen(pv => !pv)} className="flex items-center gap-2 px-5 py-2 rounded-md text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors">
+        <button onClick={() => setOpen(pv => !pv)} className="flex items-center gap-2 px-5 py-2 rounded-md text-sm text-white bg-indigo-600 hover:bg-indigo-500 transition-colors">
           <span>{currentCategory ? `Category: ${currentCategory}` : 'Filter by Category'}</span>
           <motion.span variants={dropdownAnimation.icon}>
             <FiChevronDown />

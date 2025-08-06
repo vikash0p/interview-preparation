@@ -24,11 +24,11 @@ const PracticalInterviewContainer: React.FC = () => {
   const interviews = data?.data ?? [];
 
   return (
-    <div className="p-4">
+    <div className="">
       <TechnologyHeader />
 
       <AnimatePresence mode="wait">
-        <motion.div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full" variants={motionVariants.container} initial="hidden" animate="visible" exit="exit" key={`${technology}-${category}-${difficulty}`}>
+        <motion.div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full p-4" variants={motionVariants.container} initial="hidden" animate="visible" exit="exit" key={`${technology}-${category}-${difficulty}`}>
           {isBusy && Array.from({ length: SKELETON_COUNT }).map((_, i) => <TechnologySkeleton key={i} />)}
 
           <AnimatePresence>
