@@ -18,7 +18,7 @@ export const ReusableTechnologyCard: React.FC<{ interview: IPracticalInterview }
   };
 
   return (
-    <article className="group relative flex flex-col justify-between bg-gray-950/30 hover:bg-gray-950 rounded-md  overflow-hidden border border-gray-700 hover:shadow-lg transition-all duration-300" aria-labelledby={`card-title-${interview._id}`}>
+    <article className="group relative h-[530px] flex flex-col justify-between bg-gray-950/30 hover:bg-gray-950 rounded-md  overflow-hidden border border-gray-700 hover:shadow-lg transition-all duration-300" aria-labelledby={`card-title-${interview._id}`}>
       <div className="p-2 flex flex-col gap-4">
         <div className="flex justify-between items-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm bg-slate-800/50 text-gray-300">
