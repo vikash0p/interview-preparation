@@ -1,30 +1,12 @@
-import { ReactNode } from 'react';
 
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools } from '@/main/icons/react-global-icons';
-import { SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql, SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud } from '@/main/icons/react-global-icons';
-import { FaCode, FaServer, FaBrain, FaNetworkWired } from '@/main/icons/react-global-icons';
+import { ICategoryItem } from '../../types/global.types';
 
-export interface TechnologyItem {
-  id: string;
-  slug: string;
-  label: string;
-  category: string;
-  actionLabel: string;
-  comingSoon: boolean;
-  icon: ReactNode;
-}
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools,SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql, SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud,FaCode, FaServer, FaBrain, FaNetworkWired  } from '@/main/icons/react-global-icons';
 
-export interface CategoryItem {
-  id: string;
-  slug: string;
-  label: string;
-  comingSoon: boolean;
-  actionLabel: string;
-  icon: ReactNode;
-  technologies: TechnologyItem[];
-}
 
-export const PRACTICAL_INTERVIEWS_DATA: CategoryItem[] = [
+
+
+export const PRACTICAL_INTERVIEWS_DATA: ICategoryItem[] = [
   {
     id: 'cat-1',
     slug: 'frontend',

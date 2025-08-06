@@ -1,4 +1,4 @@
-import { FaHome, FaRobot, FaComments, FaCode, FaBookmark } from 'react-icons/fa';
+import { FaHome, FaRobot, FaComments, FaCode, FaBookmark } from '@/main/icons/react-global-icons';
 
 interface MobileNavItem {
   href: string;
