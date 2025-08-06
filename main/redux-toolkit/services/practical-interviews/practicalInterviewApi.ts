@@ -5,10 +5,7 @@ import { buildQueryString } from './practicalInterviewUtils';
 export const practicalInterviewApi = baseApi.injectEndpoints({
   endpoints: builder => ({
     // 1️. Get All Interviews by Technology (optional filters)
-    getInterviewsByTechnology: builder.query<
-      types.IPracticalInterviewApiResponse,
-      types.IPracticalInterviewsQueryParams
-    >({
+    getInterviewsByTechnology: builder.query< types.IPracticalInterviewApiResponse, types.IPracticalInterviewsQueryParams>({
       query: ({ technology, category, difficulty }) => {
         const queryStr = buildQueryString({ category, difficulty });
 

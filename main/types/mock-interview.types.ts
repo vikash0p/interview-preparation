@@ -30,3 +30,7 @@ export type MockInterviewApiResponse = {
   message: string;
   data: MockInterview[];
 };
+
+
+
+export type IPFilterKey = 'category' | 'difficulty';

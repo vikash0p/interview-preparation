@@ -3,14 +3,30 @@
 import { FiChevronDown } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { dropdownAnimation } from "@/main/animation/practical-interview.animation";
+import { useParams } from "next/navigation";
+import { useGetAllCategoriesByTechnologyQuery } from "@/main/redux-toolkit/services/practical-interviews/practicalInterviewApi";
+import { IPFilterKey } from '@/main/types/mock-interview.types';
+
 
 type Props = {
-  categories: string[]; // list of category names
-  updateSearchParams: (key: string, value: string) => void;
+  updateSearchParams: (key: IPFilterKey, value: string) => void;
   currentCategory: string | null;
 };
+type OptionProps = {
+  text: string;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  updateSearchParams: () => void;
+};
 
-const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, currentCategory }) => {
+export const CategoryDropDown: React.FC<Props> = ({  updateSearchParams, currentCategory }) => {
+
+  const params=useParams();
+
+  const technology = params?.technology as string;
+  const {data:categories}=useGetAllCategoriesByTechnologyQuery(technology);
+
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,7 +37,7 @@ const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, cur
           className="flex items-center gap-2 px-5 py-2 rounded-md text-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-colors"
         >
           <span>{currentCategory ? `Category: ${currentCategory}` : 'Filter by Category'}</span>
-          <motion.span variants={iconVariants}>
+          <motion.span variants={dropdownAnimation.icon}>
             <FiChevronDown />
           </motion.span>
         </button>
@@ -29,11 +45,11 @@ const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, cur
         <motion.ul
           initial="closed"
           animate={open ? 'open' : 'closed'}
-          variants={wrapperVariants}
+          variants={dropdownAnimation.wrapper}
           style={{ originY: 'top', translateX: '-50%' }}
           className="flex flex-col gap-2 p-2 rounded-md bg-gray-950 shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden z-10"
         >
-          {categories.map(category => (
+          {categories?.data?.map(category => (
             <Option
               key={category}
               text={category}
@@ -47,16 +63,10 @@ const CategoryDropDown: React.FC<Props> = ({ categories, updateSearchParams, cur
   );
 };
 
-type OptionProps = {
-  text: string;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  updateSearchParams: () => void;
-};
-
 const Option: React.FC<OptionProps> = ({ text, setOpen, updateSearchParams }) => {
   return (
     <motion.li
-      variants={itemVariants}
+      variants={dropdownAnimation.item}
       onClick={() => {
         updateSearchParams();
         setOpen(false);
@@ -66,46 +76,4 @@ const Option: React.FC<OptionProps> = ({ text, setOpen, updateSearchParams }) =>
       <span>{text}</span>
     </motion.li>
   );
-};
-
-export default CategoryDropDown;
-
-// Animation Variants
-const wrapperVariants = {
-  open: {
-    scaleY: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.1,
-    },
-  },
-  closed: {
-    scaleY: 0,
-    transition: {
-      when: 'afterChildren',
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const iconVariants = {
-  open: { rotate: 180 },
-  closed: { rotate: 0 },
-};
-
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      when: 'beforeChildren',
-    },
-  },
-  closed: {
-    opacity: 0,
-    y: -15,
-    transition: {
-      when: 'afterChildren',
-    },
-  },
 };

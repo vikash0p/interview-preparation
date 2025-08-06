@@ -1,17 +1,23 @@
 'use client';
-
-import { FiChevronDown } from 'react-icons/fi';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FiChevronDown } from '@/main/icons/react-global-icons';
+import { IPFilterKey } from '@/main/types/mock-interview.types';
 
 type Props = {
   currentDifficulty: string | null;
-  updateSearchParams: (key: string, value: string) => void;
+  updateSearchParams: (key: IPFilterKey, value: string) => void;
 };
 
-const difficulties = ['Easy', 'Medium', 'Hard'];
+type OptionProps = {
+  text: string;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  updateSearchParams: () => void;
+};
 
-const DifficultyDropDown: React.FC<Props> = ({ currentDifficulty, updateSearchParams }) => {
+const difficulties = ['easy', 'medium', 'hard'];
+
+export const DifficultyDropDown: React.FC<Props> = ({ currentDifficulty, updateSearchParams }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -48,11 +54,7 @@ const DifficultyDropDown: React.FC<Props> = ({ currentDifficulty, updateSearchPa
   );
 };
 
-type OptionProps = {
-  text: string;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  updateSearchParams: () => void;
-};
+
 
 const Option: React.FC<OptionProps> = ({ text, setOpen, updateSearchParams }) => {
   return (
@@ -69,7 +71,6 @@ const Option: React.FC<OptionProps> = ({ text, setOpen, updateSearchParams }) =>
   );
 };
 
-export default DifficultyDropDown;
 
 // Animation Variants
 const wrapperVariants = {
