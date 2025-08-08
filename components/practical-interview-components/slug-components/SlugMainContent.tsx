@@ -9,7 +9,7 @@ import { contentVariants } from '@/main/animation/practical-interview.animation'
 
 const tabs = [{ label: 'Problem Statement' }, { label: 'Solution' }, { label: 'Discussion' }];
 
-const SlugMainContent: React.FC<ISlugDataProps> = ({ data }) => {
+export const SlugMainContent: React.FC<ISlugDataProps> = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -60,5 +60,3 @@ const SlugMainContent: React.FC<ISlugDataProps> = ({ data }) => {
     </div>
   );
 };
-
-export default SlugMainContent;

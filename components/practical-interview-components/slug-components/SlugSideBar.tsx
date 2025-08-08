@@ -14,7 +14,7 @@ const expandData = {
   challenges: false,
 };
 
-const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
+export const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(expandData);
 
   const toggleSection = (section: string) => {
@@ -162,5 +162,3 @@ const SlugSideBar: React.FC<ISlugDataProps> = ({ data }) => {
     </div>
   );
 };
-
-export default SlugSideBar;

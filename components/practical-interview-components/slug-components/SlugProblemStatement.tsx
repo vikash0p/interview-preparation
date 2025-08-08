@@ -3,6 +3,7 @@ import React from 'react';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { FaCheck, FaCopy, MdTipsAndUpdates } from '@/main/icons/react-global-icons';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
+import { ReusableSyntaxHighlighter } from "@/components/reusable-components/ReusableSyntaxHighlighter";
 
 export const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
   return (
@@ -70,11 +71,12 @@ export const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
             <FaCopy /> Copy
           </button>
         </div>
-        <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
+        <ReusableSyntaxHighlighter codeString={data.starterCode} />
+        {/* <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
           <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
             <code>{data.starterCode}</code>
           </pre>
-        </div>
+        </div> */}
       </section>
     </div>
   );

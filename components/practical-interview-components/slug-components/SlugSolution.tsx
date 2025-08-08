@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaCopy, FaLightbulb } from '@/main/icons/react-global-icons';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
+import { ReusableSyntaxHighlighter } from "@/components/reusable-components/ReusableSyntaxHighlighter";
 
 export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
   const [showSolution, setShowSolution] = useState(false);
@@ -38,17 +39,18 @@ export const SlugSolution: React.FC<ISlugDataProps> = ({ data }) => {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold text-gray-300">Solution Code</h2>
               <button
-                onClick={() => copyToClipboard(data.starterCode)}
+                onClick={() => copyToClipboard(data.solutionCode)}
                 className="flex items-center gap-2 px-3 py-1.5 text-xs bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
               >
                 <FaCopy /> Copy
               </button>
             </div>
-            <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
+            <ReusableSyntaxHighlighter codeString={data.solutionCode} />
+            {/* <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
               <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
                 <code>{data.solutionCode}</code>
               </pre>
-            </div>
+            </div> */}
           </section>
         </div>
       )}
