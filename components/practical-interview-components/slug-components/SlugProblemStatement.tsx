@@ -3,7 +3,7 @@ import React from 'react';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { FaCheck, FaCopy, MdTipsAndUpdates } from '@/main/icons/react-global-icons';
 import { copyToClipboard } from '@/main/utils/copyToClipboard';
-import { ReusableSyntaxHighlighter } from "@/components/reusable-components/ReusableSyntaxHighlighter";
+import { ReusableCodeHighlighter } from "@/components/reusable-components/ReusableCodeHighlighter";
 
 export const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
   return (
@@ -62,7 +62,7 @@ export const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
       </section>
 
       <section>
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-2">
           <h2 className="text-xl font-semibold text-gray-300">Starter Code</h2>
           <button
             onClick={() => copyToClipboard(data.starterCode)}
@@ -71,12 +71,7 @@ export const SlugProblemStatement: React.FC<ISlugDataProps> = ({ data }) => {
             <FaCopy /> Copy
           </button>
         </div>
-        <ReusableSyntaxHighlighter codeString={data.starterCode} />
-        {/* <div className="rounded-md bg-gray-900 border border-gray-700 p-4 overflow-auto max-h-[400px] text-sm">
-          <pre className="whitespace-pre-wrap break-words font-mono text-lime-400">
-            <code>{data.starterCode}</code>
-          </pre>
-        </div> */}
+        <ReusableCodeHighlighter  code={data.starterCode} language="javascript" />
       </section>
     </div>
   );
