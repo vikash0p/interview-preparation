@@ -1,9 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { BaseQueryFn, FetchArgs, FetchBaseQueryError } from '@reduxjs/toolkit/query';
 
-export const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}/api`;
+const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}/api` ;
 
-export const baseQuery = fetchBaseQuery({
+
+
+
+ const baseQuery = fetchBaseQuery({
   baseUrl,
   credentials: 'include',
 });
