@@ -1,12 +1,12 @@
 'use client';
-import React from 'react';
+import {useEffect,useState} from 'react';
 import { FaUsers, FaStar } from 'react-icons/fa';
 import LinkButton from '../utilsComponent/button-components/LinkButton';
 
 const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
-  const [count, setCount] = React.useState(from);
+  const [count, setCount] = useState(from);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setCount(prev => {
         if (prev >= to) {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 interface SocialLink {
@@ -14,10 +13,8 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ socialLinks }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.6 }}
+    <div
+   
       className="bg-gray-800/50 p-8 rounded-md border border-gray-700"
     >
       <h3 className="text-2xl font-bold mb-6 text-indigo-400">Stay Connected</h3>
@@ -33,7 +30,7 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ socialLinks }) => {
           </Link>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

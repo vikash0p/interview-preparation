@@ -1,19 +1,15 @@
 'use client';
 import React from 'react';
-import dynamic from 'next/dynamic';
 import Hero from './Hero';
-
-const Features = dynamic(() => import('./Features'), { ssr: false });
-const Domains = dynamic(() => import('./Domains'), { ssr: false });
-const Practice = dynamic(() => import('./Practice'), { ssr: false });
-const MokeInterView = dynamic(() => import('./MokeInterView'), { ssr: false });
-const Resources = dynamic(() => import('./Resources'), { ssr: false });
-const SuccessStory = dynamic(() => import('./SuccessStory'), { ssr: false });
-const JoinCommunity = dynamic(() => import('./JoinCommunity'), { ssr: false });
-const AskQuestion = dynamic(() => import('./AskQuestion'), { ssr: false });
-const Footer = dynamic(() => import('@/components/layout-components/Footer'), {
-  ssr: false,
-});
+import Features from './Features';
+import Domains from './Domains';
+import Practice from './Practice';
+import MokeInterView from './MokeInterView';
+import Resources from './Resources';
+import SuccessStory from './SuccessStory';
+import JoinCommunity from './JoinCommunity';
+import AskQuestion from './AskQuestion';
+import Footer from '@/components/layout-components/Footer';
 
 const HomeContainer = () => {
   return (

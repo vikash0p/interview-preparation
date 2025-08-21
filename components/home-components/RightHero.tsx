@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaCheck, FaChevronLeft, FaChevronRight, FaRegCopy } from '@/main/icons/react-global-icons';
 import { HeroRightData } from '@/main/data/home/HeroRightData';
 
@@ -108,7 +108,7 @@ const RightHero = () => {
                 key={index}
                 onClick={() => handleDotClick(index)}
                 aria-label={`Go to question ${index + 1}`}
-                className={`w-4 h-4 rounded-full transition-all duration-200 ${
+                className={`size-3 rounded-full transition-all duration-200 ${
                   currentQuestion === index
                     ? 'bg-indigo-500 scale-125 shadow-md'
                     : 'bg-neutral-600 hover:bg-neutral-400'

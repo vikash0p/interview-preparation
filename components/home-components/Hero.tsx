@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import LeftHero from './LeftHero';
 import RightHero from './RightHero';

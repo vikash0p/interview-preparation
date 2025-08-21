@@ -10,7 +10,7 @@ interface LinkButtonProps {
 
 export default function LinkButton({ href, children, ariaLabel, variant = 'primary' }: LinkButtonProps) {
   const baseClasses =
-    'px-8 py-4 text-center font-semibold rounded-md transition-transform md:hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400';
+    'px-12 py-4 text-center font-semibold rounded-md transition-transform md:hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400';
 
   const variantClasses =
     variant === 'primary'
