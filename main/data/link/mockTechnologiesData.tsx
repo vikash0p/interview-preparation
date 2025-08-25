@@ -10,7 +10,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-1',
     slug: 'frontend',
     label: 'FRONTEND',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Master Frontend Development',
     icon: <FaCode className="text-blue-400" />,
     technologies: [
@@ -57,7 +57,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaReact className="text-sky-500" />,
         category: 'frontend',
         actionLabel: 'Create interactive UIs',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-6',
@@ -66,7 +66,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaAngular className="text-red-500" />,
         category: 'frontend',
         actionLabel: 'Build enterprise applications',
-        comingSoon: true,
+        comingSoon: true
       },
       {
         id: 'tech-7',
@@ -75,7 +75,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaVuejs className="text-green-500" />,
         category: 'frontend',
         actionLabel: 'Develop progressive web apps',
-        comingSoon: true,
+        comingSoon: true
       },
       {
         id: 'tech-8',
@@ -84,7 +84,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiSvelte className="text-orange-400" />,
         category: 'frontend',
         actionLabel: 'Build compiler-optimized apps',
-        comingSoon: true,
+        comingSoon: true
       },
       {
         id: 'tech-9',
@@ -93,7 +93,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiNextdotjs className="text-white" />,
         category: 'frontend',
         actionLabel: 'Create SSR applications',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -101,7 +101,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-2',
     slug: 'backend',
     label: 'BACKEND',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Advance Backend Skills',
     icon: <FaServer className="text-green-400" />,
     technologies: [
@@ -112,7 +112,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaNodeJs className="text-green-500" />,
         category: 'backend',
         actionLabel: 'Build server-side JavaScript',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-11',
@@ -121,7 +121,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaServer className="text-gray-500" />,
         category: 'backend',
         actionLabel: 'Create RESTful APIs',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-12',
@@ -130,7 +130,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaPhp className="text-indigo-500" />,
         category: 'backend',
         actionLabel: 'Develop server-side scripts',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-13',
@@ -139,7 +139,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaPython className="text-yellow-500" />,
         category: 'backend',
         actionLabel: 'Build versatile backends',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-14',
@@ -148,7 +148,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiDjango className="text-green-700" />,
         category: 'backend',
         actionLabel: 'Develop Python web apps',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-15',
@@ -157,7 +157,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiRubyonrails className="text-red-500" />,
         category: 'backend',
         actionLabel: 'Build MVC applications',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-16',
@@ -166,7 +166,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaJava className="text-red-700" />,
         category: 'backend',
         actionLabel: 'Enterprise backend development',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-17',
@@ -175,7 +175,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiSpring className="text-green-600" />,
         category: 'backend',
         actionLabel: 'Java framework mastery',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-18',
@@ -184,7 +184,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiDotnet className="text-purple-600" />,
         category: 'backend',
         actionLabel: 'Microsoft stack development',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -192,7 +192,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-3',
     slug: 'database',
     label: 'DATABASE',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Database Expertise',
     icon: <FaDatabase className="text-yellow-400" />,
     technologies: [
@@ -203,7 +203,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiMongodb className="text-green-700" />,
         category: 'database',
         actionLabel: 'NoSQL document database',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-20',
@@ -212,7 +212,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiPostgresql className="text-blue-700" />,
         category: 'database',
         actionLabel: 'Advanced relational database',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-21',
@@ -221,7 +221,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiMysql className="text-blue-500" />,
         category: 'database',
         actionLabel: 'Popular open-source RDBMS',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-22',
@@ -230,7 +230,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiRedis className="text-red-600" />,
         category: 'database',
         actionLabel: 'In-memory data store',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-23',
@@ -239,7 +239,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiGraphql className="text-pink-500" />,
         category: 'database',
         actionLabel: 'Query language for APIs',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -247,7 +247,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-4',
     slug: 'mobile-development',
     label: 'MOBILE DEVELOPMENT',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Mobile App Mastery',
     icon: <FaMobileAlt className="text-purple-400" />,
     technologies: [
@@ -258,7 +258,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaReact className="text-blue-400" />,
         category: 'mobile-development',
         actionLabel: 'Build cross-platform apps',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-25',
@@ -267,7 +267,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiFlutter className="text-sky-400" />,
         category: 'mobile-development',
         actionLabel: 'Create beautiful UIs',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-26',
@@ -276,7 +276,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiSwift className="text-orange-400" />,
         category: 'mobile-development',
         actionLabel: 'Develop iOS applications',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-27',
@@ -285,7 +285,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiKotlin className="text-purple-500" />,
         category: 'mobile-development',
         actionLabel: 'Build Android apps',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -293,7 +293,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-5',
     slug: 'computer-science',
     label: 'COMPUTER SCIENCE',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'CS Fundamentals',
     icon: <FaBrain className="text-red-400" />,
     technologies: [
@@ -304,7 +304,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaCogs className="text-gray-500" />,
         category: 'computer-science',
         actionLabel: 'Learn fundamental structures',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-29',
@@ -313,7 +313,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaCogs className="text-gray-500" />,
         category: 'computer-science',
         actionLabel: 'Master problem-solving techniques',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-30',
@@ -322,7 +322,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaCogs className="text-gray-500" />,
         category: 'computer-science',
         actionLabel: 'Object-oriented principles',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-31',
@@ -331,7 +331,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaCogs className="text-gray-500" />,
         category: 'computer-science',
         actionLabel: 'Learn functional paradigms',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-32',
@@ -340,7 +340,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaCogs className="text-gray-500" />,
         category: 'computer-science',
         actionLabel: 'Software design solutions',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -348,7 +348,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-6',
     slug: 'behavioral',
     label: 'BEHAVIORAL',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Professional Skills',
     icon: <FaUsers className="text-pink-400" />,
     technologies: [
@@ -359,7 +359,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaUsers className="text-purple-400" />,
         category: 'behavioral',
         actionLabel: 'Collaboration skills',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-34',
@@ -368,7 +368,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaUsers className="text-purple-400" />,
         category: 'behavioral',
         actionLabel: 'Leadership principles',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-35',
@@ -377,7 +377,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaUsers className="text-purple-400" />,
         category: 'behavioral',
         actionLabel: 'Effective communication',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-36',
@@ -386,7 +386,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaUsers className="text-purple-400" />,
         category: 'behavioral',
         actionLabel: 'Critical thinking skills',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -394,7 +394,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-7',
     slug: 'system-design',
     label: 'SYSTEM DESIGN',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'Architecture Patterns',
     icon: <FaNetworkWired className="text-indigo-400" />,
     technologies: [
@@ -405,7 +405,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaNetworkWired className="text-indigo-500" />,
         category: 'system-design',
         actionLabel: 'Distributed systems architecture',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-38',
@@ -414,7 +414,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaNetworkWired className="text-indigo-500" />,
         category: 'system-design',
         actionLabel: 'Traditional architecture',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-39',
@@ -423,7 +423,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaNetworkWired className="text-indigo-500" />,
         category: 'system-design',
         actionLabel: 'Cloud-native solutions',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-40',
@@ -432,7 +432,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaNetworkWired className="text-indigo-500" />,
         category: 'system-design',
         actionLabel: 'Scalable system patterns',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },
@@ -440,7 +440,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
     id: 'cat-8',
     slug: 'devops',
     label: 'DEVOPS',
-    comingSoon: false,
+    comingSoon: true,
     actionLabel: 'DevOps & Tools',
     icon: <FaTools className="text-gray-400" />,
     technologies: [
@@ -451,7 +451,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaGitAlt className="text-red-500" />,
         category: 'devops',
         actionLabel: 'Version control system',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-42',
@@ -460,7 +460,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaDocker className="text-blue-500" />,
         category: 'devops',
         actionLabel: 'Containerization platform',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-43',
@@ -469,7 +469,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <FaAws className="text-orange-500" />,
         category: 'devops',
         actionLabel: 'Cloud services platform',
-        comingSoon: false,
+        comingSoon: true,
       },
       {
         id: 'tech-44',
@@ -478,7 +478,7 @@ export const MOCK_INTERVIEWS_DATA: ICategoryItem[] = [
         icon: <SiGooglecloud className="text-yellow-400" />,
         category: 'devops',
         actionLabel: 'Google cloud platform',
-        comingSoon: false,
+        comingSoon: true,
       },
     ],
   },

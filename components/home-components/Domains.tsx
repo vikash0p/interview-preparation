@@ -1,8 +1,7 @@
-'use client';
-import { domainsData } from '@/main/data/home/domainsData';
 import React from 'react';
 import DomainCard from '../utilsComponent/card-components/DomainCard';
 import { ReusableHeading } from '../reusable-components/ReusableHeading';
+import { MOCK_INTERVIEWS_DATA } from "@/main/data/link/mockTechnologiesData";
 
 const Domains = () => {
   return (
@@ -13,9 +12,9 @@ const Domains = () => {
       />
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {domainsData.map((domain, index) => (
-          <DomainCard key={index} icon={domain.icon} name={domain.name} tech={domain.tech} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {MOCK_INTERVIEWS_DATA.map((domain, index) => (
+          <DomainCard key={index} domain={domain}  />
         ))}
       </div>
     </section>

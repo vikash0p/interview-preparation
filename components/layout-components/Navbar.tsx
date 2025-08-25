@@ -36,7 +36,7 @@ function Navbar() {
                 <Link
                   key={index}
                   href={link.href}
-                  className={`text-md font-medium rounded-md transition-all duration-300 ease-in-out ${
+                  className={`text-md font-medium rounded-sm transition-all duration-300 ease-in-out ${
                     isActive
                       ? 'text-white bg-indigo-600 px-5 py-1.5 shadow-sm'
                       : 'text-gray-400 hover:text-white hover:bg-indigo-600 hover:px-5 hover:py-1.5 '
@@ -59,7 +59,7 @@ function Navbar() {
           </Link>
           <Link
             href="/register"
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md text-md transition-all duration-300 ease-in-out hover:bg-black/30 hover:scale-105 active:scale-95"
+            className="bg-indigo-600 text-white px-4 py-2 rounded-sm text-md transition-all duration-300 ease-in-out hover:bg-black/30 hover:scale-105 active:scale-95"
           >
             Register
           </Link>

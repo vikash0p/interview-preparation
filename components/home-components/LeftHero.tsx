@@ -43,11 +43,11 @@ const LeftHero = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 lg:gap-10">
-        <LinkButton href="/practical-interview" ariaLabel="Start Practicing">
+        <LinkButton href="/practical-interviews" ariaLabel="Start Practicing">
           Start Practicing
         </LinkButton>
 
-        <LinkButton href="/mock-interview" variant="outline" ariaLabel="View Questions">
+        <LinkButton href="/mock-interviews" variant="outline" ariaLabel="View Questions">
           View Questions
         </LinkButton>
       </div>
@@ -59,7 +59,7 @@ const LeftHero = () => {
             <AnimatedCounter from={0} to={10000} />+ Users
           </span>
         </div>
-        <div className="flex items-center gap-2 hover:text-yellow-300 transition-colors">
+        <div className="flex items-center gap-2 hover:text-yellow-300 transition-colors duration-500 ease-in-out">
           <FaStar className="text-yellow-400 w-5 h-5" />
           <span>Rated 4.9/5 by Learners</span>
         </div>

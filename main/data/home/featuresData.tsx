@@ -36,13 +36,13 @@ export const featuresData: IFeature[] = [
     title: 'Study Resources',
     description: 'Access comprehensive guides, tips, and best practices for interview success.',
     icon: <FaBook className="text-3xl" />,
-    link: '/resources',
+    link: '/tips-&-guides',
   },
   {
     id: '5',
     title: 'Community Support',
     description: "Connect with peers, share experiences, and learn from others' interview journeys.",
     icon: <FaUsers className="text-3xl" />,
-    link: '/community',
+    link: '/community-support',
   },
 ];

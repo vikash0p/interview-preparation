@@ -1,18 +1,14 @@
 'use client';
+import { ErrorIcon } from "@/components/utilsComponent/error-components/ErrorIcon";
 import Link from 'next/link';
-import { FaExclamationTriangle, FaHome, FaEnvelope } from 'react-icons/fa';
+import {  FaHome, FaEnvelope } from 'react-icons/fa';
 
 export default function NotFound() {
   return (
     <div className="min-h-screen px-4 flex flex-col items-center py-16">
       <div className="max-w-4xl w-full text-center flex flex-col items-center">
-        <div className="absolute top-40 -left-40 w-72 h-72 bg-red-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 -right-40 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"></div>
-        {/* Error Icon */}
-        <div className="mb-8 relative">
-          <div className="absolute -inset-4 bg-red-500/20 rounded-full blur-md animate-pulse"></div>
-          <FaExclamationTriangle className="text-7xl text-red-400 mx-auto" />
-        </div>
+
+<ErrorIcon />
 
         {/* Main Content */}
         <div className="space-y-6">

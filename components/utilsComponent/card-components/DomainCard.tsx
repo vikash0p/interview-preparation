@@ -1,53 +1,70 @@
 'use client';
-import { motion } from 'framer-motion';
-import { itemVariants, iconVariants, techItemVariants } from '@/main/animation/motionVariants';
-import React from 'react';
-import type { domainsDataInterface } from '@/main/data/home/domainsData';
+import { useTransition } from 'react';
+import { ICategoryItem } from '../../../main/types/global.types';
+import { FaSpinner } from '@/main/icons/react-global-icons';
+import { useTransitionRouter } from 'next-view-transitions';
+import { slideInOut } from '@/main/animation/practical-interview.animation';
 
-const DomainCard: React.FC<domainsDataInterface> = ({ icon, name, tech }) => {
+interface IDomainCardProps {
+  domain: ICategoryItem;
+}
+
+const DomainCard: React.FC<IDomainCardProps> = ({ domain }) => {
+  const router = useTransitionRouter();
+  const [isPending, startTransition] = useTransition();
+
+  const domainFunction = (slug: string) => {
+    startTransition(() => {
+      router.push(`/practical-interviews/${slug}`, {
+        onTransitionReady: slideInOut,
+      });
+    });
+  };
+
   return (
-    <motion.article
-      variants={itemVariants}
-      whileHover="hover"
-      whileTap="tap"
-      className="group relative p-4 sm:p-5   rounded-2xl border-2 border-gray-700 bg-gray-800 shadow-xl hover:border-indigo-500 transition-all"
-      style={{
-        background: 'linear-gradient(45deg, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%)',
-      }}
-      aria-label={`Domain card for ${name}`}
+    <article
+      className={`relative overflow-hidden w-full p-6 rounded-lg transition-all duration-300 ease-in-out
+        border-2 border-gray-700 cursor-pointer
+        ${isPending ? 'opacity-60 pointer-events-none' : 'hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500'}
+        bg-gradient-to-t from-gray-900/10 to-gray-950`}
+      role="region"
+      aria-labelledby={`domain-${domain.label}-title`}
     >
-      {/* Hover background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity pointer-events-none" aria-hidden="true" />
 
-      {/* Icon + Title */}
       <header className="flex flex-col items-center justify-center mb-6 text-center space-y-4">
-        <motion.div
-          className="text-3xl sm:text-4xl text-indigo-400 p-4 bg-gray-900 rounded-full w-fit"
-          variants={iconVariants}
-          whileHover="hover"
-          aria-hidden="true"
-        >
-          {icon}
-        </motion.div>
-
-        <h3 className="text-xl sm:text-2xl font-bold group-hover:text-indigo-400 transition-colors">{name}</h3>
+        <div className="text-3xl sm:text-4xl text-indigo-400 p-4 bg-gray-900 rounded-full w-fit" aria-hidden="true">
+          {domain.icon}
+        </div>
+        <h3 id={`domain-${domain.label}-title`} className="text-xl sm:text-2xl font-bold group-hover:text-indigo-400 transition-colors">
+          {domain.label}
+        </h3>
       </header>
 
-      {/* Tech Tags */}
-      <ul className="flex flex-wrap justify-center gap-2" aria-label={`Technologies used in ${name}`}>
-        {tech.map((t, i) => (
-          <motion.li
-            key={i}
-            variants={techItemVariants}
-            whileHover="hover"
-            className="px-3 py-1.5 text-sm rounded-full border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 text-white hover:bg-indigo-500/20 transition-colors"
-            aria-label={`Technology: ${t}`}
-          >
-            {t}
-          </motion.li>
+      <ul className="flex flex-wrap justify-center gap-2 relative" aria-label={`Technologies included in ${domain.label}`}>
+        {domain.technologies.map((t, i) => (
+          <li key={i}>
+            <button
+              type="button"
+              disabled={isPending || t.comingSoon} // ✅ disable when comingSoon
+              onClick={() => !t.comingSoon && domainFunction(t.slug)}
+              className={`px-5 py-1.5 text-sm rounded-full border transition-colors focus:outline-none focus:ring-2
+                ${t.comingSoon ? 'bg-yellow-500/20 border-yellow-500 text-yellow-200 cursor-not-allowed' : 'border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 text-white hover:bg-indigo-500/30 focus:ring-indigo-400'}`}
+              aria-label={t.comingSoon ? `${t.label} is coming soon` : `Open interview questions for ${t.label}`}
+            >
+              {t.label}
+            </button>
+          </li>
         ))}
       </ul>
-    </motion.article>
+
+      {isPending && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-20" role="status" aria-live="polite">
+          <FaSpinner className="w-6 h-6 text-white animate-spin" />
+          <span className="sr-only">Loading interview questions…</span>
+        </div>
+      )}
+    </article>
   );
 };
 

@@ -9,18 +9,17 @@ interface LinkButtonProps {
 }
 
 export default function LinkButton({ href, children, ariaLabel, variant = 'primary' }: LinkButtonProps) {
-  const baseClasses =
-    'px-12 py-4 text-center font-semibold rounded-md transition-transform md:hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400';
+  const baseClasses = 'px-12 py-4 text-center font-semibold rounded-md transition duration-500 ease-in-out  md:hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400';
 
   const variantClasses =
     variant === 'primary'
       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-      : 'border border-white hover:bg-indigo-700 hover:text-white';
+      : 'border border-white hover:bg-indigo-700 hover:text-white ';
 
   const combinedClasses = `${baseClasses} ${variantClasses}`;
 
   return (
-    <Link href={href} aria-label={ariaLabel} className={combinedClasses}>
+    <Link href={href} aria-label={ariaLabel} className={combinedClasses}  >
       {children}
     </Link>
   );
