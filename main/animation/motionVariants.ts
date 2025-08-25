@@ -1,3 +1,4 @@
+  // Find the active label based on the current route
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
