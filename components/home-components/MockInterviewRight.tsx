@@ -1,8 +1,8 @@
 import React from 'react';
 import MockInterviewCard from '../utilsComponent/card-components/MockInterviewCard';
 import { interviewFeatures } from '@/main/data/home/mockInterviewData';
-import { motion } from 'framer-motion';
 import { FaCalendarAlt } from 'react-icons/fa';
+import { Link } from 'next-view-transitions';
 
 const MockInterviewRight = () => {
   return (
@@ -13,14 +13,11 @@ const MockInterviewRight = () => {
         ))}
       </div>
 
-      <motion.button
-        className="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md transition-colors mt-8 font-medium flex items-center justify-center gap-2"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-      >
+      <Link href="/ai-interview"
+      className="w-full text-white text-lg bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md transition-colors mt-8 font-medium flex items-center justify-center gap-2">
         <FaCalendarAlt />
-        Schedule Mock Interview
-      </motion.button>
+        Schedule Interview
+      </Link>
     </div>
   );
 };

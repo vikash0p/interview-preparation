@@ -20,8 +20,7 @@ export default function HomePageError({ error, reset }: { error: Error & { diges
       <div className="max-w-lg w-full text-center">
         {/* Error icon with pulse background */}
         <div className="relative flex justify-center mb-8">
-          <div className="absolute -inset-6 bg-red-500/20 rounded-full blur-lg animate-ping" />
-          <FaExclamationTriangle className="text-7xl text-red-400 relative z-10" />
+          <FaExclamationTriangle className="text-7xl text-red-400 relative z-10 animate-pulse" />
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-extrabold text-red-400 mb-4">Oops! Something went wrong</h1>

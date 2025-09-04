@@ -24,9 +24,9 @@ const DomainCard: React.FC<IDomainCardProps> = ({ domain }) => {
   return (
     <article
       className={`relative overflow-hidden w-full p-6 rounded-lg transition-all duration-300 ease-in-out
-        border-2 border-gray-700 cursor-pointer
+        border border-gray-700 cursor-pointer
         ${isPending ? 'opacity-60 pointer-events-none' : 'hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500'}
-        bg-gradient-to-t from-gray-900/10 to-gray-950`}
+        bg-gradient-to-t from-gray-900/20 to-gray-950/40`}
       role="region"
       aria-labelledby={`domain-${domain.label}-title`}
     >

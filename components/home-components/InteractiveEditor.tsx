@@ -1,112 +1,104 @@
 'use client';
-import { motion } from 'framer-motion';
-import { FaChevronRight } from 'react-icons/fa';
-import Editor from '@monaco-editor/react';
 import React, { useState } from 'react';
+import { FiCopy, FiPlay } from 'react-icons/fi';
+import Link from 'next/link';
 
 const InteractiveEditor = () => {
-  const [code, setCode] = useState(`// Example: var, let, const
-var x = 10;
-x = 20;
-console.log("x:", x);
+  const [copied, setCopied] = useState(false);
+const sampleCode = `// Function to greet a user
+function greet(name) {
+  return "Hello, " + name;
+}
 
-let y = 15;
-y = 25;
-console.log("y:", y);
+// Function to add two numbers
+function add(a, b) {
+  return a + b;
+}
 
-const z = 30;
-console.log("z:", z);`);
+// Function to multiply two numbers
+function multiply(a, b) {
+  return a * b;
+}
 
-  const [output, setOutput] = useState('');
+// Function to find the maximum number
+function findMax(a, b) {
+  return a > b ? a : b;
+}
 
-  const runCode = () => {
-    try {
-      const capturedLogs: string[] = [];
-      const customConsole = {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        log: (...args: any[]) => capturedLogs.push(args.join(' ')),
-      };
+// Function to reverse a string
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
 
-      const runner = new Function('console', code);
-      runner(customConsole);
-      setOutput(capturedLogs.join('\n'));
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
-      setOutput(err.toString());
-    }
-  };
+// Function to check if a number is prime
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
 
-  const resetCode = () => {
-    setCode('');
-    setOutput('');
+// Example usage
+console.log(greet("World"));        // Hello, World
+console.log(add(5, 3));             // 8
+console.log(multiply(4, 6));        // 24
+console.log(findMax(10, 20));       // 20
+console.log(reverseString("Hello"));// olleH
+console.log(isPrime(7));            // true
+`;
+
+
+  const codeLines = sampleCode.split('\n');
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(sampleCode);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="bg-[#181d28] rounded-2xl p-6 shadow-2xl"
-    >
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 rounded-full bg-red-500 animate-pulse" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500 animate-pulse" />
-          <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
+    <div className="w-full max-w-4xl mx-auto rounded-2xl shadow-xl overflow-hidden border bg-gray-950/60 border-gray-700 relative">
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-gray-900">
+        {/* Left - traffic lights */}
+        <div className="flex items-center gap-2">
+          <span className="w-3 h-3 rounded-full bg-red-500"></span>
+          <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+          <span className="w-3 h-3 rounded-full bg-green-500"></span>
         </div>
-        <span className="text-sm text-gray-400">JavaScript</span>
+
+        {/* Right - Copy button */}
+        <button onClick={handleCopy} className="flex items-center gap-1 px-3 py-1.5 rounded-sm bg-indigo-600 hover:bg-indigo-700 text-gray-300 text-sm transition">
+          <FiCopy />
+          {copied ? 'Copied!' : 'Copy'}
+        </button>
       </div>
 
-      {/* Monaco Editor */}
-      <div className="h-96 border rounded-md overflow-hidden">
-        <Editor
-          height="100%"
-          defaultLanguage="javascript"
-          value={code}
-          theme="vs-dark"
-          onChange={value => setCode(value || '')}
-          options={{
-            fontSize: 14,
-            minimap: { enabled: false },
-            automaticLayout: true,
-            scrollBeyondLastLine: false,
-            wordWrap: 'on',
-            wrappingIndent: 'indent',
-            lineNumbers: 'on',
-          }}
-        />
-      </div>
-
-      {/* Console Output */}
-      <div className="mt-6 p-4 bg-gray-900 rounded-md">
-        <div className="text-sm text-gray-400 mb-2">Console Output:</div>
-        <pre className="text-green-400 font-mono text-sm whitespace-pre-wrap">
-          {output || '/* Output will appear here */'}
+      {/* Code Area with Line Numbers */}
+      <div className="p-4 font-mono text-sm overflow-y-auto text-gray-300 leading-relaxed" style={{ maxHeight: '450px' }}>
+        <pre className="flex">
+          <code className="w-full">
+            {codeLines.map((line, i) => (
+              <div key={i} className="flex hover:bg-white/10 rounded-sm transition px-1">
+                <span className="w-10 text-right pr-3 text-gray-600 select-none">{i + 1}</span>
+                <span className="whitespace-pre">{line}</span>
+              </div>
+            ))}
+          </code>
         </pre>
       </div>
 
-      {/* Buttons */}
-      <div className="flex justify-end mt-4 space-x-3">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={resetCode}
-          className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors"
-        >
-          Reset
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={runCode}
-          className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-md hover:from-indigo-700 hover:to-purple-700 transition-colors flex items-center"
-        >
-          Run Code
-          <FaChevronRight className="ml-2 w-4 h-4" />
-        </motion.button>
+      {/* Bottom Bar */}
+      <div className="absolute right-0 h-20 left-0 bottom-0  flex justify-between items-center px-4 py-2 text-xs border-t border-gray-700 bg-gray-900 text-gray-400">
+        <span>Language: JavaScript</span>
+        <Link href="/code-playground">
+          <button className="flex items-center gap-2 bg-indigo-600 text-white px-3 py-1.5 rounded-sm hover:bg-indigo-700 transition text-sm shadow">
+            <FiPlay /> Go to Playground
+          </button>
+        </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,91 +1,59 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 import { statsData, JoinCommunityData } from '@/main/data/home/JoinCommunityData';
 import { ReusableHeading } from '../reusable-components/ReusableHeading';
+import { Link } from "next-view-transitions";
 
 const JoinCommunity = () => {
   return (
-    <section className="mt-10 md:mt-14 lg:mt-20 px-4 sm:px-6 lg:px-8">
-      {/* Heading */}
-      <ReusableHeading
-        heading="Be Part of a Growing Interview Prep Network"
-        description="Engage with other candidates, ask questions, share strategies, and grow in a collaborative learning environment"
-      />
+    <section className="mt-10 md:mt-14 lg:mt-20 " aria-labelledby="join-community-heading">
+      <ReusableHeading heading="Be Part of a Growing Interview Prep Network" description="Engage with other candidates, ask questions, share strategies, and grow in a collaborative learning environment." />
 
-      {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-        {JoinCommunityData.map((feature, index) => (
-          <motion.div
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
+        {JoinCommunityData.map(feature => (
+          <div
             key={feature.id}
-            className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-md hover:border-indigo-500 transition-all duration-300 space-y-2"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
-            whileHover={{
-              scale: 1.02,
-              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
-            }}
+            className="relative overflow-hidden w-full p-6 rounded-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500 bg-gradient-to-t from-gray-900/20 to-gray-950/40"
+            role="article"
+            aria-label={`Community feature: ${feature.title}`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-md pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
 
-            <div
-              className={`w-14 h-14 ${feature.bgColor} rounded-md flex items-center justify-center ${
-                feature.title === 'Live Events' ? 'text-green-400' : ''
-              }`}
-            >
-              {feature.icon}
+            <div className={`w-14 h-14 ${feature.bgColor} rounded-md flex items-center justify-center text-xl text-indigo-400`}>{feature.icon}</div>
+
+            <h3 className="mt-4 text-lg font-semibold text-gray-100 group-hover:text-indigo-300 transition-colors">{feature.title}</h3>
+            <p className="mt-2 text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+
+            <div className="flex items-center justify-between text-sm pt-3">
+              <span className="text-gray-500">{feature.stats}</span>
+              <span className={`${feature.linkColor} font-medium cursor-pointer hover:underline`}>{feature.linkText}</span>
             </div>
-
-            <h3 className="text-xl font-semibold">{feature.title}</h3>
-            <p className="text-gray-300">{feature.description}</p>
-
-            <div className="flex items-center justify-between text-sm pt-2">
-              <span className="text-gray-400">{feature.stats}</span>
-              <span className={`${feature.linkColor}`}>{feature.linkText}</span>
-            </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10 lg:mt-16">
-        {statsData.map((stat, index) => (
-          <motion.div
-            key={stat.id}
-            className="text-center space-y-1"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-          >
-            <div className={`text-4xl font-bold ${stat.color}`}>{stat.value}</div>
-            <div className="text-neutral-400">{stat.label}</div>
-          </motion.div>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  gap-8 mt-10 lg:mt-16 text-center">
+        {statsData.map(stat => (
+          <div key={stat.id} className="space-y-1">
+            <div className={`text-3xl md:text-4xl font-bold ${stat.color}`}>{stat.value}</div>
+            <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
+          </div>
         ))}
       </div>
 
       {/* CTA */}
       <div className="mt-10 lg:mt-16 text-center">
-        <motion.button
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md transition-all transform hover:scale-105"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
+        <button type="button" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md font-medium transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-md">
           Join Our Community
-        </motion.button>
+        </button>
 
-        <motion.p
-          className="mt-4 text-neutral-400"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.1 }}
-        >
+        <p className="mt-4 text-gray-400 text-md">
           Already a member?{' '}
-          <a href="#" className="text-indigo-400 hover:text-indigo-300">
-            Sign in
-          </a>
-        </motion.p>
+          <Link href="/login" className="text-indigo-300 hover:text-indigo-200 underline">
+            Log in here
+          </Link>
+        </p>
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ export const JoinCommunityData: FeatureItem[] = [
     title: 'Study Groups',
     description: 'Join domain-specific study groups for collaborative learning and practice.',
     icon: <FaUsers className="w-8 h-8 text-white" />,
-    bgColor: 'bg-purple-600',
+    bgColor: 'bg-red-500',
     stats: 'Active Groups: 250+',
     linkText: 'Find Group →',
     linkColor: 'text-purple-400',
@@ -52,13 +52,9 @@ export const JoinCommunityData: FeatureItem[] = [
 ];
 
 export const statsData: StatItem[] = [
-  { id: 1, value: '50K+', label: 'Active Members', color: 'text-indigo-400' },
-  {
-    id: 2,
-    value: '100+',
-    label: 'Daily Discussions',
-    color: 'text-purple-400',
-  },
+  { id: 1, value: '50K+', label: 'Active Members', color: 'text-lime-400' },
+  { id: 2, value: '100+', label: 'Daily Discussions', color: 'text-purple-400' },
   { id: 3, value: '1000+', label: 'Mock Interviews', color: 'text-green-400' },
   { id: 4, value: '89%', label: 'Success Rate', color: 'text-yellow-400' },
+  { id: 5, value: '200+', label: 'Expert Mentors', color: 'text-rose-400' },
 ];

@@ -8,11 +8,7 @@ const RightHero = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleNavigation = (direction: 'prev' | 'next') => {
-    setCurrentQuestion(prev =>
-      direction === 'next'
-        ? (prev + 1) % HeroRightData.length
-        : (prev - 1 + HeroRightData.length) % HeroRightData.length
-    );
+    setCurrentQuestion(prev => (direction === 'next' ? (prev + 1) % HeroRightData.length : (prev - 1 + HeroRightData.length) % HeroRightData.length));
   };
 
   const handleDotClick = (index: number) => {
@@ -43,50 +39,29 @@ const RightHero = () => {
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          type="button"
-          aria-label="Previous question"
-          onClick={() => handleNavigation('prev')}
-          className="absolute -left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10"
-        >
+        <button type="button" aria-label="Previous question" onClick={() => handleNavigation('prev')} className="absolute -left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10">
           <FaChevronLeft className="text-white" />
         </button>
-        <button
-          type="button"
-          aria-label="Next question"
-          onClick={() => handleNavigation('next')}
-          className="absolute -right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10"
-        >
+        <button type="button" aria-label="Next question" onClick={() => handleNavigation('next')} className="absolute -right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-indigo-800 hover:bg-indigo-700 transition-colors z-10">
           <FaChevronRight className="text-white" />
         </button>
 
         {/* Main Content */}
-        <h3 className=" text-lg sm:text-xl font-semibold leading-relaxed mb-4">
-          {HeroRightData[currentQuestion].question}
-        </h3>
+        <h3 className=" text-lg sm:text-xl font-semibold leading-relaxed mb-4">{HeroRightData[currentQuestion].question}</h3>
 
         <div className="relative">
-          <pre className="bg-gray-950 h-72  p-4 rounded-md text-sm text-wrap overflow-x-auto">
+          <pre className="bg-gray-950/60 h-72  p-4 rounded-md text-sm text-wrap overflow-x-auto">
             <code>{HeroRightData[currentQuestion].code}</code>
           </pre>
           <div className="absolute top-2 right-2 group">
-            <button
-              type="button"
-              aria-label="Copy code to clipboard"
-              onClick={handleCopy}
-              className="p-2 rounded-md bg-indigo-800 hover:bg-indigo-700 transition-colors"
-            >
+            <button type="button" aria-label="Copy code to clipboard" onClick={handleCopy} className="p-2 rounded-md bg-indigo-800 hover:bg-indigo-700 transition-colors">
               {copied ? <FaCheck className="text-green-400" /> : <FaRegCopy className="text-white" />}
             </button>
-            <span className="absolute top-full mt-1 text-xs text-white bg-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
-              {copied ? 'Copied!' : 'Copy'}
-            </span>
+            <span className="absolute top-full mt-1 text-xs text-white bg-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">{copied ? 'Copied!' : 'Copy'}</span>
           </div>
         </div>
 
-        <div className="mt-4 p-3 bg-black/70 rounded-md text-sm  min-h-16 border border-indigo-400">
-          {HeroRightData[currentQuestion].explanation}
-        </div>
+        <div className="mt-4 p-3 bg-gray-950/60 rounded-md text-sm  min-h-16 border border-gray-700">{HeroRightData[currentQuestion].explanation}</div>
 
         {/* Dot Navigation */}
         <div className="flex justify-center gap-3 mt-6">
@@ -103,17 +78,7 @@ const RightHero = () => {
             }
 
             return indices.map(index => (
-              <button
-                type="button"
-                key={index}
-                onClick={() => handleDotClick(index)}
-                aria-label={`Go to question ${index + 1}`}
-                className={`size-3 rounded-full transition-all duration-200 ${
-                  currentQuestion === index
-                    ? 'bg-indigo-500 scale-125 shadow-md'
-                    : 'bg-neutral-600 hover:bg-neutral-400'
-                }`}
-              />
+              <button type="button" key={index} onClick={() => handleDotClick(index)} aria-label={`Go to question ${index + 1}`} className={`size-3 rounded-full transition-all duration-200 ${currentQuestion === index ? 'bg-indigo-500 scale-125 shadow-md' : 'bg-neutral-600 hover:bg-neutral-400'}`} />
             ));
           })()}
         </div>

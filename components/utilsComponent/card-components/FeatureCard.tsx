@@ -11,9 +11,9 @@ const FeatureCard = ({ feature }: { feature: IFeature }) => {
     <div
       onClick={() => navigate(link)}
       className={`relative overflow-hidden w-full p-6 rounded-md transition-all duration-500 ease-in-out
-        cursor-pointer border-2 border-gray-700
+        cursor-pointer border border-gray-700
         ${isPending ? 'opacity-60 pointer-events-none' : 'hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500'}
-        bg-gradient-to-t from-gray-900/10 to-gray-950`}
+        bg-gradient-to-t from-gray-900/20 to-gray-950/40`}
     >
       {/* Icon */}
       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 rounded-md flex items-center justify-center mb-4">{icon}</div>

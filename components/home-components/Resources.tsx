@@ -11,8 +11,8 @@ const Resources: React.FC = () => {
         description="Comprehensive, expert-curated materials designed to strengthen your concepts, improve problem-solving, and accelerate interview readiness"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {resourcesData.map((resource, index) => (
-          <ResourceCard key={resource.id} resource={resource} animationDelay={index * 0.05} />
+        {resourcesData.map((resource, ) => (
+          <ResourceCard key={resource.id} resource={resource}  />
         ))}
       </div>
     </section>

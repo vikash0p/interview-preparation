@@ -1,56 +1,33 @@
-import { motion } from 'framer-motion';
-import type { testimonialInterface } from '@/main/data/home/testimonialsData';
-import { FaStar } from 'react-icons/fa';
+import type { Testimonial as TestimonialInterface } from '@/main/data/home/testimonialsData';
+import Image from 'next/image';
+import { FaQuoteLeft } from "react-icons/fa";
 
 interface TestimonialCardProps {
-  testimonial: testimonialInterface;
+  testimonial: TestimonialInterface;
   index: number;
 }
 
-const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
-  const initials = testimonial.name
-    .split(' ')
-    .map(word => word[0])
-    .slice(0, 2)
-    .join('')
-    .toUpperCase();
-
+const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
-    <motion.div
-      className="group relative bg-gradient-to-r from-gray-900 to-gray-800 border-2 border-gray-700 p-6 rounded-md transition-all duration-300 hover:border-indigo-500"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{
-        y: -5,
-        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
-      }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{ delay: index * 0.05 }}
+    <div
+      className="relative overflow-hidden w-full p-6 rounded-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500 bg-gradient-to-t from-gray-900/20 to-gray-950/40"
+      role="article"
+      aria-label={`Testimonial from ${testimonial.name}`}
     >
-      {/* Hover overlay */}
-      <div className="absolute inset-0 rounded-md bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+      <FaQuoteLeft className="absolute top-4 right-4 text-indigo-400/80 text-4xl pointer-events-none" />
 
       {/* Header: Avatar & Name */}
       <div className="relative z-10 flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-xl font-bold text-black shadow-md">
-          {initials}
-        </div>
+        <Image src={testimonial.image} alt={testimonial.name} width={56} height={56} className="rounded-full border border-gray-700/60 shadow-sm" />
         <div className="ml-4">
-          <h4 className="font-semibold ">{testimonial.name}</h4>
-          <p className="text-sm ">{testimonial.role}</p>
+          <h4 className="font-semibold text-gray-100 group-hover:text-indigo-300 transition-colors">{testimonial.name}</h4>
+          <p className="text-sm text-gray-400">{testimonial.role}</p>
         </div>
-      </div>
-
-      {/* Star Rating */}
-      <div className="relative z-10 mb-2 flex text-yellow-400" aria-label="5 star rating">
-        {Array.from({ length: 5 }, (_, i) => (
-          <FaStar key={i} className="w-5 h-5" />
-        ))}
       </div>
 
       {/* Testimonial Text */}
-      <p className="relative z-10  leading-relaxed">{testimonial.text}</p>
-    </motion.div>
+      <p className="relative z-10 text-gray-300 text-sm md:text-base leading-relaxed italic">“{testimonial.text}”</p>
+    </div>
   );
 };
 
