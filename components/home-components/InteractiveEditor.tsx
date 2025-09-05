@@ -93,7 +93,7 @@ console.log(isPrime(7));            // true
       <div className="absolute right-0 h-20 left-0 bottom-0  flex justify-between items-center px-4 py-2 text-xs border-t border-gray-700 bg-gray-900 text-gray-400">
         <span>Language: JavaScript</span>
         <Link href="/code-playground">
-          <button className="flex items-center gap-2 bg-indigo-600 text-white px-3 py-1.5 rounded-sm hover:bg-indigo-700 transition text-sm shadow">
+          <button className="flex items-center gap-2 bg-indigo-600 text-white px-3 py-2 rounded-sm hover:bg-indigo-700 transition text-sm shadow">
             <FiPlay /> Go to Playground
           </button>
         </Link>

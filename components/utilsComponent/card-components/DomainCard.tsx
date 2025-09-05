@@ -23,17 +23,12 @@ const DomainCard: React.FC<IDomainCardProps> = ({ domain }) => {
 
   return (
     <article
-      className={`relative overflow-hidden w-full p-6 rounded-lg transition-all duration-300 ease-in-out
-        border border-gray-700 cursor-pointer
-        ${isPending ? 'opacity-60 pointer-events-none' : 'hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500'}
-        bg-gradient-to-t from-gray-900/20 to-gray-950/40`}
-      role="region"
-      aria-labelledby={`domain-${domain.label}-title`}
-    >
+     className={`card ${isPending && 'opacity-60 pointer-events-none'} `}
+     aria-labelledby={`domain-${domain.label}-title`}>
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity pointer-events-none" aria-hidden="true" />
 
       <header className="flex flex-col items-center justify-center mb-6 text-center space-y-4">
-        <div className="text-3xl sm:text-4xl text-indigo-400 p-4 bg-gray-900 rounded-full w-fit" aria-hidden="true">
+        <div className="icon text-3xl" aria-hidden="true">
           {domain.icon}
         </div>
         <h3 id={`domain-${domain.label}-title`} className="text-xl sm:text-2xl font-bold group-hover:text-indigo-400 transition-colors">

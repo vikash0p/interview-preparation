@@ -20,14 +20,11 @@ export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technolog
   return (
     <div
       onClick={handleClick}
-      className={`group relative overflow-hidden w-full max-w-sm p-6 rounded-md transition-all duration-300
-        ${
-          comingSoon
-            ? 'opacity-80 cursor-not-allowed border-2 border-yellow-400/30'
-            : 'cursor-pointer hover:bg-gradient-to-r hover:from-gray-950 border-2 border-gray-700 hover:to-gray-900 hover:border-gray-500 hover:shadow-lg hover:shadow-indigo-500/10'
-        }
-        ${isPending ? 'pointer-events-none opacity-70' : ''}
-      bg-gradient-to-r from-gray-900 to-gray-800`}
+      className={`group relative overflow-hidden w-full max-w-sm p-6 rounded-md transition-all duration-300 bg-gradient-to-r from-gray-950 to-gray-900
+  cursor-pointer hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500 hover:shadow-lg hover:shadow-indigo-500/10 border border-gray-700
+  ${comingSoon && 'opacity-80 cursor-not-allowed border border-yellow-400/30'}
+  ${isPending && 'pointer-events-none opacity-70'}
+`}
     >
       {/* Loading spinner */}
       {isPending && (
@@ -46,22 +43,16 @@ export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technolog
           </div>
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-yellow-400 transition-colors duration-300">{label}</h3>
-            <p className="text-sm text-yellow-500 mt-1 flex items-center transition-colors duration-300">
-              {`Available ${slug} coming soon`}
-            </p>
+            <p className="text-sm text-yellow-500 mt-1 flex items-center transition-colors duration-300">{`Available ${slug} coming soon`}</p>
           </div>
         </div>
       ) : (
         <div className="flex gap-5 items-center relative z-10">
-          <div className="p-3 rounded-md bg-black/30 group-hover:bg-indigo-500/20 transition-all duration-300">
-            <div className="text-3xl text-gray-300 group-hover:text-indigo-300 transition-colors duration-300">
-              {icon}
-            </div>
+          <div className="icon text-3xl">
+          {icon}
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
-              {label}
-            </h3>
+            <h3 className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">{label}</h3>
             <p className="text-sm text-gray-400 mt-1 flex items-center group-hover:text-indigo-300 transition-colors duration-300">
               {actionLabel}
               <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />

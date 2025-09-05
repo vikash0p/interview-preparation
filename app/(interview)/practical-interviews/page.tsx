@@ -16,7 +16,8 @@ const PracticalInterviews = () => {
           });
 
           return (
-            <section className="bg-gray-950/60 p-6 pb-12 rounded-2xl space-y-10 w-full" key={practical.id}>
+            <section className=" bg-slate-950/40 shadow-2xl  p-6 pb-12 rounded-3xl space-y-10 w-full" key={practical.id}>
+
               <div className="text-center flex flex-col items-center gap-4">
                 <div className="text-3xl bg-white/10 p-4 rounded-full">{practical.icon}</div>
                 <h2 className="text-3xl font-medium font-mono bg-clip-text text-gray-300 pb-2 uppercase">{practical.actionLabel}</h2>

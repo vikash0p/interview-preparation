@@ -3,19 +3,18 @@ import { motion } from 'framer-motion';
 import { FaClock } from 'react-icons/fa';
 import { chatMessages } from '@/main/data/home/mockInterviewData';
 import ChatBubbleCard from '../utilsComponent/card-components/ChatBubbleCard';
+
 const MockInterviewLeft = () => {
   return (
     <div className="relative">
-      <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-md p-6 shadow-2xl">
+      <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 shadow-2xl">
+        {/* Background glow */}
         <div className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_center,#4f46e510,transparent)]" />
 
+        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-3">
-            <motion.div
-              className="w-3 h-3 bg-red-500 rounded-full"
-              animate={{ scale: [1, 0.8, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
+            <motion.div className="w-3 h-3 bg-red-500 rounded-full" animate={{ scale: [1, 0.8, 1] }} transition={{ duration: 1.5, repeat: Infinity }} />
             <span className="text-neutral-400 font-medium">Live Session</span>
           </div>
           <div className="flex items-center space-x-2 text-neutral-400 bg-gray-800/50 px-3 py-1 rounded-md">
@@ -24,25 +23,19 @@ const MockInterviewLeft = () => {
           </div>
         </div>
 
-        <div className="space-y-6">
+        {/* Chat messages (scrollable) */}
+        <div className="space-y-6 max-h-80 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
           {chatMessages.map((message, index) => (
             <ChatBubbleCard key={index} message={message} />
           ))}
         </div>
 
+        {/* Buttons */}
         <div className="mt-6 flex space-x-4">
-          <motion.button
-            className="flex-1 bg-red-500/90 hover:bg-red-600 py-3 rounded-md transition-colors flex items-center justify-center gap-2 font-medium text-white"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <motion.button className="flex-1 bg-red-500/90 hover:bg-red-600 py-3 rounded-md transition-colors flex items-center justify-center gap-2 font-medium text-white" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             End Interview
           </motion.button>
-          <motion.button
-            className="flex-1 bg-indigo-600 hover:bg-indigo-700 py-3 rounded-md transition-colors flex items-center justify-center gap-2 font-medium text-white"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <motion.button className="flex-1 bg-indigo-600 hover:bg-indigo-700 py-3 rounded-md transition-colors flex items-center justify-center gap-2 font-medium text-white" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             Continue
           </motion.button>
         </div>
