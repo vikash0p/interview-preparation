@@ -5,7 +5,7 @@ import React from 'react';
 
 const MockInterviews = () => {
   return (
-    <section className="max-w-7xl mx-auto h-screen flex flex-col gap-6 items-center">
+    <section className="px-4 flex flex-col gap-6 mb-16 w-full">
       <ReusableHeading
         heading="Mock Interview Questions"
         description="Practice real-time mock interviews powered by AI. Get instant feedback and improve your responses for top tech interviews."
@@ -15,7 +15,7 @@ const MockInterviews = () => {
         {MOCK_INTERVIEWS_DATA.map(value => {
           return (
             <section
-              className="bg-gradient-to-t from-gray-900/10 to-gray-950 p-6 pb-12 rounded-2xl  shadow-2xl space-y-10"
+              className="bg-gradient-to-t w-full border border-gray-700 from-gray-900/10 to-gray-950 p-6 pb-12 rounded-2xl  shadow-2xl space-y-10"
               key={value.id}
             >
               <div className="text-center flex flex-col items-center gap-4">

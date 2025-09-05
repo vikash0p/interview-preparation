@@ -5,36 +5,35 @@ import { ReusableHeading } from '@/components/reusable-components/ReusableHeadin
 
 const PracticalInterviews = () => {
   return (
-    <div className="px-4 flex flex-col gap-4 mb-12">
+    <div className="px-4 flex flex-col gap-10 mb-16">
       <ReusableHeading heading="Hands-On Coding Practice" description="Sharpen your problem-solving skills with real-world coding assessments across JavaScript, React, Node.js, and more." />
 
-      <div className="flex flex-wrap justify-center gap-14">
+      <div className="flex flex-col gap-14">
         {PRACTICAL_INTERVIEWS_DATA.map(practical => {
-          // Sort technologies: available first, comingSoon later
-          const sortedTechnologies = [...practical.technologies].sort((a, b) => {
-            return Number(a.comingSoon) - Number(b.comingSoon);
-          });
+          const sortedTechnologies = [...practical.technologies].sort((a, b) => Number(a.comingSoon) - Number(b.comingSoon));
 
           return (
-            <section className=" bg-slate-950/40 shadow-2xl  p-6 pb-12 rounded-3xl space-y-10 w-full" key={practical.id}>
+            <section
+              key={practical.id}
+              className="relative bg-gray-950/60
+                         border border-gray-700 rounded-3xl
+                         p-8 pb-14 shadow-2xl
+                         hover:shadow-gray-950 transition-all duration-300"
+            >
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_left,#6366f110,transparent)] pointer-events-none" />
 
-              <div className="text-center flex flex-col items-center gap-4">
-                <div className="text-3xl bg-white/10 p-4 rounded-full">{practical.icon}</div>
-                <h2 className="text-3xl font-medium font-mono bg-clip-text text-gray-300 pb-2 uppercase">{practical.actionLabel}</h2>
-                <div className="w-48 h-1 bg-gray-400 mx-auto rounded-full" />
+              {/* Section heading */}
+              <div className="relative z-10 text-center flex flex-col items-center gap-5">
+                <div className="text-4xl bg-white/5 p-5 rounded-2xl shadow-inner">{practical.icon}</div>
+                <h2 className="text-2xl md:text-3xl font-semibold font-mono text-gray-200 uppercase tracking-wide">{practical.actionLabel}</h2>
+                <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" />
               </div>
 
-              <div className="flex flex-wrap gap-6 justify-center">
+              {/* Tech cards */}
+              <div className="relative z-10 mt-10 flex flex-wrap gap-8 justify-center">
                 {sortedTechnologies.map(technology => (
-                  <ReusableInterviewCard
-                    key={technology.id}
-                    technology={technology}
-                    href={
-                      technology.comingSoon
-                        ? '#' // disabled or placeholder
-                        : `/practical-interviews/${technology.slug}`
-                    }
-                  />
+                  <ReusableInterviewCard key={technology.id} technology={technology} href={technology.comingSoon ? '#' : `/practical-interviews/${technology.slug}`} />
                 ))}
               </div>
             </section>

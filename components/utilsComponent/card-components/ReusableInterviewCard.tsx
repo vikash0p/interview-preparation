@@ -2,7 +2,8 @@
 import React, { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { IPracticalCardProps } from '@/main/types/practical-interview.types';
-import { FaLock, FaArrowRight, FaSpinner } from '@/main/icons/react-global-icons';
+import { FaLock,  FaSpinner } from '@/main/icons/react-global-icons';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technology, href }) => {
   const { slug, icon, label, actionLabel, comingSoon } = technology;
@@ -55,7 +56,7 @@ export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technolog
             <h3 className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">{label}</h3>
             <p className="text-sm text-gray-400 mt-1 flex items-center group-hover:text-indigo-300 transition-colors duration-300">
               {actionLabel}
-              <FaArrowRight className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
+              <FaArrowRightLong className="ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300" />
             </p>
           </div>
         </div>
