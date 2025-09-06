@@ -1,11 +1,39 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaCheck, FaChevronLeft, FaChevronRight, FaRegCopy } from '@/main/icons/react-global-icons';
 import { HeroRightData } from '@/main/data/home/HeroRightData';
+import { useTypewriter } from 'react-simple-typewriter';
+import { useInView } from 'react-intersection-observer';
 
 const RightHero = () => {
   const [copied, setCopied] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [typingEnabled, setTypingEnabled] = useState(true);
+
+  // Use Intersection Observer to detect when component is in view
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
+
+  // Configure typewriter effect
+  const [text] = useTypewriter({
+    words: [HeroRightData[currentQuestion].code],
+    typeSpeed: 30,
+    deleteSpeed: 0,
+    delaySpeed: 1000,
+    loop: 0,
+  });
+
+  // Reset typing when question changes
+  useEffect(() => {
+    setTypingEnabled(true);
+  }, [currentQuestion]);
+
+  // Pause typing when not in view
+  useEffect(() => {
+    setTypingEnabled(inView);
+  }, [inView]);
 
   const handleNavigation = (direction: 'prev' | 'next') => {
     setCurrentQuestion(prev => (direction === 'next' ? (prev + 1) % HeroRightData.length : (prev - 1 + HeroRightData.length) % HeroRightData.length));
@@ -22,7 +50,7 @@ const RightHero = () => {
   };
 
   return (
-    <section className="basis-1/2 ">
+    <section className="basis-1/2" ref={ref}>
       <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/70 backdrop-blur-md border border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:justify-between items-center mb-6 gap-4">
@@ -50,8 +78,11 @@ const RightHero = () => {
         <h3 className=" text-lg sm:text-xl font-semibold leading-relaxed mb-4">{HeroRightData[currentQuestion].question}</h3>
 
         <div className="relative">
-          <pre className="bg-gray-950/60 h-72  p-4 rounded-md text-sm text-wrap overflow-x-auto">
-            <code>{HeroRightData[currentQuestion].code}</code>
+          <pre className="bg-gray-950/60 h-72 p-4 rounded-md text-sm text-wrap overflow-x-auto font-mono">
+            <code>
+              {typingEnabled ? text : HeroRightData[currentQuestion].code}
+              {typingEnabled && <span className="animate-pulse">|</span>}
+            </code>
           </pre>
           <div className="absolute top-2 right-2 group">
             <button type="button" aria-label="Copy code to clipboard" onClick={handleCopy} className="p-2 rounded-md bg-indigo-800 hover:bg-indigo-700 transition-colors">
@@ -61,7 +92,7 @@ const RightHero = () => {
           </div>
         </div>
 
-        <div className="mt-4 p-3 bg-gray-950/60 rounded-md text-sm  min-h-16 border border-gray-700">{HeroRightData[currentQuestion].explanation}</div>
+        <div className="mt-4 p-3 bg-gray-950/60 rounded-md text-sm min-h-16 border border-gray-700">{HeroRightData[currentQuestion].explanation}</div>
 
         {/* Dot Navigation */}
         <div className="flex justify-center gap-3 mt-6">
