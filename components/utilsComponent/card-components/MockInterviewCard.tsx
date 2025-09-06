@@ -2,7 +2,7 @@ import type { Feature } from '@/main/data/home/mockInterviewData';
 
 const MockInterviewCard: React.FC<Feature> = ({ icon: Icon, title, description }) => (
   <div
-    className="card"
+    className="card cursor-default"
   >
     <div className="icon text-3xl">
       <Icon  />

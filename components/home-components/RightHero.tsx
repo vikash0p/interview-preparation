@@ -78,7 +78,7 @@ const RightHero = () => {
             }
 
             return indices.map(index => (
-              <button type="button" key={index} onClick={() => handleDotClick(index)} aria-label={`Go to question ${index + 1}`} className={`size-3 rounded-full transition-all duration-200 ${currentQuestion === index ? 'bg-indigo-500 scale-125 shadow-md' : 'bg-neutral-600 hover:bg-neutral-400'}`} />
+              <button type="button" key={index} onClick={() => handleDotClick(index)} aria-label={`Go to question ${index + 1}`} className={`size-3 rounded-full transition-all duration-200 ${currentQuestion === index ? 'bg-indigo-500 scale-125 shadow-md' : 'bg-gray-500 hover:bg-neutral-400'}`} />
             ));
           })()}
         </div>

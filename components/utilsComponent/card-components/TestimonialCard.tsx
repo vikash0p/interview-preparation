@@ -1,6 +1,6 @@
 import type { Testimonial as TestimonialInterface } from '@/main/data/home/testimonialsData';
 import Image from 'next/image';
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft } from 'react-icons/fa';
 
 interface TestimonialCardProps {
   testimonial: TestimonialInterface;
@@ -20,7 +20,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       <div className="relative z-10 flex items-center mb-4">
         <Image src={testimonial.image} alt={testimonial.name} width={56} height={56} className="rounded-full border border-gray-700/60 shadow-sm" />
         <div className="ml-4">
-          <h4 className="font-semibold text-gray-100 group-hover:text-indigo-300 transition-colors">{testimonial.name}</h4>
+          <h4 className="font-semibold text-gray-100 transition-colors">{testimonial.name}</h4>
           <p className="text-sm text-gray-400">{testimonial.role}</p>
         </div>
       </div>

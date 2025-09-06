@@ -3,6 +3,7 @@ import React from 'react';
 import { statsData, JoinCommunityData } from '@/main/data/home/JoinCommunityData';
 import { ReusableHeading } from '../reusable-components/ReusableHeading';
 import { Link } from "next-view-transitions";
+import LinkButton from "../utilsComponent/button-components/LinkButton";
 
 const JoinCommunity = () => {
   return (
@@ -44,10 +45,9 @@ const JoinCommunity = () => {
 
       {/* CTA */}
       <div className="mt-10 lg:mt-16 text-center">
-        <button type="button" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md font-medium transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-md">
-          Join Our Community
-        </button>
+        
 
+          <LinkButton href="/register" ariaLabel="Join Our Community" size="md">Join Our Community</LinkButton>
         <p className="mt-4 text-gray-400 text-md">
           Already a member?{' '}
           <Link href="/login" className="text-indigo-300 hover:text-indigo-200 underline">
