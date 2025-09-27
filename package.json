@@ -16,7 +16,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "^1.11.0",
     "framer-motion": "^11.11.4",
-    "next": "^14.2.23",
+    "next": "^14.2.23",   
     "next-view-transitions": "^0.3.4",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.30.0",

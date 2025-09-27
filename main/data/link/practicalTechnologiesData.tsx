@@ -1,6 +1,7 @@
 
 import { ICategoryItem } from '../../types/global.types';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { FaJsSquare, FaReact, FaAngular, FaVuejs, FaNodeJs, FaPhp, FaPython, FaJava, FaGitAlt, FaDocker, FaAws, FaDatabase, FaMobileAlt, FaCogs, FaTools,SiTypescript, SiSvelte, SiNextdotjs, SiDjango, SiRubyonrails, SiSpring, SiDotnet, SiPostgresql, SiMongodb, SiMysql, SiRedis, SiGraphql, SiFlutter, SiKotlin, SiSwift, SiGooglecloud,FaCode, FaServer, FaBrain, FaNetworkWired,SiExpress  } from '@/main/icons/react-global-icons';
 
 
@@ -24,15 +25,15 @@ export const PRACTICAL_INTERVIEWS_DATA: ICategoryItem[] = [
         actionLabel: 'Implement JS Interview Logic',
         comingSoon: false,
       },
-      {
-        id: 'tech-4',
-        slug: 'typescript',
-        label: 'TYPESCRIPT',
-        icon: <SiTypescript className="text-blue-400" />,
-        category: 'frontend',
-        actionLabel: 'Apply TypeScript in Scenarios',
-        comingSoon: true,
-      },
+      // {
+      //   id: 'tech-4',
+      //   slug: 'typescript',
+      //   label: 'TYPESCRIPT',
+      //   icon: <SiTypescript className="text-blue-400" />,
+      //   category: 'frontend',
+      //   actionLabel: 'Apply TypeScript in Scenarios',
+      //   comingSoon: true,
+      // },
       {
         id: 'tech-5',
         slug: 'react',
@@ -69,15 +70,15 @@ export const PRACTICAL_INTERVIEWS_DATA: ICategoryItem[] = [
         actionLabel: 'Apply Svelte in UI Problems',
         comingSoon: true,
       },
-      {
-        id: 'tech-9',
-        slug: 'nextjs',
-        label: 'NEXT.JS',
-        icon: <SiNextdotjs className="text-white" />,
-        category: 'frontend',
-        actionLabel: 'Build Pages in Next.js',
-        comingSoon: true,
-      },
+      // {
+      //   id: 'tech-9',
+      //   slug: 'nextjs',
+      //   label: 'NEXT.JS',
+      //   icon: <SiNextdotjs className="text-white" />,
+      //   category: 'frontend',
+      //   actionLabel: 'Build Pages in Next.js',
+      //   comingSoon: true,
+      // },
     ],
   },
   {
