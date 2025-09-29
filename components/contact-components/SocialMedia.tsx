@@ -13,20 +13,13 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ socialLinks }) => {
   return (
-    <div
-   
-      className="bg-gray-800/50 p-8 rounded-md border border-gray-700"
-    >
-      <h3 className="text-2xl font-bold mb-6 text-indigo-400">Stay Connected</h3>
-      <div className="grid grid-cols-2 gap-4">
+    <div className="bg-gray-950/60 backdrop-blur-sm p-8 rounded-xl border border-gray-800 shadow-lg">
+      <h3 className="text-2xl font-bold mb-6 text-gray-200">Stay Connected</h3>
+      <div className="grid grid-cols-2  gap-4">
         {socialLinks.map((link, index) => (
-          <Link
-            key={index}
-            href={link.url}
-            className="flex items-center gap-3 p-4 bg-gray-700 rounded-md hover:bg-indigo-500 transition-colors"
-          >
-            <span className="text-2xl">{link.icon}</span>
-            <span className="font-medium">{link.name}</span>
+          <Link key={index} href={link.url} className="flex flex-col items-center justify-center gap-2 p-5 bg-gray-900/70 rounded-lg border border-gray-700 hover:border-indigo-500 hover:bg-gray-800/80 transition-all duration-300 transform hover:scale-105 group">
+            <span className="text-3xl text-gray-400 group-hover:text-indigo-400 transition-colors">{link.icon}</span>
+            <span className="font-medium text-gray-300 group-hover:text-indigo-300">{link.name}</span>
           </Link>
         ))}
       </div>
