@@ -21,7 +21,7 @@ export const ReusableInterviewCard: React.FC<IPracticalCardProps> = ({ technolog
   return (
     <div
       onClick={handleClick}
-      className={`group relative overflow-hidden w-full max-w-sm p-6 rounded-md transition-all duration-300 bg-gradient-to-r from-gray-950 to-gray-900
+      className={` group relative overflow-hidden w-full max-w-sm p-6 rounded-md transition-all duration-300 bg-gradient-to-r from-gray-950 to-gray-900
   cursor-pointer hover:bg-gradient-to-r hover:from-gray-950 hover:to-gray-900 hover:border-gray-500 hover:shadow-lg hover:shadow-indigo-500/10 border border-gray-700
   ${comingSoon && 'opacity-80 cursor-not-allowed border border-yellow-400/30'}
   ${isPending && 'pointer-events-none opacity-70'}

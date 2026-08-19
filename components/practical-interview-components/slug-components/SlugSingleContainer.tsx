@@ -6,8 +6,7 @@ import { SlugError } from '@/components/utilsComponent/error-components/SlugErro
 import { SlugHeader } from './SlugHeader';
 import {SlugSideBar} from './SlugSideBar';
 import {SlugMainContent} from './SlugMainContent';
-import { LivePreviewCode } from "./LivePreviewCode";
-import { SlugCodeEditor } from "./SlugCodeEditor";
+
 
 const SlugSingleContainer = () => {
   const { slug, technology } = useParams() as { slug: string; technology: string };
@@ -27,10 +26,7 @@ const SlugSingleContainer = () => {
         <SlugSideBar data={interviewData} />
       </section>
 
-      <div className="space-y-12">
-        <LivePreviewCode data={interviewData} />
-        <SlugCodeEditor />
-      </div>
+
     </main>
   );
 };

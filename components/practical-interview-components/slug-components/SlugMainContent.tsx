@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SlugProblemStatement } from './SlugProblemStatement';
 import { SlugSolution } from './SlugSolution';
-import { SlugDiscussion } from '../SlugDiscussion';
 import { ISlugDataProps } from '@/main/types/practical-interview.types';
 import { contentVariants } from '@/main/animation/practical-interview.animation';
 
-const tabs = [{ label: 'Problem Statement' }, { label: 'Solution' }, { label: 'Discussion' }];
+const tabs = [{ label: 'Problem Statement' }, { label: 'Solution' }, ];
 
 export const SlugMainContent: React.FC<ISlugDataProps> = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -50,10 +49,8 @@ export const SlugMainContent: React.FC<ISlugDataProps> = ({ data }) => {
         >
           {activeTab === 0 ? (
             <SlugProblemStatement data={data} />
-          ) : activeTab === 1 ? (
+          )  : (
             <SlugSolution data={data} />
-          ) : (
-            <SlugDiscussion />
           )}
         </motion.div>
       </AnimatePresence>

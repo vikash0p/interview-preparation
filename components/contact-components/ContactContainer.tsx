@@ -6,6 +6,7 @@ import SocialMedia from './SocialMedia';
 import LocationMap from './LocationMap';
 import { socialLinks, contactDataFirst } from '@/main/data/contact/contact.data';
 import ContactForm from "./ContactForm";
+import Footer from '../layout-components/Footer';
 
 const ContactContainer = () => {
   return (
@@ -22,6 +23,7 @@ const ContactContainer = () => {
           </div>
         </div>
         <LocationMap />
+        <Footer />
       </div>
     </div>
   );

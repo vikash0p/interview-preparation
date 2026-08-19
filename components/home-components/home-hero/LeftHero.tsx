@@ -1,26 +1,6 @@
-'use client';
-import {useEffect,useState} from 'react';
+import LinkButton from '@/components/utilsComponent/button-components/LinkButton';
 import { FaUsers, FaStar } from 'react-icons/fa';
-import LinkButton from '../utilsComponent/button-components/LinkButton';
 
-const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
-  const [count, setCount] = useState(from);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCount(prev => {
-        if (prev >= to) {
-          clearInterval(timer);
-          return to;
-        }
-        return prev + Math.ceil((to - from) / 50);
-      });
-    }, 20);
-    return () => clearInterval(timer);
-  }, [from, to]);
-
-  return <>{count.toLocaleString()}</>;
-};
 
 const LeftHero = () => {
   return (
@@ -56,7 +36,7 @@ const LeftHero = () => {
         <div className="flex items-center gap-2 hover:text-indigo-300 transition-colors">
           <FaUsers className="text-indigo-400 w-5 h-5" />
           <span>
-            <AnimatedCounter from={0} to={10000} />+ Users
+           100000+ Users
           </span>
         </div>
         <div className="flex items-center gap-2 hover:text-yellow-300 transition-colors duration-500 ease-in-out">

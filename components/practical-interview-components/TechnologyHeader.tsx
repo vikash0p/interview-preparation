@@ -20,7 +20,7 @@ export const TechnologyHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 bg-gray-950/80 backdrop-blur-3xl border-b border-gray-800">
+    <header className="sticky top-0 z-20">
       <div className="container mx-auto px-4 py-4 flex flex-row justify-between items-start md:items-center gap-4">
         {/* Back & Title */}
         <div className="flex items-center gap-4">

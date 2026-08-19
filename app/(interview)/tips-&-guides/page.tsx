@@ -3,7 +3,7 @@ import { tipsGuidesData } from '@/main/data/home/tipsGuidesData';
 import Link from 'next/link';
 export default function TipsPage() {
   return (
-    <main className="min-h-screen px-6 py-16 text-white bg-gradient-to-br from-gray-900 to-black">
+    <main className="min-h-screen px-6 py-16 ">
       <section className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-10">Tips & Guides</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

@@ -4,7 +4,6 @@ import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import { useActiveLinkHook } from '@/main/hooks/useActiveLinkHook';
 import { NAVIGATION_LINKS } from '@/main/data/link/navigationLinks';
-import { ReusableLinkDropDown } from '../reusable-components/ReusableLinkDropDown';
 
 function Navbar() {
   const { getActiveStatus } = useActiveLinkHook();
@@ -25,11 +24,16 @@ function Navbar() {
             <Link href="/" className={`text-md font-medium rounded-sm transition-all duration-300 ease-in-out ${getActiveStatus('/') ? 'text-white bg-indigo-600 px-5 py-1.5 shadow-sm' : 'text-gray-400 hover:text-white hover:bg-indigo-600 hover:px-5 hover:py-1.5'}`}>
               Home
             </Link>
+            <Link href="/mock-interviews" className={`text-md font-medium rounded-sm transition-all duration-300 ease-in-out ${getActiveStatus('/mock-interviews') ? 'text-white bg-indigo-600 px-5 py-1.5 shadow-sm' : 'text-gray-400 hover:text-white hover:bg-indigo-600 hover:px-5 hover:py-1.5'}`}>
+              Mock Interviews
+            </Link>
+            <Link
+              href="/practical-interviews"
+              className={`text-md font-medium rounded-sm transition-all duration-300 ease-in-out ${getActiveStatus('/practical-interviews') ? 'text-white bg-indigo-600 px-5 py-1.5 shadow-sm' : 'text-gray-400 hover:text-white hover:bg-indigo-600 hover:px-5 hover:py-1.5'}`}
+            >
+              Practical Interview
+            </Link>
 
-            {/* Dropdown with higher z-index */}
-            <span className="z-50">
-              <ReusableLinkDropDown />
-            </span>
             {NAVIGATION_LINKS.map((link, index) => {
               const isActive = getActiveStatus(link.href);
               return (

@@ -27,7 +27,7 @@ const JoinCommunity = () => {
 
             <div className="flex items-center justify-between text-sm pt-3">
               <span className="text-gray-500">{feature.stats}</span>
-              <span className={`${feature.linkColor} font-medium cursor-pointer hover:underline`}>{feature.linkText}</span>
+              {/* <span className={`${feature.linkColor} font-medium cursor-pointer hover:underline`}>{feature.linkText}</span> */}
             </div>
           </div>
         ))}
@@ -45,7 +45,7 @@ const JoinCommunity = () => {
 
       {/* CTA */}
       <div className="mt-10 lg:mt-16 text-center">
-        
+
 
           <LinkButton href="/register" ariaLabel="Join Our Community" size="md">Join Our Community</LinkButton>
         <p className="mt-4 text-gray-400 text-md">

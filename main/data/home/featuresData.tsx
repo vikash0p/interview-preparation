@@ -10,13 +10,7 @@ export const featuresData: IFeature[] = [
     icon: <FaLightbulb className="text-3xl" />,
     link: '/question-bank',
   },
-  {
-    id: '6',
-    title: 'AI Interview',
-    description: 'Experience real-time AI-driven interviews tailored to your role and level.',
-    icon: <FaRobot className="text-3xl" />,
-    link: '/ai-interview',
-  },
+
   {
     id: '2',
     title: 'Mock Interviews',
@@ -31,18 +25,6 @@ export const featuresData: IFeature[] = [
     icon: <FaFlask className="text-3xl" />,
     link: '/practical-interviews',
   },
-  {
-    id: '4',
-    title: 'Tips & Guides',
-    description: 'Access comprehensive guides, tips, and best practices for interview success.',
-    icon: <FaBook className="text-3xl" />,
-    link: '/tips-&-guides',
-  },
-  {
-    id: '5',
-    title: 'Community Support',
-    description: "Connect with peers, share experiences, and learn from others' interview journeys.",
-    icon: <FaUsers className="text-3xl" />,
-    link: '/community-support',
-  },
+
+  
 ];
