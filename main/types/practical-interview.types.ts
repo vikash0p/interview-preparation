@@ -89,7 +89,7 @@ export interface IPracticalInterviewSlugsResponse {
 export interface ISlugLayoutProps {
   child?: React.ReactNode;
   children?: React.ReactNode;
-  sideBar: React.ReactNode;
+  // sideBar: React.ReactNode;
 }
 
 export interface ISlugDataProps {

@@ -4,9 +4,8 @@ import { useGetInterviewBySlugQuery } from '@/main/redux-toolkit/services/practi
 import { SlugLoading } from '@/components/utilsComponent/loading-components/SlugLoading';
 import { SlugError } from '@/components/utilsComponent/error-components/SlugError';
 import { SlugHeader } from './SlugHeader';
-import {SlugSideBar} from './SlugSideBar';
-import {SlugMainContent} from './SlugMainContent';
-
+import { SlugSideBar } from './SlugSideBar';
+import { SlugMainContent } from './SlugMainContent';
 
 const SlugSingleContainer = () => {
   const { slug, technology } = useParams() as { slug: string; technology: string };
@@ -18,15 +17,13 @@ const SlugSingleContainer = () => {
   const interviewData = data.data;
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-300">
+    <main className="min-h-screen bg-gray-900 text-gray-300 p-2 ">
       <SlugHeader data={interviewData} />
 
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12   ">
         <SlugMainContent data={interviewData} />
         <SlugSideBar data={interviewData} />
       </section>
-
-
     </main>
   );
 };
